@@ -2,3 +2,32 @@
 footer {
   background-color: #F6F6F6;
 }
+/* line 3, ../sass/footer.scss */
+footer .top {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+/* line 7, ../sass/footer.scss */
+footer .btm {
+  padding-bottom: 25px;
+}
+/* line 10, ../sass/footer.scss */
+footer .footer-logo {
+  height: 55px;
+  width: auto;
+}
+/* line 15, ../sass/footer.scss */
+footer h4 {
+  color: #565656;
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+/* line 20, ../sass/footer.scss */
+footer li {
+  line-height: 25px;
+}
+/* line 22, ../sass/footer.scss */
+footer li a {
+  font-family: brandon-reg-italic;
+  color: #848484 !important;
+}

@@ -66,3 +66,38 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+@font-face {
+  font-family: brandon-bold;
+  src: url("../assets/fonts/Brandon_bld.otf");
+}
+@font-face {
+  font-family: brandon-reg-italic;
+  src: url("../assets/fonts/Brandon_reg_it.otf");
+}
+@font-face {
+  font-family: brandon-reg;
+  src: url("../assets/fonts/Brandon_reg.otf");
+}
+/* line 23, ../sass/screen.scss */
+.brandon-bold {
+  font-family: brandon-bold,Helvetica;
+  text-transform: uppercase;
+  line-height: 2em;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+/* line 35, ../sass/screen.scss */
+.jumbotron {
+  position: relative;
+  background: url("../assets/background/01-Homepage-Hero_Image.jpg");
+  background-size: cover;
+  border-radius: 0px;
+}
+/* line 40, ../sass/screen.scss */
+.jumbotron form {
+  background-color: #fff;
+  height: 490px;
+  border-radius: 4px;
+}

@@ -1,3 +1,27 @@
 footer {
     background-color: #F6F6F6;
+    .top {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    .btm {
+        padding-bottom: 25px;
+    }
+    .footer-logo {
+        height: 55px;
+        width: auto;
+    }
+
+    h4 {
+        color: #565656;
+        font-size: 11px;
+        margin-bottom: 25px;
+    }
+    li {
+        line-height: 25px;
+        a {
+            font-family: brandon-reg-italic;
+            color: #848484 !important;
+        }
+    }
 }
