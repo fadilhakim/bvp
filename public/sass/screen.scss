@@ -4,33 +4,11 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "./fonts.scss";
 
-@font-face {
-    font-family:brandon-bold;
-    src: url("../assets/fonts/Brandon_bld.otf");
+body {
+    font-family: $brandon;
 }
-
-@font-face {
-    font-family:brandon-reg-italic ;
-    src: url("../assets/fonts/Brandon_reg_it.otf");
-}
-
-@font-face {
-    font-family:brandon-reg;
-    src: url("../assets/fonts/Brandon_reg.otf");
-}
-
-.brandon-bold {
-    font-family: brandon-bold,Helvetica;
-    text-transform: uppercase;
-    line-height: 2em;
-    letter-spacing: 1px;
-    word-wrap: break-word;
-    
-}
-
-
-
 
 .jumbotron {
     position: relative;
