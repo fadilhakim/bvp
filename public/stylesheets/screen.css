@@ -1,22 +1,54 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../sass/screen.scss */
+@font-face {
+  font-family: 'brandon-bold';
+  src: url("../assets/fonts/Brandon_bld.otf");
+}
+@font-face {
+  font-family: 'brandon-reg-italic';
+  src: url("../assets/fonts/Brandon_reg_it.otf");
+}
+@font-face {
+  font-family: 'brandon-reg';
+  src: url("../assets/fonts/Brandon_reg.otf");
+}
+@font-face {
+  font-family: 'proxima-reg';
+  src: url("../assets/fonts/Proxima_Nova_Regular.otf");
+}
+@font-face {
+  font-family: 'proxima-semi-bold';
+  src: url("../assets/fonts/Proxima_Nova_Bold.otf");
+}
+@font-face {
+  font-family: 'proxima-semi-bold';
+  src: url("../assets/fonts/Proxima_Nova_Semibold.otf");
+}
+/* line 4, ../sass/screen.scss */
 .jumbotron {
   position: relative;
   background: url("../assets/background/01-Homepage-Hero_Image.jpg");
   background-size: cover;
   border-radius: 0px;
 }
-/* line 10, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
 .jumbotron form {
   background-color: #fff;
   height: 490px;
   border-radius: 4px;
   padding: 15px;
 }
-/* line 17, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
+.jumbotron h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  font-family: "proxima-semi-bold";
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+/* line 24, ../sass/screen.scss */
 .jumbotron button {
   width: 100%;
+  background-color: #698DF5;
+  font-weight: 600;
 }

@@ -1,7 +1,6 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import './fonts.scss';
+@import './colors.scss';
+
 .jumbotron {
     position: relative;
     background: url('../assets/background/01-Homepage-Hero_Image.jpg');
@@ -13,9 +12,19 @@
         border-radius: 4px;
         padding: 15px;
     }
-
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #555;
+        font-family: $proxima-semi-bold;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
     button {
         width: 100%;
+        background-color: $soft-blue;
+        font-weight: 600;
     }
 }
 

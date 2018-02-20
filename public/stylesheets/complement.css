@@ -64,23 +64,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-face {
-  font-family: brandon-bold;
+  font-family: 'brandon-bold';
   src: url("../assets/fonts/Brandon_bld.otf");
 }
 @font-face {
-  font-family: brandon-reg-italic;
+  font-family: 'brandon-reg-italic';
   src: url("../assets/fonts/Brandon_reg_it.otf");
 }
 @font-face {
-  font-family: brandon-reg;
+  font-family: 'brandon-reg';
   src: url("../assets/fonts/Brandon_reg.otf");
 }
-/* line 18, ../sass/complement.scss */
-.bg-white {
-  background-color: white !important;
+@font-face {
+  font-family: 'proxima-reg';
+  src: url("../assets/fonts/Proxima_Nova_Regular.otf");
+}
+@font-face {
+  font-family: 'proxima-semi-bold';
+  src: url("../assets/fonts/Proxima_Nova_Bold.otf");
+}
+@font-face {
+  font-family: 'proxima-semi-bold';
+  src: url("../assets/fonts/Proxima_Nova_Semibold.otf");
+}
+/* line 3, ../sass/complement.scss */
+html {
+  font-family: "proxima-reg";
 }
 
-/* line 22, ../sass/complement.scss */
-.bg-soft-gray {
-  background-color: #F8F8F8 !important;
+/* line 9, ../sass/complement.scss */
+li {
+  list-style: none;
+}
+
+/* line 12, ../sass/complement.scss */
+.m-top20 {
+  margin-top: 20px;
 }

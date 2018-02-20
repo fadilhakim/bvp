@@ -49,6 +49,9 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
 }
+li {
+  list-style: none;
+}
 
 @-ms-viewport {
   width: device-width;
@@ -109,6 +112,7 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  
 }
 
 ol ol,
@@ -116,6 +120,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  
 }
 
 dt {
