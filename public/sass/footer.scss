@@ -1,8 +1,11 @@
 footer {
     background-color: #F6F6F6;
     .top {
-        padding-top: 30px;
         padding-bottom: 25px;
+    }
+    .col-lg-2 {
+        margin-top: 30px;
+        padding-bottom: 20px;
     }
     .btm {
         padding-bottom: 25px;
@@ -22,6 +25,33 @@ footer {
         a {
             font-family: brandon-reg-italic;
             color: #848484 !important;
+        }
+    }
+    .sosmed-footer {
+        li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        a {
+            display: block;
+            width: 23px;
+            height: 23px;  
+        }
+        .fb {
+            background: url('../assets/icons/SocMed - Facebook.png');
+            background-size: cover; 
+        }
+        .twt {
+            background: url('../assets/icons/SocMed - Twitter.png');
+            background-size: cover; 
+        }
+        .ig {
+            background: url('../assets/icons/SocMed - Instagram.png');
+            background-size: cover; 
+        }
+        .pin {
+            background: url('../assets/icons/SocMed - Pinterest.png');
+            background-size: cover; 
         }
     }
 }

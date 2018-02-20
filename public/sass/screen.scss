@@ -2,24 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
-
-@font-face {
-    font-family:brandon-bold;
-    src: url("../assets/fonts/Brandon_bld.otf");
-}
-
-@font-face {
-    font-family:brandon-reg-italic ;
-    src: url("../assets/fonts/Brandon_reg_it.otf");
-}
-
-@font-face {
-    font-family:brandon-reg;
-    src: url("../assets/fonts/Brandon_reg.otf");
-}
-
 .brandon-bold {
     font-family: brandon-bold,Helvetica;
     text-transform: uppercase;
@@ -28,9 +10,6 @@
     word-wrap: break-word;
     
 }
-
-
-
 
 .jumbotron {
     position: relative;
@@ -41,6 +20,11 @@
         background-color: #fff;
         height: 490px;
         border-radius: 4px;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
     }
 }
 

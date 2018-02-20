@@ -4,30 +4,65 @@ footer {
 }
 /* line 3, ../sass/footer.scss */
 footer .top {
-  padding-top: 30px;
   padding-bottom: 25px;
 }
-/* line 7, ../sass/footer.scss */
+/* line 6, ../sass/footer.scss */
+footer .col-lg-2 {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+/* line 10, ../sass/footer.scss */
 footer .btm {
   padding-bottom: 25px;
 }
-/* line 10, ../sass/footer.scss */
+/* line 13, ../sass/footer.scss */
 footer .footer-logo {
   height: 55px;
   width: auto;
 }
-/* line 15, ../sass/footer.scss */
+/* line 18, ../sass/footer.scss */
 footer h4 {
   color: #565656;
   font-size: 11px;
   margin-bottom: 25px;
 }
-/* line 20, ../sass/footer.scss */
+/* line 23, ../sass/footer.scss */
 footer li {
   line-height: 25px;
 }
-/* line 22, ../sass/footer.scss */
+/* line 25, ../sass/footer.scss */
 footer li a {
   font-family: brandon-reg-italic;
   color: #848484 !important;
+}
+/* line 31, ../sass/footer.scss */
+footer .sosmed-footer li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 35, ../sass/footer.scss */
+footer .sosmed-footer a {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+/* line 40, ../sass/footer.scss */
+footer .sosmed-footer .fb {
+  background: url("../assets/icons/SocMed - Facebook.png");
+  background-size: cover;
+}
+/* line 44, ../sass/footer.scss */
+footer .sosmed-footer .twt {
+  background: url("../assets/icons/SocMed - Twitter.png");
+  background-size: cover;
+}
+/* line 48, ../sass/footer.scss */
+footer .sosmed-footer .ig {
+  background: url("../assets/icons/SocMed - Instagram.png");
+  background-size: cover;
+}
+/* line 52, ../sass/footer.scss */
+footer .sosmed-footer .pin {
+  background: url("../assets/icons/SocMed - Pinterest.png");
+  background-size: cover;
 }
