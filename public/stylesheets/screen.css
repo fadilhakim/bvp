@@ -3,29 +3,20 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 5, ../sass/screen.scss */
-.brandon-bold {
-  font-family: brandon-bold,Helvetica;
-  text-transform: uppercase;
-  line-height: 2em;
-  letter-spacing: 1px;
-  word-wrap: break-word;
-}
-
-/* line 14, ../sass/screen.scss */
 .jumbotron {
   position: relative;
   background: url("../assets/background/01-Homepage-Hero_Image.jpg");
   background-size: cover;
   border-radius: 0px;
 }
-/* line 19, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 .jumbotron form {
   background-color: #fff;
   height: 490px;
   border-radius: 4px;
   padding: 15px;
 }
-/* line 26, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 .jumbotron button {
   width: 100%;
 }

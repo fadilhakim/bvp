@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'brandon-bold';
+    src: url("../assets/fonts/Brandon_bld.otf");
+}
+
+@font-face {
+    font-family: 'brandon-reg-italic';
+    src: url("../assets/fonts/Brandon_reg_it.otf");
+}
+
+@font-face {
+    font-family: 'brandon-reg';
+    src: url("../assets/fonts/Brandon_reg.otf");
+}
+
+$brandon: 'brandon-reg';
+$brandon-bold: 'brandon-bold';
+$brandon-reg-italic: 'brandon-reg-italic';

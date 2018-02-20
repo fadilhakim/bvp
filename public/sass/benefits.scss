@@ -1,0 +1,76 @@
+@import './fonts.scss';
+@import './colors.scss';
+
+.benefits-header {
+	height: 300px;
+    background: url('../assets/background/04-Benefits-Hero_image_3.jpg');
+    background-size: cover;
+
+    .title {
+    	top: 35%;
+    	left: 50%;
+    	position: absolute;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+	    h1 {
+			font-size: 45px;
+			font-weight: 700;
+	    }
+	    .border-bottom-text {
+			margin-top: 10px;
+			border-bottom: 3px solid $dark-pink;
+			width: 30%;
+			margin-left: auto;
+			margin-right: auto;
+	    }
+    }
+}
+
+.benefits-content-1 {
+	margin: 70px 0;
+
+	.top {
+		padding-bottom: 30px;
+	}
+
+	.bottom {
+		margin-top: 30px;
+
+		.benefit-list {
+			padding: 10px 70px;
+		}
+	}
+
+	img {
+		height: 150px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h2 {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 43px;
+	}
+
+	p {
+		margin-top: 30px;
+		font-size: 18px;
+		line-height: 24px;
+		color: $dark-gray;
+
+		&.title {
+			font-size: 20px;
+			font-family: $brandon-bold;
+	    	height: 50px;
+		}
+	}
+    
+    .border-bottom-left-text {
+		margin-top: 10px;
+		border-bottom: 3px solid $dark-pink;
+		width: 45px;
+		margin-left: 3px;
+    }
+}

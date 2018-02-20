@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'brandon-bold';
+  src: url("../assets/fonts/Brandon_bld.otf");
+}
+@font-face {
+  font-family: 'brandon-reg-italic';
+  src: url("../assets/fonts/Brandon_reg_it.otf");
+}
+@font-face {
+  font-family: 'brandon-reg';
+  src: url("../assets/fonts/Brandon_reg.otf");
+}
+/* line 4, ../sass/benefits.scss */
+.benefits-header {
+  height: 300px;
+  background: url("../assets/background/04-Benefits-Hero_image_3.jpg");
+  background-size: cover;
+}
+/* line 9, ../sass/benefits.scss */
+.benefits-header .title {
+  top: 35%;
+  left: 50%;
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+/* line 15, ../sass/benefits.scss */
+.benefits-header .title h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+/* line 19, ../sass/benefits.scss */
+.benefits-header .title .border-bottom-text {
+  margin-top: 10px;
+  border-bottom: 3px solid #FF3366;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 29, ../sass/benefits.scss */
+.benefits-content-1 {
+  margin: 70px 0;
+}
+/* line 32, ../sass/benefits.scss */
+.benefits-content-1 .top {
+  padding-bottom: 30px;
+}
+/* line 36, ../sass/benefits.scss */
+.benefits-content-1 .bottom {
+  margin-top: 30px;
+}
+/* line 39, ../sass/benefits.scss */
+.benefits-content-1 .bottom .benefit-list {
+  padding: 10px 70px;
+}
+/* line 44, ../sass/benefits.scss */
+.benefits-content-1 img {
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 51, ../sass/benefits.scss */
+.benefits-content-1 h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+}
+/* line 57, ../sass/benefits.scss */
+.benefits-content-1 p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #555555;
+}
+/* line 63, ../sass/benefits.scss */
+.benefits-content-1 p.title {
+  font-size: 20px;
+  font-family: "brandon-bold";
+  height: 50px;
+}
+/* line 70, ../sass/benefits.scss */
+.benefits-content-1 .border-bottom-left-text {
+  margin-top: 10px;
+  border-bottom: 3px solid #FF3366;
+  width: 45px;
+  margin-left: 3px;
+}
