@@ -87,17 +87,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: 'proxima-semi-bold';
   src: url("../assets/fonts/Proxima_Nova_Semibold.otf");
 }
-/* line 3, ../sass/complement.scss */
+/* line 4, ../sass/complement.scss */
 html {
   font-family: "proxima-reg";
+  font-family: 400;
 }
 
 /* line 9, ../sass/complement.scss */
+p, li, a {
+  color: #555;
+}
+
+/* line 16, ../sass/complement.scss */
+a, button {
+  font-family: "proxima-reg";
+  font-weight: 700;
+}
+
+/* line 21, ../sass/complement.scss */
+.btn-primary {
+  background-color: #698DF5;
+}
+
+/* line 25, ../sass/complement.scss */
+.img-responsive {
+  width: 100%;
+}
+
+/* line 31, ../sass/complement.scss */
 li {
   list-style: none;
 }
 
-/* line 12, ../sass/complement.scss */
+/* line 34, ../sass/complement.scss */
 .m-top20 {
   margin-top: 20px;
+}
+
+/* line 38, ../sass/complement.scss */
+.border-pink {
+  width: 45px;
+  height: 3px;
+  margin-top: 25px;
+  display: block;
+  background-color: #FF3366;
 }

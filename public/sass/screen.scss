@@ -28,4 +28,45 @@
     }
 }
 
+.home-benefits {
+    img {
+        width: 80%;
+    }
+    .cover-gray {
+        background-color: $soft-gray;
+    }
+    .text {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .img{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-size: 40px;
+        font-family: $proxima-bold;
+        color:$dark-gray;
+    }
+    p{
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    strong {
+        color: #000;
+        font-weight: bolder;
+    }
+    li {
+        font-weight: 400;
+        line-height: 33px;
+    }
+    a {
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
 
