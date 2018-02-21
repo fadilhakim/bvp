@@ -1,7 +1,29 @@
 @import "compass/reset";
 @import './fonts.scss';
+@import './colors.scss';
 html {
     font-family: $proxima;
+    font-family: 400;
+    
+}
+p,li,a {
+    color: #555;
+}
+
+
+// button , a , img
+
+a,button {
+    font-family: $proxima;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: $soft-blue;
+}
+
+.img-responsive {
+    width: 100%;
 }
 
 
@@ -11,4 +33,12 @@ li {
 }
 .m-top20 {
     margin-top: 20px;
+}
+
+.border-pink{
+    width: 45px;
+    height: 3px;
+    margin-top: 25px;
+    display: block;
+    background-color: #FF3366;
 }

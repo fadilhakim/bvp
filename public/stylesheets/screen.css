@@ -15,7 +15,7 @@
   src: url("../assets/fonts/Proxima_Nova_Regular.otf");
 }
 @font-face {
-  font-family: 'proxima-semi-bold';
+  font-family: 'proxima-bold';
   src: url("../assets/fonts/Proxima_Nova_Bold.otf");
 }
 @font-face {
@@ -51,4 +51,52 @@
   width: 100%;
   background-color: #698DF5;
   font-weight: 600;
+}
+
+/* line 32, ../sass/screen.scss */
+.home-benefits img {
+  width: 80%;
+}
+/* line 35, ../sass/screen.scss */
+.home-benefits .cover-gray {
+  background-color: #F8F8F8;
+}
+/* line 38, ../sass/screen.scss */
+.home-benefits .text {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 42, ../sass/screen.scss */
+.home-benefits .img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 46, ../sass/screen.scss */
+.home-benefits h2 {
+  font-size: 40px;
+  font-family: "proxima-bold";
+  color: #555555;
+}
+/* line 51, ../sass/screen.scss */
+.home-benefits p {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+/* line 57, ../sass/screen.scss */
+.home-benefits strong {
+  color: #000;
+  font-weight: bolder;
+}
+/* line 61, ../sass/screen.scss */
+.home-benefits li {
+  font-weight: 400;
+  line-height: 33px;
+}
+/* line 65, ../sass/screen.scss */
+.home-benefits a {
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 22px;
 }
