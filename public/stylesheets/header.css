@@ -1,37 +1,15 @@
 /* line 2, ../sass/header.scss */
-header {
-  background-color: #fff;
-}
+header { background-color: #fff; }
 /* line 4, ../sass/header.scss */
-header a {
-  font-family: Helvetica;
-  font-weight: bold;
-  line-height: 2em;
-  letter-spacing: 1px;
-  word-wrap: break-word;
-  font-size: 12px;
-}
+header a { font-family: Helvetica; font-weight: bold; line-height: 2em; letter-spacing: 1px; word-wrap: break-word; font-size: 12px; }
 /* line 13, ../sass/header.scss */
-header .navbar-brand {
-  width: 210px;
-  height: 50px;
-  background-size: 100%;
-  background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0;
-}
+header .navbar-brand { width: 210px; height: 50px; background-size: 100%; background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0; }
 
 /* line 22, ../sass/header.scss */
-.navbar-expand-lg .navbar-nav .nav-link {
-  padding-left: 0px !important;
-  padding-right: 20px;
-  padding-bottom: 0px;
-}
+.navbar-expand-lg .navbar-nav .nav-link { padding-left: 0px !important; padding-right: 20px; padding-bottom: 0px; }
 
 /* line 28, ../sass/header.scss */
-.navbar-header {
-  padding: 10px 0px 0px 15px !important;
-}
+.navbar-header { padding: 10px 0px 0px 15px !important; }
 
 /* line 32, ../sass/header.scss */
-.navbar-expand-lg {
-  padding: 0px 0px 0px 15px;
-}
+.navbar-expand-lg { padding: 0px 0px 0px 15px; }

@@ -1,102 +1,80 @@
-@font-face {
-  font-family: 'brandon-bold';
-  src: url("../assets/fonts/Brandon_bld.otf");
-}
-@font-face {
-  font-family: 'brandon-reg-italic';
-  src: url("../assets/fonts/Brandon_reg_it.otf");
-}
-@font-face {
-  font-family: 'brandon-reg';
-  src: url("../assets/fonts/Brandon_reg.otf");
-}
-@font-face {
-  font-family: 'proxima-reg';
-  src: url("../assets/fonts/Proxima_Nova_Regular.otf");
-}
-@font-face {
-  font-family: 'proxima-bold';
-  src: url("../assets/fonts/Proxima_Nova_Bold.otf");
-}
-@font-face {
-  font-family: 'proxima-semi-bold';
-  src: url("../assets/fonts/Proxima_Nova_Semibold.otf");
-}
-/* line 4, ../sass/screen.scss */
-.jumbotron {
-  position: relative;
-  background: url("../assets/background/01-Homepage-Hero_Image.jpg");
-  background-size: cover;
-  border-radius: 0px;
-}
-/* line 9, ../sass/screen.scss */
-.jumbotron form {
-  background-color: #fff;
-  height: 490px;
-  border-radius: 4px;
-  padding: 15px;
-}
-/* line 15, ../sass/screen.scss */
-.jumbotron h1 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #555;
-  font-family: "proxima-semi-bold";
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-}
-/* line 24, ../sass/screen.scss */
-.jumbotron button {
-  width: 100%;
-  background-color: #698DF5;
-  font-weight: 600;
-}
+@font-face { font-family: 'brandon-bold'; src: url("../assets/fonts/Brandon_bld.otf"); }
+@font-face { font-family: 'brandon-reg-italic'; src: url("../assets/fonts/Brandon_reg_it.otf"); }
+@font-face { font-family: 'brandon-reg'; src: url("../assets/fonts/Brandon_reg.otf"); }
+@font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
+@font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
+@font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
+/* line 5, ../sass/screen.scss */
+.jumbotron { position: relative; background: url("../assets/background/01-Homepage-Hero_Image.jpg"); background-size: cover; border-radius: 0px; }
+/* line 10, ../sass/screen.scss */
+.jumbotron form { background-color: #fff; height: 490px; border-radius: 4px; padding: 15px; }
+/* line 16, ../sass/screen.scss */
+.jumbotron h1 { font-size: 45px; font-weight: 700; line-height: 54px; }
+/* line 21, ../sass/screen.scss */
+.jumbotron h2 { font-size: 20px; font-weight: 600; font-family: "proxima-semi-bold"; line-height: 24px; letter-spacing: 0.5px; margin-bottom: 15px; }
+/* line 29, ../sass/screen.scss */
+.jumbotron button { width: 100%; background-color: #698DF5; font-weight: 600; }
 
-/* line 32, ../sass/screen.scss */
-.home-benefits img {
-  width: 80%;
-}
-/* line 35, ../sass/screen.scss */
-.home-benefits .cover-gray {
-  background-color: #F8F8F8;
-}
-/* line 38, ../sass/screen.scss */
-.home-benefits .text {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-/* line 42, ../sass/screen.scss */
-.home-benefits .img {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-/* line 46, ../sass/screen.scss */
-.home-benefits h2 {
-  font-size: 40px;
-  font-family: "proxima-bold";
-  color: #555555;
-}
+/* line 37, ../sass/screen.scss */
+.home-benefits img { width: 80%; }
+/* line 40, ../sass/screen.scss */
+.home-benefits .cover-gray { background-color: #F8F8F8; }
+/* line 43, ../sass/screen.scss */
+.home-benefits .text { padding-top: 50px; padding-bottom: 50px; }
+/* line 47, ../sass/screen.scss */
+.home-benefits .img { padding-top: 50px; padding-bottom: 50px; }
 /* line 51, ../sass/screen.scss */
-.home-benefits p {
-  margin-top: 25px;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-}
-/* line 57, ../sass/screen.scss */
-.home-benefits strong {
-  color: #000;
-  font-weight: bolder;
-}
-/* line 61, ../sass/screen.scss */
-.home-benefits li {
-  font-weight: 400;
-  line-height: 33px;
-}
-/* line 65, ../sass/screen.scss */
-.home-benefits a {
-  margin-top: 35px;
-  font-size: 18px;
-  line-height: 22px;
-}
+.home-benefits h2 { font-size: 40px; font-family: "proxima-bold"; color: #555555; }
+/* line 56, ../sass/screen.scss */
+.home-benefits p { margin-top: 25px; font-size: 18px; line-height: 28px; font-weight: 400; }
+/* line 62, ../sass/screen.scss */
+.home-benefits strong { color: #000; font-weight: bolder; }
+/* line 66, ../sass/screen.scss */
+.home-benefits li { font-weight: 400; line-height: 33px; }
+/* line 70, ../sass/screen.scss */
+.home-benefits a { margin-top: 35px; font-size: 18px; line-height: 22px; }
+
+/* line 77, ../sass/screen.scss */
+.data_st { background: url("../assets/background/03-Homepage-Create_Account_Section.jpg"); background-size: cover; }
+/* line 81, ../sass/screen.scss */
+.data_st p, .data_st h2 { color: #fff; }
+/* line 83, ../sass/screen.scss */
+.data_st p span, .data_st h2 span { font-size: 60px; letter-spacing: 2px; display: block; text-align: center; font-weight: 600; margin-top: 50px; }
+/* line 93, ../sass/screen.scss */
+.data_st .col-lg-4 { padding: 10px; }
+/* line 95, ../sass/screen.scss */
+.data_st .col-lg-4 p { font-weight: 700; line-height: 25px; text-align: center; letter-spacing: 0.5px; font-size: 21px; }
+/* line 103, ../sass/screen.scss */
+.data_st .col-lg-12 { padding: 30px; background-color: #698DF5; border-radius: 1.62px; height: 224px; }
+/* line 108, ../sass/screen.scss */
+.data_st .col-lg-12.mid { background-color: #38CBAE; }
+
+/* line 114, ../sass/screen.scss */
+.download-apps { background: url("../assets/background/02-Homepage-App_Section.jpg"); background-size: cover; }
+/* line 117, ../sass/screen.scss */
+.download-apps h2 { font-size: 36px; font-weight: 700; line-height: 42px; letter-spacing: 0.5px; }
+/* line 123, ../sass/screen.scss */
+.download-apps p, .download-apps li, .download-apps a, .download-apps h2 { color: #fff; }
+/* line 127, ../sass/screen.scss */
+.download-apps ul { padding-top: 20px; }
+/* line 129, ../sass/screen.scss */
+.download-apps ul li { list-style: disc; line-height: 30px; list-style-position: inside; }
+/* line 136, ../sass/screen.scss */
+.download-apps a { width: 133.14px; height: 38.21px; display: inline-block; margin-right: 20px; }
+
+/* line 145, ../sass/screen.scss */
+.sucess-stories { border-bottom: 1px solid #EAEBED; }
+/* line 147, ../sass/screen.scss */
+.sucess-stories .testimonial { padding-top: 60px; padding-bottom: 60px; }
+/* line 150, ../sass/screen.scss */
+.sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; }
+/* line 156, ../sass/screen.scss */
+.sucess-stories .testimonial .text { padding-top: 40px; }
+/* line 158, ../sass/screen.scss */
+.sucess-stories .testimonial .text p { width: 90%; line-height: 25px; }
+/* line 163, ../sass/screen.scss */
+.sucess-stories .testimonial .border-pink { margin-top: 60px; }
+/* line 166, ../sass/screen.scss */
+.sucess-stories .testimonial .name { font-size: 18px; }
+/* line 169, ../sass/screen.scss */
+.sucess-stories .testimonial .role { font-size: 12px; color: #555; }
