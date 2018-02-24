@@ -11,6 +11,7 @@
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="stylesheets/benefits.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="stylesheets/complement.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/bs_icons.css" type="text/css" rel="stylesheet" media="screen, projection">
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -36,21 +37,17 @@
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="benefits">Benefits</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Success Stories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
+                    <% Object.keys(menu).forEach(function(key) { %>
+                        <% if(key == active) { %>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                            </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                            </li>
+                        <% } %>
+                    <% }); %>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                   

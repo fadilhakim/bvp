@@ -1,24 +1,6 @@
-@font-face {
-  font-family: 'brandon-bold';
-  src: url("../assets/fonts/Brandon_bld.otf");
-}
-@font-face {
-  font-family: 'brandon-reg-italic';
-  src: url("../assets/fonts/Brandon_reg_it.otf");
-}
-@font-face {
-  font-family: 'brandon-reg';
-  src: url("../assets/fonts/Brandon_reg.otf");
-}
-@font-face {
-  font-family: 'proxima-reg';
-  src: url("../assets/fonts/Proxima_Nova_Regular.otf");
-}
-@font-face {
-  font-family: 'proxima-semi-bold';
-  src: url("../assets/fonts/Proxima_Nova_Bold.otf");
-}
-@font-face {
-  font-family: 'proxima-semi-bold';
-  src: url("../assets/fonts/Proxima_Nova_Semibold.otf");
-}
+@font-face { font-family: 'brandon-bold'; src: url("../assets/fonts/Brandon_bld.otf"); }
+@font-face { font-family: 'brandon-reg-italic'; src: url("../assets/fonts/Brandon_reg_it.otf"); }
+@font-face { font-family: 'brandon-reg'; src: url("../assets/fonts/Brandon_reg.otf"); }
+@font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
+@font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
+@font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }

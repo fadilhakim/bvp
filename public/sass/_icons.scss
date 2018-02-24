@@ -1,0 +1,11 @@
+$icon-sprite-dimensions: true;
+@import "icons/*.png";
+@include all-icons-sprites(true);
+
+
+
+.playstore {
+    display: inline-block;
+    $spriteName: play_store;
+    @include icons-sprite($spriteName);
+}

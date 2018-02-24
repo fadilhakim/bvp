@@ -1,14 +1,195 @@
 @import "compass/reset";
 @import './fonts.scss';
+@import './colors.scss';
+
+//general 
 html {
     font-family: $proxima;
+    font-family: 400;
+    
 }
 
-
-// margin
 li {
-    list-style: none
+    list-style: none;
+    
 }
+p,li,a,h1,h2,h3 {
+    color: #555;
+}
+
+
+// button , a , img , text
+
+button {
+    font-family: $proxima;
+    font-weight: 700;
+}
+
+
+.btn-primary {
+    background-color: $soft-blue;
+    &.mid-button {
+        //width: 170px;
+        padding: 10px 15px;;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+
+.head-section {
+    color: $dark-gray;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: center;
+}
+
+.tag-head {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.64px;
+    line-height: 24px;
+    text-align: center;
+    display: block; 
+}
+
+// margin & padding
+
 .m-top20 {
     margin-top: 20px;
+}
+.m-top30 {
+    margin-top: 30px;
+}
+
+.m-top40 {
+    margin-top: 40px;
+}
+
+.m-top60 {
+    margin-top: 60px;
+}
+
+
+.m-btm20 {
+    margin-bottom: 20px;
+}
+
+.m-btm30 {
+    margin-bottom: 30px;
+}
+
+.m-btm40 {
+    margin-bottom: 40px;
+}
+.m-btm60 {
+    margin-bottom: 60px;
+}
+
+.p-left30 {
+    padding-left: 30px;
+}
+
+.pd-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+// border
+
+.border-pink{
+    width: 45px;
+    height: 3px;
+    margin-top: 25px;
+    display: block;
+    background-color: #FF3366;
+    &.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// font & line height
+
+.l-h28 {
+    line-height: 28px;
+}
+
+
+.f-w400 {
+    font-weight: 400;
+}
+
+.f-w700 {
+    font-weight: 700;
+}
+
+
+.white {
+    color: #FFF;
+}
+
+.dark-gray {
+    color:$dark-gray;
+}
+
+// background
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Logo-Vendor-Indonesia {
+    width: 2346px;
+    height: 1540px;
+    background-position: -5px -5px;
+}
+
+
+
+// 5 columns
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 368px) {
+    .col-lg-15 {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
 }

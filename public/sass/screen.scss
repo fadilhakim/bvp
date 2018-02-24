@@ -1,6 +1,7 @@
 @import './fonts.scss';
 @import './colors.scss';
 
+
 .jumbotron {
     position: relative;
     background: url('../assets/background/01-Homepage-Hero_Image.jpg');
@@ -13,9 +14,13 @@
         padding: 15px;
     }
     h1 {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 54px;
+    }
+    h2 {
         font-size: 20px;
         font-weight: 600;
-        color: #555;
         font-family: $proxima-semi-bold;
         line-height: 24px;
         letter-spacing: 0.5px;
@@ -25,6 +30,156 @@
         width: 100%;
         background-color: $soft-blue;
         font-weight: 600;
+    }
+}
+
+.home-benefits {
+    img {
+        width: 80%;
+    }
+    .cover-gray {
+        background-color: $soft-gray;
+    }
+    .text {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .img{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-size: 40px;
+        font-family: $proxima-bold;
+        color:$dark-gray;
+    }
+    p{
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    strong {
+        color: #000;
+        font-weight: bolder;
+    }
+    li {
+        font-weight: 400;
+        line-height: 33px;
+    }
+    a {
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.data_st {
+    background: url('../assets/background/03-Homepage-Create_Account_Section.jpg');
+    background-size: cover;
+    
+    p,h2 {
+        color: #fff;
+        span {
+            font-size: 60px;
+            letter-spacing: 2px;
+            display: block;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+    }
+
+    .col-lg-4 {
+        padding: 10px;
+        p {
+            font-weight: 700;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            font-size: 21px;
+        }
+    }
+    .col-lg-12 {
+        padding: 30px;
+        background-color: $soft-blue;
+        border-radius: 1.62px;
+        height: 224px;
+        &.mid {
+            background-color: #38CBAE;
+        }
+    }
+}
+
+.download-apps {
+    background: url('../assets/background/02-Homepage-App_Section.jpg');
+    background-size: cover;
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0.5px;
+    }
+    p,li,a,h2 {
+        color: #fff;
+    }
+
+    ul {
+        padding-top: 20px;
+        li {
+            list-style: disc;
+            line-height: 30px;
+            list-style-position: inside;
+        }
+    }
+
+    a {
+        width: 133.14px;
+        height: 38.21px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+   
+}
+
+.sucess-stories {
+    border-bottom:1px solid #EAEBED;
+    .testimonial {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        .profpic {
+            width: 100px;
+            height: 100px;
+            border-radius:100px;
+            background-color: #EAEBED; 
+        }
+        .text {
+            padding-top: 40px;
+            p {
+                width: 90%;
+                line-height: 25px;
+            }
+        }
+        .border-pink {
+            margin-top: 60px;
+        }
+        .name {
+            font-size: 18px;
+        }
+        .role {
+            font-size: 12px;
+            color: #555;
+        }
+    }
+    
+}
+
+
+
+.vendors {
+
+    .col-lg-15 {
+
     }
 }
 
