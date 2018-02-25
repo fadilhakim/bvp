@@ -78,3 +78,8 @@
 .sucess-stories .testimonial .name { font-size: 18px; }
 /* line 169, ../sass/screen.scss */
 .sucess-stories .testimonial .role { font-size: 12px; color: #555; }
+
+/* line 187, ../sass/screen.scss */
+.trial { background: url("../assets/background/03-Homepage-Create_Account_Section.jpg"); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
+/* line 192, ../sass/screen.scss */
+.trial h2 { font-size: 28px; }
