@@ -22,7 +22,7 @@ const menu = [
 	{ url: '/', name: 'Home' },
 	{ url: '/benefits', name: 'Benefits' },
 	{ url: '/', name: 'Success Stories' },
-	{ url: '/', name: 'Pricing' },
+	{ url: '/pricing', name: 'Pricing' },
 	{ url: '/', name: 'Blog' },
 ]
 
@@ -36,6 +36,13 @@ app.get('/benefits', function(req, res) {
 	res.render('benefits', {
 		menu: menu,
 		active: 1
+	})
+})
+
+app.get('/pricing', function(req, res) {
+	res.render('pricing', {
+		menu: menu,
+		active: 3
 	})
 })
 

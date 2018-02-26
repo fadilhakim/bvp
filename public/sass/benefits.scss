@@ -8,10 +8,10 @@
     background-size: cover;
 
     .title {
-    	top: 35%;
+    	top: 50%;
     	left: 50%;
-    	position: absolute;
-        margin-right: -50%;
+    	position: relative;
+    	float: left;
         transform: translate(-50%, -50%);
 	    h1 {
 	    	font-family: $proxima-bold;
