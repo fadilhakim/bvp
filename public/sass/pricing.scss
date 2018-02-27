@@ -1,6 +1,7 @@
 @import './fonts.scss';
 @import './colors.scss';
 @import './sosmed_icons.scss';
+@import './mixins.scss';
 
 .pricing-header {
 	height: 300px;
@@ -105,7 +106,7 @@
 		}
 	}
 
-	button {
+	button.btn {
 		width: 100%;
 		padding: 10px 0;
 		border-radius: 4px;
@@ -114,7 +115,19 @@
 		color: $white;
 	}
 
+	.pricing-slide {
+		display: none;
+		text-align: center;
+		@include mobile-device-screen {
+			display: block;
+	    }
+	}
+
 	table {	
+		@include mobile-device-screen {
+			display: none;
+	    }
+	    
 		border-collapse : separate;
 		border-spacing: 15px 0;
 		display: table;
