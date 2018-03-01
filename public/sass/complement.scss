@@ -91,13 +91,25 @@ button {
     margin-bottom: 60px;
 }
 
+.p-left15 {
+    padding-left: 15px;
+}
+
 .p-left30 {
     padding-left: 30px;
 }
 
+.p-top10 {
+    padding-top: 10px;
+}
+
+.p-top20 {
+    padding-top: 20px;
+}
+
 .pd-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 // border
 
@@ -152,6 +164,46 @@ button {
 }
 
 
+.benefits-header {
+	height: 300px;
+    
+    background-size: cover;
+
+    
+}
+
+.page-header {
+    background-size: cover;
+    height: 300px;
+    &.sucess-stories {
+        background: url('../assets/background/05-Success_Stories.jpg');
+    }
+    &.benefits {
+        background: url('../assets/background/04-Benefits-Hero_image_3.jpg');
+    }
+    
+    .title {
+    	top: 35%;
+    	left: 50%;
+    	position: absolute;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+	    h1 {
+	    	font-family: $proxima-bold;
+			font-size: 42px;
+			font-weight: 700;
+	    }
+	    .border-bottom-text {
+			margin-top: 10px;
+			border-bottom: 3px solid $dark-pink;
+			width: 30%;
+			margin-left: auto;
+			margin-right: auto;
+	    }
+    }
+
+}
+
 
 // 5 columns
 
@@ -161,14 +213,29 @@ button {
 .col-lg-15 {
     position: relative;
     min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align:center;
+    .img-responsive {
+        width: 90%;
+    }
 }
 .col-xs-15 {
     width: 20%;
     float: left;
 }
+
+// costum responsive
+
+.mobile {
+    display: none;
+}
+
 @media (min-width: 368px) {
+    display: block;
     .col-lg-15 {
         width: 50%;
         float: left;
@@ -188,6 +255,7 @@ button {
     }
 }
 @media (min-width: 1200px) {
+
     .col-lg-15 {
         width: 20%;
         float: left;

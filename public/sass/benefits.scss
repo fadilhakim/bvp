@@ -3,40 +3,6 @@
 @import './sosmed_icons.scss';
 @import './_mixins.scss';
 
-.benefits-header {
-	height: 300px;
-    background: url('../assets/background/04-Benefits-Hero_image_3.jpg');
-    background-size: cover;
-
-    .title {
-    	top: 50%;
-    	left: 50%;
-    	position: relative;
-    	float: left;
-        transform: translate(-50%, -50%);
-	    h1 {
-	    	font-family: $proxima-bold;
-			font-size: 42px;
-			font-weight: 700;
-	    
-		    @include mobile-device-screen {
-		    	font-size: 26px;
-		    }
-	    }
-	    .border-bottom-text {
-			margin-top: 10px;
-			border-bottom: 3px solid $dark-pink;
-			width: 30%;
-			margin-left: auto;
-			margin-right: auto;
-	    }
-    }
-
-    @include mobile-device-screen {
-    	height: 110px;
-    }
-}
-
 .benefits-content {
 	padding: 70px 0;
 

@@ -154,7 +154,10 @@
             background-color: #EAEBED; 
         }
         .text {
-            padding-top: 40px;
+            background: url('../assets/icons/quote.png') no-repeat;
+            background-size: 10%;
+            background-position-x: 15px;
+            padding-top: 60px;
             p {
                 width: 90%;
                 line-height: 25px;
@@ -183,4 +186,71 @@
     }
 }
 
+
+.trial {
+    background: url('../assets/background/03-Homepage-Create_Account_Section.jpg');
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-size: cover;
+    h2 {
+        font-size: 28px;
+    }
+    
+}
+
+.contact-assist {
+    background-color: #EEF4FF;
+    h2 {
+        font-size: 32px;
+    }
+    .ct-icon {
+        height: 60px;
+        width: 60px;
+        margin: auto;
+    }
+    p {
+        margin-top: 30px;
+        font-size: 22px;
+        span {
+            font-weight: 700;
+            display: block;
+            margin-top: 10px;
+        }
+        a {
+            color: #5E7FDA;
+            font-weight: 700;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+.blogs {
+    .img-blog {
+        width: 100%;
+    }
+    span {
+        display: block;
+        margin-top: 20px;
+        margin-bottom:20px;
+        color: #aaa;
+        font-weight: 400;
+        font-size: 13px;
+        b {
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 14px;
+            color: #4A90E2;
+            text-transform: uppercase;
+        } 
+    }
+    h3 {
+        text-align: center;
+    }
+    h4 {
+        line-height: 29px;
+        font-size: 22px;
+    }    
+}
 

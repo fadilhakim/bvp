@@ -18,39 +18,39 @@
 /* line 58, ../sass/sosmed_icons.scss */
 .icon-path:before { content: '\e800'; }
 
-/* '' */
+/* 'εáÇ' */
 /* line 59, ../sass/sosmed_icons.scss */
 .icon-search:before { content: '\e801'; }
 
-/* '' */
+/* 'εáü' */
 /* line 60, ../sass/sosmed_icons.scss */
 .icon-ok-circled:before { content: '\e802'; }
 
-/* '' */
+/* 'εáé' */
 /* line 61, ../sass/sosmed_icons.scss */
 .icon-cancel-circled:before { content: '\e803'; }
 
-/* '' */
+/* 'εáâ' */
 /* line 62, ../sass/sosmed_icons.scss */
 .icon-info-circled:before { content: '\e804'; }
 
-/* '' */
+/* 'εáä' */
 /* line 63, ../sass/sosmed_icons.scss */
 .icon-instagram-circled:before { content: '\f05e'; }
 
-/* '' */
+/* '∩ü₧' */
 /* line 64, ../sass/sosmed_icons.scss */
 .icon-twitter:before { content: '\f099'; }
 
-/* '' */
+/* '∩éÖ' */
 /* line 65, ../sass/sosmed_icons.scss */
 .icon-facebook:before { content: '\f09a'; }
 
-/* '' */
+/* '∩éÜ' */
 /* line 66, ../sass/sosmed_icons.scss */
 .icon-instagram:before { content: '\f16d'; }
 
-/* '' */
+/* '∩à¡' */
 /* line 67, ../sass/sosmed_icons.scss */
 .icon-diamond:before { content: '\f219'; }
 
@@ -58,88 +58,75 @@
 /* line 68, ../sass/sosmed_icons.scss */
 .icon-twitter-circled:before { content: '\f30a'; }
 
-/* '' */
+/* '∩îè' */
 /* line 6, ../sass/benefits.scss */
-.benefits-header { height: 300px; background: url("../assets/background/04-Benefits-Hero_image_3.jpg"); background-size: cover; }
-/* line 11, ../sass/benefits.scss */
-.benefits-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
-/* line 17, ../sass/benefits.scss */
-.benefits-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
-@media only screen and (max-width: 1023px) { /* line 17, ../sass/benefits.scss */
-  .benefits-header .title h1 { font-size: 26px; } }
-/* line 26, ../sass/benefits.scss */
-.benefits-header .title .border-bottom-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 30%; margin-left: auto; margin-right: auto; }
-@media only screen and (max-width: 1023px) { /* line 6, ../sass/benefits.scss */
-  .benefits-header { height: 110px; } }
-
-/* line 40, ../sass/benefits.scss */
 .benefits-content { padding: 70px 0; }
-@media only screen and (max-width: 1023px) { /* line 40, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 6, ../sass/benefits.scss */
   .benefits-content { padding: 20px 0 50px; } }
-/* line 47, ../sass/benefits.scss */
+/* line 13, ../sass/benefits.scss */
 .benefits-content [class*='col-'] { padding: 0; float: left; }
-@media only screen and (max-width: 1023px) { /* line 47, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 13, ../sass/benefits.scss */
   .benefits-content [class*='col-'] { padding: 0 15px; } }
-/* line 56, ../sass/benefits.scss */
+/* line 22, ../sass/benefits.scss */
 .benefits-content.bg-gray { background-color: #F8F8F8; }
-/* line 61, ../sass/benefits.scss */
+/* line 27, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list { padding: 10px 34px; }
-/* line 64, ../sass/benefits.scss */
+/* line 30, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list .social { font-family: "proxima-bold"; margin-top: 10px; font-size: 11px; font-weight: 700; line-height: 18px; }
-/* line 71, ../sass/benefits.scss */
+/* line 37, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list .social a { color: #698DF5; }
-/* line 75, ../sass/benefits.scss */
+/* line 41, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list .social .icon { font-size: 16px; margin-left: -4px; }
-/* line 76, ../sass/benefits.scss */
+/* line 42, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list .social .icon.mt-3 { margin-top: 3px !important; }
-/* line 83, ../sass/benefits.scss */
+/* line 49, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list .social .followers { margin-left: 5px; }
-@media only screen and (max-width: 1023px) { /* line 64, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 30, ../sass/benefits.scss */
   .benefits-content .bottom .benefit-list .social { padding: 0; }
-  /* line 89, ../sass/benefits.scss */
+  /* line 55, ../sass/benefits.scss */
   .benefits-content .bottom .benefit-list .social .icon { margin-left: 0; padding: 0; }
-  /* line 94, ../sass/benefits.scss */
+  /* line 60, ../sass/benefits.scss */
   .benefits-content .bottom .benefit-list .social .followers { margin-left: 0; padding: 0; } }
-/* line 101, ../sass/benefits.scss */
+/* line 67, ../sass/benefits.scss */
 .benefits-content .bottom .benefit-list p { margin-top: 10px; padding-right: 4.6vw; }
-@media only screen and (max-width: 1023px) { /* line 61, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 27, ../sass/benefits.scss */
   .benefits-content .bottom .benefit-list { padding: 0 15px; } }
-/* line 113, ../sass/benefits.scss */
+/* line 79, ../sass/benefits.scss */
 .benefits-content img { height: 150px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 40px; }
-@media only screen and (max-width: 1023px) { /* line 113, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 79, ../sass/benefits.scss */
   .benefits-content img { height: 170px; margin-top: 50px; } }
-/* line 126, ../sass/benefits.scss */
+/* line 92, ../sass/benefits.scss */
 .benefits-content h2 { font-family: "proxima-bold"; font-size: 28px; font-weight: 700; line-height: 43px; }
-@media only screen and (max-width: 1023px) { /* line 126, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 92, ../sass/benefits.scss */
   .benefits-content h2 { font-size: 22px; } }
-/* line 137, ../sass/benefits.scss */
+/* line 103, ../sass/benefits.scss */
 .benefits-content p { margin-top: 20px; font-size: 14px; line-height: 20px; color: #555555; }
-/* line 143, ../sass/benefits.scss */
+/* line 109, ../sass/benefits.scss */
 .benefits-content p em { font-family: "proxima-semi-bold"; }
-/* line 147, ../sass/benefits.scss */
+/* line 113, ../sass/benefits.scss */
 .benefits-content p.title { font-size: 16px; font-family: "proxima-bold"; height: 50px; }
-@media only screen and (max-width: 1023px) { /* line 147, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 113, ../sass/benefits.scss */
   .benefits-content p.title { height: auto; } }
-/* line 158, ../sass/benefits.scss */
+/* line 124, ../sass/benefits.scss */
 .benefits-content .border-bottom-left-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 45px; margin-left: 3px; }
 
-/* line 166, ../sass/benefits.scss */
+/* line 132, ../sass/benefits.scss */
 .benefit-footer { height: 265px; background: url("../assets/background/03-Homepage-Create_Account_Section.jpg"); background-size: cover; }
-/* line 171, ../sass/benefits.scss */
+/* line 137, ../sass/benefits.scss */
 .benefit-footer .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); text-align: center; }
-/* line 178, ../sass/benefits.scss */
+/* line 144, ../sass/benefits.scss */
 .benefit-footer .title h2 { font-family: "proxima-semi-bold"; font-size: 22px; color: #FFF; }
-@media only screen and (max-width: 1023px) { /* line 178, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 144, ../sass/benefits.scss */
   .benefit-footer .title h2 { font-size: 18px; line-height: 25px; } }
-/* line 188, ../sass/benefits.scss */
+/* line 154, ../sass/benefits.scss */
 .benefit-footer .title .border-bottom-text { display: none; }
-@media only screen and (max-width: 1023px) { /* line 171, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 137, ../sass/benefits.scss */
   .benefit-footer .title { padding: 0 13px; }
-  /* line 194, ../sass/benefits.scss */
+  /* line 160, ../sass/benefits.scss */
   .benefit-footer .title .border-bottom-text { display: block; margin-top: 10px; border-bottom: 3px solid #FF3366; width: 10%; margin-left: auto; margin-right: auto; } }
-/* line 204, ../sass/benefits.scss */
+/* line 170, ../sass/benefits.scss */
 .benefit-footer .title .button { margin-top: 35px; }
-/* line 206, ../sass/benefits.scss */
+/* line 172, ../sass/benefits.scss */
 .benefit-footer .title .button a { padding: 8px 25px; background: #698DF5; border-radius: 4px; font-size: 14px; color: #FFF; }
-@media only screen and (max-width: 1023px) { /* line 204, ../sass/benefits.scss */
+@media only screen and (max-width: 1023px) { /* line 170, ../sass/benefits.scss */
   .benefit-footer .title .button { margin-top: 25px; } }

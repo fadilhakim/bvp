@@ -1,7 +1,7 @@
 <% include template/header %>
     <section class="jumbotron">
         <div class="row justify-content-end">
-            <div class="col-lg-9 col-md-6 col-xs-12">
+            <div class="col-lg-8 col-md-6 col-xs-12">
                 <h1>
                     The Right Place To Grow Your <br> Wedding Business
                 </h1>
@@ -9,7 +9,7 @@
                 <p class="l-h28 f-w400">Join more than 20,000 wedding vendors from 70 countries who have <br> with millions of engaged couples
                 through Bridestory.</p>
             </div>   
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="col-lg-4 col-md-6 col-xs-12">
                 <form action="#">
                     <h2 class="">Create Your Free Business Profile!</h2>
                     <span>Fill in the details below :</span>
@@ -36,6 +36,10 @@
                 </form>
             </div>
         </div>
+    </section>
+
+    <section class="mobile home-regis">
+
     </section>
 
     <section class="home-benefits bg-white">
@@ -122,25 +126,24 @@
         <div class="container">
             <h2 class="head-section white">Lastest Statistics</h2>
             <span class="border-pink center m-top20 m-btm20"></span>
-            <span class="tag-head m-btm20 white">Average data from the last 12 months</span>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <div class="col-lg-12">
-                        <p>Average <br> Visits / Month
+                        <p>Average <br> Monthly Visitors
                             <span>597K</span>
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="col-lg-12 mid">
-                        <p>Average <br> Total Leads / Month
+                        <p>Average <br> Monthly Inquiries
                             <span>290K</span>
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="col-lg-12">
-                        <p>Average <br> Monthly Leads / Vendor
+                        <p>Average <br> Monthly Inquiries / Vendor
                             <span>136</span>
                         </p>
                     </div>
@@ -179,7 +182,6 @@
                         <a href="https://app.appsflyer.com/com.bridestory.user?pid=Bridestory&c=Desktop_App-Page_Top">
                             <img class="img-responsive" src="assets/icons/play_store.png" alt="Bridestory Play Store">
                         </a>
-                 
                 </div>
             </div>
         </div>
@@ -229,31 +231,84 @@
         </div>
     </section>
     
-    <section class="vendors pd-section">
-        <h2 class="head-section">Vendors Who Have Joined Us</h2>
+    <section class="vendors pd-section vendor-origin">
+        <h2 class="head-section">Vendors Who Have Joined Us </h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
+                <% dataVendors.forEach((vendor)=>{ %>
                 <div class="col-md-15 col-lg-15">
-                    tes
+                        <img class="img-responsive" src="assets/vendor_logo/sg/<%= vendor.vendor_img %>">
                 </div>
-                <div class="col-md-15 col-lg-15">
-                    tes
+                <%}) %>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center m-top40 trial">
+        <div class="container">
+            <h2 class="head-section white">Want to grow your business with us? Create your FREE business profile now!</h2>
+            <a href="#" class="btn btn-primary mid-button center-block m-top30">Start Free Trial</a>
+        </div>
+    </section>
+
+    <section class="text-center pd-section contact-assist">
+        <h2 class="head-section">Need assistance? Contact us today!</h2>
+        <span class="border-pink center m-top20 m-btm20"></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="ct-icon">
+                        <img class="img-responsive" src="assets/icons/Landing_page_icon-Phone.png" alt="Contact Call">
+                    </div>
+                    <p>Call <span>+62 21 3006 6819</span></p>
                 </div>
-                <div class="col-md-15 col-lg-15">
-                    tes
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="ct-icon p-top20 ">
+                        <img class="img-responsive" src="assets/icons/Landing_page_icon_Email.png" alt="Contact Email">
+                    </div>
+                    <p>Email <span>support@bridestory.com</span></p>
                 </div>
-                <div class="col-md-15 col-lg-15">
-                    tes
-                </div>
-                <div class="col-md-15 col-lg-15">
-                    tes
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="ct-icon p-top20 ">
+                        <img class="img-responsive" src="assets/icons/Landing_page_icon_Chat.png" alt="Contact Chat">
+                    </div>
+                    <p>Chat <a href="#">Start Chatting</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="row text-center m-top40">
-        <a href="#" class="btn btn-primary mid-button center-block">Start Free Trial</a>
+    <section class="blogs pd-section">
+        <h2 class="head-section">Business Blog</h2>
+        <span class="border-pink center m-top20 m-btm20"></span>
+        <h3 class="f-w400 m-top30 m-btm30">Resources you need to grow your wedding business.</h3>
+        <div class="container">
+            <div class="row">
+
+                <%let i = 0; dataBlogs.forEach((blogs)=>{ %>
+                <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="img-blog">
+                        <img class="img-responsive" src="<%= blogs.homestreamImage %>">
+                    </div>
+                    <span class="catagory">
+                        <b><%= blogs.categories.data[0].name %></b>
+                        - <% 
+                            var fd = blogs.createdAt
+                            var date = fd.slice(0,10)
+                            var newDate = new Date(date) %>
+                          <%= newDate.toDateString() %>
+                    </span>
+                    <h4 class="f-w700">
+                            <%= blogs.title %>
+                    </h4>
+                </div>
+                <%}) %>
+            </div>
+        </div>
+
+        <div class="container text-center m-top40">
+            <a href="https://www.bridestory.com/blog" class="btn btn-primary mid-button center-block ">View More Articles</a>
+        </div>
     </section>
 <% include template/footer %>
