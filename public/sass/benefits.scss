@@ -1,27 +1,29 @@
 @import './fonts.scss';
 @import './colors.scss';
 @import './sosmed_icons.scss';
-
+@import './_mixins.scss';
 
 .benefits-content {
 	padding: 70px 0;
 
+    @include mobile-device-screen {
+    	padding: 20px 0 50px;
+    }
+
 	[class*='col-'] {
 		padding: 0;
 		float: left;
+
+	    @include mobile-device-screen {
+	    	padding: 0 15px;
+	    }
 	}
 
 	&.bg-gray {
 		background-color: $soft-gray;
 	}
 
-	.top {
-		padding-bottom: 30px;
-	}
-
 	.bottom {
-		margin-top: 30px;
-
 		.benefit-list {
 			padding: 10px 34px;
 
@@ -47,12 +49,30 @@
 				.followers {
 					margin-left: 5px;
 				}
+
+				@include mobile-device-screen {
+			    	padding:0;
+			    	.icon {
+						margin-left: 0;
+						padding: 0;
+					}
+
+			    	.followers {
+						margin-left: 0;
+						padding: 0;
+					}
+			    }
 			}
 
 			p {
 				margin-top: 10px;
 				padding-right: 4.6vw;
 			}
+
+
+		    @include mobile-device-screen {
+		    	padding: 0 15px;
+		    }
 		}
 	}
 
@@ -62,6 +82,11 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 40px;
+
+	    @include mobile-device-screen {
+	    	height: 170px;
+	    	margin-top: 50px;
+	    }
 	}
 
 	h2 {
@@ -69,6 +94,10 @@
 		font-size: 28px;
 		font-weight: 700;
 		line-height: 43px;
+	    
+	    @include mobile-device-screen {
+	    	font-size: 22px;
+	    }
 	}
 
 	p {
@@ -85,6 +114,10 @@
 			font-size: 16px;
 			font-family: $proxima-bold;
 	    	height: 50px;
+
+		    @include mobile-device-screen {
+		    	height: auto;
+		    }
 		}
 	}
     
@@ -102,12 +135,36 @@
     background-size: cover;
 
     .title {
-    	text-align: center;
-        transform: translate(0, 8vw);
+    	top: 50%;
+		left: 50%;
+		position: relative;
+		float: left;
+		transform: translate(-50%, -50%);
+		text-align: center;
 	    h2 {
 	    	font-family: $proxima-semi-bold;
 			font-size: 22px;
 			color: $white;
+			@include mobile-device-screen {
+				font-size: 18px;
+				line-height: 25px;
+		    }
+	    }
+
+	    .border-bottom-text {
+	    	display: none;
+	    }
+
+	    @include mobile-device-screen {
+			padding: 0 13px;
+		    .border-bottom-text {
+		    	display: block;
+				margin-top: 10px;
+				border-bottom: 3px solid $dark-pink;
+				width: 10%;
+				margin-left: auto;
+				margin-right: auto;
+		    }
 	    }
 
 	    .button {
@@ -119,6 +176,9 @@
 				font-size: 14px;
 				color: $white;
 			}
+			@include mobile-device-screen {
+	    		margin-top: 25px;
+		    }
 	    }
 
     }

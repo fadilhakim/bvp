@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@font-face { font-family: 'brandon-bold'; src: url("../assets/fonts/Brandon_bld.otf"); }
+@font-face { font-family: 'brandon-reg-italic'; src: url("../assets/fonts/Brandon_reg_it.otf"); }
+@font-face { font-family: 'brandon-reg'; src: url("../assets/fonts/Brandon_reg.otf"); }
+@font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
+@font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
+@font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
+@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?84059704"); src: url("../assets/fonts/fontello.eot?84059704#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?84059704") format("woff2"), url("../assets/fonts/fontello.woff?84059704") format("woff"), url("../assets/fonts/fontello.ttf?84059704") format("truetype"), url("../assets/fonts/fontello.svg?84059704#fontello") format("svg"); font-weight: normal; font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'fontello'; src: url('../font/fontello.svg?84059704#fontello') format('svg'); }
+}
+*/
+/* line 23, ../sass/sosmed_icons.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: .2em; text-align: center; /* opacity: .8; */ /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; /* fix buttons height, for twitter bootstrap */ line-height: 1em; /* Animation center compensation - margins should be symmetric */ /* remove if not needed */ margin-left: .2em; /* you can be more comfortable with increased icons size */ /* font-size: 120%; */ /* Font smoothing. That was taken from TWBS */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; /* Uncomment for 3D effect */ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+/* line 58, ../sass/sosmed_icons.scss */
+.icon-path:before { content: '\e800'; }
+
+/* '' */
+/* line 59, ../sass/sosmed_icons.scss */
+.icon-search:before { content: '\e801'; }
+
+/* '' */
+/* line 60, ../sass/sosmed_icons.scss */
+.icon-ok-circled:before { content: '\e802'; }
+
+/* '' */
+/* line 61, ../sass/sosmed_icons.scss */
+.icon-cancel-circled:before { content: '\e803'; }
+
+/* '' */
+/* line 62, ../sass/sosmed_icons.scss */
+.icon-info-circled:before { content: '\e804'; }
+
+/* '' */
+/* line 63, ../sass/sosmed_icons.scss */
+.icon-instagram-circled:before { content: '\f05e'; }
+
+/* '' */
+/* line 64, ../sass/sosmed_icons.scss */
+.icon-twitter:before { content: '\f099'; }
+
+/* '' */
+/* line 65, ../sass/sosmed_icons.scss */
+.icon-facebook:before { content: '\f09a'; }
+
+/* '' */
+/* line 66, ../sass/sosmed_icons.scss */
+.icon-instagram:before { content: '\f16d'; }
+
+/* '' */
+/* line 67, ../sass/sosmed_icons.scss */
+.icon-twitter-circled:before { content: '\f30a'; }
+
+/* '' */
+/* line 6, ../sass/pricing.scss */
+.pricing-header { height: 300px; background: url("../assets/background/06-Pricing.jpg"); background-size: cover; }
+/* line 11, ../sass/pricing.scss */
+.pricing-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
+/* line 17, ../sass/pricing.scss */
+.pricing-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
+
+/* line 26, ../sass/pricing.scss */
+.border-bottom-text { margin-top: 20px; border-bottom: 3px solid #FF3366; width: 3vw; margin-left: auto; margin-right: auto; }
+
+/* line 35, ../sass/pricing.scss */
+.pricing-content h2 { text-align: center; font-size: 33px; font-family: "proxima-bold"; }
+/* line 41, ../sass/pricing.scss */
+.pricing-content p { font-size: 13px; letter-spacing: .3px; line-height: 18px; }
+/* line 47, ../sass/pricing.scss */
+.pricing-content .bold { font-family: "proxima-bold"; }
+/* line 51, ../sass/pricing.scss */
+.pricing-content .bg-gray { background-color: #F8F8F8; }
+/* line 55, ../sass/pricing.scss */
+.pricing-content .center-position { margin-left: auto; margin-right: auto; }
+/* line 59, ../sass/pricing.scss */
+.pricing-content .center-position [class*='col-'] { padding: 0; float: left; }
+/* line 65, ../sass/pricing.scss */
+.pricing-content .select-category { background: url(../assets/icons/arrow-down.png); background-repeat: no-repeat; width: 100%; height: 45px; border: 1px solid #979797; border-radius: 4px; background-position: right 10px center; padding: 0; }
+/* line 74, ../sass/pricing.scss */
+.pricing-content .select-category select { width: 100%; height: 40px; background: transparent; border: none; appearance: none; padding-left: 10px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; color: #848484; }
+/* line 89, ../sass/pricing.scss */
+.pricing-content input { width: 100%; height: 40px; padding-left: 10px; border-radius: 4px; box-sizing: border-box; border: 1px solid #979797; }
+/* line 98, ../sass/pricing.scss */
+.pricing-content .search-city { position: relative; color: #555555; }
+/* line 102, ../sass/pricing.scss */
+.pricing-content .search-city i { position: absolute; top: 10px; right: 5px; }
+/* line 109, ../sass/pricing.scss */
+.pricing-content button.btn { width: 100%; padding: 10px 0; border-radius: 4px; background-color: #698DF5; border: 1px solid #698DF5; color: #FFF; }
+/* line 118, ../sass/pricing.scss */
+.pricing-content .pricing-slide { display: none; text-align: center; }
+@media only screen and (max-width: 1023px) { /* line 118, ../sass/pricing.scss */
+  .pricing-content .pricing-slide { display: block; } }
+/* line 126, ../sass/pricing.scss */
+.pricing-content table { border-collapse: separate; border-spacing: 15px 0; display: table; font-size: 14px; margin-left: -15px; width: 100%; }
+@media only screen and (max-width: 1023px) { /* line 126, ../sass/pricing.scss */
+  .pricing-content table { display: none; } }
+/* line 136, ../sass/pricing.scss */
+.pricing-content table [class*='col-'] { padding: 0; float: left; }
+/* line 143, ../sass/pricing.scss */
+.pricing-content table tr:nth-child(even) { background-color: #F8F8F8; }
+/* line 147, ../sass/pricing.scss */
+.pricing-content table tr:nth-child(odd), .pricing-content table tr:last-child { background-color: #FFF; }
+/* line 152, ../sass/pricing.scss */
+.pricing-content table tbody td { color: #555555; }
+/* line 158, ../sass/pricing.scss */
+.pricing-content table th:nth-child(4n+1), .pricing-content table td:nth-child(4n+1) { width: 350px; }
+/* line 162, ../sass/pricing.scss */
+.pricing-content table th:nth-child(1n+2), .pricing-content table td:nth-child(1n+2) { width: 200px; text-align: center; vertical-align: top; }
+/* line 167, ../sass/pricing.scss */
+.pricing-content table th:nth-child(1n+2) .best-seller, .pricing-content table td:nth-child(1n+2) .best-seller { width: 65%; background-color: #38CBAE; padding: 9px 0; margin-left: auto; margin-right: auto; color: #FFF; }
+/* line 176, ../sass/pricing.scss */
+.pricing-content table th:nth-child(1n+2) .price, .pricing-content table td:nth-child(1n+2) .price { font-size: 16px; }
+/* line 181, ../sass/pricing.scss */
+.pricing-content table th i, .pricing-content table td i { font-size: 18px; }
+/* line 183, ../sass/pricing.scss */
+.pricing-content table th i.green, .pricing-content table td i.green { color: #38CBAE; }
+/* line 186, ../sass/pricing.scss */
+.pricing-content table th i.red, .pricing-content table td i.red { color: #FF3166; }
+/* line 189, ../sass/pricing.scss */
+.pricing-content table th i.blue, .pricing-content table td i.blue { color: #698DF5; }
+/* line 194, ../sass/pricing.scss */
+.pricing-content table th.side-border, .pricing-content table td.side-border { border-left: 2px solid #38CBAE; border-right: 2px solid #38CBAE; }
+/* line 199, ../sass/pricing.scss */
+.pricing-content table th.top-border, .pricing-content table td.top-border { border-top: 2px solid #38CBAE; }
+/* line 203, ../sass/pricing.scss */
+.pricing-content table th.bottom-border, .pricing-content table td.bottom-border { border-bottom: 2px solid #38CBAE; }
