@@ -28,9 +28,6 @@ const menu = [
 
 ]
 
-
-
-
 app.get('/', function(req, res) {
 	
 	fs.readFile('./data/vendors.json','utf-8', (err, data) => {
@@ -63,17 +60,19 @@ app.get('/benefits', function(req, res) {
 	})
 })
 
-<<<<<<< HEAD
+
 app.get('/sucessstories', function(req, res) {
 	res.render('testimonials', {
 		menu: menu,
 		active: 2
-=======
+	})
+})
+
 app.get('/pricing', function(req, res) {
 	res.render('pricing', {
 		menu: menu,
 		active: 3
->>>>>>> 8641d2dcea2082e9dd27654b6a65e2d5c646c49c
+
 	})
 })
 
