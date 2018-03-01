@@ -52,6 +52,10 @@
 
 /* '' */
 /* line 67, ../sass/sosmed_icons.scss */
+.icon-diamond:before { content: '\f219'; }
+
+/* '' */
+/* line 68, ../sass/sosmed_icons.scss */
 .icon-twitter-circled:before { content: '\f30a'; }
 
 /* '' */

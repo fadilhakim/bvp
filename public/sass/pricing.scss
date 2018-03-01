@@ -62,6 +62,27 @@
 		}
 	}
 
+	.text-center {
+		text-align: center;
+	}
+
+	.gold {
+		color: $gold;
+	}
+
+	i {
+		font-size: 18px;
+		&.green {
+			color: $turqoise;
+		}
+		&.red {
+			color: $red;
+		}
+		&.blue {
+			color: $soft-blue;
+		}
+	}
+
 	.select-category {
 		background: url(../assets/icons/arrow-down.png);
 	    background-repeat: no-repeat;
@@ -117,7 +138,26 @@
 
 	.pricing-slide {
 		display: none;
-		text-align: center;
+
+		.gold-plan {
+			.top-slide {
+				.best-seller {
+					background-color: $gold;
+					color: $white;
+					padding: 7px 30px;
+					border-radius: 3px;
+				}
+
+				i {					
+					padding: 2px 2px 1px 1px;
+					background: $gold;
+					border-radius: 50%;
+					font-size: 12px;
+					color: $white;
+				}
+			}
+		}
+
 		@include mobile-device-screen {
 			display: block;
 	    }
@@ -175,19 +215,6 @@
 
 				.price {
 					font-size: 16px; 
-				}
-			}
-
-			i {
-				font-size: 18px;
-				&.green {
-					color: $turqoise;
-				}
-				&.red {
-					color: $red;
-				}
-				&.blue {
-					color: $soft-blue;
 				}
 			}
 
