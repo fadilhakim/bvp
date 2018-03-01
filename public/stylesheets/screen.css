@@ -69,17 +69,41 @@
 /* line 150, ../sass/screen.scss */
 .sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; }
 /* line 156, ../sass/screen.scss */
-.sucess-stories .testimonial .text { padding-top: 40px; }
-/* line 158, ../sass/screen.scss */
+.sucess-stories .testimonial .text { background: url("../assets/icons/quote.png") no-repeat; background-size: 10%; background-position-x: 15px; padding-top: 60px; }
+/* line 161, ../sass/screen.scss */
 .sucess-stories .testimonial .text p { width: 90%; line-height: 25px; }
-/* line 163, ../sass/screen.scss */
-.sucess-stories .testimonial .border-pink { margin-top: 60px; }
 /* line 166, ../sass/screen.scss */
-.sucess-stories .testimonial .name { font-size: 18px; }
+.sucess-stories .testimonial .border-pink { margin-top: 60px; }
 /* line 169, ../sass/screen.scss */
+.sucess-stories .testimonial .name { font-size: 18px; }
+/* line 172, ../sass/screen.scss */
 .sucess-stories .testimonial .role { font-size: 12px; color: #555; }
 
-/* line 187, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .trial { background: url("../assets/background/03-Homepage-Create_Account_Section.jpg"); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
-/* line 192, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .trial h2 { font-size: 28px; }
+
+/* line 201, ../sass/screen.scss */
+.contact-assist { background-color: #EEF4FF; }
+/* line 203, ../sass/screen.scss */
+.contact-assist h2 { font-size: 32px; }
+/* line 206, ../sass/screen.scss */
+.contact-assist .ct-icon { height: 60px; width: 60px; margin: auto; }
+/* line 211, ../sass/screen.scss */
+.contact-assist p { margin-top: 30px; font-size: 22px; }
+/* line 214, ../sass/screen.scss */
+.contact-assist p span { font-weight: 700; display: block; margin-top: 10px; }
+/* line 219, ../sass/screen.scss */
+.contact-assist p a { color: #5E7FDA; font-weight: 700; display: block; margin-top: 10px; }
+
+/* line 230, ../sass/screen.scss */
+.blogs .img-blog { width: 100%; }
+/* line 233, ../sass/screen.scss */
+.blogs span { display: block; margin-top: 20px; margin-bottom: 20px; color: #aaa; font-weight: 400; font-size: 13px; }
+/* line 240, ../sass/screen.scss */
+.blogs span b { font-weight: 700; letter-spacing: 1px; font-size: 14px; color: #4A90E2; text-transform: uppercase; }
+/* line 248, ../sass/screen.scss */
+.blogs h3 { text-align: center; }
+/* line 251, ../sass/screen.scss */
+.blogs h4 { line-height: 29px; font-size: 22px; }

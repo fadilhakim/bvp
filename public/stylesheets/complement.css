@@ -81,48 +81,79 @@ button { font-family: "proxima-reg"; font-weight: 700; }
 .m-btm60 { margin-bottom: 60px; }
 
 /* line 94, ../sass/complement.scss */
-.p-left30 { padding-left: 30px; }
+.p-left15 { padding-left: 15px; }
 
 /* line 98, ../sass/complement.scss */
-.pd-section { padding-top: 40px; padding-bottom: 40px; }
+.p-left30 { padding-left: 30px; }
 
-/* line 104, ../sass/complement.scss */
-.border-pink { width: 45px; height: 3px; margin-top: 25px; display: block; background-color: #FF3366; }
+/* line 102, ../sass/complement.scss */
+.p-top10 { padding-top: 10px; }
+
+/* line 106, ../sass/complement.scss */
+.p-top20 { padding-top: 20px; }
+
 /* line 110, ../sass/complement.scss */
+.pd-section { padding-top: 50px; padding-bottom: 50px; }
+
+/* line 116, ../sass/complement.scss */
+.border-pink { width: 45px; height: 3px; margin-top: 25px; display: block; background-color: #FF3366; }
+/* line 122, ../sass/complement.scss */
 .border-pink.center { margin-left: auto; margin-right: auto; }
 
-/* line 118, ../sass/complement.scss */
+/* line 130, ../sass/complement.scss */
 .l-h28 { line-height: 28px; }
 
-/* line 123, ../sass/complement.scss */
+/* line 135, ../sass/complement.scss */
 .f-w400 { font-weight: 400; }
 
-/* line 127, ../sass/complement.scss */
+/* line 139, ../sass/complement.scss */
 .f-w700 { font-weight: 700; }
 
-/* line 132, ../sass/complement.scss */
+/* line 144, ../sass/complement.scss */
 .white { color: #FFF; }
 
-/* line 136, ../sass/complement.scss */
+/* line 148, ../sass/complement.scss */
 .dark-gray { color: #555555; }
 
-/* line 142, ../sass/complement.scss */
+/* line 154, ../sass/complement.scss */
 .sprite { background-image: url(spritesheet.png); background-repeat: no-repeat; display: block; }
 
-/* line 148, ../sass/complement.scss */
+/* line 160, ../sass/complement.scss */
 .sprite-Logo-Vendor-Indonesia { width: 2346px; height: 1540px; background-position: -5px -5px; }
 
-/* line 158, ../sass/complement.scss */
-.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 10px; padding-left: 10px; }
-
 /* line 167, ../sass/complement.scss */
+.benefits-header { height: 300px; background-size: cover; }
+
+/* line 175, ../sass/complement.scss */
+.page-header { background-size: cover; height: 300px; }
+/* line 178, ../sass/complement.scss */
+.page-header.sucess-stories { background: url("../assets/background/05-Success_Stories.jpg"); }
+/* line 181, ../sass/complement.scss */
+.page-header.benefits { background: url("../assets/background/04-Benefits-Hero_image_3.jpg"); }
+/* line 185, ../sass/complement.scss */
+.page-header .title { top: 35%; left: 50%; position: absolute; margin-right: -50%; transform: translate(-50%, -50%); }
+/* line 191, ../sass/complement.scss */
+.page-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
+/* line 196, ../sass/complement.scss */
+.page-header .title .border-bottom-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 30%; margin-left: auto; margin-right: auto; }
+
+/* line 210, ../sass/complement.scss */
+.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 30px; padding-left: 30px; display: flex; align-items: center; flex-wrap: wrap; text-align: center; }
+/* line 222, ../sass/complement.scss */
+.col-xs-15 .img-responsive, .col-sm-15 .img-responsive, .col-md-15 .img-responsive, .col-lg-15 .img-responsive { width: 90%; }
+
+/* line 226, ../sass/complement.scss */
 .col-xs-15 { width: 20%; float: left; }
 
-@media (min-width: 368px) { /* line 172, ../sass/complement.scss */
+/* line 233, ../sass/complement.scss */
+.mobile { display: none; }
+
+@media (min-width: 368px) { display: block;
+  /* line 239, ../sass/complement.scss */
   .col-lg-15 { width: 50%; float: left; } }
-@media (min-width: 768px) { /* line 179, ../sass/complement.scss */
+@media (min-width: 768px) { /* line 246, ../sass/complement.scss */
   .col-sm-15 { width: 50%; float: left; } }
-@media (min-width: 992px) { /* line 185, ../sass/complement.scss */
+@media (min-width: 992px) { /* line 252, ../sass/complement.scss */
   .col-md-15 { width: 20%; float: left; } }
-@media (min-width: 1200px) { /* line 191, ../sass/complement.scss */
+@media (min-width: 1200px) { /* line 259, ../sass/complement.scss */
   .col-lg-15 { width: 20%; float: left; } }

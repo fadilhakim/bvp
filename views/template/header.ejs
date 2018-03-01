@@ -20,13 +20,24 @@
 
     <header class="container-fluid sticky-top">
         <nav class="navbar navbar-header navbar-expand-lg navbar-light">
-
-            <a class="navbar-brand" href="#">
-                
-            </a>
-            <div class="">
+            
+            <a class="navbar-brand" href="/"></a>
+            <div class="top-menu">
                 <ul>
-                    <li><a href="#">Vendor Login</a></li>
+                    <li><a href="#">VENDOR LOGIN</a></li>
+                    <li class="p-left15"><a class="btn btn-primary" href="#">Start Free Trial</a></li>
+                    <li><a href="#">
+                        <div class="dropdown show">
+                            <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                EN
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item en" href="#">EN</a>
+                                <a class="dropdown-item id" href="#">ID</a>
+                            </div>
+                        </div>
+                    </a>
+                </li>
                 </ul>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +60,6 @@
                         <% } %>
                     <% }); %>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                  
-                </form>
             </div>  
         </nav>
 

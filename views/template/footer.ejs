@@ -45,19 +45,30 @@
 
             <div class="col-lg-2 col-md-4 col-xs-6">
                 <h4 class="">Language</h4>
-                <form action="">
-                    <select name="">
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </form>
+                <div class="dropdown show">
+                    <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        EN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item en" href="#">EN</a>
+                        <a class="dropdown-item id" href="#">ID</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row btm justify-content-between">
-            <div class="col-4">
+        <div class="row btm">
+            <div class="col-lg-6">
                 <img class="footer-logo" src="assets/icons/footer_logo.png" alt="bridestory logo">
             </div>
-    
+            <div class="col-lg-6">
+                <ul>
+                    <li><a href="">privacy policy</a></li>
+                    <li><a href="">term and conditions</a></li>
+                    <li><a href="">sitemap</a></li>
+                    <% var d = new Date(); var n = d.getFullYear(); %>
+                    <li><a href="">&copy; <%= n %> Bridestory all rights reserved</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

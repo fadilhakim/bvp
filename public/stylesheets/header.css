@@ -1,17 +1,35 @@
-/* line 3, ../sass/header.scss */
+@font-face { font-family: 'brandon-bold'; src: url("../assets/fonts/Brandon_bld.otf"); }
+@font-face { font-family: 'brandon-reg-italic'; src: url("../assets/fonts/Brandon_reg_it.otf"); }
+@font-face { font-family: 'brandon-reg'; src: url("../assets/fonts/Brandon_reg.otf"); }
+@font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
+@font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
+@font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
+/* line 4, ../sass/header.scss */
 header { background-color: #fff; }
 /* line 5, ../sass/header.scss */
-header a { font-family: Helvetica; font-weight: bold; line-height: 2em; letter-spacing: 1px; word-wrap: break-word; font-size: 12px; }
-/* line 14, ../sass/header.scss */
+header .navbar { display: block; }
+/* line 9, ../sass/header.scss */
+header a { font-weight: 700; line-height: 18px; letter-spacing: 0.2px; word-wrap: break-word; font-size: 15px; }
+/* line 17, ../sass/header.scss */
 header .navbar-brand { width: 210px; height: 50px; background-size: 100%; background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0; }
-
-/* line 23, ../sass/header.scss */
-.navbar-expand-lg .navbar-nav .nav-link { padding: 0px; margin-right: 20px; padding-bottom: 5px; }
+/* line 24, ../sass/header.scss */
+header .top-menu { float: right; width: 350px; margin-top: 20px; }
 /* line 28, ../sass/header.scss */
+header .top-menu li { display: inline-block; text-align: right; }
+/* line 31, ../sass/header.scss */
+header .top-menu li a { font-family: "brandon-bold"; letter-spacing: 1px; font-size: 13px; }
+/* line 37, ../sass/header.scss */
+header .top-menu li .btn-primary { font-family: "proxima-reg"; font-weight: 700; }
+/* line 42, ../sass/header.scss */
+header .top-menu li .dropdown { border-left: 1px solid #E5E5E5; margin-left: 15px; }
+
+/* line 51, ../sass/header.scss */
+.navbar-expand-lg .navbar-nav .nav-link { padding: 0px; margin-right: 40px; padding-bottom: 15px; }
+/* line 56, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link.active { border-bottom: 3px solid #698DF5; }
 
-/* line 33, ../sass/header.scss */
+/* line 61, ../sass/header.scss */
 .navbar-header { padding: 10px 0px 0px 15px !important; }
 
-/* line 37, ../sass/header.scss */
-.navbar-expand-lg { padding: 0px 0px 0px 15px; }
+/* line 65, ../sass/header.scss */
+.navbar-expand-lg { padding: 20px 0px 0px 15px; }
