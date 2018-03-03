@@ -21,15 +21,15 @@ header .top-menu li a { font-family: "brandon-bold"; letter-spacing: 1px; font-s
 /* line 37, ../sass/header.scss */
 header .top-menu li .btn-primary { font-family: "proxima-reg"; font-weight: 700; }
 /* line 42, ../sass/header.scss */
-header .top-menu li .dropdown { border-left: 1px solid #E5E5E5; margin-left: 15px; }
+header .top-menu li .dropdown { border-left: 1px solid #E5E5E5; margin-left: 15px; text-transform: uppercase; }
 
-/* line 51, ../sass/header.scss */
+/* line 52, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link { padding: 0px; margin-right: 40px; padding-bottom: 15px; }
-/* line 56, ../sass/header.scss */
+/* line 57, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link.active { border-bottom: 3px solid #698DF5; }
 
-/* line 61, ../sass/header.scss */
+/* line 62, ../sass/header.scss */
 .navbar-header { padding: 10px 0px 0px 15px !important; }
 
-/* line 65, ../sass/header.scss */
+/* line 66, ../sass/header.scss */
 .navbar-expand-lg { padding: 20px 0px 0px 15px; }

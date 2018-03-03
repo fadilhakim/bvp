@@ -25,10 +25,49 @@ const menu = [
 	{ url: '/sucessstories', name: 'Success Stories' },
 	{ url: '/pricing', name: 'Pricing' },
 	{ url: 'https://www.bridestory.com/id/blog', name: 'Blog' },
-
 ]
 
-app.get('/', function(req, res) {
+app.use('/:lang*?/benefits', function(req, res) {
+	res.locals.baseUrl = req.protocol + '://' + req.get('host');
+	res.locals.lang = req.params.lang ? req.params.lang : 'en';
+	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+
+	res.render('benefits', {
+		menu: menu,
+		active: 1,
+		localization: require('./public/lang/localization')
+	});
+})
+
+
+app.get('/:lang*?/sucessstories', function(req, res) {
+	res.locals.baseUrl = req.protocol + '://' + req.get('host');
+	res.locals.lang = req.params.lang ? req.params.lang : 'en';
+	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+
+	res.render('testimonials', {
+		menu: menu,
+		active: 2,
+		localization: require('./public/lang/localization')
+	})
+})
+
+app.get('/:lang*?/pricing', function(req, res) {
+	res.locals.baseUrl = req.protocol + '://' + req.get('host');
+	res.locals.lang = req.params.lang ? req.params.lang : 'en';
+	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+
+	res.render('pricing', {
+		menu: menu,
+		active: 3,
+		localization: require('./public/lang/localization')
+	})
+})
+
+app.get('/:lang*?/', function(req, res) {
+	res.locals.baseUrl = req.protocol + '://' + req.get('host');
+	res.locals.lang = req.params.lang ? req.params.lang : 'en';
+	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 	
 	fs.readFile('./data/vendors.json','utf-8', (err, data) => {
         if(err){
@@ -36,14 +75,15 @@ app.get('/', function(req, res) {
         }else{
 			axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category')
 				.then(response => {
-					let dataBlogs = response.data.blogArticles
+					var dataBlogs = response.data.blogArticles
 					data = JSON.parse(data)
-					let dataVendors = data.vendors
+					var dataVendors = data.vendors
 					res.render('home', {
 						dataVendors:dataVendors,
 						dataBlogs : dataBlogs,
 						menu: menu,
-						active: 0
+						active: 0,
+						localization: require('./public/lang/localization')
 					})
 				})
 				.catch(error => {
@@ -51,29 +91,6 @@ app.get('/', function(req, res) {
 			});
         }
 	  })
-})
-
-app.get('/benefits', function(req, res) {
-	res.render('benefits', {
-		menu: menu,
-		active: 1
-	})
-})
-
-
-app.get('/sucessstories', function(req, res) {
-	res.render('testimonials', {
-		menu: menu,
-		active: 2
-	})
-})
-
-app.get('/pricing', function(req, res) {
-	res.render('pricing', {
-		menu: menu,
-		active: 3
-
-	})
 })
 
 

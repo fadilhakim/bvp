@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/header.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/footer.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/benefits.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/margin+padding.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/pricing.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/complement.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/bs_icons.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="stylesheets/slick.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="stylesheets/slick-theme.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="<%- baseUrl -%>/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/header.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/footer.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/benefits.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/margin+padding.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/pricing.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/complement.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/slick.css" type="text/css" rel="stylesheet" media="screen, projection">
+    <link href="<%- baseUrl -%>/stylesheets/slick-theme.css" type="text/css" rel="stylesheet" media="screen, projection">
+    <script src="<%- baseUrl -%>/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="<%- baseUrl -%>/js/popper.min.js"></script>
+    <script src="<%- baseUrl -%>/js/slick.min.js"></script>
+    <script src="<%- baseUrl -%>/js/script.js"></script>
+    <script src="<%- baseUrl -%>/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -34,12 +33,16 @@
                     <li class="p-left15"><a class="btn btn-primary" href="#">Start Free Trial</a></li>
                     <li><a href="#">
                         <div class="dropdown show">
-                            <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                EN
+                            <a class="dropdown-toggle btn" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%- lang -%>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item en" href="#">EN</a>
-                                <a class="dropdown-item id" href="#">ID</a>
+                                <% Object.keys(menu).forEach(function(key) { %>
+                                    <% if(key == active) { %>
+                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
+                                        <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                    <% } %>
+                                <% }); %>
                             </div>
                         </div>
                     </a>
@@ -57,11 +60,11 @@
                     <% Object.keys(menu).forEach(function(key) { %>
                         <% if(key == active) { %>
                             <li class="nav-item">
-                                <a class="nav-link active" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                                <a class="nav-link active" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
                             </li>
                         <% } else { %>
                             <li class="nav-item">
-                                <a class="nav-link" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                                <a class="nav-link" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
                             </li>
                         <% } %>
                     <% }); %>
