@@ -1,9 +1,14 @@
 @import './colors.scss';
 @import './fonts.scss';
+@import './_mixins.scss';
 
 header {
-    .navbar {
-        display: block;
+    //.navbar {
+    //     display: block;
+    // }
+    border-bottom: none;
+    @include mobile-device-screen { 
+        border-bottom:1px solid #E3E3E3;  
     }
     background-color: #fff;
     a{
@@ -16,6 +21,9 @@ header {
 
     .navbar-brand {
         width: 210px;
+        @include mobile-device-screen { 
+            width: 275px;
+        }
         height: 50px;
         background-size: 100%;
         background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0;
@@ -24,14 +32,21 @@ header {
     .top-menu {
         float: right;
         width: 350px;
-        margin-top: 20px;
+        margin-top: 10px;
         li {
             display: inline-block;
             text-align: right;
+            @include mobile-device-screen {
+                display: block;
+                text-align: center;
+            }
             a {
                 font-family: $brandon-bold;
                 letter-spacing: 1px;
                 font-size: 13px;
+                @include mobile-device-screen { 
+                    display: block;
+                }
     
             }
             .btn-primary {
@@ -61,6 +76,11 @@ header {
 
 .navbar-header {
     padding: 10px 0px 0px 15px !important;
+    display: block;
+    @include mobile-device-screen {
+        padding:0px !important;
+        display: flex;
+    }
 }
 
 .navbar-expand-lg {

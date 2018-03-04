@@ -5,32 +5,40 @@
 @font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
 @font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
 @font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?47685461"); src: url("../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../assets/fonts/fontello.woff?47685461") format("woff"), url("../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
-/* line 4, ../sass/header.scss */
-header { background-color: #fff; }
 /* line 5, ../sass/header.scss */
-header .navbar { display: block; }
-/* line 9, ../sass/header.scss */
+header { border-bottom: none; background-color: #fff; }
+@media only screen and (max-width: 1023px) { /* line 5, ../sass/header.scss */
+  header { border-bottom: 1px solid #E3E3E3; } }
+/* line 14, ../sass/header.scss */
 header a { font-weight: 700; line-height: 18px; letter-spacing: 0.2px; word-wrap: break-word; font-size: 15px; }
-/* line 17, ../sass/header.scss */
+/* line 22, ../sass/header.scss */
 header .navbar-brand { width: 210px; height: 50px; background-size: 100%; background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0; }
-/* line 24, ../sass/header.scss */
-header .top-menu { float: right; width: 350px; margin-top: 20px; }
-/* line 28, ../sass/header.scss */
+@media only screen and (max-width: 1023px) { /* line 22, ../sass/header.scss */
+  header .navbar-brand { width: 275px; } }
+/* line 32, ../sass/header.scss */
+header .top-menu { float: right; width: 350px; margin-top: 10px; }
+/* line 36, ../sass/header.scss */
 header .top-menu li { display: inline-block; text-align: right; }
-/* line 31, ../sass/header.scss */
+@media only screen and (max-width: 1023px) { /* line 36, ../sass/header.scss */
+  header .top-menu li { display: block; text-align: center; } }
+/* line 43, ../sass/header.scss */
 header .top-menu li a { font-family: "brandon-bold"; letter-spacing: 1px; font-size: 13px; }
-/* line 37, ../sass/header.scss */
+@media only screen and (max-width: 1023px) { /* line 43, ../sass/header.scss */
+  header .top-menu li a { display: block; } }
+/* line 52, ../sass/header.scss */
 header .top-menu li .btn-primary { font-family: "proxima-reg"; font-weight: 700; }
-/* line 42, ../sass/header.scss */
+/* line 57, ../sass/header.scss */
 header .top-menu li .dropdown { border-left: 1px solid #E5E5E5; margin-left: 15px; text-transform: uppercase; }
 
-/* line 52, ../sass/header.scss */
+/* line 67, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link { padding: 0px; margin-right: 40px; padding-bottom: 15px; }
-/* line 57, ../sass/header.scss */
+/* line 72, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link.active { border-bottom: 3px solid #698DF5; }
 
-/* line 62, ../sass/header.scss */
-.navbar-header { padding: 10px 0px 0px 15px !important; }
+/* line 77, ../sass/header.scss */
+.navbar-header { padding: 10px 0px 0px 15px !important; display: block; }
+@media only screen and (max-width: 1023px) { /* line 77, ../sass/header.scss */
+  .navbar-header { padding: 0px !important; display: flex; } }
 
-/* line 66, ../sass/header.scss */
+/* line 86, ../sass/header.scss */
 .navbar-expand-lg { padding: 20px 0px 0px 15px; }
