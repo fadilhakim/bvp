@@ -34,18 +34,23 @@ app.get('/', function(req, res) {
         if(err){
             console.log(err)
         }else{
-			axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category')
-				.then(response => {
+			axios.all([
+				axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
+				axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
+			]).then(axios.spread((response,response2)  => {
 					let dataBlogs = response.data.blogArticles
+					let dataCategories = response2.data.category
+					//console.log(dataCategories)
 					data = JSON.parse(data)
 					let dataVendors = data.vendors
 					res.render('home', {
 						dataVendors:dataVendors,
 						dataBlogs : dataBlogs,
+						dataCategories : dataCategories,
 						menu: menu,
 						active: 0
 					})
-				})
+				}))
 				.catch(error => {
 				console.log(error);
 			});
@@ -77,4 +82,10 @@ app.get('/pricing', function(req, res) {
 })
 
 
+// app.listen(3000, 'local.bridestory.com', function() {
+// 	console.log("... port %d in %s mode", app.address().port, app.settings.env);
+// });
+
 app.listen(3000, () => console.log('App listening on port 3000!'))
+
+// set to local.bridestory.com

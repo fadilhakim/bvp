@@ -6,47 +6,87 @@
                     The Right Place To Grow Your <br> Wedding Business
                 </h1>
                 <span class="border-pink m-top30 m-btm30"></span>
-                <p class="l-h28 f-w400">Join more than 20,000 wedding vendors from 70 countries who have <br> with millions of engaged couples
-                through Bridestory.</p>
+                <p class="l-h28 f-w400">Join more than 20,000 wedding vendors from 70 countries who have <br> connected with millions of engaged couples
+                    through Bridestory.</p>
             </div>   
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <form action="#">
                     <h2 class="">Create Your Free Business Profile!</h2>
                     <span>Fill in the details below :</span>
                     <div class="form-group ">
-                        <select class="form-control m-top20" id="exampleSelect1">
-                            <option selected>Service Category</option>
-                            <option>2</option>
+                        <select class="form-control m-top20">
+                            <%dataCategories.forEach((categories)=>{ %>
+                                <option value="<%= categories %>"><%= categories.name %></option>
+                            <%}) %>
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="" aria-describedby="businessName" placeholder="Business Name">
+                        <input type="text" class="form-control" name="businessName" placeholder="Business Name">
                     </div>
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Email Address">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control" name="emailHelp" placeholder="Email Address">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control" id="" aria-describedby="passwordHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">Please fill your password</small>
+                        <input type="password" class="form-control" name="passwordHelp" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">Please fill your password</small> -->
                     </div>
                     <button type="submit" class="btn btn-primary">Start Free Trial</button>
+                    <span>By clicking “Start Free Trial”, you agree to our <a href="https://www.bridestory.com/terms-conditions">Terms & Conditions</a></span>
+                    <br><br>
+                    <span class="f-w700">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
+                </form>
+            </div>
+        </div>
+
+        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;">Why join Bridestory?</a> 
+    </section>
+
+    <!-- displayed only on mobile screen -->
+    <section class="home-regis">
+        <div class="container">
+            <div class="col-12">
+                <form action="#">
+                    <h2 class="">Create Your Free Business Profile!</h2>
+                    <span>Fill in the details below :</span>
+                    <div class="form-group ">
+                        <select name="businesscategory" class="form-control m-top20" id="exampleSelect1">
+                            <%dataCategories.forEach((categories)=>{ %>
+                                <option value="<%= categories %>"><%= categories.name %></option>
+                            <%}) %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="businessname" required class="form-control" name="businessName" placeholder="Business Name">
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="email" name="vendoremail" required class="form-control" name="emailHelp" placeholder="Email Address">
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="password" name="password" required class="form-control" name"passwordHelp" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Start Free Trial</button>
+                    <span>By clicking “Start Free Trial”, you agree to our <a href="https://www.bridestory.com/terms-conditions">Terms & Conditions</a></span>
+                    <br><br>
+                    <span class="f-w700">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
+                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;">Why join Bridestory?</a> 
                 </form>
             </div>
         </div>
     </section>
+    <!-- -->
 
-    <section class="mobile home-regis">
-
-    </section>
-
-    <section class="home-benefits bg-white">
+    <section id="benefits" class="home-benefits bg-white">
      
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 text">
+                <div class="col-12 pt-40 switch-mobile">
+                    <img class="img-responsive" src="assets/icons/Landing_Page_Icon_1.png" alt="Instantly build an online presence">
+                </div>
+                <div class="col-lg-6 col-12 text">
                     <h2>Instantly build an <br> online presence</h2>
                     <span class="border-pink"></span>
                     <p>Be discovered by more than 500,000 brides-to-be / month <br>
@@ -55,7 +95,7 @@
                         Learn More
                     </a>
                 </div>
-                <div class="col-lg-6 img">
+                <div class="col-lg-6 col-12 img switch-desktop">
                     <img class="img-responsive" src="assets/icons/Landing_Page_Icon_1.png" alt="Instantly build an online presence">
                 </div>
             </div>
@@ -64,11 +104,11 @@
         <div class="cover-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 img">
+                    <div class="col-lg-6 col-12 img">
                         <img class="img-responsive" src="assets/icons/Landing_Page_Icon_2.png" alt="Provide your clients with various <br> payment options">
                     </div>
         
-                    <div class="col-lg-6 text">
+                    <div class="col-lg-6 col-12 text">
                         <h2>Provide your clients with various <br> payment options</h2>
                         <span class="border-pink"></span>
                         <p>Bridestory Pay       is a wedding payment solution that will provide many benefits, including:</p>
@@ -87,11 +127,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 img">
+                <div class="col-lg-6 col-12 img">
                     <img class="img-responsive" src="assets/icons/Landing_Page_Icon_3.png" alt="IExpand your business easily">
                 </div>
     
-                <div class="col-lg-6 text">
+                <div class="col-lg-6 col-12 text">
                     <h2>Expand your business <br> easily</h2>
                     <span class="border-pink"></span>
                     <p>We let you focus on your great work and leave the marketing  to us. Our platform generates 4,000,000+ business inquiries and reached 6,000,000+ engaged couples from Indonesia and around the world every year.</p>
@@ -105,7 +145,12 @@
         <div class="cover-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 text">
+
+                    <div class="col-12 img switch-mobile">
+                        <img class="img-responsive"  src="assets/icons/Landing_Page_Icon_4.png" alt="Interact real time with potential clients">
+                    </div>
+
+                    <div class="col-lg-6 col-12 text ">
                         <h2>Interact real time <br> with potential clients</h2>
                         <span class="border-pink"></span>
                         <p>Follow up and chat with brides-to-be directly with our <br> Bridestory Pro app.
@@ -114,7 +159,7 @@
                             Learn More
                         </a>
                     </div>
-                    <div class="col-lg-6 img">
+                    <div class="col-lg-6 col-12 img switch-desktop">
                         <img class="img-responsive"  src="assets/icons/Landing_Page_Icon_4.png" alt="Interact real time with potential clients">
                     </div>
                 </div>
@@ -122,31 +167,37 @@
         </div>
     </section>
 
-    <section class="data_st pd-section">
+    <section id="counter" class="data_st pd-section">
         <div class="container">
             <h2 class="head-section white">Lastest Statistics</h2>
             <span class="border-pink center m-top20 m-btm20"></span>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
-                    <div class="col-lg-12">
-                        <p>Average <br> Monthly Visitors
-                            <span>597K</span>
-                        </p>
+                    <div class="img-box">
+                            <img class="img-responsive" src="assets/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
+                    <p>Average <br> Monthly Visitors <br><br>
+                        <span class="counter-value" data-count="597">0</span>
+                        <span>K</span>
+                    </p>
+              
                 </div>
                 <div class="col-lg-4">
-                    <div class="col-lg-12 mid">
-                        <p>Average <br> Monthly Inquiries
-                            <span>290K</span>
-                        </p>
+                    <div class="img-box">
+                        <img class="img-responsive" src="assets/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
+                    <p>Average <br> Monthly Inquiries<br><br>
+                        <span class="counter-value" data-count="290">0</span>
+                        <span>K</span>
+                    </p>
                 </div>
                 <div class="col-lg-4">
-                    <div class="col-lg-12">
-                        <p>Average <br> Monthly Inquiries / Vendor
-                            <span>136</span>
-                        </p>
+                    <div class="img-box">
+                        <img class="img-responsive" src="assets/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
+                    <p>Average <br> Monthly Inquiries / Vendor<br><br>
+                        <span class="counter-value" data-count="136">0</span>
+                    </p>
                 </div>
             </div>
 
@@ -160,10 +211,10 @@
     <section class="download-apps pd-section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <img src="" alt="">
+                <div class="col-12 col-lg-6 img-frame">
+                    <img class="phone-apps" src="assets/icons/phone_app_store.png" alt="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-12 col-lg-6">
                     <h2>Manage your business <br>anytime, anywhere</h2>
                     <span class="border-pink"></span>
                     <ul>
@@ -187,18 +238,18 @@
         </div>
     </section>
 
-    <section class="sucess-stories pd-section">
+    <section class="sucess-stories">
         <h2 class="head-section">Success Stories</h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-6 col-xs-12 testimonial">
+                <div class="col-lg-6 col-md-6 col-12 testimonial">
                     <div class="row">
-                        <div class="col-lg-3 col-xs-12">
+                        <div class="col-lg-3 col-12">
                             <div class="profpic"></div>
                         </div>
-                        <div class="col-lg-9 col-xs-12 text">
+                        <div class="col-lg-9 col-12 text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend luctus nulla, eu rutrum velit fermentum et. Nam vitae condimentum dolor. Nunc erat risus, tincidunt id arcu ac, sodales iaculis diam. Ut dignissim id dolor at dignissim. Morbi dolor libero, ultrices ut ante a, tincidunt euismod odio</p>
                             <span class="border-pink"></span>
                             <p class="name f-w700 m-top40">Alice Callista</p>
@@ -208,12 +259,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-xs-12 testimonial">
+                <div class="col-lg-6 col-md-6 col-12 testimonial">
                     <div class="row">
-                        <div class="col-lg-3 col-xs-12">
+                        <div class="col-lg-3 col-12">
                             <div class="profpic"></div>
                         </div>
-                        <div class="col-lg-9 col-xs-12 text">
+                        <div class="col-lg-9 col-12 text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend luctus nulla, eu rutrum velit fermentum et. Nam vitae condimentum dolor. Nunc erat risus, tincidunt id arcu ac, sodales iaculis diam. Ut dignissim id dolor at dignissim. Morbi dolor libero, ultrices ut ante a, tincidunt euismod odio</p>
                             <span class="border-pink"></span>
                             <p class="name f-w700 m-top40">Alice Callista</p>
@@ -226,7 +277,7 @@
           
             </div>
             <div class="row text-center m-top40">
-                <a href="#" class="btn btn-primary mid-button center-block ">See Other Success Stories</a>
+                <a href="/sucessstories" class="btn btn-primary mid-button center-block ">See Other Success Stories</a>
             </div>
         </div>
     </section>
@@ -237,7 +288,7 @@
         <div class="container">
             <div class="row">
                 <% dataVendors.forEach((vendor)=>{ %>
-                <div class="col-md-15 col-lg-15">
+                <div class="col-lg-15 col-md-15 col-sm-15">
                         <img class="img-responsive" src="assets/vendor_logo/sg/<%= vendor.vendor_img %>">
                 </div>
                 <%}) %>
@@ -248,7 +299,7 @@
     <section class="text-center m-top40 trial">
         <div class="container">
             <h2 class="head-section white">Want to grow your business with us? Create your FREE business profile now!</h2>
-            <a href="#" class="btn btn-primary mid-button center-block m-top30">Start Free Trial</a>
+            <a href="https://business.bridestory.com/register/vendor#/" class="btn btn-primary mid-button center-block m-top30">Start Free Trial</a>
         </div>
     </section>
 
@@ -273,7 +324,7 @@
                     <div class="ct-icon p-top20 ">
                         <img class="img-responsive" src="assets/icons/Landing_page_icon_Chat.png" alt="Contact Chat">
                     </div>
-                    <p>Chat <a href="#">Start Chatting</a></p>
+                    <p>Chat <a href="https://v2.zopim.com/widget/livechat.html?key=1zzZrxG2padaT6Mo2xl8EwufERXIUswj&lang=en&hostname=www.bridestory.com">Start Chatting</a></p>
                 </div>
             </div>
         </div>
@@ -310,5 +361,5 @@
         <div class="container text-center m-top40">
             <a href="https://www.bridestory.com/blog" class="btn btn-primary mid-button center-block ">View More Articles</a>
         </div>
-    </section>
+    </section>          
 <% include template/footer %>

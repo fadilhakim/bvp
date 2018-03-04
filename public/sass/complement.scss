@@ -28,6 +28,7 @@ button {
 
 .btn-primary {
     background-color: $soft-blue;
+    border-color:$soft-blue;
     &.mid-button {
         //width: 170px;
         padding: 10px 15px;;
@@ -230,28 +231,35 @@ button {
 
 // costum responsive
 
+
 .mobile {
     display: none;
 }
 
-@media (min-width: 368px) {
+@media (max-width: 450px) {
     display: block;
     .col-lg-15 {
-        width: 50%;
-        float: left;
+        -webkit-box-flex: 0; 
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 
-@media (min-width: 768px) {
-.col-sm-15 {
-        width: 50%;
-        float: left;
+@media (min-width: 200px) {
+.col-lg-15 {
+    -webkit-box-flex: 0; 
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
     }
 }
 @media (min-width: 992px) {
-    .col-md-15 {
-        width: 20%;
-        float: left;
+    .col-lg-15 {
+        -webkit-box-flex: 0; 
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 }
 @media (min-width: 1200px) {
