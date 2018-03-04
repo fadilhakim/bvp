@@ -3,7 +3,7 @@
 .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 /* line 17, ../sass/slick.scss */
-.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0 3px; padding: 0; }
 /* line 24, ../sass/slick.scss */
 .slick-list:focus { outline: none; }
 /* line 28, ../sass/slick.scss */
