@@ -24,6 +24,9 @@ button {
     font-family: $proxima;
     font-weight: 700;
 }
+.block {
+    display: block;
+}
 
 
 .btn-primary {
@@ -176,7 +179,7 @@ button {
 .page-header {
     background-size: cover;
     height: 300px;
-    &.sucess-stories {
+    &.testimonials {
         background: url('../assets/background/05-Success_Stories.jpg');
     }
     &.benefits {

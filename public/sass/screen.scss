@@ -13,11 +13,21 @@
     }
     form {
         background-color: #fff;
-        height: 490px;
+        height: 470px;
         border-radius: 4px;
         padding: 15px;
         @include mobile-device-screen {
             display: none;
+        }
+
+        .info-login {
+            font-size: 14px;
+            color: #555;
+            line-height: 16px;
+        }
+        .login {
+            color: #698DF5;
+            text-decoration: underline;
         }
     }
     h1 {
