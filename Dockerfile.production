@@ -12,7 +12,7 @@ RUN cd /tmp && npm install --quiet && npm install gulp -g --quiet && npm install
 # when we change our application's bower dependencies:
 # ADD bower.json /tmp/bower.json
 
-RUN cd /tmp && bower install --allow-root
+# RUN cd /tmp && bower install --allow-root
 
 # Start the main procedure
 RUN mkdir -p /app
