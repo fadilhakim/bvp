@@ -8,8 +8,6 @@ ADD package.json /tmp/package.json
 
 RUN cd /tmp && npm install --quiet && npm install gulp -g --quiet && npm install bower -g --quiet
 
-# use changes to bower.json to force Docker not to use the cache
-# when we change our application's bower dependencies:
 # ADD bower.json /tmp/bower.json
 
 # RUN cd /tmp && bower install --allow-root
