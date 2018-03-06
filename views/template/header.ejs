@@ -28,7 +28,7 @@
 
     <header class="container-fluid sticky-top">
         <nav class="navbar navbar-header navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mr-20" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/"></a>
@@ -59,6 +59,18 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-faded">
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mt-20 m-top">
+                    <li>
+                        <a class="btn btn-primary block center" href="">
+                            Start Free Trial
+                        </a>
+                    </li>
+                    <li class="mt-20 mb-20">
+                        <a class="text-center block" href="">
+                            VENDOR LOGIN
+                        </a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <% Object.keys(menu).forEach(function(key) { %>
                         <% if(key == active) { %>
@@ -71,6 +83,22 @@
                             </li>
                         <% } %>
                     <% }); %>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.bridestory.com/blog">Blog</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav m-btm">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            English
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">EN</a>
+                            <a class="dropdown-item" href="#">ID</a>
+                        </div>
+                    </li>
                 </ul>
             </div>  
         </nav>

@@ -21,8 +21,7 @@ const menu = [
 	{ url: '/', name: 'Home' },
 	{ url: '/benefits', name: 'Benefits' },
 	{ url: '/sucessstories', name: 'Success Stories' },
-	{ url: '/pricing', name: 'Pricing' },
-	{ url: 'https://www.bridestory.com/id/blog', name: 'Blog' },
+	{ url: '/pricing', name: 'Pricing' }
 ]
 
 app.use('/:lang*?/benefits', function(req, res) {

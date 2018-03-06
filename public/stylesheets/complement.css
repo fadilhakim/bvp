@@ -135,29 +135,29 @@ button { font-family: "proxima-reg"; font-weight: 700; }
 /* line 185, ../sass/complement.scss */
 .page-header.benefits { background: url("../assets/background/04-Benefits-Hero_image_3.jpg"); }
 /* line 189, ../sass/complement.scss */
-.page-header .title { top: 35%; left: 50%; position: absolute; margin-right: -50%; transform: translate(-50%, -50%); }
-/* line 195, ../sass/complement.scss */
+.page-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
+/* line 196, ../sass/complement.scss */
 .page-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
-/* line 200, ../sass/complement.scss */
+/* line 201, ../sass/complement.scss */
 .page-header .title .border-bottom-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 30%; margin-left: auto; margin-right: auto; }
 
-/* line 214, ../sass/complement.scss */
+/* line 215, ../sass/complement.scss */
 .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 30px; padding-left: 30px; display: flex; align-items: center; flex-wrap: wrap; text-align: center; }
-/* line 226, ../sass/complement.scss */
+/* line 227, ../sass/complement.scss */
 .col-xs-15 .img-responsive, .col-sm-15 .img-responsive, .col-md-15 .img-responsive, .col-lg-15 .img-responsive { width: 90%; }
 
-/* line 230, ../sass/complement.scss */
+/* line 231, ../sass/complement.scss */
 .col-xs-15 { width: 20%; float: left; }
 
-/* line 238, ../sass/complement.scss */
+/* line 239, ../sass/complement.scss */
 .mobile { display: none; }
 
 @media (max-width: 450px) { display: block;
-  /* line 244, ../sass/complement.scss */
+  /* line 245, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 200px) { /* line 253, ../sass/complement.scss */
+@media (min-width: 200px) { /* line 254, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 992px) { /* line 261, ../sass/complement.scss */
+@media (min-width: 992px) { /* line 262, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 20%; flex: 0 0 20%; max-width: 20%; } }
-@media (min-width: 1200px) { /* line 270, ../sass/complement.scss */
+@media (min-width: 1200px) { /* line 271, ../sass/complement.scss */
   .col-lg-15 { width: 20%; float: left; } }
