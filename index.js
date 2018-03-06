@@ -4,7 +4,9 @@ const fs = require('fs');
 const axios = require('axios');
 
 const bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
 app.use(express.static(__dirname + '/public'));
 
 // views
@@ -92,7 +94,7 @@ app.get('/:lang*?/', function(req, res) {
 				console.log(error);
 			});
         }
-	  })
+    })
 })
 
 
