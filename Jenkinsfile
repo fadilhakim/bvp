@@ -8,7 +8,7 @@ node('jenkins-aws')
       doGenerateSubmoduleConfigurations: false,
       extensions: [],
       submoduleCfg: [],
-      userRemoteConfigs: [[credentialsId: '86dee152-8902-4693-a4d8-b721093c6a41',
+      userRemoteConfigs: [[credentialsId: 'bitbucket',
       url: 'git@bitbucket.org:bridestory/bridestory-vendor-home.git']]])
   }
   stage('Build Image')
