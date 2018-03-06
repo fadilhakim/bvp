@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const fs = require('fs');
@@ -19,80 +21,87 @@ app.set('view engine', 'ejs')
 const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
-const menu = [
-	{ url: '/', name: 'Home' },
-	{ url: '/benefits', name: 'Benefits' },
-	{ url: '/sucessstories', name: 'Success Stories' },
-	{ url: '/pricing', name: 'Pricing' }
-]
+const menu = [{
+    url: '/',
+    name: 'Home'
+}, {
+    url: '/benefits',
+    name: 'Benefits'
+}, {
+    url: '/success-stories',
+    name: 'Success Stories'
+}, {
+    url: '/pricing',
+    name: 'Pricing'
+}]
 
 app.use('/:lang*?/benefits', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
-	res.locals.lang = req.params.lang ? req.params.lang : 'en';
-	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.lang = req.params.lang ? req.params.lang : 'en';
+    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
-	res.render('benefits', {
-		menu: menu,
-		active: 1,
-		localization: require('./public/lang/localization')
-	});
+    res.render('benefits', {
+        menu: menu,
+        active: 1,
+        localization: require('./public/lang/localization')
+    });
 })
 
 
-app.get('/:lang*?/sucessstories', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
-	res.locals.lang = req.params.lang ? req.params.lang : 'en';
-	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+app.get('/:lang*?/success-stories', function(req, res) {
+    res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.lang = req.params.lang ? req.params.lang : 'en';
+    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
-	res.render('testimonials', {
-		menu: menu,
-		active: 2,
-		localization: require('./public/lang/localization')
-	})
+    res.render('testimonials', {
+        menu: menu,
+        active: 2,
+        localization: require('./public/lang/localization')
+    })
 })
 
 app.get('/:lang*?/pricing', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
-	res.locals.lang = req.params.lang ? req.params.lang : 'en';
-	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.lang = req.params.lang ? req.params.lang : 'en';
+    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
-	res.render('pricing', {
-		menu: menu,
-		active: 3,
-		localization: require('./public/lang/localization')
-	})
+    res.render('pricing', {
+        menu: menu,
+        active: 3,
+        localization: require('./public/lang/localization')
+    })
 })
 
 app.get('/:lang*?/', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
-	res.locals.lang = req.params.lang ? req.params.lang : 'en';
-	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-	
-	fs.readFile('./data/vendors.json','utf-8', (err, data) => {
-        if(err){
+    res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.lang = req.params.lang ? req.params.lang : 'en';
+    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+
+    fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
+        if (err) {
             console.log(err)
-        }else{
-			axios.all([
-				axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
-				axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-			]).then(axios.spread((response,response2)  => {
-					let dataBlogs = response.data.blogArticles
-					let dataCategories = response2.data.category
-					//console.log(dataCategories)
-					data = JSON.parse(data)
-					var dataVendors = data.vendors
-					res.render('home', {
-						dataVendors:dataVendors,
-						dataBlogs : dataBlogs,
-						dataCategories : dataCategories,
-						menu: menu,
-						active: 0,
-						localization: require('./public/lang/localization')
-					})
-				}))
-				.catch(error => {
-				console.log(error);
-			});
+        } else {
+            axios.all([
+                    axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
+                    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
+                ]).then(axios.spread((response, response2) => {
+                    let dataBlogs = response.data.blogArticles
+                    let dataCategories = response2.data.category
+                        //console.log(dataCategories)
+                    data = JSON.parse(data)
+                    var dataVendors = data.vendors
+                    res.render('home', {
+                        dataVendors: dataVendors,
+                        dataBlogs: dataBlogs,
+                        dataCategories: dataCategories,
+                        menu: menu,
+                        active: 0,
+                        localization: require('./public/lang/localization')
+                    })
+                }))
+                .catch(error => {
+                    console.log(error);
+                });
         }
     })
 })
