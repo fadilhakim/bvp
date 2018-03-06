@@ -15,4 +15,5 @@ node('jenkins-aws')
     sh 'gcloud container clusters get-credentials staging-cluster --zone asia-southeast1-a --project staging-176502'
     sh 'kubectl set image deployment/vendor-home-staging-deployment vendor-home-staging=asia.gcr.io/staging-176502/vendor-home:staging-${BUILD_NUMBER}'
   }
+  
 }
