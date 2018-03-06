@@ -113,60 +113,66 @@
 /* line 118, ../sass/pricing.scss */
 .pricing-content input { width: 100%; height: 40px; padding-left: 10px; border-radius: 4px; box-sizing: border-box; border: 1px solid #979797; }
 /* line 127, ../sass/pricing.scss */
+.pricing-content .dropdown-menu { width: 100%; color: #555555; padding: 0; }
+/* line 132, ../sass/pricing.scss */
+.pricing-content .dropdown-menu li { padding: 10px; }
+/* line 135, ../sass/pricing.scss */
+.pricing-content .dropdown-menu li:hover { background-color: #E5E5E5; cursor: pointer; }
+/* line 142, ../sass/pricing.scss */
 .pricing-content .search-city { position: relative; color: #555555; }
-/* line 131, ../sass/pricing.scss */
+/* line 146, ../sass/pricing.scss */
 .pricing-content .search-city i { position: absolute; top: 10px; right: 5px; }
-/* line 138, ../sass/pricing.scss */
+/* line 153, ../sass/pricing.scss */
 .pricing-content button.btn { width: 100%; padding: 10px 0; border-radius: 4px; background-color: #698DF5; border: 1px solid #698DF5; color: #FFF; }
-/* line 147, ../sass/pricing.scss */
+/* line 162, ../sass/pricing.scss */
 .pricing-content .pricing-info { margin-top: 80px; }
-@media only screen and (max-width: 1023px) { /* line 147, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 162, ../sass/pricing.scss */
   .pricing-content .pricing-info { padding-top: 40px; margin-top: 0; border-top: 1px solid #E5E5E5; } }
-/* line 156, ../sass/pricing.scss */
+/* line 171, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide { display: none; }
-/* line 159, ../sass/pricing.scss */
+/* line 174, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide { text-transform: uppercase; }
-/* line 160, ../sass/pricing.scss */
+/* line 175, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide i { padding: 4px 3px 2px 2px; border-radius: 50%; font-size: 18px; color: #FFF; }
-/* line 169, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide { width: 100%; display: table; }
-/* line 172, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide span { display: table-cell; vertical-align: middle; }
-/* line 177, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase { margin-left: auto; margin-right: auto; margin-bottom: 20px; margin-top: 50px; width: 170px; }
 /* line 184, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn { padding: 10px 30px; }
+.pricing-content .pricing-info .pricing-slide .bottom-slide { width: 100%; display: table; }
+/* line 187, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide span { display: table-cell; vertical-align: middle; }
 /* line 192, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase { margin-left: auto; margin-right: auto; margin-bottom: 20px; margin-top: 50px; width: 170px; }
+/* line 199, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn { padding: 10px 30px; }
+/* line 207, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide .best-seller { background-color: #C49F42; color: #FFF; padding: 7px 30px; border-radius: 3px; font-family: "brandon-bold"; letter-spacing: 1px; font-size: 16px; }
-/* line 202, ../sass/pricing.scss */
+/* line 217, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide i { background-color: #C49F42; }
-/* line 210, ../sass/pricing.scss */
+/* line 225, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .silver-plan .top-slide i { background-color: #AAAAAA; }
-@media only screen and (max-width: 1023px) { /* line 156, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 171, ../sass/pricing.scss */
   .pricing-content .pricing-info .pricing-slide { display: block; } }
-/* line 221, ../sass/pricing.scss */
+/* line 236, ../sass/pricing.scss */
 .pricing-content .pricing-info table { border-collapse: separate; border-spacing: 15px 0; display: table; font-size: 14px; margin-left: -15px; width: 100%; }
-@media only screen and (max-width: 1023px) { /* line 221, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 236, ../sass/pricing.scss */
   .pricing-content .pricing-info table { display: none; } }
-/* line 231, ../sass/pricing.scss */
+/* line 246, ../sass/pricing.scss */
 .pricing-content .pricing-info table [class*='col-'] { padding: 0; float: left; }
-/* line 238, ../sass/pricing.scss */
-.pricing-content .pricing-info table tr:nth-child(even) { background-color: #F8F8F8; }
-/* line 242, ../sass/pricing.scss */
-.pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child { background-color: #FFF; }
-/* line 247, ../sass/pricing.scss */
-.pricing-content .pricing-info table tbody td { color: #555555; }
 /* line 253, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) { width: 350px; }
+.pricing-content .pricing-info table tr:nth-child(even) { background-color: #F8F8F8; }
 /* line 257, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) { width: 200px; text-align: center; vertical-align: top; }
+.pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child { background-color: #FFF; }
 /* line 262, ../sass/pricing.scss */
+.pricing-content .pricing-info table tbody td { color: #555555; }
+/* line 268, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) { width: 350px; }
+/* line 272, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) { width: 200px; text-align: center; vertical-align: top; }
+/* line 277, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .best-seller, .pricing-content .pricing-info table td:nth-child(1n+2) .best-seller { width: 65%; background-color: #38CBAE; padding: 9px 0; margin-left: auto; margin-right: auto; color: #FFF; }
-/* line 271, ../sass/pricing.scss */
+/* line 286, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .price, .pricing-content .pricing-info table td:nth-child(1n+2) .price { font-size: 16px; }
-/* line 276, ../sass/pricing.scss */
+/* line 291, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.side-border, .pricing-content .pricing-info table td.side-border { border-left: 2px solid #38CBAE; border-right: 2px solid #38CBAE; }
-/* line 281, ../sass/pricing.scss */
+/* line 296, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border { border-top: 2px solid #38CBAE; }
-/* line 285, ../sass/pricing.scss */
+/* line 300, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border { border-bottom: 2px solid #38CBAE; }
