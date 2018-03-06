@@ -1,4 +1,6 @@
 <% include template/header %>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="<%- baseUrl -%>/js/pricing.js"></script>
 
 <section class="pricing-header">
 	<div class="title">
@@ -19,22 +21,28 @@
 						<span class="bold"><%- localization[lang].pricing.content_2 %></span>
 					</div>
 					<div class="col-lg-12 select-category mt-10">
-						<select>
-							<option value="0"><%- localization[lang].pricing.content_3 %></option>
-						</select>
+                        <select name="businesscategory" class="form-control">
+                            <%dataCategories.forEach((categories)=>{ %>
+                                <option value="<%= categories %>"><%= categories.name %></option>
+                            <%}) %>
+                        </select>
 					</div>
 					<div class="col-lg-12 mt-20">
 						<span class="bold"><%- localization[lang].pricing.content_4 %></span>
 					</div>
 					<div class="col-lg-12 mt-10 search-city">
 						<i class="icon-search"></i>
-						<input type="text" placeholder="Jakarta, Indonesia">
+						<input name="cityName" onkeyup="searchCity()" type="text" placeholder="Jakarta, Indonesia">
+						<input name="cityId" type="hidden">
+						<ul id="cities" class="dropdown-menu">
+
+						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-12 mt-20">
 				<div class="col-lg-2 center-position">
-					<button class="btn"><%- localization[lang].pricing.content_5 %></button>
+					<button onclick="checkPrice()" class="btn"><%- localization[lang].pricing.content_5 %></button>
 				</div>
 			</div>
 		</div>
@@ -49,16 +57,20 @@
 									<span><%- localization[lang].pricing.content_6 %></span>
 								</div>
 								<div class="col-lg-12 select-category mt-10">
-									<select>
-										<option value="0">Photography</option>
-									</select>
+			                        <select name="businesscategory" class="form-control">
+			                            <%dataCategories.forEach((categories)=>{ %>
+			                                <option value="<%= categories %>"><%= categories.name %></option>
+			                            <%}) %>
+			                        </select>
 								</div>
 								<div class="col-lg-12 mt-10">
 									<span><%- localization[lang].pricing.content_7 %></span>
 								</div>
 								<div class="col-lg-12 search-city mt-10">
 									<i class="icon-search"></i>
-									<input type="text" placeholder="Jakarta, Indonesia">
+									<input name="cityPrice" onkeyup="searchCityPrice()" type="text" placeholder="Jakarta, Indonesia">
+									<input name="cityPriceId" type="hidden">
+									<ul id="citiesPrice" class="dropdown-menu"></ul>
 								</div>
 							</th>
 							<th>

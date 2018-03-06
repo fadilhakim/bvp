@@ -124,6 +124,21 @@
 		border: 1px solid $border-gray;
 	}
 
+	.dropdown-menu {
+		width: 100%;
+		color: $dark-gray;
+		padding: 0;
+
+		li {
+			padding: 10px;
+
+			&:hover {
+				background-color: $light-gray;
+				cursor: pointer;
+			}
+		}
+	}
+
 	.search-city {
 		position: relative;
 		color: $dark-gray;
