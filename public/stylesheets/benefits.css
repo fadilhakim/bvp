@@ -5,11 +5,12 @@
 @font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
 @font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
 @font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
-@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?84059704"); src: url("../assets/fonts/fontello.eot?84059704#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?84059704") format("woff2"), url("../assets/fonts/fontello.woff?84059704") format("woff"), url("../assets/fonts/fontello.ttf?84059704") format("truetype"), url("../assets/fonts/fontello.svg?84059704#fontello") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?47685461"); src: url("../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../assets/fonts/fontello.woff?47685461") format("woff"), url("../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?47685461"); src: url("../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../assets/fonts/fontello.woff?47685461") format("woff"), url("../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
-@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'fontello'; src: url('../font/fontello.svg?84059704#fontello') format('svg'); }
+@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'fontello'; src: url('../font/fontello.svg?47685461#fontello') format('svg'); }
 }
 */
 /* line 23, ../sass/sosmed_icons.scss */
@@ -18,43 +19,55 @@
 /* line 58, ../sass/sosmed_icons.scss */
 .icon-path:before { content: '\e800'; }
 
-/* 'εáÇ' */
+/* '' */
 /* line 59, ../sass/sosmed_icons.scss */
 .icon-search:before { content: '\e801'; }
 
-/* 'εáü' */
+/* '' */
 /* line 60, ../sass/sosmed_icons.scss */
 .icon-ok-circled:before { content: '\e802'; }
 
-/* 'εáé' */
+/* '' */
 /* line 61, ../sass/sosmed_icons.scss */
 .icon-cancel-circled:before { content: '\e803'; }
 
-/* 'εáâ' */
+/* '' */
 /* line 62, ../sass/sosmed_icons.scss */
 .icon-info-circled:before { content: '\e804'; }
 
-/* 'εáä' */
+/* '' */
 /* line 63, ../sass/sosmed_icons.scss */
+.icon-left-open:before { content: '\e805'; }
+
+/* '' */
+/* line 64, ../sass/sosmed_icons.scss */
+.icon-right-open:before { content: '\e806'; }
+
+/* '' */
+/* line 65, ../sass/sosmed_icons.scss */
 .icon-instagram-circled:before { content: '\f05e'; }
 
-/* '∩ü₧' */
-/* line 64, ../sass/sosmed_icons.scss */
+/* '' */
+/* line 66, ../sass/sosmed_icons.scss */
 .icon-twitter:before { content: '\f099'; }
 
-/* '∩éÖ' */
-/* line 65, ../sass/sosmed_icons.scss */
+/* '' */
+/* line 67, ../sass/sosmed_icons.scss */
 .icon-facebook:before { content: '\f09a'; }
 
-/* '∩éÜ' */
-/* line 66, ../sass/sosmed_icons.scss */
+/* '' */
+/* line 68, ../sass/sosmed_icons.scss */
 .icon-instagram:before { content: '\f16d'; }
 
-/* '∩à¡' */
-/* line 67, ../sass/sosmed_icons.scss */
+/* '' */
+/* line 69, ../sass/sosmed_icons.scss */
+.icon-diamond:before { content: '\f219'; }
+
+/* '' */
+/* line 70, ../sass/sosmed_icons.scss */
 .icon-twitter-circled:before { content: '\f30a'; }
 
-/* '∩îè' */
+/* '' */
 /* line 6, ../sass/benefits.scss */
 .benefits-content { padding: 70px 0; }
 @media only screen and (max-width: 1023px) { /* line 6, ../sass/benefits.scss */

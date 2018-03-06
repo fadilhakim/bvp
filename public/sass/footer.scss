@@ -1,3 +1,5 @@
+@import './_mixins.scss';
+
 footer {
     background-color: #F6F6F6;
     .top {
@@ -13,6 +15,10 @@ footer {
             display: inline-block;
             padding-top: 40px;
             padding-left: 20px;
+            @include mobile-device-screen {
+                padding-left: 0;
+                padding-top: 0px;
+            }
             a {
                 color: #aaa;
                 font-size: 9px;
@@ -26,6 +32,9 @@ footer {
     .footer-logo {
         height: 55px;
         width: auto;
+        @include mobile-device-screen {
+           margin-bottom: 20px;
+        }
     }
 
     h4 {

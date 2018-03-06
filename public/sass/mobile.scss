@@ -1,0 +1,22 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@include media-breakpoint-down(md) {
+    .d-hide {
+        display: block;
+    }
+    .m-hide {
+        display:none !important;
+    }
+    header {
+
+        .navbar-expand-lg {
+            padding: 0px;
+        }
+        .navbar-light .navbar-toggler {
+            border:none;
+        }
+    }
+}
+

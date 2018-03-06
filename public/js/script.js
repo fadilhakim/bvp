@@ -3,5 +3,6 @@ $(document).ready(function(){
     $('.pricing-slide').slick({
     	dots: true,
   		infinite: false,
+		arrows: true
     });   
 });

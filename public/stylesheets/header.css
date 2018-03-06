@@ -4,32 +4,51 @@
 @font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
 @font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
 @font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
-/* line 4, ../sass/header.scss */
-header { background-color: #fff; }
+@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?47685461"); src: url("../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../assets/fonts/fontello.woff?47685461") format("woff"), url("../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
 /* line 5, ../sass/header.scss */
-header .navbar { display: block; }
-/* line 9, ../sass/header.scss */
+header { border-bottom: none; background-color: #fff; }
+@media only screen and (max-width: 1023px) { /* line 5, ../sass/header.scss */
+  header { border-bottom: 1px solid #E3E3E3; } }
+/* line 14, ../sass/header.scss */
 header a { font-weight: 700; line-height: 18px; letter-spacing: 0.2px; word-wrap: break-word; font-size: 15px; }
-/* line 17, ../sass/header.scss */
+/* line 22, ../sass/header.scss */
 header .navbar-brand { width: 210px; height: 50px; background-size: 100%; background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0; }
-/* line 24, ../sass/header.scss */
-header .top-menu { float: right; width: 350px; margin-top: 20px; }
-/* line 28, ../sass/header.scss */
+/* line 29, ../sass/header.scss */
+header .top-menu { float: right; width: 350px; margin-top: 10px; }
+@media only screen and (max-width: 1023px) { /* line 29, ../sass/header.scss */
+  header .top-menu { display: none; } }
+/* line 36, ../sass/header.scss */
 header .top-menu li { display: inline-block; text-align: right; }
-/* line 31, ../sass/header.scss */
-header .top-menu li a { font-family: "brandon-bold"; letter-spacing: 1px; font-size: 13px; }
-/* line 37, ../sass/header.scss */
+@media only screen and (max-width: 1023px) { /* line 36, ../sass/header.scss */
+  header .top-menu li { display: block; text-align: center; } }
+/* line 43, ../sass/header.scss */
+header .top-menu li a { font-weight: 700; letter-spacing: 1px; font-size: 13px; }
+@media only screen and (max-width: 1023px) { /* line 43, ../sass/header.scss */
+  header .top-menu li a { display: block; } }
+/* line 52, ../sass/header.scss */
 header .top-menu li .btn-primary { font-family: "proxima-reg"; font-weight: 700; }
-/* line 42, ../sass/header.scss */
+/* line 57, ../sass/header.scss */
 header .top-menu li .dropdown { border-left: 1px solid #E5E5E5; margin-left: 15px; }
 
-/* line 51, ../sass/header.scss */
+/* line 66, ../sass/header.scss */
 .navbar-expand-lg .navbar-nav .nav-link { padding: 0px; margin-right: 40px; padding-bottom: 15px; }
-/* line 56, ../sass/header.scss */
-.navbar-expand-lg .navbar-nav .nav-link.active { border-bottom: 3px solid #698DF5; }
+@media only screen and (max-width: 1023px) { /* line 66, ../sass/header.scss */
+  .navbar-expand-lg .navbar-nav .nav-link { padding: 15px 0 15px 0; border-bottom: 1px solid #E3E3E3; } }
+@media only screen and (max-width: 1023px) { /* line 74, ../sass/header.scss */
+  .navbar-expand-lg .navbar-nav .nav-link.active { border-bottom: 1px solid #E3E3E3; } }
 
-/* line 61, ../sass/header.scss */
-.navbar-header { padding: 10px 0px 0px 15px !important; }
+/* line 81, ../sass/header.scss */
+.navbar-header { padding: 10px 0px 0px 15px !important; display: block; }
+@media only screen and (max-width: 1023px) { /* line 81, ../sass/header.scss */
+  .navbar-header { padding: 0px !important; display: -webkit-flex; display: flex; -webkit-flex-direction: row; flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start; } }
 
-/* line 65, ../sass/header.scss */
+/* line 95, ../sass/header.scss */
 .navbar-expand-lg { padding: 20px 0px 0px 15px; }
+@media only screen and (max-width: 1023px) { /* line 95, ../sass/header.scss */
+  .navbar-expand-lg { padding: 0px; } }
+
+/* line 104, ../sass/header.scss */
+.navbar-light .navbar-toggler { border: none; }
+
+/* line 111, ../sass/header.scss */
+.navbar-collapse .m-top { border-bottom: 1px solid #E3E3E3; }

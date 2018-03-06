@@ -1,9 +1,14 @@
 @import './colors.scss';
 @import './fonts.scss';
+@import './_mixins.scss';
 
 header {
-    .navbar {
-        display: block;
+    //.navbar {
+    //     display: block;
+    // }
+    border-bottom: none;
+    @include mobile-device-screen { 
+        border-bottom:1px solid #E3E3E3;  
     }
     background-color: #fff;
     a{
@@ -23,15 +28,25 @@ header {
 
     .top-menu {
         float: right;
+        @include mobile-device-screen { 
+            display: none;
+        }
         width: 350px;
-        margin-top: 20px;
+        margin-top: 10px;
         li {
             display: inline-block;
             text-align: right;
+            @include mobile-device-screen {
+                display: block;
+                text-align: center;
+            }
             a {
-                font-family: $brandon-bold;
+                font-weight: 700;
                 letter-spacing: 1px;
                 font-size: 13px;
+                @include mobile-device-screen { 
+                    display: block;
+                }
     
             }
             .btn-primary {
@@ -52,16 +67,48 @@ header {
     padding: 0px;
     margin-right:40px;
     padding-bottom: 15px;
-
+    @include mobile-device-screen { 
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #E3E3E3;
+    }
     &.active {
-        border-bottom: 3px solid $soft-blue;
+        @include mobile-device-screen { 
+            border-bottom: 1px solid #E3E3E3;
+        }
     }
 }
 
 .navbar-header {
     padding: 10px 0px 0px 15px !important;
+    display: block;
+    @include mobile-device-screen {
+        padding:0px !important;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+    }
 }
 
 .navbar-expand-lg {
-    padding: 20px 0px 0px 15px
+    padding: 20px 0px 0px 15px;
+    @include mobile-device-screen {
+        padding: 0px;
+    }
+}
+
+.navbar-light {
+
+    .navbar-toggler {
+        border:none;
+    }
+
+}
+
+.navbar-collapse {
+    .m-top {
+        border-bottom:1px solid #E3E3E3;
+    }
 }

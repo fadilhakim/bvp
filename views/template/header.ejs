@@ -4,67 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/header.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/footer.css" type="text/css" rel="stylesheet">
-    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/benefits.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/margin+padding.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/pricing.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/complement.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/bs_icons.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="stylesheets/slick.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="stylesheets/slick-theme.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>Home for Bridestory's Wedding Vendors | Grow Wedding Business with Bridestory</title>
+
+    <link href="<%- baseUrl -%>/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/header.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/footer.css" type="text/css" rel="stylesheet">
+    <link href="<%- baseUrl -%>/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/benefits.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/margin+padding.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/pricing.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/complement.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="<%- baseUrl -%>/stylesheets/slick.css" type="text/css" rel="stylesheet" media="screen, projection">
+    <link href="<%- baseUrl -%>/stylesheets/slick-theme.css" type="text/css" rel="stylesheet" media="screen, projection">
+    
+    <script src="<%- baseUrl -%>/js/jquery-3.3.1.min.js"></script>
+    <script src="<%- baseUrl -%>/js/popper.min.js"></script>
+    <script src="<%- baseUrl -%>/js/slick.min.js"></script>
+    <script src="<%- baseUrl -%>/js/script.js"></script>
+    <script src="<%- baseUrl -%>/bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
     <header class="container-fluid sticky-top">
         <nav class="navbar navbar-header navbar-expand-lg navbar-light">
-            
+            <button class="navbar-toggler mr-20" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand" href="/"></a>
             <div class="top-menu">
                 <ul>
-                    <li><a href="#">VENDOR LOGIN</a></li>
-                    <li class="p-left15"><a class="btn btn-primary" href="#">Start Free Trial</a></li>
-                    <li><a href="#">
+                    <li><a href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
+                    <li class="p-left15"><a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
+                    <li class=""><a href="#">
                         <div class="dropdown show">
-                            <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                EN
+                            <a class="dropdown-toggle btn" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%- lang -%>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item en" href="#">EN</a>
-                                <a class="dropdown-item id" href="#">ID</a>
+                                <% Object.keys(menu).forEach(function(key) { %>
+                                    <% if(key == active) { %>
+                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
+                                        <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                    <% } %>
+                                <% }); %>
                             </div>
                         </div>
                     </a>
                 </li>
                 </ul>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
+            
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-faded">
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mt-20 m-top">
+                    <li>
+                        <a class="btn btn-primary block center" href="">
+                            Start Free Trial
+                        </a>
+                    </li>
+                    <li class="mt-20 mb-20">
+                        <a class="text-center block" href="">
+                            VENDOR LOGIN
+                        </a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <% Object.keys(menu).forEach(function(key) { %>
                         <% if(key == active) { %>
                             <li class="nav-item">
-                                <a class="nav-link active" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                                <a class="nav-link active" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
                             </li>
                         <% } else { %>
                             <li class="nav-item">
-                                <a class="nav-link" href="<%= menu[key].url %>"><%= menu[key].name %></a>
+                                <a class="nav-link" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
                             </li>
                         <% } %>
                     <% }); %>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.bridestory.com/blog">Blog</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav m-btm">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            English
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">EN</a>
+                            <a class="dropdown-item" href="#">ID</a>
+                        </div>
+                    </li>
                 </ul>
             </div>  
         </nav>
