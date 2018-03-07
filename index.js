@@ -61,7 +61,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
 })
 
 app.get('/:lang*?/pricing', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
+	res.locals.baseUrl = process.env.BASE_URL;
 	res.locals.lang = req.params.lang ? req.params.lang : 'en';
 	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
