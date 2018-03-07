@@ -33,7 +33,7 @@
                         <!-- <small id="emailHelp" class="form-text text-muted">Please fill your password</small> -->
                     </div>
                     <a onClick="save()" class="btn btn-primary block white f-w700">Start Free Trial</a>
-                    <span class="block mt-20 info-login">By clicking “Start Free Trial”, you agree to our <a href="https://www.bridestory.com/terms-conditions">Terms & Conditions</a></span>
+                    <span class="block mt-20 info-login">By clicking “Start Free Trial”, you agree to our <a href="<%- baseUrl -%>/terms-conditions">Terms & Conditions</a></span>
 
                     <span class="f-w700 block mt-20 info-login">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
                 </form>
@@ -69,7 +69,7 @@
                         <input type="password" name="password" required class="form-control" name"passwordHelp" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-primary">Start Free Trial</button>
-                    <span>By clicking “Start Free Trial”, you agree to our <a href="https://www.bridestory.com/terms-conditions">Terms & Conditions</a></span>
+                    <span>By clicking “Start Free Trial”, you agree to our <a href="<%- baseUrl -%>/terms-conditions">Terms & Conditions</a></span>
                     <br><br>
                     <span class="f-w700">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
                     <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;">Why join Bridestory?</a> 
@@ -359,7 +359,7 @@
         </div>
 
         <div class="container text-center m-top40">
-            <a href="https://www.bridestory.com/blog" class="btn btn-primary mid-button center-block ">View More Articles</a>
+            <a href="<%- baseUrl -%>/blog" class="btn btn-primary mid-button center-block ">View More Articles</a>
         </div>
     </section>          
 <% include template/footer %>
