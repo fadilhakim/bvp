@@ -4,8 +4,12 @@ const express = require('express')
 const app = express()
 const fs = require('fs');
 const axios = require('axios');
+const morgan = require('morgan');
+const helmet = require('helmet');
+const compression = require('compression');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
-const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({
     extended: false
 }))
@@ -14,7 +18,6 @@ app.use(express.static(__dirname + '/public'));
 // views
 app.set('views', './views')
 app.set('view engine', 'ejs')
-
 
 // routes -> controller
 
@@ -34,6 +37,8 @@ const menu = [{
     url: '/home/pricing',
     name: 'Pricing'
 }]
+
+app.use(morgan('combined'), helmet(), compression(), cookieParser());
 
 app.use('/:lang*?/home/benefits', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
