@@ -35,7 +35,7 @@ const menu = [{
     name: 'Pricing'
 }]
 
-app.use('/:lang*?/benefits', function(req, res) {
+app.use('/:lang*?/home/benefits', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
@@ -48,7 +48,7 @@ app.use('/:lang*?/benefits', function(req, res) {
 })
 
 
-app.get('/:lang*?/success-stories', function(req, res) {
+app.get('/:lang*?/home/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
@@ -60,27 +60,27 @@ app.get('/:lang*?/success-stories', function(req, res) {
     })
 })
 
-app.get('/:lang*?/pricing', function(req, res) {
-	res.locals.baseUrl = req.protocol + '://' + req.get('host');
-	res.locals.lang = req.params.lang ? req.params.lang : 'en';
-	res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+app.get('/:lang*?/home/pricing', function(req, res) {
+    res.locals.baseUrl = req.protocol + '://' + req.get('host');
+    res.locals.lang = req.params.lang ? req.params.lang : 'en';
+    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
 
-	axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-	.then((categories) => {
-		let dataCategories = categories.data.category;
-		
-		res.render('pricing', {
-			menu: menu,
-			active: 3,
-			dataCategories : dataCategories,
-			localization: require('./public/lang/localization')
-		})
-	});
+    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
+        .then((categories) => {
+            let dataCategories = categories.data.category;
+
+            res.render('pricing', {
+                menu: menu,
+                active: 3,
+                dataCategories: dataCategories,
+                localization: require('./public/lang/localization')
+            })
+        });
 
 })
 
-app.get('/:lang*?/', function(req, res) {
+app.get('/:lang*?/home/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
