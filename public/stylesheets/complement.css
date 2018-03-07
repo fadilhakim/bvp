@@ -114,7 +114,7 @@ button { font-family: "proxima-reg"; font-weight: 700; }
 .f-w700 { font-weight: 700; }
 
 /* line 148, ../sass/complement.scss */
-.white { color: #FFF; }
+.white { color: #FFF !important; }
 
 /* line 152, ../sass/complement.scss */
 .dark-gray { color: #555555; }

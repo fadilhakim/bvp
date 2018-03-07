@@ -110,5 +110,15 @@ header {
 .navbar-collapse {
     .m-top {
         border-bottom:1px solid #E3E3E3;
+        display: none;
+        @include mobile-device-screen { 
+            display: block;
+        }
+    }
+    .m-btm {
+        display: none;
+        @include mobile-device-screen { 
+            display: block;
+        }
     }
 }
