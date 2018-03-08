@@ -40,7 +40,7 @@ const menu = [{
 
 app.use(morgan('combined'), helmet(), compression(), cookieParser());
 
-app.use('/:lang*?/home/benefits', function(req, res) {
+app.use('/:lang*?/benefits', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
@@ -53,7 +53,7 @@ app.use('/:lang*?/home/benefits', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/success-stories', function(req, res) {
+app.get('/:lang*?/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
@@ -65,7 +65,7 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
     })
 })
 
-app.get('/:lang*?/home/pricing', function(req, res) {
+app.get('/:lang*?/pricing', function(req, res) {
     res.locals.baseUrl = req.protocol + '://' + req.get('host');
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
@@ -85,7 +85,7 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 
 })
 
-app.get('/:lang*?/home/', function(req, res) {
+app.get('/:lang*?/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
