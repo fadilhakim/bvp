@@ -64,7 +64,7 @@ if ('local' === process.env.NODE_ENV) {
     for (var i = paths.length - 1; i >= 0; i--) {
         var revManifestPath = './public/dist/' + paths[i] + '/rev-manifest.json';
         var manifest = JSON.parse(fs.readFileSync(revManifestPath, 'utf8'));
-        var revAssets = manifest['application.' + fixedPath];
+        var revAssets = manifest['application.' + paths[i]];
 
         if (paths[i] === 'js')
             app.locals.assetsJsUrl = process.env.ASSETS_URL + revAssets;
