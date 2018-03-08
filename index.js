@@ -25,16 +25,16 @@ const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
 const menu = [{
-    url: '/home',
+    url: '/',
     name: 'Home'
 }, {
-    url: '/home/benefits',
+    url: '/benefits',
     name: 'Benefits'
 }, {
-    url: '/home/success-stories',
+    url: '/success-stories',
     name: 'Success Stories'
 }, {
-    url: '/home/pricing',
+    url: '/pricing',
     name: 'Pricing'
 }]
 
