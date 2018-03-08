@@ -131,8 +131,6 @@ gulp.task("upload", function() {
 
 gulp.task('default', ['js', 'css']);
 
-gulp.task('deploy', ['js', 'css', 'upload']);
-
 gulp.task('watch', function() {
     gulp.watch(['./public/js/*.js', './public/stylesheets/*.css'], ['js', 'css']);
 });
