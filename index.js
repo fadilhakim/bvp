@@ -40,8 +40,42 @@ const menu = [{
 
 app.use(morgan('combined'), helmet(), compression(), cookieParser());
 
+if ('production' === process.env.NODE_ENV)
+    app.locals.PROD_MODE = true;
+else
+    app.locals.PROD_MODE = false;
+
+if ('staging' === process.env.NODE_ENV)
+    app.locals.DEV_MODE = true;
+else
+    app.locals.DEV_MODE = false;
+
+if ('local' === process.env.NODE_ENV)
+    app.locals.LOCAL_MODE = true;
+else
+    app.locals.LOCAL_MODE = false;
+
+if ('local' === process.env.NODE_ENV) {
+    app.locals.assetsJsUrl = process.env.ASSETS_URL + '/dist/js/application.js';
+    app.locals.assetsCssUrl = process.env.ASSETS_URL + '/dist/css/application.css';
+} else {
+    var paths = ['js', 'css'];
+
+    for (var i = paths.length - 1; i >= 0; i--) {
+        var revManifestPath = './public/dist/' + paths[i] + '/rev-manifest.json';
+        var manifest = JSON.parse(fs.readFileSync(revManifestPath, 'utf8'));
+        var revAssets = manifest['application.' + fixedPath];
+
+        if (paths[i] === 'js')
+            app.locals.assetsJsUrl = process.env.ASSETS_URL + revAssets;
+        if (paths[i] === 'css')
+            app.locals.assetsCssUrl = process.env.ASSETS_URL + revAssets;
+    }
+}
+
 app.use('/:lang*?/benefits', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
@@ -55,6 +89,7 @@ app.use('/:lang*?/benefits', function(req, res) {
 
 app.get('/:lang*?/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
@@ -66,7 +101,8 @@ app.get('/:lang*?/success-stories', function(req, res) {
 })
 
 app.get('/:lang*?/pricing', function(req, res) {
-    res.locals.baseUrl = req.protocol + '://' + req.get('host');
+    res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
@@ -87,6 +123,7 @@ app.get('/:lang*?/pricing', function(req, res) {
 
 app.get('/:lang*?/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
+    res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
