@@ -67,9 +67,9 @@ if ('local' === process.env.NODE_ENV) {
         var revAssets = manifest['application.' + paths[i]];
 
         if (paths[i] === 'js')
-            app.locals.assetsJsUrl = process.env.ASSETS_URL + '/raw/upload/business-home/' + revAssets;
+            app.locals.assetsJsUrl = process.env.ASSETS_URL + '/raw/upload/business-home/js/' + revAssets;
         if (paths[i] === 'css')
-            app.locals.assetsCssUrl = process.env.ASSETS_URL + '/raw/upload/business-home/' + revAssets;
+            app.locals.assetsCssUrl = process.env.ASSETS_URL + '/raw/upload/business-home/css/' + revAssets;
     }
 }
 
