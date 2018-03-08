@@ -56,8 +56,8 @@ else
     app.locals.LOCAL_MODE = false;
 
 if ('local' === process.env.NODE_ENV) {
-    app.locals.assetsJsUrl = process.env.ASSETS_URL + '/dist/js/application.js';
-    app.locals.assetsCssUrl = process.env.ASSETS_URL + '/dist/css/application.css';
+    app.locals.assetsJsUrl = process.env.ASSETS_BASE_URL + '/dist/js/application.js';
+    app.locals.assetsCssUrl = process.env.ASSETS_BASE_URL + '/dist/css/application.css';
 } else {
     var paths = ['js', 'css'];
 
@@ -67,9 +67,9 @@ if ('local' === process.env.NODE_ENV) {
         var revAssets = manifest['application.' + paths[i]];
 
         if (paths[i] === 'js')
-            app.locals.assetsJsUrl = process.env.ASSETS_URL + '/raw/upload/business-home/js/' + revAssets;
+            app.locals.assetsJsUrl = process.env.ASSETS_BASE_URL + '/raw/upload/business-home/js/' + revAssets;
         if (paths[i] === 'css')
-            app.locals.assetsCssUrl = process.env.ASSETS_URL + '/raw/upload/business-home/css/' + revAssets;
+            app.locals.assetsCssUrl = process.env.ASSETS_BASE_URL + '/raw/upload/business-home/css/' + revAssets;
     }
 }
 
