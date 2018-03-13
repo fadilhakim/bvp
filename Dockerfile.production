@@ -6,13 +6,7 @@ MAINTAINER Arthur Pello <arthur.pello@bridestory.com>
 # when we change our application's nodejs dependencies:
 ADD package.json /tmp/package.json
 
-RUN cd /tmp && npm install --quiet && npm install gulp -g --quiet && npm install bower -g --quiet
-
-# use changes to bower.json to force Docker not to use the cache
-# when we change our application's bower dependencies:
-# ADD bower.json /tmp/bower.json
-
-# RUN cd /tmp && bower install --allow-root
+RUN cd /tmp && npm install --quiet && npm install gulp -g --quiet
 
 # Start the main procedure
 RUN mkdir -p /app
@@ -26,9 +20,8 @@ ADD . /app
 RUN cp .env.staging .env
 
 RUN cp -a /tmp/node_modules /app/
-# RUN cp -a /tmp/bower_components /app/
 
-# RUN gulp js-config && gulp
+RUN gulp js && gulp css && gulp upload
 
 # Expose port 3000
 EXPOSE 3000
