@@ -28,13 +28,13 @@ const menu = [{
     url: '/home',
     name: 'Home'
 }, {
-    url: '/benefits',
+    url: '/home/benefits',
     name: 'Benefits'
 }, {
-    url: '/success-stories',
+    url: '/home/success-stories',
     name: 'Success Stories'
 }, {
-    url: '/pricing',
+    url: '/home/pricing',
     name: 'Pricing'
 }]
 
@@ -86,19 +86,6 @@ app.use('/:lang*?/home/benefits', function(req, res) {
     });
 })
 
-app.use('/:lang*?/benefits', function(req, res) {
-    res.locals.baseUrl = process.env.BASE_URL;
-    res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = req.params.lang ? req.params.lang : 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    res.render('benefits', {
-        menu: menu,
-        active: 1,
-        localization: require('./data/localization')
-    });
-})
-
 app.get('/:lang*?/home/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
@@ -112,18 +99,6 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
     })
 })
 
-app.get('/:lang*?/success-stories', function(req, res) {
-    res.locals.baseUrl = process.env.BASE_URL;
-    res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = req.params.lang ? req.params.lang : 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    res.render('testimonials', {
-        menu: menu,
-        active: 2,
-        localization: require('./data/localization')
-    })
-})
 
 app.get('/:lang*?/home/pricing', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
@@ -145,25 +120,6 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 
 })
 
-app.get('/:lang*?/pricing', function(req, res) {
-    res.locals.baseUrl = process.env.BASE_URL;
-    res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = req.params.lang ? req.params.lang : 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-        .then((categories) => {
-            let dataCategories = categories.data.category;
-
-            res.render('pricing', {
-                menu: menu,
-                active: 3,
-                dataCategories: dataCategories,
-                localization: require('./data/localization')
-            })
-        });
-
-})
 
 app.get('/:lang*?/home/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
@@ -199,42 +155,6 @@ app.get('/:lang*?/home/', function(req, res) {
         }
     })
 })
-
-app.get('/:lang*?/', function(req, res) {
-    res.locals.baseUrl = process.env.BASE_URL;
-    res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = req.params.lang ? req.params.lang : 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
-        if (err) {
-            console.log(err)
-        } else {
-            axios.all([
-                    axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
-                    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-                ]).then(axios.spread((response, response2) => {
-                    let dataBlogs = response.data.blogArticles
-                    let dataCategories = response2.data.category
-                        //console.log(dataCategories)
-                    data = JSON.parse(data)
-                    var dataVendors = data.vendors
-                    res.render('home', {
-                        dataVendors: dataVendors,
-                        dataBlogs: dataBlogs,
-                        dataCategories: dataCategories,
-                        menu: menu,
-                        active: 0,
-                        localization: require('./data/localization')
-                    })
-                }))
-                .catch(error => {
-                    console.log(error);
-                });
-        }
-    })
-})
-
 
 // app.listen(3000, 'local.bridestory.com', function() {
 // 	console.log("... port %d in %s mode", app.address().port, app.settings.env);
