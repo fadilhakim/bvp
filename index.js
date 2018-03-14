@@ -82,7 +82,7 @@ app.use('/:lang*?/benefits', function(req, res) {
     res.render('benefits', {
         menu: menu,
         active: 1,
-        localization: require('./public/lang/localization')
+        localization: require('./data/localization')
     });
 })
 
@@ -146,7 +146,7 @@ app.get('/:lang*?/', function(req, res) {
                         dataCategories: dataCategories,
                         menu: menu,
                         active: 0,
-                        localization: require('./public/lang/localization')
+                        localization: require('./data/localization')
                     })
                 }))
                 .catch(error => {

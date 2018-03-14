@@ -5,7 +5,7 @@
 
 .jumbotron {
     position: relative;
-    background: url('../assets/background/01-Homepage-Hero_Image.jpg');
+    background: url('../../assets/background/01-Homepage-Hero_Image.jpg');
     background-size: cover;
     border-radius:0px;
     @include mobile-device-screen {
@@ -165,7 +165,7 @@
 }
 
 .data_st {
-    background: url('../assets/background/07-Latest-statistics.jpg');
+    background: url('../../assets/background/07-Latest-statistics.jpg');
     background-size: cover;
     h2 {
         @include mobile-device-screen {
@@ -222,7 +222,7 @@
 }
 
 .download-apps {
-    background: url('../assets/background/02-Homepage-App_Section.jpg');
+    background: url('../../assets/background/02-Homepage-App_Section.jpg');
     background-size: cover;
     @include mobile-device-screen {
         background-position-x: -772px;
@@ -296,7 +296,7 @@
             background-color: #EAEBED; 
         }
         .text {
-            background: url('../assets/icons/quote.png') no-repeat;
+            background: url('../../assets/icons/quote.png') no-repeat;
             background-size: 10%;
             background-position-x: 15px;
             padding-top: 60px;
@@ -353,7 +353,7 @@
 
 
 .trial {
-    background: url('../assets/background/03-Homepage-Create_Account_Section.jpg');
+    background: url('../../assets/background/03-Homepage-Create_Account_Section.jpg');
     padding-top: 60px;
     padding-bottom: 60px;
     background-size: cover;

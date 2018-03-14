@@ -62,19 +62,19 @@ footer {
             height: 23px;  
         }
         .fb {
-            background: url('../assets/icons/SocMed_Facebook.png');
+            background: url('../../assets/icons/SocMed_Facebook.png');
             background-size: cover; 
         }
         .twt {
-            background: url('../assets/icons/SocMed_Twitter.png');
+            background: url('../../assets/icons/SocMed_Twitter.png');
             background-size: cover; 
         }
         .ig {
-            background: url('../assets/icons/SocMed_Instagram.png');
+            background: url('../../assets/icons/SocMed_Instagram.png');
             background-size: cover; 
         }
         .pin {
-            background: url('../assets/icons/SocMed_Pinterest.png');
+            background: url('../../assets/icons/SocMed_Pinterest.png');
             background-size: cover; 
         }
     }
@@ -91,7 +91,7 @@ footer {
             padding: 3px 0px 3px 20px;;
             font-size: 12px;
             font-weight: 700;
-            background: url('../assets/icons/Icon_EN.png');
+            background: url('../../assets/icons/Icon_EN.png');
             background-size: 29%;
             background-position: 3px 1px;
             background-repeat: no-repeat;
@@ -110,14 +110,14 @@ footer {
             display: block;
            
             &.en {
-                background: url('../assets/icons/Icon_EN.png');
+                background: url('../../assets/icons/Icon_EN.png');
                 background-size: 32%;
                 background-position: 3px 1px;
                 background-repeat: no-repeat;
             }
 
             &.id {
-                background: url('../assets/icons/Icon_ID.png');
+                background: url('../../assets/icons/Icon_ID.png');
                 background-size: 32%;
                 background-position: 3px 1px;
                 background-repeat: no-repeat;
