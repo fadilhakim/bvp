@@ -96,7 +96,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
     res.render('testimonials', {
         menu: menu,
         active: 2,
-        localization: require('./public/lang/localization')
+        localization: require('./data/localization')
     })
 })
 
@@ -115,7 +115,7 @@ app.get('/:lang*?/pricing', function(req, res) {
                 menu: menu,
                 active: 3,
                 dataCategories: dataCategories,
-                localization: require('./public/lang/localization')
+                localization: require('./data/localization')
             })
         });
 
