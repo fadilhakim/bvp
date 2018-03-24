@@ -32,7 +32,6 @@ gulp.task('js', function() {
         './public/js/slick.min.js',
         './public/js/script.js',
         './public/bootstrap/js/bootstrap.min.js',
-        './public/bootstrap/js/bootstrap.min.js',
     ];
 
     if (process.env.NODE_ENV === 'local') {

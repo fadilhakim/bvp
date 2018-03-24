@@ -27,17 +27,17 @@ footer .sosmed-footer li { display: inline-block; }
 /* line 59, ../sass/footer.scss */
 footer .sosmed-footer a { display: block; width: 23px; height: 23px; }
 /* line 64, ../sass/footer.scss */
-footer .sosmed-footer .fb { background: url("../assets/icons/SocMed_Facebook.png"); background-size: cover; }
+footer .sosmed-footer .fb { background: url("../../assets/icons/SocMed_Facebook.png"); background-size: cover; }
 /* line 68, ../sass/footer.scss */
-footer .sosmed-footer .twt { background: url("../assets/icons/SocMed_Twitter.png"); background-size: cover; }
+footer .sosmed-footer .twt { background: url("../../assets/icons/SocMed_Twitter.png"); background-size: cover; }
 /* line 72, ../sass/footer.scss */
-footer .sosmed-footer .ig { background: url("../assets/icons/SocMed_Instagram.png"); background-size: cover; }
+footer .sosmed-footer .ig { background: url("../../assets/icons/SocMed_Instagram.png"); background-size: cover; }
 /* line 76, ../sass/footer.scss */
-footer .sosmed-footer .pin { background: url("../assets/icons/SocMed_Pinterest.png"); background-size: cover; }
+footer .sosmed-footer .pin { background: url("../../assets/icons/SocMed_Pinterest.png"); background-size: cover; }
 /* line 81, ../sass/footer.scss */
 footer .dropdown { border: 0.5px solid #d5d5d5; border-radius: 6px; width: 56px; height: 22px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; position: relative; }
 /* line 90, ../sass/footer.scss */
-footer .dropdown .dropdown-toggle { padding: 3px 0px 3px 20px; font-size: 12px; font-weight: 700; background: url("../assets/icons/Icon_EN.png"); background-size: 29%; background-position: 3px 1px; background-repeat: no-repeat; line-height: 1; }
+footer .dropdown .dropdown-toggle { padding: 3px 0px 3px 20px; font-size: 12px; font-weight: 700; background: url("../../assets/icons/Icon_EN.png"); background-size: 29%; background-position: 3px 1px; background-repeat: no-repeat; line-height: 1; }
 /* line 101, ../sass/footer.scss */
 footer .dropdown .dropdown-toggle::after { margin-top: 4px; }
 /* line 104, ../sass/footer.scss */
@@ -45,6 +45,6 @@ footer .dropdown .dropdown-menu { min-width: 6rem; }
 /* line 107, ../sass/footer.scss */
 footer .dropdown .dropdown-item { width: 56px; height: 22px; display: block; }
 /* line 112, ../sass/footer.scss */
-footer .dropdown .dropdown-item.en { background: url("../assets/icons/Icon_EN.png"); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }
+footer .dropdown .dropdown-item.en { background: url("../../assets/icons/Icon_EN.png"); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }
 /* line 119, ../sass/footer.scss */
-footer .dropdown .dropdown-item.id { background: url("../assets/icons/Icon_ID.png"); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }
+footer .dropdown .dropdown-item.id { background: url("../../assets/icons/Icon_ID.png"); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }

@@ -1,12 +1,12 @@
-@font-face { font-family: 'brandon-bold'; src: url("../assets/fonts/Brandon_bld.otf"); }
-@font-face { font-family: 'brandon-reg-italic'; src: url("../assets/fonts/Brandon_reg_it.otf"); }
-@font-face { font-family: 'brandon-reg'; src: url("../assets/fonts/Brandon_reg.otf"); }
-@font-face { font-family: 'proxima-reg'; src: url("../assets/fonts/Proxima_Nova_Regular.otf"); }
-@font-face { font-family: 'proxima-bold'; src: url("../assets/fonts/Proxima_Nova_Bold.otf"); }
-@font-face { font-family: 'proxima-semi-bold'; src: url("../assets/fonts/Proxima_Nova_Semibold.otf"); }
-@font-face { font-family: 'fontello'; src: url("../assets/fonts/fontello.eot?47685461"); src: url("../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../assets/fonts/fontello.woff?47685461") format("woff"), url("../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'brandon-bold'; src: url("../../assets/fonts/Brandon_bld.otf"); }
+@font-face { font-family: 'brandon-reg-italic'; src: url("../../assets/fonts/Brandon_reg_it.otf"); }
+@font-face { font-family: 'brandon-reg'; src: url("../../assets/fonts/Brandon_reg.otf"); }
+@font-face { font-family: 'proxima-reg'; src: url("../../assets/fonts/Proxima_Nova_Regular.otf"); }
+@font-face { font-family: 'proxima-bold'; src: url("../../assets/fonts/Proxima_Nova_Bold.otf"); }
+@font-face { font-family: 'proxima-semi-bold'; src: url("../../assets/fonts/Proxima_Nova_Semibold.otf"); }
+@font-face { font-family: 'fontello'; src: url("../../assets/fonts/fontello.eot?47685461"); src: url("../../assets/fonts/fontello.eot?47685461#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff2?47685461") format("woff2"), url("../../assets/fonts/fontello.woff?47685461") format("woff"), url("../../assets/fonts/fontello.ttf?47685461") format("truetype"), url("../../assets/fonts/fontello.svg?47685461#fontello") format("svg"); font-weight: normal; font-style: normal; }
 /* line 6, ../sass/screen.scss */
-.jumbotron { position: relative; background: url("../assets/background/01-Homepage-Hero_Image.jpg"); background-size: cover; border-radius: 0px; }
+.jumbotron { position: relative; background: url("../../assets/background/01-Homepage-Hero_Image.jpg"); background-size: cover; border-radius: 0px; }
 @media only screen and (max-width: 1023px) { /* line 6, ../sass/screen.scss */
   .jumbotron { padding: 3rem 1rem; } }
 /* line 14, ../sass/screen.scss */
@@ -79,7 +79,7 @@
   .home-benefits .switch-desktop { display: none; } }
 
 /* line 167, ../sass/screen.scss */
-.data_st { background: url("../assets/background/07-Latest-statistics.jpg"); background-size: cover; }
+.data_st { background: url("../../assets/background/07-Latest-statistics.jpg"); background-size: cover; }
 @media only screen and (max-width: 1023px) { /* line 170, ../sass/screen.scss */
   .data_st h2 { font-size: 20px; } }
 /* line 175, ../sass/screen.scss */
@@ -102,7 +102,7 @@
   .data_st .col-lg-4 p { margin-top: 0px; } }
 
 /* line 224, ../sass/screen.scss */
-.download-apps { background: url("../assets/background/02-Homepage-App_Section.jpg"); background-size: cover; }
+.download-apps { background: url("../../assets/background/02-Homepage-App_Section.jpg"); background-size: cover; }
 @media only screen and (max-width: 1023px) { /* line 224, ../sass/screen.scss */
   .download-apps { background-position-x: -772px; } }
 /* line 230, ../sass/screen.scss */
@@ -135,7 +135,7 @@
 /* line 292, ../sass/screen.scss */
 .sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; }
 /* line 298, ../sass/screen.scss */
-.sucess-stories .testimonial .text { background: url("../assets/icons/quote.png") no-repeat; background-size: 10%; background-position-x: 15px; padding-top: 60px; }
+.sucess-stories .testimonial .text { background: url("../../assets/icons/quote.png") no-repeat; background-size: 10%; background-position-x: 15px; padding-top: 60px; }
 @media only screen and (max-width: 1023px) { /* line 298, ../sass/screen.scss */
   .sucess-stories .testimonial .text { background-size: 5%; padding-top: 30px; margin-top: 25px; } }
 /* line 308, ../sass/screen.scss */
@@ -159,7 +159,7 @@
   .vendors .col-lg-15 { margin: 20px 0 20px 0; } }
 
 /* line 355, ../sass/screen.scss */
-.trial { background: url("../assets/background/03-Homepage-Create_Account_Section.jpg"); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
+.trial { background: url("../../assets/background/03-Homepage-Create_Account_Section.jpg"); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
 /* line 360, ../sass/screen.scss */
 .trial h2 { font-size: 28px; }
 @media only screen and (max-width: 1023px) { /* line 360, ../sass/screen.scss */

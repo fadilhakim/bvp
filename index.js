@@ -25,7 +25,7 @@ const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
 const menu = [{
-    url: '/home',
+    url: '/',
     name: 'Home'
 }, {
     url: '/home/benefits',
@@ -121,7 +121,7 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/', function(req, res) {
+app.get('/:lang*?/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
