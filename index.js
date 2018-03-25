@@ -108,7 +108,7 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 
     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
         .then((categories) => {
-            let dataCategories = categories.data.category;
+            var dataCategories = categories.data.category;
 
             res.render('pricing', {
                 menu: menu,
@@ -135,8 +135,8 @@ app.get('/:lang*?/', function(req, res) {
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
                     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
                 ]).then(axios.spread((response, response2) => {
-                    let dataBlogs = response.data.blogArticles
-                    let dataCategories = response2.data.category
+                    var dataBlogs = response.data.blogArticles
+                    var dataCategories = response2.data.category
                         //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
