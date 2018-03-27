@@ -3,9 +3,62 @@
 @import './_mixins.scss';
 
 header {
-    //.navbar {
-    //     display: block;
-    // }
+    &.container-fluid {
+        padding-left:0px;
+        padding-right: 0px;
+    }
+    .m-if-login {
+        display: none;
+        @include mobile-device-screen { 
+            display: block;
+        }
+        padding-top: 20px;
+        padding-bottom:20px;
+        border-bottom:1px solid #ccc;
+        .vendorPic {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin-left: 30px;
+            img {
+                border-radius:40px; 
+            }
+
+            
+        }
+        .vendorInfo {
+            display: inline-block;
+            padding-left: 20px;
+            .vendorName {
+                font-family:$proxima;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 1.17px;
+                line-height: 17px;
+            }
+    
+            .status {
+                font-size: 11px;
+                color: #848484;
+                letter-spacing: 0.5px;
+                line-height: 20px;
+                text-transform: uppercase;
+                .credit {
+                    color: #555;
+                    display: inline;
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                letter-spacing: 0.5px;
+                padding-top: 15px;
+                display: block;
+                color: #698DF5;
+            }
+        }
+        
+    }
     border-bottom: none;
     @include mobile-device-screen { 
         border-bottom:1px solid #E3E3E3;  
@@ -24,6 +77,21 @@ header {
         height: 50px;
         background-size: 100%;
         background: url(https://alexandra.bridestory.com/image/upload/business-logo.svg) no-repeat 0;
+    }
+
+    .navbar-nav {
+        @include mobile-device-screen {  
+            margin-left: -15px;
+            
+        }
+        
+        .nav-item {
+            a {
+                @include mobile-device-screen { 
+                    padding-left: 20px;
+                }
+            }
+        }
     }
 
     .top-menu {
@@ -67,9 +135,13 @@ header {
     padding: 0px;
     margin-right:40px;
     padding-bottom: 15px;
+    border-bottom: 3px solid #698DF5;
     @include mobile-device-screen { 
-        padding: 15px 0 15px 0;
+        padding: 15px 0 15px 40px;
         border-bottom: 1px solid #E3E3E3;
+        color: #555;
+        margin-right: 0px;
+        text-transform: uppercase;
     }
     &.active {
         @include mobile-device-screen { 
