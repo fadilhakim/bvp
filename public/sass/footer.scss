@@ -2,6 +2,9 @@
 
 footer {
     background-color: #F6F6F6;
+    @include mobile-device-screen { 
+        padding-bottom: 50px;
+    }
     .top {
         padding-bottom: 25px;
     }
@@ -125,4 +128,44 @@ footer {
         }
     }
     
+    
+}
+
+.fixedFooterMobile {
+    background-color: #fff;
+    border-top:1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: none;
+    .btn {
+        width: 100%;
+    }
+    .col-5 {
+        padding-left: 0px;
+    }
+    .chat {
+        background-color: #fff;
+        width: 100%;
+        color:#698DF5;
+        font-weight: 700;
+        span {
+            display: inline-block;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-image: url('../../assets/icons/m-chat-icon.png');
+            background-size: 27%;
+            background-position-y: center;
+            background-position-x: left;
+            width: 100px;
+            margin: auto;
+        }
+    }
+    
+    @include mobile-device-screen { 
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        display: block;
+    }
 }
