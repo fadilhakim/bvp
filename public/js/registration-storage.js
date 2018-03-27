@@ -1,11 +1,3 @@
-$(document).ready(function(){
-    if(window.location.hostname.indexOf('local') > -1 || window.location.hostname.indexOf('staging') > -1) {
-        window.businessUrl = 'https://business-staging.bridestory.com';
-    }else {
-        window.businessUrl = 'https://business.bridestory.com';
-    }
-});
-
 function submitRegistration () {
     // e.preventDefault();
     var businessName    = $('[name="businessName"]').val(),
@@ -27,7 +19,7 @@ function submitRegistration () {
 
     if(businessName && email && password && validateEmail(email)){
         document.cookie = 'BS.registration-data=' + JSON.stringify({'name' : businessName, 'email' : email, 'password' : password, 'category' : category}) + ';domain=.bridestory.com;';
-        window.location = businessUrl + '/register/vendor';
+        window.location = configUrl.businessUrl + '/register/vendor';
     }   
 }
 

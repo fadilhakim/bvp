@@ -36,7 +36,7 @@ function selectCity(city){
 
 function backendSearch(val, className) {
 	if(val){
-		axios.get('https://secure-cdn-api.bridestory.com/v2/cities/search?limit=10&keyword=' + val)
+		axios.get(configUrl.api + '/v2/cities/search?limit=10&keyword=' + val)
 		.then(function (response) {
 			if(response.data.cities){
 				$('#'+className).show();
@@ -56,7 +56,7 @@ function backendSearch(val, className) {
 
 function checkPrice(){
 	var cityId = $('[name=cityId]').val() || $('[name=cityPriceId]').val();
-	axios.get('https://secure-cdn-api.bridestory.com/v2/subscribes?cityIds='+ cityId +'&include=basePrice')
+	axios.get(configUrl.api + '/v2/subscribes?cityIds='+ cityId +'&include=basePrice')
 	.then(function (response) {
 		console.log(response);
 	})
