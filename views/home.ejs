@@ -10,29 +10,32 @@
                     through Bridestory.</p>
             </div>   
             <div class="col-lg-4 col-md-6 col-xs-12">
-                <form action="#">
+                <form>
                     <h2 class="">Create Your Free Business Profile!</h2>
                     <span>Fill in the details below :</span>
                     <div class="form-group ">
-                        <select class="form-control m-top20">
+                        <select class="form-control m-top20" name="category">
                             <%dataCategories.forEach((categories)=>{ %>
-                                <option value="<%= categories %>"><%= categories.name %></option>
+                                <option value="<%= categories.id %>"><%= categories.name %></option>
                             <%}) %>
                         </select>
                     </div>
                     <div class="form-group">
-                        <input id="businessName" type="text" class="form-control stored" name="businessName" placeholder="Business Name">
+                        <input id="businessName" type="text" class="form-control" name="businessName" placeholder="Business Name" required>
+                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
 
                     <div class="form-group">
-                        <input id="email" type="text" class="form-control stored" name="email" placeholder="Email Address">
+                        <input id="email" type="email" class="form-control" name="email" placeholder="Email Address" required>
+                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your password</small>
+                        <small style="display: none" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
                     </div>
 
                     <div class="form-group">
-                        <input id="password" type="password" class="form-control stored" name="password" placeholder="Password">
-                        <!-- <small id="emailHelp" class="form-text text-muted">Please fill your password</small> -->
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                        <small style="display: none" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
-                    <a onClick="save()" class="btn btn-primary block white f-w700">Start Free Trial</a>
+                    <a class="btn btn-primary block white f-w700" onclick="submitRegistration()" />Start Free Trial</a>
                     <span class="block mt-20 info-login">By clicking “Start Free Trial”, you agree to our <a href="<%- baseUrl -%>/terms-conditions">Terms & Conditions</a></span>
 
                     <span class="f-w700 block mt-20 info-login">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
