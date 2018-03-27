@@ -1,4 +1,6 @@
 /node_modules
 .sass-cache
 /.env
-/public/dist
+/public/dist/css/*
+/public/dist/js/*
+/public/dist/stream/*
