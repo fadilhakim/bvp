@@ -25,7 +25,7 @@ const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
 const menu = [{
-    url: '/',
+    url: '/home',
     name: 'Home'
 }, {
     url: '/home/benefits',
@@ -108,7 +108,7 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 
     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
         .then((categories) => {
-            var dataCategories = categories.data.category;
+            let dataCategories = categories.data.category;
 
             res.render('pricing', {
                 menu: menu,
@@ -135,8 +135,8 @@ app.get('/:lang*?/', function(req, res) {
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
                     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
                 ]).then(axios.spread((response, response2) => {
-                    var dataBlogs = response.data.blogArticles
-                    var dataCategories = response2.data.category
+                    let dataBlogs = response.data.blogArticles
+                    let dataCategories = response2.data.category
                         //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors

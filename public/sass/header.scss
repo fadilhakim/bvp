@@ -135,7 +135,9 @@ header {
     padding: 0px;
     margin-right:40px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #698DF5;
+    &.active {
+        border-bottom: 3px solid #698DF5;
+    }
     @include mobile-device-screen { 
         padding: 15px 0 15px 40px;
         border-bottom: 1px solid #E3E3E3;
