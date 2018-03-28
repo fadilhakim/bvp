@@ -31,8 +31,10 @@ gulp.task('js', function() {
         './public/js/registration-storage.js',
         './public/js/slick.min.js',
         './public/js/script.js',
-        './public/bootstrap/js/bootstrap.min.js',
+        './public/bootstrap/js/bootstrap.min.js'
     ];
+
+    jsFiles.push('.config/' + process.env.NODE_ENV + '.js');
 
     if (process.env.NODE_ENV === 'local') {
         gulp.src(jsFiles)
