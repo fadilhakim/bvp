@@ -25,16 +25,16 @@ const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
 const menu = [{
-    url: '/home',
+    url: '/',
     name: 'Home'
 }, {
-    url: '/home/benefits',
+    url: '/benefits',
     name: 'Benefits'
 }, {
-    url: '/home/success-stories',
+    url: '/success-stories',
     name: 'Success Stories'
 }, {
-    url: '/home/pricing',
+    url: '/pricing',
     name: 'Pricing'
 }]
 
@@ -73,7 +73,7 @@ if ('local' === process.env.NODE_ENV) {
     }
 }
 
-app.use('/:lang*?/home/benefits', function(req, res) {
+app.use('/:lang*?/benefits', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
@@ -86,7 +86,7 @@ app.use('/:lang*?/home/benefits', function(req, res) {
     });
 })
 
-app.get('/:lang*?/home/success-stories', function(req, res) {
+app.get('/:lang*?/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';
@@ -100,7 +100,7 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/pricing', function(req, res) {
+app.get('/:lang*?/pricing', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.params.lang ? req.params.lang : 'en';

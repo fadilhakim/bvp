@@ -16,12 +16,12 @@ header {
         padding-bottom:20px;
         border-bottom:1px solid #ccc;
         .vendorPic {
-            display: inline-block;
+            float: left;
             width: 45px;
             height: 45px;
             margin-left: 30px;
             img {
-                border-radius:40px; 
+                border-radius:40px;
             }
 
             
@@ -40,13 +40,14 @@ header {
             .status {
                 font-size: 11px;
                 color: #848484;
-                letter-spacing: 0.5px;
+                letter-spacing: 0.9px;
                 line-height: 20px;
                 text-transform: uppercase;
                 .credit {
                     color: #555;
                     display: inline;
                     text-decoration: underline;
+                    font-weight: 700;
                 }
             }
 
@@ -135,11 +136,45 @@ header {
     padding: 0px;
     margin-right:40px;
     padding-bottom: 15px;
+    background-repeat:no-repeat;
+    background-position-x: 50px;
+    background-position-y: center;
     &.active {
         border-bottom: 3px solid #698DF5;
     }
+ 
+    &.Home {
+        @include mobile-device-screen { 
+            background-image: url('../../assets/m-icons/m-home.png');
+        }
+    }
+
+    &.Benefits {
+        @include mobile-device-screen { 
+            background-image: url('../../assets/m-icons/m-benefits.png');
+        }
+    }
+
+    &.Stories {
+        @include mobile-device-screen { 
+            background-image: url('../../assets/m-icons/m-sucess_stories.png');
+        }
+    }
+
+    &.Pricing {
+        @include mobile-device-screen { 
+            background-image: url('../../assets/m-icons/m-pricing.png');
+        }
+    }
+
+    &.blog {
+        @include mobile-device-screen { 
+            background-image: url('../../assets/m-icons/m-blog.png');
+        }
+    }
+
     @include mobile-device-screen { 
-        padding: 15px 0 15px 40px;
+        padding: 15px 0 15px 85px;
         border-bottom: 1px solid #E3E3E3;
         color: #555;
         margin-right: 0px;
@@ -193,6 +228,28 @@ header {
         display: none;
         @include mobile-device-screen { 
             display: block;
+        }
+
+        .nav-link {
+            &.toggle-en {
+                background-repeat:no-repeat;
+                background-position-x: 50px;
+                background-position-y: center;
+                background-image: url('../../assets/m-icons/Icon_EN.png');
+            }
+        }
+
+        .dropdown-item {
+                background-position-y: center;
+                padding-left: 50px;
+                background-repeat:no-repeat;
+                background-position-x: 20px;
+            &.en {
+                background-image: url('../../assets/m-icons/Icon_EN.png');   
+            }
+            &.id {
+                background-image: url('../../assets/m-icons/Icon_ID.png');   
+            }
         }
     }
 }
