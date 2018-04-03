@@ -122,11 +122,17 @@ app.get('/:lang*?/pricing', function(req, res) {
 
 
 app.get('/:lang*?/', function(req, res) {
+    if (req.headers.country) {
+        var lang = req.headers.country.toLowerCase();
+    } else {
+        var lang = 'en';
+    }
+
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = req.headers.country ? req.headers.country : 'en';
+    res.locals.lang = lang;
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-    res.set('country', req.headers.country);
+    res.set('country', lang);
 
     fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
         if (err) {
