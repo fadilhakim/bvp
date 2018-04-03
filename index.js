@@ -126,6 +126,7 @@ app.get('/:lang*?/', function(req, res) {
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = req.headers['CloudFront-Viewer-Country'] ? req.headers['CloudFront-Viewer-Country'] : 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.set('CloudFront-Viewer-Country', req.headers['CloudFront-Viewer-Country']);
 
     fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
         if (err) {
