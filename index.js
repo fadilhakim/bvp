@@ -140,6 +140,7 @@ app.get('/:lang*?/pricing', function(req, res) {
 
 
 app.get('/:lang*?/', function(req, res) {
+    console.log('test');
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
