@@ -5,6 +5,7 @@ Encoding.default_external = "utf-8"
 http_path = "https://london.bridestory.com"
 
 http_images_dir = "raw/upload/business-home/assets/"
+http_fonts_dir = "raw/upload/business-home/assets/"
 #require "compass/utilities/sprites";
 # Require any additional compass plugins here.
 
