@@ -13,18 +13,24 @@ node('jenkins-aws')
   }
   stage('Build Image')
   {
-    sh 'docker build -f Dockerfile.staging -t asia.gcr.io/staging-176502/vendor-home:staging-${BUILD_NUMBER} .'
+    sh 'docker build -f Dockerfile.staging -t 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER} .'
   }
 
   stage('Push Docker Image')
   {
-    sh 'gcloud docker -- push asia.gcr.io/staging-176502/vendor-home:staging-${BUILD_NUMBER}'
+    sh 'awsdockerlogin'
+    sh 'docker push 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER}'
   }
 
-  stage('Deploy To Staging')
+  stage('Create New Task')
   {
-    sh 'gcloud container clusters get-credentials staging-cluster --zone asia-southeast1-a --project staging-176502'
-    sh 'kubectl set image deployment/vendor-home-staging-deployment vendor-home-staging=asia.gcr.io/staging-176502/vendor-home:staging-${BUILD_NUMBER}'
+      sh 'sed -e "s:BUILD_NUMBER:${BUILD_NUMBER}:g" task-template-staging.json > task-template-staging-${BUILD_NUMBER}.json'
+      sh 'aws ecs register-task-definition --family vendor-home-staging-task --cli-input-json file://task-template-staging-${BUILD_NUMBER}.json'
+  }
+  
+  stage('Update Service')
+  {
+      sh 'bash update-service-staging'
   }
 
 }
