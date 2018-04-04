@@ -1,3 +1,4 @@
+@import "compass";
 @import './colors.scss';
 @import './fonts.scss';
 @import './_mixins.scss';
@@ -145,31 +146,31 @@ header {
  
     &.Home {
         @include mobile-device-screen { 
-            background-image: url('../../assets/m-icons/m-home.png');
+            background-image: image-url('m-icons/m-home.png');
         }
     }
 
     &.Benefits {
         @include mobile-device-screen { 
-            background-image: url('../../assets/m-icons/m-benefits.png');
+            background-image: image-url('m-icons/m-benefits.png');
         }
     }
 
     &.Stories {
         @include mobile-device-screen { 
-            background-image: url('../../assets/m-icons/m-sucess_stories.png');
+            background-image: image-url('m-icons/m-sucess_stories.png');
         }
     }
 
     &.Pricing {
         @include mobile-device-screen { 
-            background-image: url('../../assets/m-icons/m-pricing.png');
+            background-image: image-url('m-icons/m-pricing.png');
         }
     }
 
     &.blog {
         @include mobile-device-screen { 
-            background-image: url('../../assets/m-icons/m-blog.png');
+            background-image: image-url('m-icons/m-blog.png');
         }
     }
 
@@ -235,7 +236,7 @@ header {
                 background-repeat:no-repeat;
                 background-position-x: 50px;
                 background-position-y: center;
-                background-image: url('../../assets/m-icons/Icon_EN.png');
+                background-image: image-url('m-icons/Icon_EN.png');
             }
         }
 
@@ -245,10 +246,10 @@ header {
                 background-repeat:no-repeat;
                 background-position-x: 20px;
             &.en {
-                background-image: url('../../assets/m-icons/Icon_EN.png');   
+                background-image: image-url('m-icons/Icon_EN.png');   
             }
             &.id {
-                background-image: url('../../assets/m-icons/Icon_ID.png');   
+                background-image: image-url('m-icons/Icon_ID.png');   
             }
         }
     }

@@ -65,19 +65,19 @@ footer {
             height: 23px;  
         }
         .fb {
-            background: url('../../assets/icons/SocMed_Facebook.png');
+            background: image-url('icons/SocMed_Facebook.png');
             background-size: cover; 
         }
         .twt {
-            background: url('../../assets/icons/SocMed_Twitter.png');
+            background: image-url('icons/SocMed_Twitter.png');
             background-size: cover; 
         }
         .ig {
-            background: url('../../assets/icons/SocMed_Instagram.png');
+            background: image-url('icons/SocMed_Instagram.png');
             background-size: cover; 
         }
         .pin {
-            background: url('../../assets/icons/SocMed_Pinterest.png');
+            background: image-url('icons/SocMed_Pinterest.png');
             background-size: cover; 
         }
     }
@@ -94,7 +94,7 @@ footer {
             padding: 3px 0px 3px 20px;;
             font-size: 12px;
             font-weight: 700;
-            background: url('../../assets/icons/Icon_EN.png');
+            background: image-url('icons/Icon_EN.png');
             background-size: 29%;
             background-position: 3px 1px;
             background-repeat: no-repeat;
@@ -113,14 +113,14 @@ footer {
             display: block;
            
             &.en {
-                background: url('../../assets/icons/Icon_EN.png');
+                background: image-url('icons/Icon_EN.png');
                 background-size: 32%;
                 background-position: 3px 1px;
                 background-repeat: no-repeat;
             }
 
             &.id {
-                background: url('../../assets/icons/Icon_ID.png');
+                background: image-url('icons/Icon_ID.png');
                 background-size: 32%;
                 background-position: 3px 1px;
                 background-repeat: no-repeat;
@@ -152,7 +152,7 @@ footer {
             display: inline-block;
             height: 25px;
             background-repeat: no-repeat;
-            background-image: url('../../assets/icons/m-chat-icon.png');
+            background-image: image-url('icons/m-chat-icon.png');
             background-size: 27%;
             background-position-y: center;
             background-position-x: left;

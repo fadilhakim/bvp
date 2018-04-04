@@ -1,3 +1,4 @@
+@import "compass";
 @import './fonts.scss';
 @import './colors.scss';
 @import './sosmed_icons.scss';
@@ -131,7 +132,7 @@
 
 .benefit-footer {
 	height: 265px;
-    background: url('../assets/background/03-Homepage-Create_Account_Section.jpg');
+    background: image-url('background/03-Homepage-Create_Account_Section.jpg');
     background-size: cover;
 
     .title {

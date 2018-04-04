@@ -2,6 +2,11 @@ FROM node:6.10.0
 
 MAINTAINER Arthur Pello <arthur.pello@bridestory.com>
 
+RUN apt-get update -qq
+
+RUN apt-get install -y -qq rubygems ruby-dev
+RUN apt-get install make
+
 # use changes to package.json to force Docker not to use the cache
 # when we change our application's nodejs dependencies:
 ADD package.json /tmp/package.json
@@ -17,9 +22,18 @@ WORKDIR /app
 
 ADD . /app
 
+RUN gem install --no-rdoc --no-ri sass -v 3.4.23
+RUN gem install --no-rdoc --no-ri compass -v 1.0.3
+RUN gem install --no-rdoc --no-ri susy
+
+RUN export LC_ALL="en_US.UTF-8"
+RUN export LANG="en_US.UTF-8"
+
 RUN cp .env.staging .env
 
 RUN cp -a /tmp/node_modules /app/
+
+RUN cd public && compass compile --force
 
 RUN gulp js && gulp css && gulp upload
 
