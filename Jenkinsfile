@@ -16,6 +16,11 @@ node('jenkins-aws')
     sh 'docker build -f Dockerfile.staging -t 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER} .'
   }
 
+  stage('Container Testing')
+  {
+    sh 'bash container-testing.sh'
+  }
+
   stage('Push Docker Image')
   {
     sh 'awsdockerlogin'
@@ -30,7 +35,7 @@ node('jenkins-aws')
   
   stage('Update Service')
   {
-      sh 'bash update-service-staging'
+      sh 'bash update-service-staging.sh'
   }
 
 }
