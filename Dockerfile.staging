@@ -31,6 +31,8 @@ RUN export LANG="en_US.UTF-8"
 
 RUN cp .env.staging .env
 
+RUN cd public && cp config.rb.staging config.rb
+
 RUN cp -a /tmp/node_modules /app/
 
 RUN cd public && compass compile --force
