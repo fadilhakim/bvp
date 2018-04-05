@@ -27,6 +27,10 @@
 	.bottom {
 		.benefit-list {
 			padding: 10px 34px;
+			a {
+				color: $soft-blue;
+				font-weight: 700;
+			}
 
 			.social {
 				font-family: $proxima-bold;
