@@ -3,16 +3,15 @@
         <div class="row justify-content-end">
             <div class="col-lg-8 col-md-6 col-xs-12">
                 <h1>
-                    The Right Place To Grow Your <br> Wedding Business
+                    <%- localization[lang].home.title -%>
                 </h1>
                 <span class="border-pink m-top30 m-btm30"></span>
-                <p class="l-h28 f-w400">Join more than 20,000 wedding vendors from 70 countries who have <br> connected with millions of engaged couples
-                    through Bridestory.</p>
+                <p class="l-h28 f-w400"> <%- localization[lang].home.sub_title -%></p>
             </div>   
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <form>
-                    <h2 class="">Create Your Free Business Profile!</h2>
-                    <span>Fill in the details below :</span>
+                    <h2 class=""><%- localization[lang].home.form_title -%></h2>
+                    <span><%- localization[lang].home.form_sub_title -%> :</span>
                     <div class="form-group ">
                         <select class="form-control m-top20" name="category">
                             <%dataCategories.forEach((categories)=>{ %>
@@ -22,12 +21,12 @@
                     </div>
                     <div class="form-group">
                         <input id="businessName" type="text" class="form-control" name="businessName" placeholder="Business Name" required>
-                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your password</small>
+                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
                     </div>
 
                     <div class="form-group">
                         <input id="email" type="email" class="form-control" name="email" placeholder="Email Address" required>
-                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your password</small>
+                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
                         <small style="display: none" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
                     </div>
 
@@ -36,23 +35,23 @@
                         <small style="display: none" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
                     <a class="btn btn-primary block white f-w700" onclick="submitRegistration()" />Start Free Trial</a>
-                    <span class="block mt-20 info-login">By clicking “Start Free Trial”, you agree to our <a href="<%- baseUrl -%>/terms-conditions">Terms & Conditions</a></span>
+                    <span class="block mt-20 info-login"><%- localization[lang].home.form_cond_1 -%></span>
 
-                    <span class="f-w700 block mt-20 info-login">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
+                    <span class="f-w700 block mt-20 info-login"><%- localization[lang].home.form_cond_2 -%></span>
                 </form>
             </div>
         </div>
 
-        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;">Why join Bridestory?</a> 
+        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[lang].home.content_1 -%></a> 
     </section>
 
     <!-- displayed only on mobile screen -->
     <section class="home-regis">
         <div class="container">
             <div class="col-12">
-                <form action="#">
-                    <h2 class="">Create Your Free Business Profile!</h2>
-                    <span>Fill in the details below :</span>
+                <form>
+                    <h2 class=""><%- localization[lang].home.form_title -%></h2>
+                    <span><%- localization[lang].home.form_sub_title -%> :</span>
                     <div class="form-group ">
                         <select name="businesscategory" class="form-control m-top20" id="exampleSelect1">
                             <%dataCategories.forEach((categories)=>{ %>
@@ -62,20 +61,24 @@
                     </div>
                     <div class="form-group">
                         <input type="text" name="businessname" required class="form-control" name="businessName" placeholder="Business Name">
+                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
                     </div>
     
                     <div class="form-group">
                         <input type="email" name="vendoremail" required class="form-control" name="emailHelp" placeholder="Email Address">
+                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
+                        <small style="display: none" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
                     </div>
     
                     <div class="form-group">
                         <input type="password" name="password" required class="form-control" name"passwordHelp" placeholder="Password">
+                        <small style="display: none" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Start Free Trial</button>
-                    <span>By clicking “Start Free Trial”, you agree to our <a href="<%- baseUrl -%>/terms-conditions">Terms & Conditions</a></span>
+                    <button onclick="submitRegistration()" class="btn btn-primary">Start Free Trial</button>
+                    <span><%- localization[lang].home.form_cond_1 -%></span>
                     <br><br>
-                    <span class="f-w700">Have an account? <a  class="login" href="https://business.bridestory.com/login">Login to your dashboard</a></span>
-                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;">Why join Bridestory?</a> 
+                    <span class="f-w700"><%- localization[lang].home.form_cond_2 -%></span>
+                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[lang].home.content_1 -%></a> 
                 </form>
             </div>
         </div>
@@ -90,10 +93,9 @@
                     <img class="img-responsive" src="<%- assetsUrl -%>/icons/Landing_Page_Icon_1.png" alt="Instantly build an online presence">
                 </div>
                 <div class="col-lg-6 col-12 text">
-                    <h2>Instantly build an <br> online presence</h2>
+                    <h2><%- localization[lang].home.content_2 -%></h2>
                     <span class="border-pink"></span>
-                    <p>Be discovered by more than 500,000 brides-to-be / month <br>
-                    by setting up your business profile on Bridestory!</p>
+                    <p><%- localization[lang].home.content_3 -%></p>
                     <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                         Learn More
                     </a>
@@ -112,13 +114,13 @@
                     </div>
         
                     <div class="col-lg-6 col-12 text">
-                        <h2>Provide your clients with various <br> payment options</h2>
+                        <h2><%- localization[lang].home.content_4 -%></h2>
                         <span class="border-pink"></span>
-                        <p>Bridestory Pay       is a wedding payment solution that will provide many benefits, including:</p>
+                        <p><%- localization[lang].home.content_5 -%>:</p>
                         <ul>
-                            <li><strong>0% installment</strong> up to 24 months from 15 banks for your clients</li>
-                            <li><strong>FREE Wedding Cancellation Protection</strong> for your clients</li>
-                            <li><strong>Earn Points</strong> for every transactions and redeem to get <br> Bridestory Product and Services for FREE!</li>
+                            <li><%- localization[lang].home.content_6 -%></li>
+                            <li><%- localization[lang].home.content_7 -%></li>
+                            <li><%- localization[lang].home.content_8 -%></li>
                         </ul>
                         <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                             Learn More
@@ -135,9 +137,9 @@
                 </div>
     
                 <div class="col-lg-6 col-12 text">
-                    <h2>Expand your business <br> easily</h2>
+                    <h2><%- localization[lang].home.content_9 -%></h2>
                     <span class="border-pink"></span>
-                    <p>We let you focus on your great work and leave the marketing  to us. Our platform generates 4,000,000+ business inquiries and reached 6,000,000+ engaged couples from Indonesia and around the world every year.</p>
+                    <p><%- localization[lang].home.content_10 -%></p>
                     <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                         Learn More
                     </a>
@@ -154,10 +156,9 @@
                     </div>
 
                     <div class="col-lg-6 col-12 text ">
-                        <h2>Interact real time <br> with potential clients</h2>
+                        <h2><%- localization[lang].home.content_11 -%></h2>
                         <span class="border-pink"></span>
-                        <p>Follow up and chat with brides-to-be directly with our <br> Bridestory Pro app.
-                                !</p>
+                        <p><%- localization[lang].home.content_12 -%></p>
                         <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                             Learn More
                         </a>
@@ -172,14 +173,14 @@
 
     <section id="counter" class="data_st pd-section">
         <div class="container">
-            <h2 class="head-section white">Lastest Statistics</h2>
+            <h2 class="head-section"><%- localization[lang].home.content_13 -%></h2>
             <span class="border-pink center m-top20 m-btm20"></span>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <div class="img-box">
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
-                    <p>Average <br> Monthly Visitors <br><br>
+                    <p><%- localization[lang].home.content_14 -%>
                         <span class="counter-value" data-count="597">0</span>
                         <span>K</span>
                     </p>
@@ -189,7 +190,7 @@
                     <div class="img-box">
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
-                    <p>Average <br> Monthly Inquiries<br><br>
+                    <p><%- localization[lang].home.content_15 -%>
                         <span class="counter-value" data-count="290">0</span>
                         <span>K</span>
                     </p>
@@ -198,14 +199,14 @@
                     <div class="img-box">
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
-                    <p>Average <br> Monthly Inquiries / Vendor<br><br>
+                    <p><%- localization[lang].home.content_16 -%>
                         <span class="counter-value" data-count="136">0</span>
                     </p>
                 </div>
             </div>
 
             <div class="row text-center m-top40">
-                <a href="#" class="btn btn-primary mid-button center-block ">Find Out More</a>
+                <a href="https://business.bridestory.com/blog/category/bridestory-platfom-insider" class="btn btn-primary mid-button center-block ">Find Out More</a>
             </div>
             
         </div>
@@ -218,22 +219,22 @@
                     <img class="phone-apps" src="<%- assetsUrl -%>/icons/phone_app_store.png" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h2>Manage your business <br>anytime, anywhere</h2>
+                    <h2><%- localization[lang].home.content_17 -%></h2>
                     <span class="border-pink"></span>
                     <ul>
-                        <li>Chat with your clients</li>
-                        <li>See who your potential clients are and reach out to them</li>
-                        <li>Upload and manage your projects</li>
-                        <li>Manage your subscription plans</li>
-                        <li>Keep your business information up to date</li>
+                        <li><%- localization[lang].home.content_18 -%></li>
+                        <li><%- localization[lang].home.content_19 -%></li>
+                        <li><%- localization[lang].home.content_20 -%></li>
+                        <li><%- localization[lang].home.content_21 -%></li>
+                        <li><%- localization[lang].home.content_22 -%></li>
                     </ul>
                     <p class="f-w700 m-btm30 m-top20">Download bridestory Pro on</p>
                  
-                        <a class="playstore" href="https://app.appsflyer.com/id1067262519?pid=Bridestory&c=Desktop_App-Page_Top">
+                        <a class="playstore" href="https://itunes.apple.com/us/app/bridestory-pro/id1014315547?mt=8">
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/appstore.png" alt="Bridestory App Store">
                         </a>
             
-                        <a href="https://app.appsflyer.com/com.bridestory.user?pid=Bridestory&c=Desktop_App-Page_Top">
+                        <a href="https://play.google.com/store/apps/details?id=com.bridestory.android.bridestoryforbusiness">
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/play_store.png" alt="Bridestory Play Store">
                         </a>
                 </div>
@@ -242,7 +243,7 @@
     </section>
 
     <section class="sucess-stories">
-        <h2 class="head-section">Success Stories</h2>
+        <h2 class="head-section"><%- localization[lang].home.content_23 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -280,13 +281,13 @@
           
             </div>
             <div class="row text-center m-top40">
-                <a href="/sucessstories" class="btn btn-primary mid-button center-block ">See Other Success Stories</a>
+                <a href="/sucessstories" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_24 -%></a>
             </div>
         </div>
     </section>
     
     <section class="vendors pd-section vendor-origin">
-        <h2 class="head-section">Vendors Who Have Joined Us </h2>
+        <h2 class="head-section"><%- localization[lang].home.content_25 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -301,13 +302,13 @@
 
     <section class="text-center m-top40 trial">
         <div class="container">
-            <h2 class="head-section white">Want to grow your business with us? Create your FREE business profile now!</h2>
+            <h2 class="head-section white"><%- localization[lang].home.content_26 -%></h2>
             <a href="https://business.bridestory.com/register/vendor#/" class="btn btn-primary mid-button center-block m-top30">Start Free Trial</a>
         </div>
     </section>
 
     <section class="text-center pd-section contact-assist">
-        <h2 class="head-section">Need assistance? Contact us today!</h2>
+        <h2 class="head-section"><%- localization[lang].home.content_27 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -336,7 +337,7 @@
     <section class="blogs pd-section">
         <h2 class="head-section">Business Blog</h2>
         <span class="border-pink center m-top20 m-btm20"></span>
-        <h3 class="f-w400 m-top30 m-btm30">Resources you need to grow your wedding business.</h3>
+        <h3 class="f-w400 m-top30 m-btm30"><%- localization[lang].home.content_28 -%></h3>
         <div class="container">
             <div class="row">
 
@@ -362,7 +363,7 @@
         </div>
 
         <div class="container text-center m-top40">
-            <a href="<%- baseUrl -%>/blog" class="btn btn-primary mid-button center-block ">View More Articles</a>
+            <a href="https://business.bridestory.com/blog" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_29 -%></a>
         </div>
     </section>          
 <% include template/footer %>

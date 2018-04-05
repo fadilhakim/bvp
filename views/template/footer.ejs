@@ -46,12 +46,16 @@
             <div class="col-6 col-lg-2">
                 <h4 class="">Language</h4>
                 <div class="dropdown show">
-                    <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        EN
+                    <a class="dropdown-toggle btn <%- lang -%>" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%- lang -%>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item en" href="#">EN</a>
-                        <a class="dropdown-item id" href="#">ID</a>
+                        <% Object.keys(menu).forEach(function(key) { %>
+                            <% if(key == active) { %>
+                                <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
+                                <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                            <% } %>
+                        <% }); %>
                     </div>
                 </div>
             </div>
@@ -84,7 +88,7 @@
                 </a>
             </div>
             <div class="col-5">
-                <a class="btn btn-primary chat text-center" href="#" >
+                <a class="btn btn-primary chat text-center" href="https://v2.zopim.com/widget/livechat.html?key=1zzZrxG2padaT6Mo2xl8EwufERXIUswj&lang=en&hostname=www.bridestory.com" >
                     <span>Chat</span>
                 </a>
             </div>

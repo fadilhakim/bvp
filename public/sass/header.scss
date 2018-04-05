@@ -129,6 +129,50 @@ header {
                 margin-left: 15px;
             }
         }
+
+        .dropdown-toggle {
+            text-transform: uppercase;
+            padding: 3px 0px 3px 20px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            &.en {
+                background: image-url('icons/Icon_EN.png');
+                background-size: 29%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
+            &.id { 
+                background: image-url('icons/Icon_ID.png');
+                background-size: 29%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 0rem;
+        }
+
+        .dropdown-item {
+            width: 56px;
+            height: 22px;
+            display: block;
+            text-transform: uppercase;
+            &.en {
+                background: image-url('icons/Icon_EN.png');
+                background-size: 32%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
+
+            &.id {
+                background: image-url('icons/Icon_ID.png');
+                background-size: 32%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
+        }
     }
     
 }

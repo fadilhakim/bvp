@@ -91,14 +91,23 @@ footer {
         letter-spacing: 0.5px;
         position: relative;
         .dropdown-toggle {
-            padding: 3px 0px 3px 20px;;
+            padding: 3px 0px 3px 20px;
             font-size: 12px;
             font-weight: 700;
-            background: image-url('icons/Icon_EN.png');
-            background-size: 29%;
-            background-position: 3px 1px;
-            background-repeat: no-repeat;
             line-height: 1;
+            text-transform: uppercase;
+            &.en {
+                background: image-url('icons/Icon_EN.png');
+                background-size: 29%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
+            &.id { 
+                background: image-url('icons/Icon_ID.png');
+                background-size: 29%;
+                background-position: 3px 1px;
+                background-repeat: no-repeat;
+            }
         }
 
         .dropdown-toggle::after {
@@ -111,7 +120,7 @@ footer {
             width: 56px;
             height: 22px;
             display: block;
-           
+            text-transform: uppercase;
             &.en {
                 background: image-url('icons/Icon_EN.png');
                 background-size: 32%;
