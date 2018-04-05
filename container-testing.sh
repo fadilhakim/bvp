@@ -3,7 +3,7 @@ PAYMENT_IP=`docker inspect --format '{{ .NetworkSettings.IPAddress }}' vendor-ho
 ENDPOINT_URL="home"
 sleep 10s
 RESPONSE_CODE=`curl -I -X GET http://$PAYMENT_IP/$ENDPOINT_URL | head -n1 | awk '{ print $2 }'`
-if [ $RESPONSE_CODE != "200" ] 
+if [[ $RESPONSE_CODE != "200" ]]
 then
 	echo "Tests Failed! - Return code $RESPONSE_CODE"
 	docker stop vendor-home-staging
