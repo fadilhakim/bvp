@@ -1,7 +1,7 @@
 docker run --rm --name vendor-home-staging -d -P 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER}
 PAYMENT_IP=`docker inspect --format '{{ .NetworkSettings.IPAddress }}' vendor-home-staging`
 ENDPOINT_URL="home"
-sleep 10s
+sleep 30s
 RESPONSE_CODE=`curl -I -X GET http://$PAYMENT_IP/$ENDPOINT_URL | head -n1 | awk '{ print $2 }'`
 if [[ $RESPONSE_CODE != "200" ]]
 then
