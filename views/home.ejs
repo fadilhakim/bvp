@@ -344,7 +344,11 @@
                 <%var i = 0; dataBlogs.forEach((blogs)=>{ %>
                 <div class="col-lg-4 col-md-12 col-xs-12">
                     <div class="img-blog">
-                        <img class="img-responsive" src="<%= blogs.homestreamImage %>">
+                        <% 
+                            var newImageName =  blogs.homestreamImage 
+                            var res = newImageName.replace("upload/","upload/f_auto,fl_progressive,w_350,h_233,q_80")
+                        %>
+                        <img class="img-responsive" src="<%= res %>">
                     </div>
                     <span class="catagory">
                         <b><%= blogs.categories.data[0].name %></b>
