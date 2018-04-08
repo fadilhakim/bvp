@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('pricingApp',[])
+.module('homeApp.pricing',[])
 .controller('pricingController', ['$http', '$scope', function($http, $scope){
 	$scope.city = [
 		{
