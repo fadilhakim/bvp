@@ -6,17 +6,17 @@
 		<div class="border-bottom-text"><div/>
 	</div>
 </section>
-<section class="pricing-content">
-	<div class="container">
+<section class="pricing-content" ng-app="pricingApp">
+	<div class="container" ng-controller="pricingController as pricingCtrl" ng-cloak>
 		<div class="row mt-50 pb-40">
 			<div class="col-lg-12">
-				<h2><%- localization[lang].pricing.content_1 %></h2>
+				<h2><%- localization[transId].pricing.content_1 %></h2>
 				<div class="border-bottom-text"></div>
 			</div>
 			<div class="col-lg-12 mt-20">
 				<div class="center-position col-lg-6">
 					<div class="col-lg-12 mt-20">
-						<span class="bold"><%- localization[lang].pricing.content_2 %></span>
+						<span class="bold"><%- localization[transId].pricing.content_2 %></span>
 					</div>
 					<div class="col-lg-12 select-category mt-10">
                         <select name="businesscategory" class="form-control">
@@ -26,21 +26,20 @@
                         </select>
 					</div>
 					<div class="col-lg-12 mt-20">
-						<span class="bold"><%- localization[lang].pricing.content_4 %></span>
+						<span class="bold"><%- localization[transId].pricing.content_4 %></span>
 					</div>
 					<div class="col-lg-12 mt-10 search-city">
 						<i class="icon-search"></i>
-						<input name="cityName" onkeyup="searchCity()" type="text" placeholder="Jakarta, Indonesia">
-						<input name="cityId" type="hidden">
-						<ul id="cities" class="dropdown-menu">
-
+						<input ng-model="city[0].name" ng-change="searchCity(0)" type="text" placeholder="Jakarta, Indonesia">
+						<ul class="dropdown-menu" ng-if="city[0].cities.length">
+							<li ng-repeat="(key, city) in city[0].cities" ng-click="selectCity(0, city)">{{city.name}}</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-12 mt-20">
 				<div class="col-lg-2 center-position">
-					<button onclick="checkPrice()" class="btn"><%- localization[lang].pricing.content_5 %></button>
+					<button ng-click="checkPrice(0)" class="btn"><%- localization[transId].pricing.content_5 %></button>
 				</div>
 			</div>
 		</div>
@@ -52,7 +51,7 @@
 						<tr>
 							<th class="bold">
 								<div class="col-lg-12">
-									<span><%- localization[lang].pricing.content_6 %></span>
+									<span><%- localization[transId].pricing.content_6 %></span>
 								</div>
 								<div class="col-lg-12 select-category mt-10">
 			                        <select name="businesscategory" class="form-control">
@@ -62,13 +61,14 @@
 			                        </select>
 								</div>
 								<div class="col-lg-12 mt-10">
-									<span><%- localization[lang].pricing.content_7 %></span>
+									<span><%- localization[transId].pricing.content_7 %></span>
 								</div>
 								<div class="col-lg-12 search-city mt-10">
 									<i class="icon-search"></i>
-									<input name="cityPrice" onkeyup="searchCityPrice()" type="text" placeholder="Jakarta, Indonesia">
-									<input name="cityPriceId" type="hidden">
-									<ul id="citiesPrice" class="dropdown-menu"></ul>
+									<input ng-model="city[1].name" ng-change="searchCity(1)" type="text" placeholder="Jakarta, Indonesia">
+									<ul class="dropdown-menu" ng-if="city[1].name">
+										<li ng-repeat="(key, city) in city[1].cities" ng-click="selectCity(1, city)">{{city.name}}</li>
+									</ul>
 								</div>
 							</th>
 							<th>
@@ -593,7 +593,7 @@
 								</span>
 							</div>
 							<div class="purchase">
-								<button class="btn"><%- localization[lang].pricing.content_8 -%></button>
+								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
 							</div>
 						</div>
 					</div>
@@ -723,7 +723,7 @@
 								</span>
 							</div>
 							<div class="purchase">
-								<button class="btn"><%- localization[lang].pricing.content_8 -%></button>
+								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
 							</div>
 						</div>
 					</div>
@@ -853,7 +853,7 @@
 								</span>
 							</div>
 							<div class="purchase">
-								<button class="btn"><%- localization[lang].pricing.content_8 -%></button>
+								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
 							</div>
 						</div>
 					</div>
@@ -864,10 +864,10 @@
 		<div class="row mt-50 pb-80">
 			<div class="col-lg-7">
 				<p>
-					*<%- localization[lang].pricing.content_9 -%>
+					*<%- localization[transId].pricing.content_9 -%>
 				</p>
 				<p>
-					**<%- localization[lang].pricing.content_10 -%>
+					**<%- localization[transId].pricing.content_10 -%>
 				</p>
 			</div>
 		</div>
