@@ -1,49 +1,31 @@
+'use strict';
 
-function searchCity(){
-	$('#cities').hide();
-	$('#cities').children().remove();
-	$('[name=cityPrice]').val('');
-	$('[name=cityPriceId]').val('');
-	if($('[name=cityName]').val()){
-		backendSearch($('[name=cityName]').val(), 'cities');
-	}
-}
+angular
+.module('pricingApp',[])
+.controller('pricingController', ['$http', '$scope', function($http, $scope){
+	$scope.city = [
+		{
+			'name' : null,
+			'id' : null,
+			'cities' : []
+		},
+		{
+			'name' : null,
+			'id' : null,
+			'cities' : []
+		}
+	];
 
-function searchCityPrice(){
-	$('#citiesPrice').hide();
-	$('#citiesPrice').children().remove();
-	$('[name=cityName]').val('');
-	$('[name=cityId]').val('');
-	if($('[name=cityPrice]').val()){
-		backendSearch($('[name=cityPrice]').val(), 'citiesPrice');
-	}
-}
-
-function selectCity(city){
-	if($('[name=cityName]').val()){
-		$('[name=cityName]').val(city.name);
-		$('[name=cityId]').val(city.id);
-		$('#cities').hide();
-		$('#cities').children().remove();
-	}else {
-		$('[name=cityPrice]').val(city.name);
-		$('[name=cityPriceId]').val(city.id);
-		$('#citiesPrice').hide();
-		$('#citiesPrice').children().remove();
-		checkPrice();
-	}
-}
-
-function backendSearch(val, className) {
-	if(val){
-		axios.get(configUrl.api + '/v2/cities/search?limit=10&keyword=' + val)
+	$scope.searchCity = function(idx) {
+		$scope.city[idx].cities = [];
+		$scope.removeOtherCity(idx);
+		$http.get(configUrl.api + '/v2/cities/search?limit=10&keyword=' + $scope.city[idx].name)
 		.then(function (response) {
 			if(response.data.cities){
-				$('#'+className).show();
 				response.data.cities.map(function(city, index){
 					if(index < 10){
-						var cityParam = {'id' : city.id, 'name' : city.name}
-						$('#'+className).append("<li onClick='selectCity("+ JSON.stringify(cityParam) +")'>"+ city.name +"</li>");	
+						var cityParam = {'id' : city.id, 'name' : city.name};
+						$scope.city[idx].cities.push(cityParam);
 					}
 				})
 			}
@@ -52,15 +34,28 @@ function backendSearch(val, className) {
 			console.log(error);
 		});
 	}
-}
 
-function checkPrice(){
-	var cityId = $('[name=cityId]').val() || $('[name=cityPriceId]').val();
-	axios.get(configUrl.api + '/v2/subscribes?cityIds='+ cityId +'&include=basePrice')
-	.then(function (response) {
-		console.log(response);
-	})
-	.catch(function (error) {
-		console.log(error);
-	});
-}
+	$scope.removeOtherCity = function(idx) {
+		$scope.city.map(function(val, key){
+			if(key != idx) $scope.city[key] = {'name' : null, 'cities' : []};
+		})
+	}
+
+	$scope.selectCity = function(idx, city) {
+		$scope.city[idx].name = city.name
+		$scope.city[idx].id = city.id
+		$scope.city[idx].cities = [];
+
+		if(idx == 1) $scope.checkPrice(idx);
+	}
+
+	$scope.checkPrice = function(idx){
+		$http.get(configUrl.api + '/v2/subscribes?cityIds='+ $scope.city[idx].id +'&include=basePrice')
+		.then(function (response) {
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+	}
+}]);

@@ -75,14 +75,16 @@ if ('local' === process.env.NODE_ENV) {
 
 app.use('/:lang*?/benefits', function(req, res) {
     if (req.headers.country) {
-        var lang = req.headers.country.toLowerCase();
+        var country = req.headers.country.toLowerCase();
     } else {
-        var lang = 'en';
+        var country = 'en';
     }
 
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
+    res.locals.country = lang;
     res.locals.lang = lang;
+    res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
     res.render('benefits', {
@@ -111,6 +113,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
+    res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
     
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
@@ -142,11 +145,12 @@ app.get('/:lang*?/pricing', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
+    res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
         .then((categories) => {
-            let dataCategories = categories.data.category;
+            var dataCategories = categories.data.category;
 
             res.render('pricing', {
                 menu: menu,
@@ -169,6 +173,7 @@ app.get('/:lang*?/', function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
+    res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
 
     fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
@@ -179,8 +184,8 @@ app.get('/:lang*?/', function(req, res) {
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
                     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
                 ]).then(axios.spread((response, response2) => {
-                    let dataBlogs = response.data.blogArticles
-                    let dataCategories = response2.data.category
+                    var dataBlogs = response.data.blogArticles
+                    var dataCategories = response2.data.category
                         //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors

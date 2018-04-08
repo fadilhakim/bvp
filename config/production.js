@@ -1,7 +1,7 @@
 (function() {
 	window.configUrl = {
-		businessUrl : 'https://business-staging.bridestory.com',
-		api : 'https://secure-cdn-api.bridestory.com',
-		url : 'local.bridestory.com:3000'
+		businessUrl : 'https://business.bridestory.com',
+		api : 'https://secure-cdn-backend-staging.bridestory.com',
+		url : 'https://www.bridestory.com'
 	}
 })();

@@ -22,19 +22,22 @@ var plugins = require("gulp-load-plugins")({
 
 gulp.task('js', function() {
     var jsFiles = [
+        './bower_components/angular/angular.min.js',
+        './bower_components/angular-cookies/angular-cookies.min.js',
         './public/js/jquery-3.3.1.min.js',
         './public/js/popper.js',
         './public/js/counter.js',
         './public/js/pricing.js',
+        './public/js/login.js',
         './public/js/axios.min.js',
         './public/js/smooth-scroll.js',
         './public/js/registration-storage.js',
         './public/js/slick.min.js',
         './public/js/script.js',
-        './public/bootstrap/js/bootstrap.min.js'
+        './public/bootstrap/js/bootstrap.min.js',
     ];
 
-    jsFiles.push('.config/' + process.env.NODE_ENV + '.js');
+    jsFiles.push('./config/' + process.env.NODE_ENV + '.js');
 
     if (process.env.NODE_ENV === 'local') {
         gulp.src(jsFiles)
