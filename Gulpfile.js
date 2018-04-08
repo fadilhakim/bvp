@@ -25,6 +25,7 @@ gulp.task('js', function() {
         './bower_components/angular/angular.min.js',
         './bower_components/angular-cookies/angular-cookies.min.js',
         './public/js/jquery-3.3.1.min.js',
+        './public/js/homeApp.js',
         './public/js/popper.js',
         './public/js/counter.js',
         './public/js/pricing.js',

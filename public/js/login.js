@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('loginApp',['ngCookies'])
+.module('homeApp.login',['ngCookies'])
 .controller('loginController', ['$http', '$scope', '$cookies', function($http, $scope, $cookies){
 
 	$scope.user = {};
