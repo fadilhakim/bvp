@@ -99,16 +99,36 @@ app.get('/:lang*?/success-stories', function(req, res) {
         var lang = 'en';
     }
 
+    if(lang == 'id'){
+        var dataTesti = "./data/testimonial_id.json"
+    }else if(lang == 'ph'){
+        var dataTesti = "./data/testimonial_ph.json"
+    }else {
+        var dataTesti = "./data/testimonials_en.json"
+    }
+    
+
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    res.render('testimonials', {
-        menu: menu,
-        active: 2,
-        localization: require('./public/lang/localization')
+    
+    fs.readFile(dataTesti, 'utf-8', (err, data) => {
+        if (err) {
+            console.log(err)
+        }else {
+            data = JSON.parse(data)
+            var testimonials = data.testi
+            console.log(testimonials)
+            res.render('testimonials', {
+                menu: menu,
+                testimonials : testimonials,
+                active: 2,
+                localization: require('./public/lang/localization')
+            })
+        }
     })
+    
 })
 
 
