@@ -75,9 +75,9 @@ if ('local' === process.env.NODE_ENV) {
 
 app.use('/:lang*?/benefits', function(req, res) {
     if (req.headers.country) {
-        var country = req.headers.country.toLowerCase();
+        var lang = req.headers.country.toLowerCase();
     } else {
-        var country = 'en';
+        var lang = 'en';
     }
 
     res.locals.baseUrl = process.env.BASE_URL;
