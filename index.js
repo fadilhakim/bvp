@@ -170,13 +170,24 @@ app.get('/:lang*?/', function(req, res) {
         var lang = 'en';
     }
 
+    if(lang == 'id' || lang == 'en' ){
+        var dataVendors = "./data/vendors_global.json";
+        var folderImg = 'global';
+    }else if(lang == 'ph'){
+        var dataVendors = "./data/vendors_ph.json";
+        var folderImg = 'ph';
+    }else if(lang == 'sg') {
+        var dataVendors = "./data/vendors_sg.json";
+        var folderImg = 'sg';
+    }
+
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-
-    fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
+    
+    fs.readFile(dataVendors, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
         } else {
@@ -186,12 +197,14 @@ app.get('/:lang*?/', function(req, res) {
                 ]).then(axios.spread((response, response2) => {
                     var dataBlogs = response.data.blogArticles
                     var dataCategories = response2.data.category
+                    
                         //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
                         dataVendors: dataVendors,
                         dataBlogs: dataBlogs,
+                        folderImg : folderImg,
                         dataCategories: dataCategories,
                         menu: menu,
                         active: 0,

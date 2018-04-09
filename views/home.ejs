@@ -181,7 +181,7 @@
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
                     <p><%- localization[lang].home.content_14 -%>
-                        <span class="counter-value" data-count="597">0</span>
+                        <span class="counter-value">597</span>
                         <span>K</span>
                     </p>
               
@@ -191,7 +191,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
                     <p><%- localization[lang].home.content_15 -%>
-                        <span class="counter-value" data-count="290">0</span>
+                        <span class="counter-value">290</span>
                         <span>K</span>
                     </p>
                 </div>
@@ -200,7 +200,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
                     <p><%- localization[lang].home.content_16 -%>
-                        <span class="counter-value" data-count="136">0</span>
+                        <span class="counter-value">136</span>
                     </p>
                 </div>
             </div>
@@ -291,9 +291,10 @@
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
+                    
                 <% dataVendors.forEach((vendor)=>{ %>
                 <div class="col-lg-15 col-md-15 col-sm-15">
-                    <img class="img-responsive" src="<%- assetsUrl -%>/vendor_logo/sg/<%= vendor.vendor_img %>">
+                    <img class="img-responsive" src="<%- assetsUrl -%>/vendor_logo/<%= folderImg %>/<%= vendor.vendor_img %>">
                 </div>
                 <%}) %>
             </div>
