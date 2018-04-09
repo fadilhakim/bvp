@@ -101,20 +101,21 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
         var lang = 'en';
     }
 
-    if(lang == 'id'){
-        var dataTesti = "./data/testimonial_id.json"
-    }else if(lang == 'ph'){
-        var dataTesti = "./data/testimonial_ph.json"
-    }else {
-        var dataTesti = "./data/testimonials_en.json"
-    }
-    
-
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
+    
+
+    if(lang == 'id' || lang == 'en'){
+        var dataTesti = "./data/testimonial_global.json"
+    }else if(lang == 'ph'){
+        var dataTesti = "./data/testimonial_ph.json"
+    }else if(lang == 'sg') {
+        var dataTesti = "./data/testimonials_sg.json"
+    }
+
     
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
         if (err) {
