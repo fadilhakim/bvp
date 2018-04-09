@@ -182,17 +182,14 @@ app.get('/:lang*?/home/', function(req, res) {
         } else {
             axios.all([
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
-                    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-                ]).then(axios.spread((response, response2) => {
+                ]).then(axios.spread((response) => {
                     var dataBlogs = response.data.blogArticles
-                    var dataCategories = response2.data.category
                         //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
                         dataVendors: dataVendors,
                         dataBlogs: dataBlogs,
-                        dataCategories: dataCategories,
                         menu: menu,
                         active: 0,
                         localization: require('./public/lang/localization')

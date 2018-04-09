@@ -29,6 +29,7 @@ gulp.task('js', function() {
         './public/js/popper.js',
         './public/js/counter.js',
         './public/js/pricing.js',
+        './public/js/registration-storage.js',
         './public/js/login.js',
         './public/js/axios.min.js',
         './public/js/smooth-scroll.js',
