@@ -25,16 +25,16 @@ const home = require('./routes/home')
 const benefits = require('./routes/benefits')
 
 const menu = [{
-    url: '/',
+    url: '/home/',
     name: 'Home'
 }, {
-    url: '/benefits',
+    url: '/home/benefits',
     name: 'Benefits'
 }, {
-    url: '/success-stories',
+    url: '/home/success-stories',
     name: 'Success Stories'
 }, {
-    url: '/pricing',
+    url: '/home/pricing',
     name: 'Pricing'
 }]
 
@@ -73,7 +73,7 @@ if ('local' === process.env.NODE_ENV) {
     }
 }
 
-app.use('/:lang*?/benefits', function(req, res) {
+app.use('/:lang*?/home/benefits', function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -85,7 +85,7 @@ app.use('/:lang*?/benefits', function(req, res) {
     res.locals.country = lang;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
     res.render('benefits', {
         menu: menu,
@@ -94,7 +94,7 @@ app.use('/:lang*?/benefits', function(req, res) {
     });
 })
 
-app.get('/:lang*?/success-stories', function(req, res) {
+app.get('/:lang*?/home/success-stories', function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -114,7 +114,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
     
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
         if (err) {
@@ -122,7 +122,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
         }else {
             data = JSON.parse(data)
             var testimonials = data.testi
-            console.log(testimonials)
+
             res.render('testimonials', {
                 menu: menu,
                 testimonials : testimonials,
@@ -135,7 +135,7 @@ app.get('/:lang*?/success-stories', function(req, res) {
 })
 
 
-app.get('/:lang*?/pricing', function(req, res) {
+app.get('/:lang*?/home/pricing', function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -146,7 +146,7 @@ app.get('/:lang*?/pricing', function(req, res) {
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
+    res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
     axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
         .then((categories) => {
@@ -163,7 +163,7 @@ app.get('/:lang*?/pricing', function(req, res) {
 })
 
 
-app.get('/:lang*?/', function(req, res) {
+app.get('/:lang*?/home/', function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -185,8 +185,8 @@ app.get('/:lang*?/', function(req, res) {
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
-    res.locals.menuUrl = (res.locals.lang != 'en') ? res.locals.baseUrl + '/' + res.locals.lang : res.locals.baseUrl;
-    
+    res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
+
     fs.readFile(dataVendors, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
