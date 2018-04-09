@@ -109,9 +109,9 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
     
 
     if(lang == 'id' || lang == 'en'){
-        var dataTesti = "./data/testimonial_global.json"
+        var dataTesti = "./data/testimonials_global.json"
     }else if(lang == 'ph'){
-        var dataTesti = "./data/testimonial_ph.json"
+        var dataTesti = "./data/testimonials_ph.json"
     }else if(lang == 'sg') {
         var dataTesti = "./data/testimonials_sg.json"
     }
