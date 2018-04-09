@@ -1,8 +1,10 @@
 
 {"vendors":
     [
-        {"vendor_name":"Ayana Bali","vendor_img":"ayana-bali.png"},
-        {"vendor_name":"four season","vendor_img":"four_season.png"},
+        {"vendor_name":"Ayana Bali","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
+        {"vendor_name":"Sheraton Grand Jakarta Gandaria City Hotel","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
+
+        {"vendor_name":"four season","vendor_img":"four_season.png","vendor_account":""},
         {"vendor_name":"multifolds","vendor_img":"multifolds-web.png"},
         {"vendor_name":"febspantry","vendor_img":"febspantry.png"},
         {"vendor_name":"alia illas","vendor_img":"alila _illas.png"},

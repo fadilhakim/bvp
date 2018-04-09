@@ -101,20 +101,21 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
         var lang = 'en';
     }
 
-    if(lang == 'id'){
-        var dataTesti = "./data/testimonial_id.json"
-    }else if(lang == 'ph'){
-        var dataTesti = "./data/testimonial_ph.json"
-    }else {
-        var dataTesti = "./data/testimonials_en.json"
-    }
-    
-
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
+    
+
+    if(lang == 'id' || lang == 'en'){
+        var dataTesti = "./data/testimonial_global.json"
+    }else if(lang == 'ph'){
+        var dataTesti = "./data/testimonial_ph.json"
+    }else if(lang == 'sg') {
+        var dataTesti = "./data/testimonials_sg.json"
+    }
+
     
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
         if (err) {
@@ -170,13 +171,24 @@ app.get('/:lang*?/home/', function(req, res) {
         var lang = 'en';
     }
 
+    if(lang == 'id' || lang == 'en' ){
+        var dataVendors = "./data/vendors_global.json";
+        var folderImg = 'global';
+    }else if(lang == 'ph'){
+        var dataVendors = "./data/vendors_ph.json";
+        var folderImg = 'ph';
+    }else if(lang == 'sg') {
+        var dataVendors = "./data/vendors_sg.json";
+        var folderImg = 'sg';
+    }
+
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
-    fs.readFile('./data/vendors.json', 'utf-8', (err, data) => {
+    fs.readFile(dataVendors, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
         } else {
@@ -184,12 +196,13 @@ app.get('/:lang*?/home/', function(req, res) {
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
                 ]).then(axios.spread((response) => {
                     var dataBlogs = response.data.blogArticles
-                        //console.log(dataCategories)
+                    
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
                         dataVendors: dataVendors,
                         dataBlogs: dataBlogs,
+                        folderImg : folderImg,
                         menu: menu,
                         active: 0,
                         localization: require('./public/lang/localization')

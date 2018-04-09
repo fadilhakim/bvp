@@ -44,19 +44,20 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-faded">
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <!-- <ul class="navbar-nav mt-20 m-top">
+
+                <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li>
-                        <a class="btn btn-primary block center" href="">
+                        <a class="btn btn-primary block center" href="https://business.bridestory.com/register/vendor">
                             Start Free Trial
                         </a>
                     </li>
                     <li class="mt-20 mb-20">
-                        <a class="text-center block" href="">
+                        <a class="text-center block" href="https://business.bridestory.com/login">
                             VENDOR LOGIN
                         </a>
                     </li>
                 </ul>
-            -->
+           
                 <div class="m-if-login" ng-if="loginCtrl.user().id != undefined">
                     <div class="vendorPic">
                         <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="45">
