@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const langChecker = require('./middleware/langChecker');
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -73,7 +74,7 @@ if ('local' === process.env.NODE_ENV) {
     }
 }
 
-app.use('/:lang*?/home/benefits', function(req, res) {
+app.use('/:lang*?/home/benefits', langChecker, function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -94,7 +95,7 @@ app.use('/:lang*?/home/benefits', function(req, res) {
     });
 })
 
-app.get('/:lang*?/home/success-stories', function(req, res) {
+app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -106,37 +107,37 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
-    
 
-    if(lang == 'id' || lang == 'en'){
+
+    if (lang == 'id' || lang == 'en') {
         var dataTesti = "./data/testimonial_global.json"
-    }else if(lang == 'ph'){
+    } else if (lang == 'ph') {
         var dataTesti = "./data/testimonial_ph.json"
-    }else if(lang == 'sg') {
+    } else if (lang == 'sg') {
         var dataTesti = "./data/testimonials_sg.json"
     }
 
-    
+
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
-        }else {
+        } else {
             data = JSON.parse(data)
             var testimonials = data.testi
 
             res.render('testimonials', {
                 menu: menu,
-                testimonials : testimonials,
+                testimonials: testimonials,
                 active: 2,
                 localization: require('./public/lang/localization')
             })
         }
     })
-    
+
 })
 
 
-app.get('/:lang*?/home/pricing', function(req, res) {
+app.get('/:lang*?/home/pricing', langChecker, function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -164,20 +165,20 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/', function(req, res) {
+app.get('/:lang*?/home/', langChecker, function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
         var lang = 'en';
     }
 
-    if(lang == 'id' || lang == 'en' ){
+    if (lang == 'id' || lang == 'en') {
         var dataVendors = "./data/vendors_global.json";
         var folderImg = 'global';
-    }else if(lang == 'ph'){
+    } else if (lang == 'ph') {
         var dataVendors = "./data/vendors_ph.json";
         var folderImg = 'ph';
-    }else if(lang == 'sg') {
+    } else if (lang == 'sg') {
         var dataVendors = "./data/vendors_sg.json";
         var folderImg = 'sg';
     }
@@ -198,14 +199,14 @@ app.get('/:lang*?/home/', function(req, res) {
                 ]).then(axios.spread((response, response2) => {
                     var dataBlogs = response.data.blogArticles
                     var dataCategories = response2.data.category
-                    
-                        //console.log(dataCategories)
+
+                    //console.log(dataCategories)
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
                         dataVendors: dataVendors,
                         dataBlogs: dataBlogs,
-                        folderImg : folderImg,
+                        folderImg: folderImg,
                         dataCategories: dataCategories,
                         menu: menu,
                         active: 0,
