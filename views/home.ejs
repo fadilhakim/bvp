@@ -1,6 +1,6 @@
 <% include template/header %>
     <section class="jumbotron">
-        <div class="row justify-content-end">
+        <div class="row justify-content-end" ng-controller="registerController as registerCtrl" ng-cloak>
             <div class="col-lg-8 col-md-6 col-xs-12">
                 <h1>
                     <%- localization[lang].home.title -%>
@@ -13,28 +13,25 @@
                     <h2 class=""><%- localization[lang].home.form_title -%></h2>
                     <span><%- localization[lang].home.form_sub_title -%> :</span>
                     <div class="form-group ">
-                        <select class="form-control m-top20" name="category">
-                            <%dataCategories.forEach((categories)=>{ %>
-                                <option value="<%= categories.id %>"><%= categories.name %></option>
-                            <%}) %>
+                        <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id">
                         </select>
                     </div>
                     <div class="form-group">
-                        <input id="businessName" type="text" class="form-control" name="businessName" placeholder="Business Name" required>
-                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
+                        <input id="businessName" type="text" class="form-control" ng-model="businessName" placeholder="Business Name" required>
+                        <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
                     </div>
 
                     <div class="form-group">
-                        <input id="email" type="email" class="form-control" name="email" placeholder="Email Address" required>
-                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
-                        <small style="display: none" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
+                        <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address" required>
+                        <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
+                        <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
                     </div>
 
                     <div class="form-group">
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
-                        <small style="display: none" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
+                        <input id="password" type="password" class="form-control" ng-model="password" placeholder="Password" required>
+                        <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
-                    <a class="btn btn-primary block white f-w700" onclick="submitRegistration()" />Start Free Trial</a>
+                    <a class="btn btn-primary block white f-w700" ng-click="submitRegistration()" />Start Free Trial</a>
                     <span class="block mt-20 info-login"><%- localization[lang].home.form_cond_1 -%></span>
 
                     <span class="f-w700 block mt-20 info-login"><%- localization[lang].home.form_cond_2 -%></span>
@@ -47,34 +44,32 @@
 
     <!-- displayed only on mobile screen -->
     <section class="home-regis">
-        <div class="container">
+        <div class="container" ng-controller="registerController as registerCtrl" ng-cloak>
             <div class="col-12">
                 <form>
                     <h2 class=""><%- localization[lang].home.form_title -%></h2>
                     <span><%- localization[lang].home.form_sub_title -%> :</span>
                     <div class="form-group ">
-                        <select name="businesscategory" class="form-control m-top20" id="exampleSelect1">
-                            <%dataCategories.forEach((categories)=>{ %>
-                                <option value="<%= categories %>"><%= categories.name %></option>
-                            <%}) %>
+                        <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id">
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="businessname" required class="form-control" name="businessName" placeholder="Business Name">
-                        <small style="display: none" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
+                        <input id="businessName" type="text" class="form-control" ng-model="businessName" placeholder="Business Name">
+                        <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
                     </div>
-    
+
                     <div class="form-group">
-                        <input type="email" name="vendoremail" required class="form-control" name="emailHelp" placeholder="Email Address">
-                        <small style="display: none" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
-                        <small style="display: none" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
+                        <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address">
+                        <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
+                        <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
                     </div>
-    
+
                     <div class="form-group">
-                        <input type="password" name="password" required class="form-control" name"passwordHelp" placeholder="Password">
-                        <small style="display: none" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
+                        <input id="password" type="password" class="form-control" ng-model="password" placeholder="Password">
+                        <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
-                    <button onclick="submitRegistration()" class="btn btn-primary">Start Free Trial</button>
+
+                    <button ng-click="submitRegistration()" class="btn btn-primary">Start Free Trial</button>
                     <span><%- localization[lang].home.form_cond_1 -%></span>
                     <br><br>
                     <span class="f-w700"><%- localization[lang].home.form_cond_2 -%></span>
@@ -254,7 +249,7 @@
                             <div class="profpic"></div>
                         </div>
                         <div class="col-lg-9 col-12 text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend luctus nulla, eu rutrum velit fermentum et. Nam vitae condimentum dolor. Nunc erat risus, tincidunt id arcu ac, sodales iaculis diam. Ut dignissim id dolor at dignissim. Morbi dolor libero, ultrices ut ante a, tincidunt euismod odio</p>
+                            <p>"Its the right place to display our talents and services. As a new comer, participating in Bridestory Fair has given us a chance to meet direct clients and it also gives us the opportunity to continue networking with other wedding professionals."</p>
                             <span class="border-pink"></span>
                             <p class="name f-w700 m-top40">Alice Callista</p>
                             <p class="role">Founder, Alleka Design, Indonesia</p>
@@ -269,19 +264,49 @@
                             <div class="profpic"></div>
                         </div>
                         <div class="col-lg-9 col-12 text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend luctus nulla, eu rutrum velit fermentum et. Nam vitae condimentum dolor. Nunc erat risus, tincidunt id arcu ac, sodales iaculis diam. Ut dignissim id dolor at dignissim. Morbi dolor libero, ultrices ut ante a, tincidunt euismod odio</p>
+                            <p>We believe that the bridestory website is truly an effective way to find good vendors. Its like having a virtual mall for wedding. Through bridestory, clients can see our profile and enable them to determine what they want even before they meet us.</p>
                             <span class="border-pink"></span>
-                            <p class="name f-w700 m-top40">Alice Callista</p>
-                            <p class="role">Founder, Alleka Design, Indonesia</p>
+                            <p class="name f-w700 m-top40">Yu Cien</p>
+                            <p class="role">Founder, Lotus Design, Indonesia</p>
                         </div>
                         <div></div>
                     </div>
                 </div>
 
+                <div class="col-lg-6 col-md-6 col-12 testimonial">
+                    <div class="row">
+                        <div class="col-lg-3 col-12">
+                            <div class="profpic"></div>
+                        </div>
+                        <div class="col-lg-9 col-12 text">
+                            <p>Bridestory has become one of the top wedding vendors platforms in Singapore. My photography business has been exposed and showcased locally and as well as in South East Asia. A great channel that bring photographers and potential couples together and at ease. Thanks Bridestory</p>
+                            <span class="border-pink"></span>
+                            <p class="name f-w700 m-top40">Yu Cien</p>
+                            <p class="role">Founder, Stanstills, Singapore</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12 testimonial">
+                        <div class="row">
+                            <div class="col-lg-3 col-12">
+                                <div class="profpic"></div>
+                            </div>
+                            <div class="col-lg-9 col-12 text">
+                                <p>The app made it easy for us to update our profile, post new photos and videos for our portfolio. Besides, we receive more business leads and can respond to them immediately. The application has made us visible to our clients and potential clients.</p>
+                                <span class="border-pink"></span>
+                                <p class="name f-w700 m-top40">Yu Cien</p>
+                                <p class="role">Founder, Mayad Studios, Phillippines</p>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+
           
             </div>
             <div class="row text-center m-top40">
-                <a href="/sucessstories" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_24 -%></a>
+                <a href="/home/success-stories" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_24 -%></a>
             </div>
         </div>
     </section>

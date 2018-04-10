@@ -1,29 +1,42 @@
-function submitRegistration () {
-    // e.preventDefault();
-    var businessName    = $('[name="businessName"]').val(),
-    email               = $('[name="email"]').val(),
-    password            = $('[name="password"]').val(),
-    category            = $('[name="category"]').val();
+'use strict';
 
-    $('#businessEmpty').hide();
-    $('#emailEmpty').hide();
-    $('#wrongEmail').hide();
-    $('#passwordEmpty').hide();
+angular
+.module('homeApp.register',['ngCookies'])
+.controller('registerController', ['$http', '$scope', '$cookies', function($http, $scope, $cookies){
+    $scope.submitted = false;
+    $scope.category = {};
+    $scope.categories = {};
+    $scope.businessName = null;
+    $scope.emailVendor = null;
+    $scope.password = null;
+    $scope.emailValid = true;
 
-    if(!businessName) $('#businessEmpty').show();
-    
-    if(!email) $('#emailEmpty').show();
-    else if(!validateEmail(email)) $('#wrongEmail').show();
-    
-    if(!password) $('#passwordEmpty').show();
+    $scope.getCategories = function(){
+        $http.get(configUrl.api + '/v2/categories').then(function(result){
+            $scope.categories = result.data.category;
+            $scope.category = $scope.categories[0];
+        })
+    }
 
-    if(businessName && email && password && validateEmail(email)){
-        document.cookie = 'BS.registration-data=' + JSON.stringify({'name' : businessName, 'email' : email, 'password' : password, 'category' : category}) + ';domain=.bridestory.com;';
-        window.location = configUrl.businessUrl + '/register/vendor';
-    }   
-}
+    $scope.getCategories();
 
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+    $scope.submitRegistration = function() {
+        $scope.submitted = true;
+        if($scope.businessName && $scope.emailVendor && $scope.password && $scope.validateEmail($scope.emailVendor)){
+            document.cookie = 'BS.registration-data=' + encodeURIComponent(JSON.stringify({'full_name' : $scope.businessName, 'email' : $scope.emailVendor, 'password' : $scope.password, 'category' : $scope.category})) + ';domain=.bridestory.com;path=/';
+            window.location = configUrl.businessUrl + '/register/vendor';
+        }   
+    }
+
+    $scope.validateEmail = function(email) {
+        var rgx = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,10}(?:\.[a-z]{2})?)$/i;
+        $scope.emailValid = rgx.test(email);
+        return $scope.emailValid;
+    }
+
+    return {
+        categories : function(){
+            return $scope.categories;
+        }
+    }
+}]);

@@ -2,5 +2,6 @@
 
 angular.module('homeApp', [
     'homeApp.login',
-    'homeApp.pricing'
+    'homeApp.pricing',
+    'homeApp.register'
 ]);

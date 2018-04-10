@@ -1,8 +1,35 @@
 
 {"vendors":
     [
-        {"vendor_name":"Ayana Bali SG","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
-        {"vendor_name":"Sheraton Grand Jakarta Gandaria City Hotel","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"}
+        {"vendor_name":"four season","vendor_img":"four_season.png","vendor_account":"https://www.bridestory.com/four-seasons-resort-bali-jimbaran-bay"},
+        {"vendor_name":"multifolds","vendor_img":"multifolds-web.png","vendor_account":""},
+        {"vendor_name":"febspantry","vendor_img":"febspantry.png"},
+        {"vendor_name":"alia illas","vendor_img":"alila _illas.png"},
+        {"vendor_name":"amanda cheong","vendor_img":"amanda_cheong.png"},
+        {"vendor_name":"Androidsin Boots","vendor_img":"AndroidsinBoots.png"},
+        {"vendor_name":"axioo","vendor_img":"axioo.png"},
+        {"vendor_name":"davy linggar","vendor_img":"davylinggar.png"},
+        {"vendor_name":"Elizabeth Messina","vendor_img":"Elizabeth-Messina-Logo-Remake.png"},
+        {"vendor_name":"Fairmont Singapore","vendor_img":"Fairmont-Singapore-Logo-Black-High-Res.png"},
+        {"vendor_name":"flower story","vendor_img":"flowerstory.png"},
+        {"vendor_name":"Iris Wave","vendor_img":"Iriswave.png"},
+        {"vendor_name":"Kartoe","vendor_img":"kartoe.png"},
+        {"vendor_name":"saptodjojokartiko","vendor_img":"saptodjojokartiko_2.png"},
+        {"vendor_name":"Global Wedding","vendor_img":"logo-Global-Weddings.png"},
+        {"vendor_name":"Marina bay sands","vendor_img":"Marina_Bay_Sands_logo_logotype.png"},
+        {"vendor_name":"makeup entourage","vendor_img":"makeup_entourage.png"},
+        {"vendor_name":"The Ritz Cartlon","vendor_img":"ritz-carlton.png"},
+        {"vendor_name":"Jessica Cindy","vendor_img":"jessicacindy.png"},
+        {"vendor_name":"Olive3","vendor_img":"olive3.png"},
+        {"vendor_name":"Vaughn Tan","vendor_img":"vaughn_tan.png"},
+        {"vendor_name":"SK Jewellery","vendor_img":"sk_logo.png"},
+        {"vendor_name":"so singapore hotel","vendor_img":"so-singapore-hotel.png"},
+        {"vendor_name":"sweetescape","vendor_img":"sweetescape.png"},
+        {"vendor_name":"theproposal","vendor_img":"theproposal.png"},
+        {"vendor_name":"The Beautiful Moment","vendor_img":"The_Beautiful_Moment.png"},
+        {"vendor_name":"Truly enamoured ","vendor_img":"truly_enamoured_logo.png"},
+        {"vendor_name":"Verawang","vendor_img":"VRW_Logo_Master_black-x18165.png"},
+        {"vendor_name":"Wedrock","vendor_img":"wedrock.png"}
 
     ]
     
