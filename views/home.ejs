@@ -368,26 +368,30 @@
             <div class="row">
 
                 <%var i = 0; dataBlogs.forEach((blogs)=>{ %>
-                <div class="col-lg-4 col-md-12 col-xs-12">
-                    <div class="img-blog">
-                        <% 
-                            var newImageName =  blogs.homestreamImage 
-                            var res = newImageName.replace("upload/","upload/f_auto,fl_progressive,w_350,h_233,q_80/")
-                        %>
-                        <img class="img-responsive" src="<%= res %>">
+                
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                        <a href="https://business.bridestory.com/blog/<%= blogs.slug %>">
+                            <div class="img-blog">
+                                <% 
+                                    var newImageName =  blogs.homestreamImage 
+                                    var res = newImageName.replace("upload/","upload/f_auto,fl_progressive,w_350,h_233,q_80/")
+                                %>
+                                <img class="img-responsive" src="<%= res %>">
+                            </div>
+                            <span class="catagory">
+                                <b><%= blogs.categories.data[0].name %></b>
+                                - <% 
+                                    var fd = blogs.createdAt
+                                    var date = fd.slice(0,10)
+                                    var newDate = new Date(date) %>
+                                <%= newDate.toDateString() %>
+                            </span>
+                            <h4 class="f-w700">
+                                    <%= blogs.title %>
+                            </h4>
+                        </a>
                     </div>
-                    <span class="catagory">
-                        <b><%= blogs.categories.data[0].name %></b>
-                        - <% 
-                            var fd = blogs.createdAt
-                            var date = fd.slice(0,10)
-                            var newDate = new Date(date) %>
-                          <%= newDate.toDateString() %>
-                    </span>
-                    <h4 class="f-w700">
-                            <%= blogs.title %>
-                    </h4>
-                </div>
+                
                 <%}) %>
             </div>
         </div>

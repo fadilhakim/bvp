@@ -206,6 +206,7 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
                         active: 0,
                         localization: require('./public/lang/localization')
                     })
+                    
                 }))
                 .catch(error => {
                     console.log(error);
