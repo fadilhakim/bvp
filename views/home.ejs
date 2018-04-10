@@ -3,15 +3,15 @@
         <div class="row justify-content-end" ng-controller="registerController as registerCtrl" ng-cloak>
             <div class="col-lg-8 col-md-6 col-xs-12">
                 <h1>
-                    <%- localization[lang].home.title -%>
+                    <%- localization[transId].home.title -%>
                 </h1>
                 <span class="border-pink m-top30 m-btm30"></span>
-                <p class="l-h28 f-w400"> <%- localization[lang].home.sub_title -%></p>
+                <p class="l-h28 f-w400"> <%- localization[transId].home.sub_title -%></p>
             </div>   
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <form>
-                    <h2 class=""><%- localization[lang].home.form_title -%></h2>
-                    <span><%- localization[lang].home.form_sub_title -%> :</span>
+                    <h2 class=""><%- localization[transId].home.form_title -%></h2>
+                    <span><%- localization[transId].home.form_sub_title -%> :</span>
                     <div class="form-group ">
                         <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id">
                         </select>
@@ -32,14 +32,14 @@
                         <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
                     </div>
                     <a class="btn btn-primary block white f-w700" ng-click="submitRegistration()" />Start Free Trial</a>
-                    <span class="block mt-20 info-login"><%- localization[lang].home.form_cond_1 -%></span>
+                    <span class="block mt-20 info-login"><%- localization[transId].home.form_cond_1 -%></span>
 
-                    <span class="f-w700 block mt-20 info-login"><%- localization[lang].home.form_cond_2 -%></span>
+                    <span class="f-w700 block mt-20 info-login"><%- localization[transId].home.form_cond_2 -%></span>
                 </form>
             </div>
         </div>
 
-        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[lang].home.content_1 -%></a> 
+        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
     </section>
 
     <!-- displayed only on mobile screen -->
@@ -47,8 +47,8 @@
         <div class="container" ng-controller="registerController as registerCtrl" ng-cloak>
             <div class="col-12">
                 <form>
-                    <h2 class=""><%- localization[lang].home.form_title -%></h2>
-                    <span><%- localization[lang].home.form_sub_title -%> :</span>
+                    <h2 class=""><%- localization[transId].home.form_title -%></h2>
+                    <span><%- localization[transId].home.form_sub_title -%> :</span>
                     <div class="form-group ">
                         <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id">
                         </select>
@@ -70,10 +70,10 @@
                     </div>
 
                     <button ng-click="submitRegistration()" class="btn btn-primary">Start Free Trial</button>
-                    <span><%- localization[lang].home.form_cond_1 -%></span>
+                    <span><%- localization[transId].home.form_cond_1 -%></span>
                     <br><br>
-                    <span class="f-w700"><%- localization[lang].home.form_cond_2 -%></span>
-                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[lang].home.content_1 -%></a> 
+                    <span class="f-w700"><%- localization[transId].home.form_cond_2 -%></span>
+                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
                 </form>
             </div>
         </div>
@@ -88,9 +88,9 @@
                     <img class="img-responsive" src="<%- assetsUrl -%>/icons/Landing_Page_Icon_1.png" alt="Instantly build an online presence">
                 </div>
                 <div class="col-lg-6 col-12 text">
-                    <h2><%- localization[lang].home.content_2 -%></h2>
+                    <h2><%- localization[transId].home.content_2 -%></h2>
                     <span class="border-pink"></span>
-                    <p><%- localization[lang].home.content_3 -%></p>
+                    <p><%- localization[transId].home.content_3 -%></p>
                     <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                         Learn More
                     </a>
@@ -109,13 +109,13 @@
                     </div>
         
                     <div class="col-lg-6 col-12 text">
-                        <h2><%- localization[lang].home.content_4 -%></h2>
+                        <h2><%- localization[transId].home.content_4 -%></h2>
                         <span class="border-pink"></span>
-                        <p><%- localization[lang].home.content_5 -%>:</p>
+                        <p><%- localization[transId].home.content_5 -%>:</p>
                         <ul>
-                            <li><%- localization[lang].home.content_6 -%></li>
-                            <li><%- localization[lang].home.content_7 -%></li>
-                            <li><%- localization[lang].home.content_8 -%></li>
+                            <li><%- localization[transId].home.content_6 -%></li>
+                            <li><%- localization[transId].home.content_7 -%></li>
+                            <li><%- localization[transId].home.content_8 -%></li>
                         </ul>
                         <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                             Learn More
@@ -132,9 +132,9 @@
                 </div>
     
                 <div class="col-lg-6 col-12 text">
-                    <h2><%- localization[lang].home.content_9 -%></h2>
+                    <h2><%- localization[transId].home.content_9 -%></h2>
                     <span class="border-pink"></span>
-                    <p><%- localization[lang].home.content_10 -%></p>
+                    <p><%- localization[transId].home.content_10 -%></p>
                     <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                         Learn More
                     </a>
@@ -151,9 +151,9 @@
                     </div>
 
                     <div class="col-lg-6 col-12 text ">
-                        <h2><%- localization[lang].home.content_11 -%></h2>
+                        <h2><%- localization[transId].home.content_11 -%></h2>
                         <span class="border-pink"></span>
-                        <p><%- localization[lang].home.content_12 -%></p>
+                        <p><%- localization[transId].home.content_12 -%></p>
                         <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
                             Learn More
                         </a>
@@ -168,14 +168,14 @@
 
     <section id="counter" class="data_st pd-section">
         <div class="container">
-            <h2 class="head-section"><%- localization[lang].home.content_13 -%></h2>
+            <h2 class="head-section"><%- localization[transId].home.content_13 -%></h2>
             <span class="border-pink center m-top20 m-btm20"></span>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <div class="img-box">
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
-                    <p><%- localization[lang].home.content_14 -%>
+                    <p><%- localization[transId].home.content_14 -%>
                         <span class="counter-value">597</span>
                         <span>K</span>
                     </p>
@@ -185,7 +185,7 @@
                     <div class="img-box">
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
-                    <p><%- localization[lang].home.content_15 -%>
+                    <p><%- localization[transId].home.content_15 -%>
                         <span class="counter-value">290</span>
                         <span>K</span>
                     </p>
@@ -194,7 +194,7 @@
                     <div class="img-box">
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
-                    <p><%- localization[lang].home.content_16 -%>
+                    <p><%- localization[transId].home.content_16 -%>
                         <span class="counter-value">136</span>
                     </p>
                 </div>
@@ -214,14 +214,14 @@
                     <img class="phone-apps" src="<%- assetsUrl -%>/icons/phone_app_store.png" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h2><%- localization[lang].home.content_17 -%></h2>
+                    <h2><%- localization[transId].home.content_17 -%></h2>
                     <span class="border-pink"></span>
                     <ul>
-                        <li><%- localization[lang].home.content_18 -%></li>
-                        <li><%- localization[lang].home.content_19 -%></li>
-                        <li><%- localization[lang].home.content_20 -%></li>
-                        <li><%- localization[lang].home.content_21 -%></li>
-                        <li><%- localization[lang].home.content_22 -%></li>
+                        <li><%- localization[transId].home.content_18 -%></li>
+                        <li><%- localization[transId].home.content_19 -%></li>
+                        <li><%- localization[transId].home.content_20 -%></li>
+                        <li><%- localization[transId].home.content_21 -%></li>
+                        <li><%- localization[transId].home.content_22 -%></li>
                     </ul>
                     <p class="f-w700 m-btm30 m-top20">Download bridestory Pro on</p>
                  
@@ -238,7 +238,7 @@
     </section>
 
     <section class="sucess-stories">
-        <h2 class="head-section"><%- localization[lang].home.content_23 -%></h2>
+        <h2 class="head-section"><%- localization[transId].home.content_23 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -306,13 +306,13 @@
           
             </div>
             <div class="row text-center m-top40">
-                <a href="/home/success-stories" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_24 -%></a>
+                <a href="/home/success-stories" class="btn btn-primary mid-button center-block "><%- localization[transId].home.content_24 -%></a>
             </div>
         </div>
     </section>
     
     <section class="vendors pd-section vendor-origin">
-        <h2 class="head-section"><%- localization[lang].home.content_25 -%></h2>
+        <h2 class="head-section"><%- localization[transId].home.content_25 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -328,13 +328,13 @@
 
     <section class="text-center m-top40 trial">
         <div class="container">
-            <h2 class="head-section white"><%- localization[lang].home.content_26 -%></h2>
+            <h2 class="head-section white"><%- localization[transId].home.content_26 -%></h2>
             <a href="https://business.bridestory.com/register/vendor#/" class="btn btn-primary mid-button center-block m-top30">Start Free Trial</a>
         </div>
     </section>
 
     <section class="text-center pd-section contact-assist">
-        <h2 class="head-section"><%- localization[lang].home.content_27 -%></h2>
+        <h2 class="head-section"><%- localization[transId].home.content_27 -%></h2>
         <span class="border-pink center m-top20 m-btm20"></span>
         <div class="container">
             <div class="row">
@@ -363,7 +363,7 @@
     <section class="blogs pd-section">
         <h2 class="head-section">Business Blog</h2>
         <span class="border-pink center m-top20 m-btm20"></span>
-        <h3 class="f-w400 m-top30 m-btm30"><%- localization[lang].home.content_28 -%></h3>
+        <h3 class="f-w400 m-top30 m-btm30"><%- localization[transId].home.content_28 -%></h3>
         <div class="container">
             <div class="row">
 
@@ -372,7 +372,7 @@
                     <div class="img-blog">
                         <% 
                             var newImageName =  blogs.homestreamImage 
-                            var res = newImageName.replace("upload/","upload/f_auto,fl_progressive,w_350,h_233,q_80")
+                            var res = newImageName.replace("upload/","upload/f_auto,fl_progressive,w_350,h_233,q_80/")
                         %>
                         <img class="img-responsive" src="<%= res %>">
                     </div>
@@ -393,7 +393,7 @@
         </div>
 
         <div class="container text-center m-top40">
-            <a href="https://business.bridestory.com/blog" class="btn btn-primary mid-button center-block "><%- localization[lang].home.content_29 -%></a>
+            <a href="https://business.bridestory.com/blog" class="btn btn-primary mid-button center-block "><%- localization[transId].home.content_29 -%></a>
         </div>
     </section>          
 <% include template/footer %>
