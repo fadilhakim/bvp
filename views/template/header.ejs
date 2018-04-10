@@ -29,7 +29,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <% Object.keys(menu).forEach(function(key) { %>
                                     <% if(key == active) { %>
-                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item" href="#">EN</a>
+                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
                                         <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
                                     <% } %>
                                 <% }); %>
