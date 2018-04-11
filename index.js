@@ -170,7 +170,7 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
     }
 
     if (lang == 'id' || lang == 'en') {
-        var dataVendors = "./data/vendors_ph.json";
+        var dataVendors = "./data/vendors_global.json";
         var folderImg = 'global';
     } else if (lang == 'ph') {
         var dataVendors = "./data/vendors_ph.json";

@@ -19,7 +19,33 @@
             <div class="top-menu">
                 <ul>
                     <li ng-if="loginCtrl.user().id == undefined"><a href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
-                    <li ng-if="loginCtrl.user().id">{{loginCtrl.user().displayName}}</li>
+                    <li ng-if="loginCtrl.user().id">
+                        <div class="dropdown show if-login">
+                            <a class="dropdown-toggle btn" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
+                                <div class="vendorPic">
+                                    <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="38">
+                                </div>
+                                <div class="vendorInfo">
+                                    <h4 class="vendorName">{{loginCtrl.user().displayName}}</h4>
+                                    <p class="status">
+                                        Trial -
+                                        <span class="credit">
+                                            35 credits
+                                        </span>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuProfile">
+                               <a class="dropdown-item" href="">{{loginCtrl.user().displayName}}</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item dashboard" href="<%- baseUrl -%>/dashboard">MY DASHBOARD</a>
+                               <a class="dropdown-item profile" href="<%- baseUrl -%>/{{loginCtrl.user().slug}}">MY PROFILE</a>
+                               <a class="dropdown-item settings" href="<%- baseUrl -%>/dashboard/settings">MY SETTINGS</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item logout" href="">LOG OUT</a>
+                            </div>
+                        </div>
+                    </li>   
                     <li ng-if="loginCtrl.user().id == undefined" class="p-left15"><a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
                     <li class=""><a href="#">
                         <div class="dropdown show">

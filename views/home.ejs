@@ -319,7 +319,9 @@
                     
                 <% dataVendors.forEach((vendor)=>{ %>
                 <div class="col-lg-15 col-md-15 col-sm-15">
-                    <img class="img-responsive" src="<%- assetsUrl -%>/vendor_logo/<%= folderImg %>/<%= vendor.vendor_img %>">
+                    <a href="<%= vendor.vendor_account %>">
+                        <img class="img-responsive" src="<%- assetsUrl -%>/vendor_logo/<%= folderImg %>/<%= vendor.vendor_img %>">
+                    </a>
                 </div>
                 <%}) %>
             </div>
