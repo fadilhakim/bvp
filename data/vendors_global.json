@@ -2,37 +2,41 @@
 {"vendors":
     [
         {"vendor_name":"Ayana Bali","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
-        {"vendor_name":"Sheraton Grand Jakarta Gandaria City Hotel","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
+        {"vendor_name":"Sheraton Grand Jakarta Gandaria City Hotel","vendor_img":"Screen-Shot-2017-06-06-at-11.01.48-AM.png","vendor_account":"https://www.bridestory.com/sheraton-grand-jakarta-gandaria-city-hotel"},
+        {"vendor_name":"four season","vendor_img":"669871_orig.png","vendor_account":"https://www.bridestory.com/four-seasons-resort-bali-jimbaran-bay"},
+        {"vendor_name":"alia illas","vendor_img":"alila_villas.png","vendor_account":"https://www.bridestory.com/alila-hotels-and-resorts-bali"},
+        {"vendor_name":"Shangrila Hotel Jakarta","vendor_img":"SLJ-Hotel-Logo.png","vendor_account":"https://www.bridestory.com/shangri-la-hotel-jakarta"},
+       
+        {"vendor_name":"Global Wedding","vendor_img":"logo-Global-Weddings.png","vendor_account":"https://www.bridestory.com/global-weddings"},
+        {"vendor_name":"Verawang","vendor_img":"VRW_Logo_Master_black-x18165.png","vendor_account":"https://www.bridestory.com/global-weddings"},
+        {"vendor_name":"The Ritz Cartlon","vendor_img":"ritz-carlton.png","vendor_account":"https://www.bridestory.com/ritz-carlton-mega-kuningan"},
+        {"vendor_name":"sweetescape","vendor_img":"sweetescape.png","vendor_account":"https://www.bridestory.com/sweetescape"},
+        {"vendor_name":"Ayang Cempaka Studio","vendor_img":"ayangcempaka.png","vendor_account":"https://www.bridestory.com/ayang-cempaka-studio"},
+       
+        {"vendor_name":"elantier","vendor_img":"elantier.png","vendor_account":"https://www.bridestory.com/elantier"},
+        {"vendor_name":"ppf photography & videography","vendor_img":"PPF.png","vendor_account":"https://www.bridestory.com/ppf-photography-videography"},
+        {"vendor_name":"barli asmara couture","vendor_img":"barli-exercise-final-outline-10.png","vendor_account":"https://www.bridestory.com/barli-asmara-couture"},
+        {"vendor_name":"davy linggar","vendor_img":"davylinggar.png","vendor_account":"https://www.bridestory.com/davy-linggar-photography-1"},
+        {"vendor_name":"saptodjojokartiko","vendor_img":"saptodjojokartiko_2.png","vendor_account":"https://www.bridestory.com/saptodjojokartiko-bride"},
 
-        {"vendor_name":"four season","vendor_img":"four_season.png","vendor_account":""},
-        {"vendor_name":"multifolds","vendor_img":"multifolds-web.png"},
-        {"vendor_name":"febspantry","vendor_img":"febspantry.png"},
-        {"vendor_name":"alia illas","vendor_img":"alila _illas.png"},
-        {"vendor_name":"amanda cheong","vendor_img":"amanda_cheong.png"},
-        {"vendor_name":"Androidsin Boots","vendor_img":"AndroidsinBoots.png"},
-        {"vendor_name":"axioo","vendor_img":"axioo.png"},
-        {"vendor_name":"davy linggar","vendor_img":"davylinggar.png"},
-        {"vendor_name":"Elizabeth Messina","vendor_img":"Elizabeth-Messina-Logo-Remake.png"},
-        {"vendor_name":"Fairmont Singapore","vendor_img":"Fairmont-Singapore-Logo-Black-High-Res.png"},
-        {"vendor_name":"flower story","vendor_img":"flowerstory.png"},
-        {"vendor_name":"Iris Wave","vendor_img":"Iriswave.png"},
-        {"vendor_name":"Kartoe","vendor_img":"kartoe.png"},
-        {"vendor_name":"saptodjojokartiko","vendor_img":"saptodjojokartiko_2.png"},
-        {"vendor_name":"Global Wedding","vendor_img":"logo-Global-Weddings.png"},
-        {"vendor_name":"Marina bay sands","vendor_img":"Marina_Bay_Sands_logo_logotype.png"},
-        {"vendor_name":"makeup entourage","vendor_img":"makeup_entourage.png"},
-        {"vendor_name":"The Ritz Cartlon","vendor_img":"ritz-carlton.png"},
-        {"vendor_name":"Jessica Cindy","vendor_img":"jessicacindy.png"},
-        {"vendor_name":"Olive3","vendor_img":"olive3.png"},
-        {"vendor_name":"Vaughn Tan","vendor_img":"vaughn_tan.png"},
-        {"vendor_name":"SK Jewellery","vendor_img":"sk_logo.png"},
-        {"vendor_name":"so singapore hotel","vendor_img":"so-singapore-hotel.png"},
-        {"vendor_name":"sweetescape","vendor_img":"sweetescape.png"},
-        {"vendor_name":"theproposal","vendor_img":"theproposal.png"},
-        {"vendor_name":"The Beautiful Moment","vendor_img":"The_Beautiful_Moment.png"},
-        {"vendor_name":"Truly enamoured ","vendor_img":"truly_enamoured_logo.png"},
-        {"vendor_name":"Verawang","vendor_img":"VRW_Logo_Master_black-x18165.png"},
-        {"vendor_name":"Wedrock","vendor_img":"wedrock.png"}
+        {"vendor_name":"twigs and twine","vendor_img":"twigsandtwine.png","vendor_account":"https://www.bridestory.com/twigs-and-twine"},
+        {"vendor_name":"pemberley paperie ","vendor_img":"pemberley-paperie.png","vendor_account":"https://www.bridestory.com/pemberley-paperie"},
+        {"vendor_name":"david salim photography","vendor_img":"david-salim.png","vendor_account":"https://www.bridestory.com/david-salim-photography"},
+        {"vendor_name":"Elizabeth Messina","vendor_img":"Elizabeth-Messina-Logo-Remake.png","vendor_account":"https://www.bridestory.com/elizabeth-messina"},
+        {"vendor_name":"theproposal","vendor_img":"theproposal copy.png","vendor_account":"https://www.bridestory.com/the-proposal"},
+
+        {"vendor_name":"gordon blue cake","vendor_img":"gordon-blue-cake.png","vendor_account":"https://www.bridestory.com/gordon-blue-cake"},
+        {"vendor_name":"truly enamoured","vendor_img":"truly_enamoured_logo.png","vendor_account":"https://www.bridestory.com/truly-enamoured"},
+        {"vendor_name":"royal designs indonesia","vendor_img":"royal-designs-indonesia.png","vendor_account":"https://www.bridestory.com/royal-design-indonesia"},
+        {"vendor_name":"axioo","vendor_img":"axioo.png","vendor_account":"https://www.bridestory.com/axioo"},
+        {"vendor_name":"verakebaya","vendor_img":"verakebaya.png","vendor_account":"https://www.bridestory.com/verakebaya"},
+
+        {"vendor_name":"thedistillery","vendor_img":"thedistillery.png","vendor_account":"https://www.bridestory.com/distillery"},
+        {"vendor_name":"frank & co","vendor_img":"frank-co.png","vendor_account":"https://www.bridestory.com/frank-co"},
+        {"vendor_name":"mayad Studio","vendor_img":"mayad.png","vendor_account":"https://www.bridestory.com/mayad-studios-1"},
+        {"vendor_name":"arale","vendor_img":"arale.png","vendor_account":"https://www.bridestory.com/arale-feat-tex-saverio-1"},
+        {"vendor_name":"the leornadi","vendor_img":"the_leornadi.png","vendor_account":"https://www.bridestory.com/the-leonardi"}
+
     ]
     
 }

@@ -1,8 +1,29 @@
 
 {"vendors":
     [
-        {"vendor_name":"Ayana Bali PH","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
-        {"vendor_name":"Sheraton Grand Jakarta Gandaria City Hotel","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"}
+        {"vendor_name":"Ayana Bali","vendor_img":"ayana-bali.png","vendor_account":"https://www.bridestory.com/ayana-resort-and-spa-bali"},
+        {"vendor_name":"Conrad Manila","vendor_img":"50ff90c5-CONRAD---Thumbnail.png","vendor_account":"https://www.bridestory.com/conrad-manila"},
+        {"vendor_name":"Discovery shores boracay","vendor_img":"dsblogo.png","vendor_account":"https://www.bridestory.com/discovery-shores-boracay"},
+        {"vendor_name":"alia Hotels","vendor_img":"alila villas.png","vendor_account":"https://www.bridestory.com/alila-hotels-and-resorts-bali"},
+        {"vendor_name":"shangri las mactan resort spa cebu","vendor_img":"shangri-la-mactan.png","vendor_account":"https://www.bridestory.com/shangri-las-mactan-resort-spa-cebu"},
+
+        {"vendor_name":"Global Wedding","vendor_img":"logo-Global-Weddings.png","vendor_account":"https://www.bridestory.com/global-weddings"},
+        {"vendor_name":"Verawang","vendor_img":"VRW_Logo_Master_black-x18165.png","vendor_account":"https://www.bridestory.com/vera-wang-singapore"},
+        {"vendor_name":"makeup entourage","vendor_img":"makeup_entourage.png","vendor_account":"https://www.bridestory.com/makeup-entourage"},
+        {"vendor_name":"sweetescape","vendor_img":"sweetescape.png","vendor_account":"https://www.bridestory.com/sweetescape"},
+        {"vendor_name":"elizabeth hallie design","vendor_img":"elizabeth-hallie.png","vendor_account":"https://www.bridestory.com/elizabeth-hallie-design"},
+
+        {"vendor_name":"rita neri","vendor_img":"rita neri.png","vendor_account":"https://www.bridestory.com/rita-neri-event-planners"},
+        {"vendor_name":"chestknots studios","vendor_img":"chestknots.png","vendor_account":"https://www.bridestory.com/chestknots-studios"},
+        {"vendor_name":"vania romoff inc","vendor_img":"vania-romoff.png","vendor_account":"https://www.bridestory.com/vania-romoff-inc"},
+        {"vendor_name":"davy linggar","vendor_img":"davylinggar.png","vendor_account":"https://www.bridestory.com/davy-linggar-photography-1"},
+        {"vendor_name":"saptodjojokartiko","vendor_img":"saptodjojokartiko_2.png","vendor_account":"https://www.bridestory.com/saptodjojokartiko-bride"},
+
+        {"vendor_name":"teddy-manuel-flowers-events","vendor_img":"teddy.png","vendor_account":"https://www.bridestory.com/teddy-manuel-flowers-events"},
+        {"vendor_name":"nice print photography","vendor_img":"nice print.png","vendor_account":"https://www.bridestory.com/nice-print-photography"},
+        {"vendor_name":"project jdg","vendor_img":"project jdg.png","vendor_account":"https://www.bridestory.com/project-jdg-photo"},
+        {"vendor_name":"Elizabeth Messina","vendor_img":"Elizabeth-Messina-Logo-Remake.png","vendor_account":"https://www.bridestory.com/elizabeth-messina"},
+        {"vendor_name":"theproposal","vendor_img":"theproposal.png","vendor_account":"https://www.bridestory.com/the-proposal"}
 
     ]
     
