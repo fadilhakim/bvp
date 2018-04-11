@@ -19,10 +19,7 @@
 						<span class="bold"><%- localization[transId].pricing.content_2 %></span>
 					</div>
 					<div class="col-lg-12 select-category mt-10">
-                        <select name="businesscategory" class="form-control">
-                            <%dataCategories.forEach((categories)=>{ %>
-                                <option value="<%= categories %>"><%= categories.name %></option>
-                            <%}) %>
+                        <select class="form-control" ng-model="category[0]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id">
                         </select>
 					</div>
 					<div class="col-lg-12 mt-20">
@@ -44,831 +41,830 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-12 pricing-info">
-				<table>
-					<thead>
-						<tr>
-							<th class="bold">
-								<div class="col-lg-12">
-									<span><%- localization[transId].pricing.content_6 %></span>
-								</div>
-								<div class="col-lg-12 select-category mt-10">
-			                        <select name="businesscategory" class="form-control">
-			                            <%dataCategories.forEach((categories)=>{ %>
-			                                <option value="<%= categories %>"><%= categories.name %></option>
-			                            <%}) %>
-			                        </select>
-								</div>
-								<div class="col-lg-12 mt-10">
-									<span><%- localization[transId].pricing.content_7 %></span>
-								</div>
-								<div class="col-lg-12 search-city mt-10">
-									<i class="icon-search"></i>
-									<input ng-model="city[1].name" ng-change="searchCity(1)" type="text" placeholder="Jakarta, Indonesia">
-									<ul class="dropdown-menu" ng-if="city[1].name">
-										<li ng-repeat="(key, city) in city[1].cities" ng-click="selectCity(1, city)">{{city.name}}</li>
-									</ul>
-								</div>
-							</th>
-							<th>
-								<div class="col-lg-12 pt-10 pb-10">
+		<div ng-if="memberships.gold != undefined && memberships.silver != undefined">
+			<div class="row">
+				<div class="col-lg-12 pricing-info">
+					<table>
+						<thead>
+							<tr>
+								<th class="bold">
+									<div class="col-lg-12">
+										<span><%- localization[transId].pricing.content_6 %></span>
+									</div>
+									<div class="col-lg-12 select-category mt-10">
+				                        <select class="form-control" ng-model="category[1]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id">
+				                        </select>
+									</div>
+									<div class="col-lg-12 mt-10">
+										<span><%- localization[transId].pricing.content_7 %></span>
+									</div>
+									<div class="col-lg-12 search-city mt-10">
+										<i class="icon-search"></i>
+										<input ng-model="city[1].name" ng-change="searchCity(1)" type="text" placeholder="Jakarta, Indonesia">
+										<ul class="dropdown-menu" ng-if="city[1].name">
+											<li ng-repeat="(key, city) in city[1].cities" ng-click="selectCity(1, city)">{{city.name}}</li>
+										</ul>
+									</div>
+								</th>
+								<th>
+									<div class="col-lg-12 pt-10 pb-10">
+										&nbsp;
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										<span class="bold price">SILVER</span>
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										<span class="bold">UNLIMITED CREDITS</span> FOR
+									</div>
+									<div class="col-lg-12 pt-10 pb-10 bg-gray">
+										IDR <span class="bold price">{{numberFormat(memberships.silver.packagesPrices[0].price)}}</span>/MO
+									</div>
+								</th>
+								<th class="side-border top-border">
+									<div class="col-lg-12">
+										<div class="best-seller">BEST SELLER</div>
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										<span class="bold price">GOLD</span>
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										<span class="bold">UNLIMITED CREDITS</span> FOR
+									</div>
+									<div class="col-lg-12 pt-10 pb-10 bg-gray">
+										IDR <span class="bold price">{{numberFormat(memberships.gold.packagesPrices[0].price)}}</span>/MO
+									</div>
+								</th>
+								<th>
+									<div class="col-lg-12 pt-10 pb-10">
+										&nbsp;
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										<span class="bold price">TRIAL</span>
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										&nbsp;
+									</div>
+									<div class="col-lg-12 pt-10 pb-10">
+										&nbsp;
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
 									&nbsp;
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
-									<span class="bold price">SILVER</span>
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
-									<span class="bold">UNLIMITED CREDITS</span> FOR
-								</div>
-								<div class="col-lg-12 pt-10 pb-10 bg-gray">
-									IDR <span class="bold price">500,000</span>/MO
-								</div>
-							</th>
-							<th class="side-border top-border">
-								<div class="col-lg-12">
-									<div class="best-seller">BEST SELLER</div>
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
-									<span class="bold price">GOLD</span>
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
-									<span class="bold">UNLIMITED CREDITS</span> FOR
-								</div>
-								<div class="col-lg-12 pt-10 pb-10 bg-gray">
-									IDR <span class="bold price">250,000</span>/MO
-								</div>
-							</th>
-							<th>
-								<div class="col-lg-12 pt-10 pb-10">
+								</td>
+								<td>
 									&nbsp;
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
-									<span class="bold price">TRIAL</span>
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
+								</td>
+								<td class="side-border">
 									&nbsp;
-								</div>
-								<div class="col-lg-12 pt-10 pb-10">
+								</td>
+								<td>
 									&nbsp;
-								</div>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								&nbsp;
-							</td>
-							<td>
-								&nbsp;
-							</td>
-							<td class="side-border">
-								&nbsp;
-							</td>
-							<td>
-								&nbsp;
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Credits <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									Unlimited
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									Unlimited
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									35 Credits
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Premium listing - Featured on Vendor List
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Show All Contact Details On My Profile
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									Only When You Have Credits
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Check Messages In Your Bridestory Inbox
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									Only When You Have Credits
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Listed in Bridestory
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									0% Installment for clients** <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="0% Installment for clients"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									No MDR Charge
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									No MDR Charge
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									No MDR Charge
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Wedding Protection for clients** <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Wedding Protection for clients"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Search Marketing
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Featured in Bridestory Magazine
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Access to statistic
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									Only When You Have Credits
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Hilda business partner
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="red icon-cancel-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Access to Bridestory Pro app
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Review request tool
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10 ml-10">
-									Respond to reviews
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td class="side-border bottom-border">
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-10 pb-10">
-									<i class="green icon-ok-circled"></i>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="col-lg-12 pt-20 pb-10">
-									&nbsp;
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-20 pb-10">
-									<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-20 pb-10">
-									<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
-								</div>
-							</td>
-							<td>
-								<div class="col-lg-12 pt-20 pb-10">
-									<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Credits <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										Unlimited
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										Unlimited
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										35 Credits
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Premium listing - Featured on Vendor List
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Show All Contact Details On My Profile
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										Only When You Have Credits
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Check Messages In Your Bridestory Inbox
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										Only When You Have Credits
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Listed in Bridestory
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										0% Installment for clients** <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="0% Installment for clients"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										No MDR Charge
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										No MDR Charge
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										No MDR Charge
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Wedding Protection for clients** <i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Wedding Protection for clients"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Search Marketing
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Featured in Bridestory Magazine
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Access to statistic
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										Only When You Have Credits
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Hilda business partner
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="red icon-cancel-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Access to Bridestory Pro app
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Review request tool
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10 ml-10">
+										Respond to reviews
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td class="side-border bottom-border">
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-10 pb-10">
+										<i class="green icon-ok-circled"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-lg-12 pt-20 pb-10">
+										&nbsp;
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-20 pb-10">
+										<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-20 pb-10">
+										<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
+									</div>
+								</td>
+								<td>
+									<div class="col-lg-12 pt-20 pb-10">
+										<a href="https://business.bridestory.com/register/vendor#/" class="btn">Purchase Now</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-				<div class="pricing-slide">
-					<div class="row gold-plan">
-						<div class="top-slide">
-							<div class="col-12 text-center mt-10">
-								<span class="best-seller bold">Best Seller</span>
+					<div class="pricing-slide">
+						<div class="row gold-plan">
+							<div class="top-slide">
+								<div class="col-12 text-center mt-10">
+									<span class="best-seller bold">Best Seller</span>
+								</div>
+								<div class="col-12 text-center mt-30">
+									<span class="f-s-22 bold gold"><i class="icon-diamond"></i> GOLD</span>
+								</div>
+								<div class="col-12 text-center mt-30">
+									<span class="bold">UNLIMITED CREDITS</span> FROM
+								</div>
+								<div class="col-12 text-center mt-10">
+									IDR <span class="bold">{{numberFormat(memberships.gold.packagesPrices[0].price)}}</span>/MO
+								</div>
 							</div>
-							<div class="col-12 text-center mt-30">
-								<span class="f-s-22 bold gold"><i class="icon-diamond"></i> GOLD</span>
-							</div>
-							<div class="col-12 text-center mt-30">
-								<span class="bold">UNLIMITED CREDITS</span> FROM
-							</div>
-							<div class="col-12 text-center mt-10">
-								IDR <span class="bold">500,000</span>/MO
-							</div>
-						</div>
-						<div class="bottom-slide mt-50">
-							<div class="col-12">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Premium listing - Featured on Vendor List
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Visible Contact Details<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Inbox<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Listed in Bridestory<br/> (Only when your trial account is active)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Search Marketing
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Featured in Bridestory Magazine
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to statistic<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Hilda Business Partner
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Pro App
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Review Request Tools
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Respond to Reviews
-								</span>
-							</div>
-							<div class="purchase">
-								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
-							</div>
-						</div>
-					</div>
-					<div class="row silver-plan">
-						<div class="top-slide">
-							<div class="col-12 text-center mt-55">
-								<span class="f-s-22 bold silver"><i class="icon-diamond"></i> Silver</span>
-							</div>
-							<div class="col-12 text-center mt-30">
-								<span class="bold">UNLIMITED CREDITS</span> FROM
-							</div>
-							<div class="col-12 text-center mt-10">
-								IDR <span class="bold">250,000</span>/MO
+							<div class="bottom-slide mt-50">
+								<div class="col-12">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Premium listing - Featured on Vendor List
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Visible Contact Details<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Inbox<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Listed in Bridestory<br/> (Only when your trial account is active)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Search Marketing
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Featured in Bridestory Magazine
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to statistic<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Hilda Business Partner
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Pro App
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Review Request Tools
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Respond to Reviews
+									</span>
+								</div>
+								<div class="purchase">
+									<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
+								</div>
 							</div>
 						</div>
-						<div class="bottom-slide mt-50">
-							<div class="col-12">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
+						<div class="row silver-plan">
+							<div class="top-slide">
+								<div class="col-12 text-center mt-55">
+									<span class="f-s-22 bold silver"><i class="icon-diamond"></i> Silver</span>
+								</div>
+								<div class="col-12 text-center mt-30">
+									<span class="bold">UNLIMITED CREDITS</span> FROM
+								</div>
+								<div class="col-12 text-center mt-10">
+									IDR <span class="bold">{{numberFormat(memberships.silver.packagesPrices[0].price)}}</span>/MO
+								</div>
 							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Premium listing - Featured on Vendor List
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Visible Contact Details<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Inbox<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Listed in Bridestory<br/> (Only when your trial account is active)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Search Marketing
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Featured in Bridestory Magazine
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to statistic<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Hilda Business Partner
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Pro App
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Review Request Tools
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Respond to Reviews
-								</span>
-							</div>
-							<div class="purchase">
-								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
+							<div class="bottom-slide mt-50">
+								<div class="col-12">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Premium listing - Featured on Vendor List
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Visible Contact Details<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Inbox<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Listed in Bridestory<br/> (Only when your trial account is active)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Search Marketing
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Featured in Bridestory Magazine
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to statistic<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Hilda Business Partner
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Pro App
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Review Request Tools
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Respond to Reviews
+									</span>
+								</div>
+								<div class="purchase">
+									<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row trial-plan">
-						<div class="top-slide">
-							<div class="col-12 text-center mt-55">
-								<span class="f-s-22 bold">Trial</span>
+						<div class="row trial-plan">
+							<div class="top-slide">
+								<div class="col-12 text-center mt-55">
+									<span class="f-s-22 bold">Trial</span>
+								</div>
+								<div class="col-12 text-center mt-30">
+									&nbsp;
+								</div>
+								<div class="col-12 text-center mt-10">
+									&nbsp;
+								</div>
 							</div>
-							<div class="col-12 text-center mt-30">
-								&nbsp;
-							</div>
-							<div class="col-12 text-center mt-10">
-								&nbsp;
-							</div>
-						</div>
-						<div class="bottom-slide mt-50">
-							<div class="col-12">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Premium listing - Featured on Vendor List
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Visible Contact Details<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Inbox<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Listed in Bridestory<br/> (Only when your trial account is active)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Search Marketing
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Featured in Bridestory Magazine
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to statistic<br/> (Only when you have credits)
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="red icon-cancel-circled"></i>
-								</span>
-								<span>
-									Hilda Business Partner
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Access to Bridestory Pro App
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Review Request Tools
-								</span>
-							</div>
-							<div class="col-12 mt-20">
-								<span class="pr-10">
-									<i class="green icon-ok-circled"></i>
-								</span>
-								<span>
-									Respond to Reviews
-								</span>
-							</div>
-							<div class="purchase">
-								<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
+							<div class="bottom-slide mt-50">
+								<div class="col-12">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Credits<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Premium listing - Featured on Vendor List
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Visible Contact Details<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Inbox<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Listed in Bridestory<br/> (Only when your trial account is active)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										0% Installment for clients**<br/> (No MDR Charge)<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Wedding Protection for clients**<i class="blue icon-info-circled" data-toggle="tooltip" data-placement="right" title="Credits"></i>
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Search Marketing
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Featured in Bridestory Magazine
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to statistic<br/> (Only when you have credits)
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="red icon-cancel-circled"></i>
+									</span>
+									<span>
+										Hilda Business Partner
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Access to Bridestory Pro App
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Review Request Tools
+									</span>
+								</div>
+								<div class="col-12 mt-20">
+									<span class="pr-10">
+										<i class="green icon-ok-circled"></i>
+									</span>
+									<span>
+										Respond to Reviews
+									</span>
+								</div>
+								<div class="purchase">
+									<button class="btn"><%- localization[transId].pricing.content_8 -%></button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="row mt-50 pb-80">
-			<div class="col-lg-7">
-				<p>
-					*<%- localization[transId].pricing.content_9 -%>
-				</p>
-				<p>
-					**<%- localization[transId].pricing.content_10 -%>
-				</p>
+			<div class="row mt-50 pb-80">
+				<div class="col-lg-7">
+					<p>
+						*<%- localization[transId].pricing.content_9 -%>
+					</p>
+					<p>
+						**<%- localization[transId].pricing.content_10 -%>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

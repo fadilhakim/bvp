@@ -149,18 +149,11 @@ app.get('/:lang*?/home/pricing', function(req, res) {
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
-    axios.get('https://secure-cdn-api.bridestory.com/v2/categories')
-        .then((categories) => {
-            var dataCategories = categories.data.category;
-
-            res.render('pricing', {
-                menu: menu,
-                active: 3,
-                dataCategories: dataCategories,
-                localization: require('./public/lang/localization')
-            })
-        });
-
+    res.render('pricing', {
+        menu: menu,
+        active: 3,
+        localization: require('./public/lang/localization')
+    })
 })
 
 

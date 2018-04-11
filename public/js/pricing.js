@@ -15,10 +15,32 @@ angular
 			'cities' : []
 		}
 	];
+    $scope.category = [
+		{
+			'name' : null,
+			'id' : null
+		},
+		{
+			'name' : null,
+			'id' : null
+		}
+	];
+    $scope.categories = {};
+    $scope.memberships = {};
+
+    $scope.getCategories = function(){
+        $http.get(configUrl.api + '/v2/categories').then(function(result){
+            $scope.categories = result.data.category;
+            $scope.category[0] = $scope.categories[0];
+            $scope.category[1] = $scope.categories[0];
+        })
+    }
+
+    $scope.getCategories();
 
 	$scope.searchCity = function(idx) {
 		$scope.city[idx].cities = [];
-		$scope.removeOtherCity(idx);
+		$scope.removeOther(idx);
 		$http.get(configUrl.api + '/v2/cities/search?limit=10&keyword=' + $scope.city[idx].name)
 		.then(function (response) {
 			if(response.data.cities){
@@ -35,10 +57,8 @@ angular
 		});
 	}
 
-	$scope.removeOtherCity = function(idx) {
-		$scope.city.map(function(val, key){
-			if(key != idx) $scope.city[key] = {'name' : null, 'cities' : []};
-		})
+	$scope.removeOther = function(idx) {
+		if(idx == 1) $scope.city[0] = {'name' : null, 'cities' : []};
 	}
 
 	$scope.selectCity = function(idx, city) {
@@ -46,16 +66,35 @@ angular
 		$scope.city[idx].id = city.id
 		$scope.city[idx].cities = [];
 
+		if(idx == 0) $scope.city[1] = {'name' : city.name, 'id': city.id, 'cities' : []};
+
 		if(idx == 1) $scope.checkPrice(idx);
 	}
 
+	$scope.numberFormat = function(number) {
+		return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
 	$scope.checkPrice = function(idx){
-		$http.get(configUrl.api + '/v2/subscribes?cityIds='+ $scope.city[idx].id +'&include=basePrice')
+		if(idx == 0) $scope.category[1] = $scope.category[0];
+
+		$http.get(configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id + '&include=basePrice')
 		.then(function (response) {
 			console.log(response);
+			var membershipsList = response.data.planCombination.vendorMemberships[0].membershipsList;
+			membershipsList.map(function(val, idx){
+				if (val.id == 194) $scope.memberships.gold = val;
+				if (val.id == 196) $scope.memberships.silver = val;
+			});
 		})
 		.catch(function (error) {
 			console.log(error);
 		});
 	}
+
+    return {
+        categories : function(){
+            return $scope.categories;
+        }
+    }
 }]);

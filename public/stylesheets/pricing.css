@@ -265,35 +265,36 @@
   border-radius: 4px;
   box-sizing: border-box;
   border: 1px solid #979797;
+  color: #848484;
 }
-/* line 127, ../sass/pricing.scss */
+/* line 128, ../sass/pricing.scss */
 .pricing-content .dropdown-menu {
   width: 100%;
   color: #555555;
   padding: 0;
   display: block;
 }
-/* line 133, ../sass/pricing.scss */
+/* line 134, ../sass/pricing.scss */
 .pricing-content .dropdown-menu li {
   padding: 10px;
 }
-/* line 136, ../sass/pricing.scss */
+/* line 137, ../sass/pricing.scss */
 .pricing-content .dropdown-menu li:hover {
   background-color: #E5E5E5;
   cursor: pointer;
 }
-/* line 143, ../sass/pricing.scss */
+/* line 144, ../sass/pricing.scss */
 .pricing-content .search-city {
   position: relative;
   color: #555555;
 }
-/* line 147, ../sass/pricing.scss */
+/* line 148, ../sass/pricing.scss */
 .pricing-content .search-city i {
   position: absolute;
   top: 10px;
   right: 5px;
 }
-/* line 154, ../sass/pricing.scss */
+/* line 155, ../sass/pricing.scss */
 .pricing-content button.btn {
   width: 100%;
   padding: 10px 0;
@@ -302,44 +303,44 @@
   border: 1px solid #698DF5;
   color: #FFF;
 }
-/* line 163, ../sass/pricing.scss */
+/* line 164, ../sass/pricing.scss */
 .pricing-content .pricing-info {
   margin-top: 80px;
 }
 @media only screen and (max-width: 1023px) {
-  /* line 163, ../sass/pricing.scss */
+  /* line 164, ../sass/pricing.scss */
   .pricing-content .pricing-info {
     padding-top: 40px;
     margin-top: 0;
     border-top: 1px solid #E5E5E5;
   }
 }
-/* line 172, ../sass/pricing.scss */
+/* line 173, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide {
   display: none;
 }
-/* line 175, ../sass/pricing.scss */
+/* line 176, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide {
   text-transform: uppercase;
 }
-/* line 176, ../sass/pricing.scss */
+/* line 177, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide i {
   padding: 4px 3px 2px 2px;
   border-radius: 50%;
   font-size: 18px;
   color: #FFF;
 }
-/* line 185, ../sass/pricing.scss */
+/* line 186, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide {
   width: 100%;
   display: table;
 }
-/* line 188, ../sass/pricing.scss */
+/* line 189, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 193, ../sass/pricing.scss */
+/* line 194, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide .purchase {
   margin-left: auto;
   margin-right: auto;
@@ -347,11 +348,11 @@
   margin-top: 50px;
   width: 170px;
 }
-/* line 200, ../sass/pricing.scss */
+/* line 201, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn {
   padding: 10px 30px;
 }
-/* line 208, ../sass/pricing.scss */
+/* line 209, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide .best-seller {
   background-color: #C49F42;
   color: #FFF;
@@ -361,21 +362,21 @@
   letter-spacing: 1px;
   font-size: 16px;
 }
-/* line 218, ../sass/pricing.scss */
+/* line 219, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide i {
   background-color: #C49F42;
 }
-/* line 226, ../sass/pricing.scss */
+/* line 227, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .silver-plan .top-slide i {
   background-color: #AAAAAA;
 }
 @media only screen and (max-width: 1023px) {
-  /* line 172, ../sass/pricing.scss */
+  /* line 173, ../sass/pricing.scss */
   .pricing-content .pricing-info .pricing-slide {
     display: block;
   }
 }
-/* line 237, ../sass/pricing.scss */
+/* line 238, ../sass/pricing.scss */
 .pricing-content .pricing-info table {
   border-collapse: separate;
   border-spacing: 15px 0;
@@ -385,39 +386,39 @@
   width: 100%;
 }
 @media only screen and (max-width: 1023px) {
-  /* line 237, ../sass/pricing.scss */
+  /* line 238, ../sass/pricing.scss */
   .pricing-content .pricing-info table {
     display: none;
   }
 }
-/* line 247, ../sass/pricing.scss */
+/* line 248, ../sass/pricing.scss */
 .pricing-content .pricing-info table [class*='col-'] {
   padding: 0;
   float: left;
 }
-/* line 254, ../sass/pricing.scss */
+/* line 255, ../sass/pricing.scss */
 .pricing-content .pricing-info table tr:nth-child(even) {
   background-color: #F8F8F8;
 }
-/* line 258, ../sass/pricing.scss */
+/* line 259, ../sass/pricing.scss */
 .pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child {
   background-color: #FFF;
 }
-/* line 263, ../sass/pricing.scss */
+/* line 264, ../sass/pricing.scss */
 .pricing-content .pricing-info table tbody td {
   color: #555555;
 }
-/* line 269, ../sass/pricing.scss */
+/* line 270, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) {
   width: 350px;
 }
-/* line 273, ../sass/pricing.scss */
+/* line 274, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) {
   width: 200px;
   text-align: center;
   vertical-align: top;
 }
-/* line 278, ../sass/pricing.scss */
+/* line 279, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .best-seller, .pricing-content .pricing-info table td:nth-child(1n+2) .best-seller {
   width: 65%;
   background-color: #38CBAE;
@@ -426,20 +427,20 @@
   margin-right: auto;
   color: #FFF;
 }
-/* line 287, ../sass/pricing.scss */
+/* line 288, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .price, .pricing-content .pricing-info table td:nth-child(1n+2) .price {
   font-size: 16px;
 }
-/* line 292, ../sass/pricing.scss */
+/* line 293, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.side-border, .pricing-content .pricing-info table td.side-border {
   border-left: 2px solid #38CBAE;
   border-right: 2px solid #38CBAE;
 }
-/* line 297, ../sass/pricing.scss */
+/* line 298, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border {
   border-top: 2px solid #38CBAE;
 }
-/* line 301, ../sass/pricing.scss */
+/* line 302, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border {
   border-bottom: 2px solid #38CBAE;
 }
