@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const fs = require('fs');
@@ -106,11 +108,11 @@ app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
-    if(lang == 'id' || lang == 'en'){
+    if (lang == 'id' || lang == 'en') {
         var dataTesti = "./data/testimonials_global.json"
-    }else if(lang == 'ph'){
+    } else if (lang == 'ph') {
         var dataTesti = "./data/testimonials_ph.json"
-    }else if(lang == 'sg') {
+    } else if (lang == 'sg') {
         var dataTesti = "./data/testimonials_sg.json"
     }
 
@@ -197,7 +199,7 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
                         active: 0,
                         localization: require('./public/lang/localization')
                     })
-                    
+
                 }))
                 .catch(error => {
                     console.log(error);
