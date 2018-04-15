@@ -55,8 +55,8 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <% Object.keys(menu).forEach(function(key) { %>
                                     <% if(key == active) { %>
-                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
-                                        <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                        <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
                                     <% } %>
                                 <% }); %>
                             </div>
@@ -125,8 +125,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <% Object.keys(menu).forEach(function(key) { %>
                                 <% if(key == active) { %>
-                                    <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
-                                    <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                    <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                    <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
                                 <% } %>
                             <% }); %>
                         </div>
