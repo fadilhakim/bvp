@@ -23,6 +23,10 @@ angular
 		}
 	}
 
+	$scope.setPreferredLang = function (lang) {
+        document.cookie = 'BS_PreferredLang=' + lang + ';domain=.bridestory.com;path=/';
+	}
+
 	$scope.getUser();
 
 	return {
