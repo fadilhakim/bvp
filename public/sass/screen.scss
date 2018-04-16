@@ -116,6 +116,13 @@
             padding-top: 15px;
             line-height: 20px;
         }
+        li {
+            padding-left: 27px;
+            background-image: image-url('icons/check_list.png');
+            background-position-x: left;
+            background-position-y: 5px;
+            background-repeat:no-repeat;
+        }
     }
     .img{
         padding-top: 50px;
