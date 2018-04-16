@@ -186,9 +186,9 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
             console.log(err)
         } else {
             axios.all([
-                    axios.get('https://secure-cdn-api.bridestory.com/v2/blog_articles?limit=3&include=category'),
+                    axios.get('https://secure-cdn-api.bridestory.com/v2/blog_vendors?limit=3&is_published=true&sort=most_published&include=views,category,tag'),
                 ]).then(axios.spread((response) => {
-                    var dataBlogs = response.data.blogArticles
+                    var dataBlogs = response.data.blogVendors
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
