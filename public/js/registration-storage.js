@@ -5,7 +5,12 @@ angular
 .controller('registerController', ['$http', '$scope', '$cookies', function($http, $scope, $cookies){
     $scope.submitted = false;
     $scope.category = {};
-    $scope.categories = {};
+    $scope.categories = [
+        {   
+            'id' : 0,
+            'name' : 'Service Category'
+        }
+    ];
     $scope.businessName = null;
     $scope.emailVendor = null;
     $scope.password = null;
@@ -13,7 +18,9 @@ angular
 
     $scope.getCategories = function(){
         $http.get(configUrl.api + '/v2/categories').then(function(result){
-            $scope.categories = result.data.category;
+            result.data.category.map(function(val, key){
+                $scope.categories.push(val);
+            });
             $scope.category = $scope.categories[0];
         })
     }
@@ -22,7 +29,9 @@ angular
 
     $scope.submitRegistration = function() {
         $scope.submitted = true;
-        if($scope.businessName && $scope.emailVendor && $scope.password && $scope.validateEmail($scope.emailVendor)){
+
+console.log("$scope.category", $scope.category);
+        if($scope.businessName && $scope.emailVendor && $scope.password && $scope.validateEmail($scope.emailVendor) && $scope.category.id > 0){
             document.cookie = 'BS.registration-data=' + encodeURIComponent(JSON.stringify({'full_name' : $scope.businessName, 'email' : $scope.emailVendor, 'password' : $scope.password, 'category' : $scope.category})) + ';domain=.bridestory.com;path=/';
             window.location = configUrl.businessUrl + '/register/vendor';
         }   
