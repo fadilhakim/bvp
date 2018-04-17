@@ -151,23 +151,11 @@ footer {
     }
     .col-5 {
         padding-left: 0px;
+        color:#698DF5;
+        background-color: #fff !important;
     }
     .chat {
-        background-color: #fff;
-        width: 100%;
-        color:#698DF5;
-        font-weight: 700;
-        span {
-            display: inline-block;
-            height: 25px;
-            background-repeat: no-repeat;
-            background-image: image-url('icons/m-chat-icon.png');
-            background-size: 27%;
-            background-position-y: center;
-            background-position-x: left;
-            width: 100px;
-            margin: auto;
-        }
+        
     }
     
     @include mobile-device-screen { 

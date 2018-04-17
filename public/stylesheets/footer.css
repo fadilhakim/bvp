@@ -60,10 +60,6 @@ footer .dropdown .dropdown-item.id { background: url('../../assets/icons/Icon_ID
 /* line 149, ../sass/footer.scss */
 .fixedFooterMobile .btn { width: 100%; }
 /* line 152, ../sass/footer.scss */
-.fixedFooterMobile .col-5 { padding-left: 0px; }
-/* line 155, ../sass/footer.scss */
-.fixedFooterMobile .chat { background-color: #fff; width: 100%; color: #698DF5; font-weight: 700; }
-/* line 160, ../sass/footer.scss */
-.fixedFooterMobile .chat span { display: inline-block; height: 25px; background-repeat: no-repeat; background-image: url('../../assets/icons/m-chat-icon.png'); background-size: 27%; background-position-y: center; background-position-x: left; width: 100px; margin: auto; }
+.fixedFooterMobile .col-5 { padding-left: 0px; color: #698DF5; background-color: #fff !important; }
 @media only screen and (max-width: 1023px) { /* line 143, ../sass/footer.scss */
   .fixedFooterMobile { position: fixed; left: 0px; bottom: 0px; width: 100%; display: block; } }

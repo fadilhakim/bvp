@@ -35,8 +35,16 @@
                                     </p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuProfile">
-                               <a class="dropdown-item" href="">{{loginCtrl.user().displayName}}</a>
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuProfile">
+                               <a class="dropdown-item vendor_info" href="">
+                                <span class="vendor_pic">
+                                    <img class="img-fluid" height="38" src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile">
+                                </span>
+                                <span class="vendor_name">
+                                        {{loginCtrl.user().displayName}}    
+                                </span>
+                               
+                                </a>
                                <div class="dropdown-divider"></div>
                                <a class="dropdown-item dashboard" href="<%- baseUrl -%>/dashboard">MY DASHBOARD</a>
                                <a class="dropdown-item profile" href="<%- baseUrl -%>/{{loginCtrl.user().slug}}">MY PROFILE</a>
@@ -73,7 +81,7 @@
 
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li>
-                        <a class="btn btn-primary block center" href="https://business.bridestory.com/register/vendor">
+                        <a class="btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
                             Start Free Trial
                         </a>
                     </li>
@@ -96,7 +104,7 @@
                                 35 credits
                             </span>
                         </p>
-                        <a href="#">GO TO MY DASHBOARD</a>
+                        <a class="link_dashboard" href="<%- baseUrl -%>/dashboard">GO TO MY DASHBOARD</a>
                     </div>   
                 </div>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -132,6 +140,87 @@
                         </div>
                     </li>
                 </ul>
+                <footer class="container-fluid m-footer-menu">
+                    <div class="container">
+                        <div class="row top">
+                            <div class="col-6 col-lg-2">
+                                <h4 class="">BRIDESTORY</h4>
+                                <ul>
+                                    <li><a href="https://www.bridestory.com/about-us">About</a></li>
+                                    <li><a href="https://careers.bridestory.com/">Careers</a></li>
+                                    <li><a href="https://www.bridestory.com/contact-us">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-2">
+                                <h4 class="">BRIDES-TO-BE</h4>
+                                <ul>
+                                    <li><a href="https://www.bridestory.com/blog">Blog</a></li>
+                                    <li><a href="https://www.bridestory.com/app">Bridestory App</a></li>
+                                </ul>
+                            </div>
+                
+                            <div class="col-lg-2 col-6">
+                                <h4 class="">Business</h4>
+                                <ul>
+                                    <li><a href="https://business.bridestory.com/">Become a Vendor</a></li>
+                                    <li><a href="https://business.bridestory.com/blog">Business Blog</a></li>
+                                    <li><a href="https://business.bridestory.com/pro">Bridestory Pro</a></li>
+                                </ul>
+                            </div>
+                
+                            <div class="col-6 col-lg-2">
+                                <h4 class="">Support</h4>
+                                <ul>
+                                    <li><a href="https://support.bridestory.com">Help Center</a></li>
+                                </ul>
+                            </div>
+                
+                            <div class="col-6 col-lg-2">
+                                <h4 class="">Follow Us</h4>
+                                <ul class="sosmed-footer">
+                                    <li><a class="fb" href="https://www.facebook.com/thebridestory"></a></li>
+                                    <li><a class="twt" href="https://twitter.com/TheBrideStory"></a></li>
+                                    <li><a class="ig" href="https://www.instagram.com/thebridestory/"></a></li>
+                                    <li><a class="pin" href="https://pinterest.com/thebridestory"></a></li>
+                                </ul>
+                            </div>
+                
+                            <div class="col-6 col-lg-2">
+                                <h4 class="">Language</h4>
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn <%- transId -%>" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <%- transId -%>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <% Object.keys(menu).forEach(function(key) { %>
+                                            <% if(key == active) { %>
+                                                <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
+                                                <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                            <% } %>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btm">
+                            <div class="col-lg-6">
+                                <a href="https://www.bridestory.com/">
+                                    <img class="footer-logo" src="<%- assetsUrl -%>/icons/footer_logo.png" alt="bridestory logo">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><a href="https://business.bridestory.com/privacy-policy">privacy policy</a></li>
+                                    <li><a href="https://business.bridestory.com/terms-conditionsr">terms and conditions</a></li>
+                                    <li><a href="https://www.bridestory.com/sitemap">sitemap</a></li>
+                                    <% var d = new Date(); var n = d.getFullYear(); %>
+                                    <li><a href="">&copy; <%= n %> Bridestory all rights reserved</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
             </div>  
         </nav>
 
