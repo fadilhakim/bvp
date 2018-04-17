@@ -21,6 +21,7 @@
 					<div class="col-lg-12 select-category mt-10">
                         <select class="form-control" ng-model="category[0]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id">
                         </select>
+                        <small ng-if="!category[0].id && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
 					</div>
 					<div class="col-lg-12 mt-20">
 						<span class="bold"><%- localization[transId].pricing.content_4 %></span>
@@ -28,6 +29,7 @@
 					<div class="col-lg-12 mt-10 search-city">
 						<i class="icon-search"></i>
 						<input ng-model="city[0].name" ng-change="searchCity(0)" type="text" placeholder="Jakarta, Indonesia">
+                        <small ng-if="!city[0].name && submitted" id="businessEmpty" class="form-text text-muted">Please fill your City Name</small>
 						<ul class="dropdown-menu" ng-if="city[0].cities.length">
 							<li ng-repeat="(key, city) in city[0].cities" ng-click="selectCity(0, city)">{{city.name}}</li>
 						</ul>
@@ -52,8 +54,8 @@
 										<span><%- localization[transId].pricing.content_6 %></span>
 									</div>
 									<div class="col-lg-12 select-category mt-10">
-				                        <select class="form-control" ng-model="category[1]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id">
-				                        </select>
+				                        <select class="form-control" ng-model="category[1]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id"></select>
+                       					<small ng-if="!category[1].id && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
 									</div>
 									<div class="col-lg-12 mt-10">
 										<span><%- localization[transId].pricing.content_7 %></span>

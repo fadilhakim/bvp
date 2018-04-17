@@ -25,12 +25,20 @@ angular
 			'id' : null
 		}
 	];
-    $scope.categories = {};
+    $scope.categories = [
+        {   
+            'id' : null,
+            'name' : 'Service Category'
+        }
+    ];
     $scope.memberships = {};
+    $scope.submitted = false;
 
     $scope.getCategories = function(){
         $http.get(configUrl.api + '/v2/categories').then(function(result){
-            $scope.categories = result.data.category;
+            result.data.category.map(function(val, key){
+                $scope.categories.push(val);
+            });
             $scope.category[0] = $scope.categories[0];
             $scope.category[1] = $scope.categories[0];
         })
@@ -77,19 +85,21 @@ angular
 
 	$scope.checkPrice = function(idx){
 		if(idx == 0) $scope.category[1] = $scope.category[0];
-
-		$http.get(configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id + '&include=basePrice')
-		.then(function (response) {
-			console.log(response);
-			var membershipsList = response.data.planCombination.vendorMemberships[0].membershipsList;
-			membershipsList.map(function(val, idx){
-				if (val.id == 194) $scope.memberships.gold = val;
-				if (val.id == 196) $scope.memberships.silver = val;
+		$scope.submitted = true;
+		if ($scope.city[idx].id && $scope.category[idx].id) {
+			$http.get(configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id + '&include=basePrice')
+			.then(function (response) {
+				console.log(response);
+				var membershipsList = response.data.planCombination.vendorMemberships[0].membershipsList;
+				membershipsList.map(function(val, idx){
+					if (val.id == 194) $scope.memberships.gold = val;
+					if (val.id == 196) $scope.memberships.silver = val;
+				});
+			})
+			.catch(function (error) {
+				console.log(error);
 			});
-		})
-		.catch(function (error) {
-			console.log(error);
-		});
+		}
 	}
 
     return {
