@@ -94,7 +94,7 @@ header .top-menu .if-login .dropdown-menu a.profile { background-image: url('../
 /* line 230, ../sass/header.scss */
 header .top-menu .if-login .dropdown-menu a.settings { background-image: url('../../assets/m-icons/Settings.png'); }
 /* line 233, ../sass/header.scss */
-header .top-menu .if-login .dropdown-menu a.logout { background-image: url('../../assets/m-icons/Settings.png'); }
+header .top-menu .if-login .dropdown-menu a.logout { background-image: url('../../assets/m-icons/Logout.png'); }
 /* line 236, ../sass/header.scss */
 header .top-menu .if-login .dropdown-menu a .vendor_pic { width: 32px; height: 34px; display: inline-block; }
 /* line 240, ../sass/header.scss */
