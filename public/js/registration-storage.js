@@ -29,8 +29,6 @@ angular
 
     $scope.submitRegistration = function() {
         $scope.submitted = true;
-
-console.log("$scope.category", $scope.category);
         if($scope.businessName && $scope.emailVendor && $scope.password && $scope.validateEmail($scope.emailVendor) && $scope.category.id > 0){
             document.cookie = 'BS.registration-data=' + encodeURIComponent(JSON.stringify({'full_name' : $scope.businessName, 'email' : $scope.emailVendor, 'password' : $scope.password, 'category' : $scope.category})) + ';domain=.bridestory.com;path=/';
             window.location = configUrl.businessUrl + '/register/vendor';

@@ -75,16 +75,8 @@ if ('local' === process.env.NODE_ENV) {
 }
 
 app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
-    if (req.headers.country) {
-        var lang = req.headers.country.toLowerCase();
-    } else {
-        var lang = 'en';
-    }
-
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.country = lang;
-    res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
@@ -96,26 +88,18 @@ app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
 })
 
 app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
-    if (req.headers.country) {
-        var lang = req.headers.country.toLowerCase();
-    } else {
-        var lang = 'en';
-    }
-
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
-    if (lang == 'id' || lang == 'en') {
+    if (res.locals.country == 'id' || res.locals.country == 'en') {
         var dataTesti = "./data/testimonials_global.json"
-    } else if (lang == 'ph') {
+    } else if (res.locals.country == 'ph') {
         var dataTesti = "./data/testimonials_ph.json"
-    } else if (lang == 'sg') {
+    } else if (res.locals.country == 'sg') {
         var dataTesti = "./data/testimonials_sg.json"
     }
-
 
     fs.readFile(dataTesti, 'utf-8', (err, data) => {
         if (err) {
@@ -137,15 +121,8 @@ app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
 
 
 app.get('/:lang*?/home/pricing', langChecker, function(req, res) {
-    if (req.headers.country) {
-        var lang = req.headers.country.toLowerCase();
-    } else {
-        var lang = 'en';
-    }
-
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
@@ -158,26 +135,19 @@ app.get('/:lang*?/home/pricing', langChecker, function(req, res) {
 
 
 app.get('/:lang*?/home/', langChecker, function(req, res) {
-    if (req.headers.country) {
-        var lang = req.headers.country.toLowerCase();
-    } else {
-        var lang = 'en';
-    }
-
-    if (lang == 'id' || lang == 'en') {
+    if (res.locals.country == 'id' || res.locals.country == 'en') {
         var dataVendors = "./data/vendors_global.json";
         var folderImg = 'global';
-    } else if (lang == 'ph') {
+    } else if (res.locals.country == 'ph') {
         var dataVendors = "./data/vendors_ph.json";
         var folderImg = 'ph';
-    } else if (lang == 'sg') {
+    } else if (res.locals.country == 'sg') {
         var dataVendors = "./data/vendors_sg.json";
         var folderImg = 'sg';
     }
 
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
-    res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
     
