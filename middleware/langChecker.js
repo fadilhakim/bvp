@@ -2,7 +2,6 @@ module.exports = langChecker
 
 
 function langChecker(req, res, next) {
-
     if (req.params.lang) {
         next();
     } else {
@@ -14,7 +13,6 @@ function langChecker(req, res, next) {
             } else {
                 next();
             }
-
         } else {
             next();
         }

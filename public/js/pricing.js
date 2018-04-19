@@ -2,7 +2,7 @@
 
 angular
 .module('homeApp.pricing',[])
-.controller('pricingController', ['$http', '$scope', function($http, $scope){
+.controller('pricingController', ['$http', '$scope', '$cookies', function($http, $scope, $cookies){
 	$scope.city = [
 		{
 			'name' : null,
@@ -32,7 +32,7 @@ angular
         }
     ];
     $scope.memberships = {};
-    $scope.submitted = false;
+    $scope.submitted = [false, false];
 
     $scope.getCategories = function(){
         $http.get(configUrl.api + '/v2/categories').then(function(result){
@@ -85,16 +85,32 @@ angular
 
 	$scope.checkPrice = function(idx){
 		if(idx == 0) $scope.category[1] = $scope.category[0];
-		$scope.submitted = true;
+		$scope.submitted[idx] = true;
 		if ($scope.city[idx].id && $scope.category[idx].id) {
-			$http.get(configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id + '&include=basePrice')
+			$http({
+				method: 'GET',
+				url: configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id,
+				headers: {
+					'Session-Id' : $cookies.get('BSID')
+				}
+			})
 			.then(function (response) {
-				console.log(response);
 				var membershipsList = response.data.planCombination.vendorMemberships[0].membershipsList;
 				membershipsList.map(function(val, idx){
-					if (val.id == 194) $scope.memberships.gold = val;
-					if (val.id == 196) $scope.memberships.silver = val;
+					if (val.id == 194) {
+						val.packagesPrices.map(function(val, idx){
+							if(val.id == 3) $scope.memberships.gold = val;
+						})
+					}
+					
+					if (val.id == 196) {
+						val.packagesPrices.map(function(val, idx){
+							if(val.id == 3) $scope.memberships.silver = val;
+						})
+					}
 				});
+
+				$scope.submitted[idx] = false;
 			})
 			.catch(function (error) {
 				console.log(error);

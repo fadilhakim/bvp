@@ -21,7 +21,7 @@
 					<div class="col-lg-12 select-category mt-10">
                         <select class="form-control" ng-model="category[0]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id">
                         </select>
-                        <small ng-if="!category[0].id && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
+                        <small ng-if="!category[0].id && submitted[0]" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
 					</div>
 					<div class="col-lg-12 mt-20">
 						<span class="bold"><%- localization[transId].pricing.content_4 %></span>
@@ -29,7 +29,7 @@
 					<div class="col-lg-12 mt-10 search-city">
 						<i class="icon-search"></i>
 						<input ng-model="city[0].name" ng-change="searchCity(0)" type="text" placeholder="Jakarta, Indonesia">
-                        <small ng-if="!city[0].name && submitted" id="businessEmpty" class="form-text text-muted">Please fill your City Name</small>
+                        <small ng-if="!city[0].name && submitted[0]" id="businessEmpty" class="form-text text-muted">Please fill your City Name</small>
 						<ul class="dropdown-menu" ng-if="city[0].cities.length">
 							<li ng-repeat="(key, city) in city[0].cities" ng-click="selectCity(0, city)">{{city.name}}</li>
 						</ul>
@@ -55,7 +55,7 @@
 									</div>
 									<div class="col-lg-12 select-category mt-10">
 				                        <select class="form-control" ng-model="category[1]" ng-options="item as item.name for item in pricingCtrl.categories() track by item.id"></select>
-                       					<small ng-if="!category[1].id && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
+                       					<small ng-if="!category[1].id && submitted[1]" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
 									</div>
 									<div class="col-lg-12 mt-10">
 										<span><%- localization[transId].pricing.content_7 %></span>
@@ -79,7 +79,7 @@
 										<span class="bold">UNLIMITED CREDITS</span> FOR
 									</div>
 									<div class="col-lg-12 pt-10 pb-10 bg-gray">
-										IDR <span class="bold price">{{numberFormat(memberships.silver.packagesPrices[0].price)}}</span>/MO
+										IDR <span class="bold price">{{numberFormat(memberships.silver.price)}}</span>/MO
 									</div>
 								</th>
 								<th class="side-border top-border">
@@ -93,7 +93,7 @@
 										<span class="bold">UNLIMITED CREDITS</span> FOR
 									</div>
 									<div class="col-lg-12 pt-10 pb-10 bg-gray">
-										IDR <span class="bold price">{{numberFormat(memberships.gold.packagesPrices[0].price)}}</span>/MO
+										IDR <span class="bold price">{{numberFormat(memberships.gold.price)}}</span>/MO
 									</div>
 								</th>
 								<th>
@@ -473,7 +473,7 @@
 									<span class="bold">UNLIMITED CREDITS</span> FROM
 								</div>
 								<div class="col-12 text-center mt-10">
-									IDR <span class="bold">{{numberFormat(memberships.gold.packagesPrices[0].price)}}</span>/MO
+									IDR <span class="bold">{{numberFormat(memberships.gold.price)}}</span>/MO
 								</div>
 							</div>
 							<div class="bottom-slide mt-50">
@@ -603,7 +603,7 @@
 									<span class="bold">UNLIMITED CREDITS</span> FROM
 								</div>
 								<div class="col-12 text-center mt-10">
-									IDR <span class="bold">{{numberFormat(memberships.silver.packagesPrices[0].price)}}</span>/MO
+									IDR <span class="bold">{{numberFormat(memberships.silver.price)}}</span>/MO
 								</div>
 							</div>
 							<div class="bottom-slide mt-50">
