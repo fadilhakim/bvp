@@ -31,7 +31,7 @@
                                     <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">
                                         Trial -
                                         <span class="credit" ng-if="loginCtrl.user().contactCredit < 999">
-                                            {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)]] Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
+                                            {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)}} Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
                                         </span>
                                         <span class="blocklist__credit" ng-if="loginCtrl.user().contactCredit > 999">
                                             <span class="credit">&#8734; Credits</span>
