@@ -60,6 +60,14 @@ footer .dropdown .dropdown-item.id { background: url('../../assets/icons/Icon_ID
 /* line 149, ../sass/footer.scss */
 .fixedFooterMobile .btn { width: 100%; }
 /* line 152, ../sass/footer.scss */
-.fixedFooterMobile .col-5 { padding-left: 0px; color: #698DF5; background-color: #fff !important; }
+.fixedFooterMobile .col-5 { padding-left: 0px; background-color: #fff !important; }
+/* line 155, ../sass/footer.scss */
+.fixedFooterMobile .col-5 a:hover { text-decoration: none; }
+/* line 159, ../sass/footer.scss */
+.fixedFooterMobile .chat { border: 1.5px solid #698DF5; border-radius: 4px; height: 100%; text-align: center; color: #698DF5; font-weight: 700; }
+/* line 166, ../sass/footer.scss */
+.fixedFooterMobile .chat img { display: inline-block; margin-top: 9px; width: 25px; }
+/* line 171, ../sass/footer.scss */
+.fixedFooterMobile .chat span { height: 100%; display: inline-block; padding-top: 3px; vertical-align: middle; margin-left: 5px; }
 @media only screen and (max-width: 1023px) { /* line 143, ../sass/footer.scss */
   .fixedFooterMobile { position: fixed; left: 0px; bottom: 0px; width: 100%; display: block; } }
