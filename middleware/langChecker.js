@@ -6,7 +6,7 @@ function langChecker(req, res, next) {
         next();
     } else {
         if (req.headers.country) {
-            var lang = req.headers.country.toLowerCase();
+            var lang = req.cookies.BS_PreferredLang || req.headers.country.toLowerCase();
 
             if (lang == 'id') {
                 res.redirect('/' + lang + req.originalUrl);

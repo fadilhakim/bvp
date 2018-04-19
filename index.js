@@ -74,7 +74,7 @@ if ('local' === process.env.NODE_ENV) {
     }
 }
 
-app.use('/:lang*?/home/benefits', langChecker, function(req, res) {
+app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
     if (req.headers.country) {
         var lang = req.headers.country.toLowerCase();
     } else {
@@ -180,7 +180,7 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
     res.locals.lang = lang;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
-
+    
     fs.readFile(dataVendors, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
