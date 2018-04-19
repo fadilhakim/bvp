@@ -1,5 +1,6 @@
 module.exports = langChecker
 
+
 function langChecker(req, res, next) {
     if (req.params.lang) {
         next();
