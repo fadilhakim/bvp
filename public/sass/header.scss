@@ -4,6 +4,14 @@
 @import './_mixins.scss';
 
 header {
+    .f-c-gold {
+        color: $gold;
+    }
+
+    .f-c-silver {
+        color: $silver;
+    }
+
     &.container-fluid {
         padding-left:0px;
         padding-right: 0px;

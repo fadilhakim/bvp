@@ -25,14 +25,37 @@
                                 <div class="vendorPic">
                                     <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="38">
                                 </div>
-                                <div class="vendorInfo">
+                                <div class="vendorInfo" ng-cloak>
                                     <h4 class="vendorName">{{loginCtrl.user().displayName}}</h4>
-                                    <p class="status">
+
+                                    <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">
                                         Trial -
-                                        <span class="credit">
-                                            35 credits
+                                        <span class="credit" ng-if="loginCtrl.user().contactCredit < 999">
+                                            {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)]] Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
+                                        </span>
+                                        <span class="blocklist__credit" ng-if="loginCtrl.user().contactCredit > 999">
+                                            <span class="credit">&#8734; Credits</span>
                                         </span>
                                     </p>
+
+                                    <p class="status" ng-if="loginCtrl.isPublished() && loginCtrl.membership().membershipType.data.name == 'Gold' && !loginCtrl.trialVendor() && loginCtrl.membership().status == 'active' && loginCtrl.totalPoint()">
+                                        <span class="f-c-gold">Gold</span> -
+                                        <span class="credit" ng-if="loginCtrl.totalPoint()">{{ loginCtrl.numberWithCommas(loginCtrl.totalPoint()) }} Point{{loginCtrl.totalPoint() > 1 ? 's' : '' }}</span>
+                                    </p>
+
+                                    <p class="status" ng-if="loginCtrl.isPublished() && loginCtrl.membership().membershipType.data.name == 'Silver' && !loginCtrl.trialVendor() && loginCtrl.membership().status == 'active' && loginCtrl.totalPoint()">
+                                        <span class="f-c-silver">{{ trans('lang.plan_silver') }}</span> -
+                                        <span class="credit" ng-if="loginCtrl.totalPoint()">{{ loginCtrl.numberWithCommas(loginCtrl.totalPoint().total_point) }} Point{{ loginCtrl.totalPoint().total_point > 1 ? 's' : '' }}</span>
+                                    </p>
+
+                                    <p class="status" ng-if="loginCtrl.user().status == 0">
+                                        Unpublished
+                                    </p>
+
+                                    <p class="status" ng-if="loginCtrl.user().status == 3">
+                                        Inactive
+                                    </p>
+
                                 </div>
                             </a>
                             <div class="dropdown-menu " aria-labelledby="dropdownMenuProfile">
@@ -50,7 +73,7 @@
                                <a class="dropdown-item profile" href="<%- baseUrl -%>/{{loginCtrl.user().slug}}">MY PROFILE</a>
                                <a class="dropdown-item settings" href="<%- baseUrl -%>/dashboard/settings">MY SETTINGS</a>
                                <div class="dropdown-divider"></div>
-                               <a class="dropdown-item logout" href="">LOG OUT</a>
+                               <a class="dropdown-item logout" ng-click="loginCtrl.logout()" href="#">LOG OUT</a>
                             </div>
                         </div>
                     </li>   
@@ -96,13 +119,35 @@
                     <div class="vendorPic">
                         <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="45">
                     </div>
-                    <div class="vendorInfo">
+                    <div class="vendorInfo" ng-cloak>
                         <h4 class="vendorName">{{loginCtrl.user().displayName}}</h4>
-                        <p class="status">
+
+                        <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">
                             Trial -
-                            <span class="credit">
-                                35 credits
+                            <span class="credit" ng-if="loginCtrl.user().contactCredit < 999">
+                                {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)]] Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
                             </span>
+                            <span class="blocklist__credit" ng-if="loginCtrl.user().contactCredit > 999">
+                                <span class="credit">&#8734; Credits</span>
+                            </span>
+                        </p>
+                        
+                        <p class="status" ng-if="loginCtrl.isPublished() && loginCtrl.membership().membershipType.data.name == 'Gold' && !loginCtrl.trialVendor() && loginCtrl.membership().status == 'active' && loginCtrl.totalPoint()">
+                            <span class="f-c-gold">Gold</span> -
+                            <span class="credit" ng-if="loginCtrl.totalPoint()">{{ loginCtrl.numberWithCommas(loginCtrl.totalPoint()) }} Point{{loginCtrl.totalPoint() > 1 ? 's' : '' }}</span>
+                        </p>
+
+                        <p class="status" ng-if="loginCtrl.isPublished() && loginCtrl.membership().membershipType.data.name == 'Silver' && !loginCtrl.trialVendor() && loginCtrl.membership().status == 'active' && loginCtrl.totalPoint()">
+                            <span class="f-c-silver">{{ trans('lang.plan_silver') }}</span> -
+                            <span class="credit" ng-if="loginCtrl.totalPoint()">{{ loginCtrl.numberWithCommas(loginCtrl.totalPoint().total_point) }} Point{{ loginCtrl.totalPoint().total_point > 1 ? 's' : '' }}</span>
+                        </p>
+
+                        <p class="status" ng-if="loginCtrl.user().status == 0">
+                            Unpublished
+                        </p>
+
+                        <p class="status" ng-if="loginCtrl.user().status == 3">
+                            Inactive
                         </p>
                         <a class="link_dashboard" href="<%- baseUrl -%>/dashboard">GO TO MY DASHBOARD</a>
                     </div>   
