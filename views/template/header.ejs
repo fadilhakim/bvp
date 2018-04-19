@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<%- baseUrl -%>"></a>
             <div class="top-menu">
                 <ul>
-                    <li ng-if="loginCtrl.user().id == undefined"><a href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
+                    <li ng-if="loginCtrl.user().id == undefined"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
                     <li ng-if="loginCtrl.user().id">
                         <div class="dropdown show if-login">
                             <a class="dropdown-toggle btn" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
@@ -115,13 +115,25 @@
                             </li>
                         <% } else { %>
                             <li class="nav-item">
-                                <a class="nav-link <%= menu[key].name %>" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
+                                <% 
+                                    var menuEvent = ''
+                                    if(menu[key].name == 'Success Stories'){
+                                        menuEvent = 'hp_success_stories';
+                                    }
+                                    if(menu[key].name == 'Pricing'){
+                                        menuEvent = 'hp_pricing'
+                                    }
+                                    if(menu[key].name == 'Benefits'){
+                                        menuEvent = 'hp_benefits'
+                                    }
+                                %>
+                                <a class="nav-link <%= menu[key].name %> <%= menuEvent %>" data-key="<%= menuEvent %>" href="<%= menuUrl + menu[key].url %>"><%= menu[key].name %></a>
                             </li>
                         <% } %>
                     <% }); %>
 
                     <li class="nav-item">
-                        <a class="nav-link blog" href="https://business.bridestory.com/blog">Blog</a>
+                        <a class="nav-link blog hp_blog" href="https://business.bridestory.com/blog">Blog</a>
                     </li>
                 </ul>
 
@@ -133,8 +145,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <% Object.keys(menu).forEach(function(key) { %>
                                 <% if(key == active) { %>
-                                    <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                    <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                    <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                    <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
                                 <% } %>
                             <% }); %>
                         </div>
