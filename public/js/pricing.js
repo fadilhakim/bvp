@@ -89,10 +89,7 @@ angular
 		if ($scope.city[idx].id && $scope.category[idx].id) {
 			$http({
 				method: 'GET',
-				url: configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id,
-				headers: {
-					'Session-Id' : $cookies.get('BSID')
-				}
+				url: configUrl.api + '/v2/subscribes/prices?budgetId=48&cityId='+ $scope.city[idx].id + '&categoryId=' + $scope.category[idx].id + '&countryIso=' + BS__country
 			})
 			.then(function (response) {
 				var membershipsList = response.data.planCombination.vendorMemberships[0].membershipsList;
