@@ -118,7 +118,7 @@
                             <li><%- localization[transId].home.content_7 -%></li>
                             <li><%- localization[transId].home.content_8 -%></li>
                         </ul>
-                        <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
+                        <a data-key="hp_learn_more_provide_your_client_with_various_payment_options" href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary hp_learn_more_provide_your_client_with_various_payment_options">
                             Learn More
                         </a>
                     </div>
@@ -155,7 +155,7 @@
                         <h2><%- localization[transId].home.content_11 -%></h2>
                         <span class="border-pink"></span>
                         <p><%- localization[transId].home.content_12 -%></p>
-                        <a href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary">
+                        <a data-key="hp_learn_more_interact_real_time_with_potensial_clients" href="<%= menuUrl + menu[1].url %>#online_presence" class="btn btn-primary hp_learn_more_interact_real_time_with_potensial_clients">
                             Learn More
                         </a>
                     </div>
@@ -389,7 +389,7 @@
                                     var newDate = new Date(date) %>
                                 <%= newDate.toDateString() %>
                             </span>
-                            <h4 class="f-w700">
+                            <h4 class="f-w700" data-key="<%= blogs.slug %>">
                                     <%= blogs.title %>
                             </h4>
                         </a>

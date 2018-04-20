@@ -11,7 +11,9 @@
 <body>
 
     <header class="container-fluid sticky-top" ng-controller="loginController as loginCtrl">
-        <script type="text/javascript">var BS__lang = <%- JSON.stringify(lang) %></script>
+        <script type="text/javascript">
+            var BS__lang = JSON.stringify(lang)
+        </script>
         <nav class="navbar navbar-header navbar-expand-lg navbar-light">
             <button class="navbar-toggler mr-20" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -87,7 +89,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <% Object.keys(menu).forEach(function(key) { %>
                                     <% if(key == active) { %>
-                                        <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                        <a data-plan="" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
                                         <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
                                     <% } %>
                                 <% }); %>
@@ -126,7 +128,7 @@
                         <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">
                             Trial -
                             <span class="credit" ng-if="loginCtrl.user().contactCredit < 999">
-                                {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)]] Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
+                                {{ loginCtrl.numberWithCommas(loginCtrl.user().contactCredit)}} Credit{{loginCtrl.user().contactCredit > 1 ? 's' : '' }}
                             </span>
                             <span class="blocklist__credit" ng-if="loginCtrl.user().contactCredit > 999">
                                 <span class="credit">&#8734; Credits</span>
@@ -191,8 +193,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <% Object.keys(menu).forEach(function(key) { %>
                                 <% if(key == active) { %>
-                                    <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                    <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                    <a data-plan="hp_select_language_header" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                    <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
                                 <% } %>
                             <% }); %>
                         </div>
@@ -252,8 +254,8 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <% Object.keys(menu).forEach(function(key) { %>
                                             <% if(key == active) { %>
-                                                <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#">EN</a>
-                                                <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#">ID</a>
+                                                <a data-plan="hp_select_language_header" data-key="en"  href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#">EN</a>
+                                                <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#">ID</a>
                                             <% } %>
                                         <% }); %>
                                     </div>

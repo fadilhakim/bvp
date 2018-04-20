@@ -52,8 +52,8 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <% Object.keys(menu).forEach(function(key) { %>
                             <% if(key == active) { %>
-                                <a href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language" href="#">EN</a>
-                                <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language" href="#">ID</a>
+                                <a data-plan="hp_select_language" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language" href="#">EN</a>
+                                <a data-plan="hp_select_language" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language" href="#">ID</a>
                             <% } %>
                         <% }); %>
                     </div>
