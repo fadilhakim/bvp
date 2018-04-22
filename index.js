@@ -9,7 +9,6 @@ const helmet = require('helmet');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const langChecker = require('./middleware/langChecker');
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -127,8 +126,8 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
 
 
 app.get('/:lang*?/home/pricing', function(req, res) {
-    res.locals.country = langChecker2(req, res).countryCode;
-    res.locals.lang = langChecker2(req, res).langCode;
+    res.locals.country = getLocalization(req, res).countryCode;
+    res.locals.lang = getLocalization(req, res).langCode;
 
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
