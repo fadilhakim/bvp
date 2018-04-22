@@ -70,6 +70,7 @@ gulp.task('js', function() {
 
 gulp.task('css', function() {
     var cssFiles = [
+        './bower_components/angular/angular-csp.css',
         './public/bootstrap/css/bootstrap.css',
         './public/stylesheets/header.css',
         './public/stylesheets/footer.css',

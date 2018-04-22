@@ -8,25 +8,25 @@
     <link rel="shortcut icon" href="https://alexandra.bridestory.com/image/upload/assets/images/desktop/favicon.ico" type="image/x-icon">
     <link href="<%- assetsCssUrl -%>" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body ng-cloak>
 
     <header class="container-fluid sticky-top" ng-controller="loginController as loginCtrl">
         <script type="text/javascript">var BS__lang = <%- JSON.stringify(lang) %>; var BS__country = <%- JSON.stringify(lang) %>;</script>
-        <nav class="navbar navbar-header navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-header navbar-expand-lg navbar-light" ng-if="!loginCtrl.isLoading()">
             <button class="navbar-toggler mr-20" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<%- baseUrl -%>"></a>
             <div class="top-menu">
                 <ul>
-                    <li ng-if="loginCtrl.user().id == undefined"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
+                    <li ng-if="!loginCtrl.user()"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
                     <li ng-if="loginCtrl.user().id">
                         <div class="dropdown show if-login">
                             <a class="dropdown-toggle btn" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
                                 <div class="vendorPic">
                                     <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="38">
                                 </div>
-                                <div class="vendorInfo" ng-cloak>
+                                <div class="vendorInfo">
                                     <h4 class="vendorName">{{loginCtrl.user().displayName}}</h4>
 
                                     <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">
@@ -78,31 +78,31 @@
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="loginCtrl.user().id == undefined" class="p-left15"><a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
-                    <li class=""><a href="#">
-                        <div class="dropdown show">
-                            <a class="dropdown-toggle btn <%- transId -%>" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <%- transId -%>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <% Object.keys(menu).forEach(function(key) { %>
-                                    <% if(key == active) { %>
-                                        <a data-plan="" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                        <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
-                                    <% } %>
-                                <% }); %>
+                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
+                    <li class="">
+                        <a href="#">
+                            <div class="dropdown show">
+                                <a class="dropdown-toggle btn <%- transId -%>" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <%- transId -%>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <% Object.keys(menu).forEach(function(key) { %>
+                                        <% if(key == active) { %>
+                                            <a data-plan="" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                            <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                        <% } %>
+                                    <% }); %>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
                 </ul>
             </div>
             
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+        <nav class="navbar navbar-expand-lg navbar-light bg-faded" ng-if="!loginCtrl.isLoading()">
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li>
                         <a class="btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
@@ -120,7 +120,7 @@
                     <div class="vendorPic">
                         <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="45">
                     </div>
-                    <div class="vendorInfo" ng-cloak>
+                    <div class="vendorInfo">
                         <h4 class="vendorName">{{loginCtrl.user().displayName}}</h4>
 
                         <p class="status" ng-if="loginCtrl.isPublished() && (loginCtrl.trialVendor() || loginCtrl.membership().status == 'expired')">

@@ -4,12 +4,13 @@ angular
 .module('homeApp.login',['ngCookies'])
 .controller('loginController', ['$http', '$scope', '$cookies', '$window', function($http, $scope, $cookies, $window){
 
-	$scope.user = {};
+	$scope.user = null;
 	$scope.trialVendor = null;
 	$scope.goldMembership = null;
 	$scope.membership = null;
 	$scope.secondary = null;
 	$scope.processMembership = false;
+	$scope.isLoading = true;
 
 	$scope.getUser = function(){
 		if($cookies.get('BSID')) {
@@ -31,7 +32,6 @@ angular
 						}
 					}).then(function (response) {
 						if(response.data.vendor.memberships != undefined){
-							$scope.processMembership = true;
 							if(response.data.vendor.memberships.length == 1 && response.data.vendor.memberships[0].status == 'expired'){
 								$scope.trialVendor = true;
 							}else{
@@ -48,7 +48,6 @@ angular
 									}
 								})
 							}
-							$scope.processMembership = false;
 						}
 					});
 
@@ -63,11 +62,15 @@ angular
 							$scope.totalPoint = response.data.data.total_point;
 						}
 					})
+					
+					$scope.isLoading = false;
 				}
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
+		}else {
+			$scope.isLoading = false;
 		}
 	}
 
@@ -79,16 +82,21 @@ angular
 
 	return {
 		user: function() {
+			
+console.log("$scope.user", $scope.user);
 			return $scope.user;
+		},
+		isLoading: function() {
+			return $scope.isLoading;
 		},
 		isPublished: function() {
 			return $scope.user && $scope.user.status == 1;
 		},
 		trialVendor: function() {
-			return !$scope.processMembership ? $scope.trialVendor : null;
+			return !$scope.isLoading ? $scope.trialVendor : null;
 		},
 		membership: function() {
-			return !$scope.processMembership ? $scope.goldMembership || $scope.membership : null;
+			return !$scope.isLoading ? $scope.goldMembership || $scope.membership : null;
 		},
 		totalPoint: function() {
 			return $scope.totalPoint;
