@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const langChecker = require('./middleware/langChecker');
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -73,10 +74,7 @@ if ('local' === process.env.NODE_ENV) {
     }
 }
 
-app.get('/:lang*?/home/benefits', function(req, res) {
-    res.locals.country = getLocalization(req, res).countryCode;
-    res.locals.lang = getLocalization(req, res).langCode;
-
+app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.transId = req.params.lang || 'en';
@@ -89,10 +87,7 @@ app.get('/:lang*?/home/benefits', function(req, res) {
     });
 })
 
-app.get('/:lang*?/home/success-stories', function(req, res) {
-    res.locals.country = getLocalization(req, res).countryCode;
-    res.locals.lang = getLocalization(req, res).langCode;
-
+app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.transId = req.params.lang || 'en';
@@ -125,10 +120,7 @@ app.get('/:lang*?/home/success-stories', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/pricing', function(req, res) {
-    res.locals.country = getLocalization(req, res).countryCode;
-    res.locals.lang = getLocalization(req, res).langCode;
-
+app.get('/:lang*?/home/pricing', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.transId = req.params.lang || 'en';
@@ -142,10 +134,7 @@ app.get('/:lang*?/home/pricing', function(req, res) {
 })
 
 
-app.get('/:lang*?/home/',function(req, res) {
-    res.locals.country = getLocalization(req, res).countryCode;
-    res.locals.lang = getLocalization(req, res).langCode;
-
+app.get('/:lang*?/home/', langChecker, function(req, res) {
     if (res.locals.country == 'id' || res.locals.country == 'en') {
         var dataVendors = "./data/vendors_global.json";
         var folderImg = 'global';
@@ -188,26 +177,6 @@ app.get('/:lang*?/home/',function(req, res) {
         }
     })
 })
-
-function getLocalization(req, res) {
-    if (req.headers.country) {
-        var lang = req.cookies.BS_PreferredLang ? req.cookies.BS_PreferredLang : req.headers.country.toLowerCase();
-
-        if(req.headers.country.toLowerCase() == 'ph' || req.headers.country.toLowerCase() == 'sg' || req.headers.country.toLowerCase() == 'id') 
-            var country = req.headers.country.toLowerCase();
-        else 
-            var country = 'en';
-
-    }else {
-        var lang = req.cookies.BS_PreferredLang ? req.cookies.BS_PreferredLang : 'en';
-        var country = 'en';
-    }
-
-    return {
-        countryCode: country,
-        langCode: lang
-    }
-}
 
 // app.listen(3000, 'local.bridestory.com', function() {
 // 	console.log("... port %d in %s mode", app.address().port, app.settings.env);
