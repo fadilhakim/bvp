@@ -71,14 +71,14 @@
                                 </a>
                                <div class="dropdown-divider"></div>
                                <a class="dropdown-item dashboard" href="<%- baseUrl -%>/dashboard">MY DASHBOARD</a>
-                               <a class="dropdown-item profile" href="<%- baseUrl -%>/{{loginCtrl.user().slug}}">MY PROFILE</a>
+                               <a class="dropdown-item profile" href="bridestory.com/{{loginCtrl.user().slug}}">MY PROFILE</a>
                                <a class="dropdown-item settings" href="<%- baseUrl -%>/dashboard/settings">MY SETTINGS</a>
                                <div class="dropdown-divider"></div>
                                <a class="dropdown-item logout" ng-click="loginCtrl.logout()" href="#">LOG OUT</a>
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
+                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
                     <li class="">
                         <a href="#">
                             <div class="dropdown show">
@@ -88,8 +88,8 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <% Object.keys(menu).forEach(function(key) { %>
                                         <% if(key == active) { %>
-                                            <a data-plan="" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                            <a href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
+                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
                                         <% } %>
                                     <% }); %>
                                 </div>
@@ -269,7 +269,7 @@
                             <div class="col-lg-6">
                                 <ul>
                                     <li><a href="https://business.bridestory.com/privacy-policy">privacy policy</a></li>
-                                    <li><a href="https://business.bridestory.com/terms-conditionsr">terms and conditions</a></li>
+                                    <li><a href="https://business.bridestory.com/terms-conditions/vendor">terms and conditions</a></li>
                                     <li><a href="https://www.bridestory.com/sitemap">sitemap</a></li>
                                     <% var d = new Date(); var n = d.getFullYear(); %>
                                     <li><a href="">&copy; <%= n %> Bridestory all rights reserved</a></li>
