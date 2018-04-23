@@ -33,6 +33,7 @@ angular
     ];
     $scope.memberships = {};
     $scope.submitted = [false, false];
+    $scope.currency = null;
 
     $scope.getCategories = function(){
         $http.get(configUrl.api + '/v2/categories').then(function(result){
@@ -107,6 +108,7 @@ angular
 					}
 				});
 
+				$scope.currency = response.data.planCombination.currency.name;
 				$scope.submitted[idx] = false;
 			})
 			.catch(function (error) {
