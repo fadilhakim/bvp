@@ -82,8 +82,6 @@ angular
 
 	return {
 		user: function() {
-			
-console.log("$scope.user", $scope.user);
 			return $scope.user;
 		},
 		isLoading: function() {
