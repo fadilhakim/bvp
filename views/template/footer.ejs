@@ -1,106 +1,107 @@
-<footer class="container-fluid">
-    <div class="container">
-        <div class="row top">
-            <div class="col-6 col-lg-2">
-                <h4 class="">BRIDESTORY</h4>
-                <ul>
-                    <li><a href="<%- baseUrl -%>/about-us">About</a></li>
-                    <li><a href="https://careers.bridestory.com/">Careers</a></li>
-                    <li><a href="<%- baseUrl -%>/contact-us">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-lg-2">
-                <h4 class="">BRIDES-TO-BE</h4>
-                <ul>
-                    <li><a href="https://www.bridestory.com/blog">Blog</a></li>
-                    <li><a href="https://www.bridestory.com/app">Bridestory App</a></li>
-                </ul>
-            </div>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row top">
+                <div class="col-6 col-lg-2">
+                    <h4 class="">BRIDESTORY</h4>
+                    <ul>
+                        <li><a href="<%- baseUrl -%>/about-us">About</a></li>
+                        <li><a href="https://careers.bridestory.com/">Careers</a></li>
+                        <li><a href="<%- baseUrl -%>/contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4 class="">BRIDES-TO-BE</h4>
+                    <ul>
+                        <li><a href="https://www.bridestory.com/blog">Blog</a></li>
+                        <li><a href="https://www.bridestory.com/app">Bridestory App</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-lg-2 col-6">
-                <h4 class="">Business</h4>
-                <ul>
-                    <li><a href="<%- baseUrl -%>">Become a Vendor</a></li>
-                    <li><a href="<%- baseUrl -%>/blog">Business Blog</a></li>
-                    <li><a href="<%- baseUrl -%>/pro">Bridestory Pro</a></li>
-                </ul>
-            </div>
+                <div class="col-lg-2 col-6">
+                    <h4 class="">Business</h4>
+                    <ul>
+                        <li><a href="<%- baseUrl -%>">Become a Vendor</a></li>
+                        <li><a href="<%- baseUrl -%>/blog">Business Blog</a></li>
+                        <li><a href="<%- baseUrl -%>/pro">Bridestory Pro</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-6 col-lg-2">
-                <h4 class="">Support</h4>
-                <ul>
-                    <li><a href="https://support.bridestory.com">Help Center</a></li>
-                </ul>
-            </div>
+                <div class="col-6 col-lg-2">
+                    <h4 class="">Support</h4>
+                    <ul>
+                        <li><a href="https://support.bridestory.com">Help Center</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-6 col-lg-2">
-                <h4 class="">Follow Us</h4>
-                <ul class="sosmed-footer">
-                    <li><a class="fb" href="https://www.facebook.com/thebridestory"></a></li>
-                    <li><a class="twt" href="https://twitter.com/TheBrideStory"></a></li>
-                    <li><a class="ig" href="https://www.instagram.com/thebridestory/"></a></li>
-                    <li><a class="pin" href="https://pinterest.com/thebridestory"></a></li>
-                </ul>
-            </div>
+                <div class="col-6 col-lg-2">
+                    <h4 class="">Follow Us</h4>
+                    <ul class="sosmed-footer">
+                        <li><a class="fb" href="https://www.facebook.com/thebridestory"></a></li>
+                        <li><a class="twt" href="https://twitter.com/TheBrideStory"></a></li>
+                        <li><a class="ig" href="https://www.instagram.com/thebridestory/"></a></li>
+                        <li><a class="pin" href="https://pinterest.com/thebridestory"></a></li>
+                    </ul>
+                </div>
 
-            <div class="col-6 col-lg-2">
-                <h4 class="">Language</h4>
-                <div class="dropdown show">
-                    <a class="dropdown-toggle btn <%- transId -%>" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%- transId -%>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <% Object.keys(menu).forEach(function(key) { %>
-                            <% if(key == active) { %>
-                                <a data-plan="hp_select_language" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language" href="#">EN</a>
-                                <a data-plan="hp_select_language" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language" href="#">ID</a>
-                            <% } %>
-                        <% }); %>
+                <div class="col-6 col-lg-2">
+                    <h4 class="">Language</h4>
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn <%- transId -%>" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <%- transId -%>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <% Object.keys(menu).forEach(function(key) { %>
+                                <% if(key == active) { %>
+                                    <a data-plan="hp_select_language" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language" href="#" ng-click="langCtrl.setPreferredLang('en')">EN</a>
+                                    <a data-plan="hp_select_language" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language" href="#" ng-click="langCtrl.setPreferredLang('id')">ID</a>
+                                <% } %>
+                            <% }); %>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row btm">
-            <div class="col-lg-6">
-                <a href="https://www.bridestory.com/">
-                    <img class="footer-logo" src="<%- assetsUrl -%>/icons/footer_logo.png" alt="bridestory logo">
-                </a>
+            <div class="row btm">
+                <div class="col-lg-6">
+                    <a href="https://www.bridestory.com/">
+                        <img class="footer-logo" src="<%- assetsUrl -%>/icons/footer_logo.png" alt="bridestory logo">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <ul>
+                        <li><a href="<%- baseUrl -%>/privacy-policy">privacy policy</a></li>
+                        <li><a href="<%- baseUrl -%>/terms-conditions/vendor">terms and conditions</a></li>
+                        <li><a href="https://www.bridestory.com/sitemap">sitemap</a></li>
+                        <% var d = new Date(); var n = d.getFullYear(); %>
+                        <li><a href="">&copy; <%= n %> Bridestory all rights reserved</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <ul>
-                    <li><a href="<%- baseUrl -%>/privacy-policy">privacy policy</a></li>
-                    <li><a href="<%- baseUrl -%>/terms-conditions/vendor">terms and conditions</a></li>
-                    <li><a href="https://www.bridestory.com/sitemap">sitemap</a></li>
-                    <% var d = new Date(); var n = d.getFullYear(); %>
-                    <li><a href="">&copy; <%= n %> Bridestory all rights reserved</a></li>
-                </ul>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<div class="fixedFooterMobile">
-    <div class="container">
-        <div class="row">
-            <div class="col-7">
-                <a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">
-                    Start Free Trial
-                </a>
-            </div>
-            <div class="col-5">
-             
-                <a href="https://v2.zopim.com/widget/livechat.html?key=1zzZrxG2padaT6Mo2xl8EwufERXIUswj&lang=en&hostname=www.bridestory.com" >
-                    <div class="chat">
-                        <img class="img-fluid" src="<%- assetsUrl -%>/icons/m-chat-icon.png" alt="bridestory logo">
-                        <span>Chat</span>
-                    </div>
-                </a>
-   
+    <div class="fixedFooterMobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <a class="btn btn-primary" href="https://business.bridestory.com/register/vendor#/">
+                        Start Free Trial
+                    </a>
+                </div>
+                <div class="col-5">
+                 
+                    <a href="https://v2.zopim.com/widget/livechat.html?key=1zzZrxG2padaT6Mo2xl8EwufERXIUswj&lang=en&hostname=www.bridestory.com" >
+                        <div class="chat">
+                            <img class="img-fluid" src="<%- assetsUrl -%>/icons/m-chat-icon.png" alt="bridestory logo">
+                            <span>Chat</span>
+                        </div>
+                    </a>
+       
+                </div>
             </div>
         </div>
     </div>
+
 </div>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

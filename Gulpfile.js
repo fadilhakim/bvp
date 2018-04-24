@@ -31,6 +31,7 @@ gulp.task('js', function() {
         './public/js/pricing.js',
         './public/js/registration-storage.js',
         './public/js/login.js',
+        './public/js/langSelector.js',
         './public/js/axios.min.js',
         './public/js/smooth-scroll.js',
         './public/js/smooth-scroll.js',

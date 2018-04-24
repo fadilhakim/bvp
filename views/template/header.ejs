@@ -9,7 +9,7 @@
     <link href="<%- assetsCssUrl -%>" type="text/css" rel="stylesheet">
 </head>
 <body ng-cloak>
-
+    <div ng-controller="langController as langCtrl">
     <header class="container-fluid sticky-top" ng-controller="loginController as loginCtrl">
         <script type="text/javascript">var BS__lang = <%- JSON.stringify(lang) %>; var BS__country = <%- JSON.stringify(country) %>;</script>
         <nav class="navbar navbar-header navbar-expand-lg navbar-light">
@@ -88,8 +88,8 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <% Object.keys(menu).forEach(function(key) { %>
                                         <% if(key == active) { %>
-                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('en')">EN</a>
+                                            <a data-plan="hp_select_language_header" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('id')">ID</a>
                                         <% } %>
                                     <% }); %>
                                 </div>
@@ -281,7 +281,6 @@
 
             </div>  
         </nav>
-
     </header>
 
 
