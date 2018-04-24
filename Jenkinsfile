@@ -13,7 +13,7 @@ node('jenkins-aws')
   }
   stage('Build Image')
   {
-    sh 'docker build -f Dockerfile.staging -t 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER} .'
+    sh 'docker build -f Dockerfile.staging -t 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BRANCH_NAME}-${BUILD_NUMBER} .'
   }
 
   stage('Container Testing')
