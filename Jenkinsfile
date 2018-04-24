@@ -24,7 +24,7 @@ node('jenkins-aws')
   stage('Push Docker Image')
   {
     sh 'awsdockerlogin'
-    sh 'docker push 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER}'
+    sh 'docker push 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BRANCH_NAME}-${BUILD_NUMBER}'
   }
 
   stage('Create New Task')
