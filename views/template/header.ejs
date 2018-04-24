@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
+                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
                     <li class="">
                         <a href="#">
                             <div class="dropdown show">
@@ -105,7 +105,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li>
-                        <a class="btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
+                        <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
                             Start Free Trial
                         </a>
                     </li>
