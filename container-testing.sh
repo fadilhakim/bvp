@@ -1,4 +1,4 @@
-docker run --rm --name vendor-home-staging -d -P 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BRANCH_NAME}-${BUILD_NUMBER}
+docker run --rm --name vendor-home-staging -d -P 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-${BUILD_NUMBER}
 VENDOR_IP=`docker inspect --format '{{ .NetworkSettings.IPAddress }}' vendor-home-staging`
 ENDPOINT_URL="home"
 sleep 30s
