@@ -372,6 +372,10 @@ header {
         flex-direction: row;
         -webkit-justify-content: flex-start;
         justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background-color: #fff;
     }
 }
 
@@ -391,6 +395,22 @@ header {
 }
 
 .navbar-collapse {
+    @include mobile-device-screen {  
+        position: fixed;
+        z-index: 9;
+        overflow: scroll;
+        height: calc(100vh - 36px);
+        top:40px;
+        width: 100%;
+        background-color: #fff;
+        border-top:1px solid #e3e3e3;
+    }
+
+    .btn-wrap-m {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
     .m-top {
         border-bottom:1px solid #E3E3E3;
         display: none;
