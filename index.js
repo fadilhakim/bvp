@@ -77,6 +77,7 @@ if ('local' === process.env.NODE_ENV) {
 app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
+    res.locals.mainUrl = process.env.MAIN_URL;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
@@ -90,6 +91,7 @@ app.get('/:lang*?/home/benefits', langChecker, function(req, res) {
 app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
+    res.locals.mainUrl = process.env.MAIN_URL;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
@@ -123,6 +125,7 @@ app.get('/:lang*?/home/success-stories', langChecker, function(req, res) {
 app.get('/:lang*?/home/pricing', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
+    res.locals.mainUrl = process.env.MAIN_URL;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
 
@@ -148,6 +151,7 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
 
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
+    res.locals.mainUrl = process.env.MAIN_URL;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
     

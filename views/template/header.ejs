@@ -71,7 +71,7 @@
                                 </a>
                                <div class="dropdown-divider"></div>
                                <a class="dropdown-item dashboard" href="<%- baseUrl -%>/dashboard">MY DASHBOARD</a>
-                               <a class="dropdown-item profile" href="https://www.bridestory.com/{{loginCtrl.user().slug}}">MY PROFILE</a>
+                               <a class="dropdown-item profile" href="<%- mainUrl -%>/{{loginCtrl.user().slug}}">MY PROFILE</a>
                                <a class="dropdown-item settings" href="<%- baseUrl -%>/dashboard/settings">MY SETTINGS</a>
                                <div class="dropdown-divider"></div>
                                <a class="dropdown-item logout" ng-click="loginCtrl.logout()" href="#">LOG OUT</a>
@@ -104,8 +104,8 @@
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
-                    <li>
-                        <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
+                    <li class="btn-wrap-m">
+                        <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center" href="https://business.bridestory.com/register/vendor">
                             <%- localization[transId].home.content_30 -%>
                         </a>
                     </li>
@@ -179,7 +179,7 @@
                     <% }); %>
 
                     <li class="nav-item">
-                        <a class="nav-link blog hp_blog" href="https://business.bridestory.com/blog">Blog</a>
+                        <a class="nav-link blog hp_blog" href="<%= baseUrl %>/blog">Blog</a>
                     </li>
                 </ul>
 
@@ -212,7 +212,7 @@
                             <div class="col-6 col-lg-2">
                                 <h4 class="">BRIDES-TO-BE</h4>
                                 <ul>
-                                    <li><a href="https://www.bridestory.com/blog">Blog</a></li>
+                                    <li><a href="<%= baseUrl %>/blog">Blog</a></li>
                                     <li><a href="https://www.bridestory.com/app">Bridestory App</a></li>
                                 </ul>
                             </div>
