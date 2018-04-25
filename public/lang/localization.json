@@ -41,7 +41,8 @@
 			"content_27"		: "Butuh bantuan? Hubungi kami sekarang!",
 
 			"content_28"		: "Sarana yang Anda butuhkan untuk mengembangkan bisnis pernikahan Anda.",
-			"content_29"		: "Lihat Artikel Lainnya"
+			"content_29"		: "Lihat Artikel Lainnya",
+			"content_30"		: "Mulai Free Trial"
 		},
 	    "benefits" : {
 	    	"title" 		: "Bangun sebuah online presence yang tepat",
@@ -82,7 +83,8 @@
 			"content_7"		: "Selanjutnya, masukkan lokasi bisnis",
 			"content_8"		: "Beli Sekarang",
 			"content_9"		: "*Harga yang tertera di atas tidak termasuk Pajak Pertambahan Nilai (PPN) sebagaimana ditentukan oleh undang-undang pajak yang berlaku",
-			"content_10"	: "**Untuk sementara hanya tersedia di Indonesia"
+			"content_10"	: "**Untuk sementara hanya tersedia di Indonesia",
+			"content_11"	: "Mulai Free Trial"
 		}
 	},
 	"en" : {
@@ -127,7 +129,8 @@
 			"content_27"		: "Need assistance? Contact us today!",
 
 			"content_28"		: "Resources you need to grow your wedding business.",
-			"content_29"		: "View More Articles"
+			"content_29"		: "View More Articles",
+			"content_30"		: "Start Free Trial"
 		},
 	    "benefits" : {
 	    	"title" 		: "Build an online presence that works",
@@ -169,7 +172,8 @@
 			"content_7"		: "Next, put in the business location",
 			"content_8"		: "Purchase Now",
 			"content_9"		: "*The prices quoted above are exclusive of VAT as determined by applicable tax law",
-			"content_10"	: "**Currently only available in Indonesia"
+			"content_10"	: "**Currently only available in Indonesia",
+			"content_11"	: "Start Free Trial"
 		}
 	}
 }

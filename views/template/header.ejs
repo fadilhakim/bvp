@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/">Start Free Trial</a></li>
+                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/"><%- localization[transId].home.content_30 -%></a></li>
                     <li class="">
                         <a href="#">
                             <div class="dropdown show">
@@ -106,7 +106,7 @@
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li>
                         <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center border-0" href="https://business.bridestory.com/register/vendor">
-                            Start Free Trial
+                            <%- localization[transId].home.content_30 -%>
                         </a>
                     </li>
                     <li class="mt-20 mb-20">
@@ -191,8 +191,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <% Object.keys(menu).forEach(function(key) { %>
                                 <% if(key == active) { %>
-                                    <a data-plan="hp_select_language_header" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="setPreferredLang('en')">EN</a>
-                                    <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="setPreferredLang('id')">ID</a>
+                                    <a data-plan="hp_select_language_header" data-key="en" href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('en')">EN</a>
+                                    <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('id')">ID</a>
                                 <% } %>
                             <% }); %>
                         </div>
@@ -252,8 +252,8 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <% Object.keys(menu).forEach(function(key) { %>
                                             <% if(key == active) { %>
-                                                <a data-plan="hp_select_language_header" data-key="en"  href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#">EN</a>
-                                                <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#">ID</a>
+                                                <a data-plan="hp_select_language_header" data-key="en"  href="<%= baseUrl + menu[key].url%>" class="dropdown-item en hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('en')">EN</a>
+                                                <a data-plan="hp_select_language_header" data-key="id" href="<%= baseUrl + '/id' + menu[key].url%>" class="dropdown-item id hp_select_language_header" href="#" ng-click="langCtrl.setPreferredLang('id')">ID</a>
                                             <% } %>
                                         <% }); %>
                                     </div>

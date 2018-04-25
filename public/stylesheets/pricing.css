@@ -1,453 +1,167 @@
-@font-face {
-  font-family: 'brandon-bold';
-  src: url('/fonts/fonts/Brandon_bld.otf');
-}
-@font-face {
-  font-family: 'brandon-reg-italic';
-  src: url('/fonts/fonts/Brandon_reg_it.otf');
-}
-@font-face {
-  font-family: 'brandon-reg';
-  src: url('/fonts/fonts/Brandon_reg.otf');
-}
-@font-face {
-  font-family: 'proxima-reg';
-  src: url('/fonts/fonts/Proxima_Nova_Regular.otf');
-}
-@font-face {
-  font-family: 'proxima-bold';
-  src: url('/fonts/fonts/Proxima_Nova_Bold.otf');
-}
-@font-face {
-  font-family: 'proxima-semi-bold';
-  src: url('/fonts/fonts/Proxima_Nova_Semibold.otf');
-}
-@font-face {
-  font-family: 'fontello';
-  src: url('/fonts/fonts/fontello.eot');
-  src: url('/fonts/fonts/fontello.eot') format("embedded-opentype"), url('/fonts/fonts/fontello.woff2') format("woff2"), url('/fonts/fonts/fontello.woff') format("woff"), url('/fonts/fonts/fontello.ttf') format("truetype"), url('/fonts/fonts/fontello.svg') format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'fontello';
-  src: url('/fonts/fonts/fontello.eot');
-  src: url('/fonts/fonts/fontello.eot') format("embedded-opentype"), url('/fonts/fonts/fontello.woff2') format("woff2"), url('/fonts/fonts/fontello.woff') format("woff"), url('/fonts/fonts/fontello.ttf') format("truetype"), url('/fonts/fonts/fontello.svg') format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+@font-face { font-family: 'brandon-bold'; src: url('../../assets/fonts/Brandon_bld.otf'); }
+@font-face { font-family: 'brandon-reg-italic'; src: url('../../assets/fonts/Brandon_reg_it.otf'); }
+@font-face { font-family: 'brandon-reg'; src: url('../../assets/fonts/Brandon_reg.otf'); }
+@font-face { font-family: 'proxima-reg'; src: url('../../assets/fonts/Proxima_Nova_Regular.otf'); }
+@font-face { font-family: 'proxima-bold'; src: url('../../assets/fonts/Proxima_Nova_Bold.otf'); }
+@font-face { font-family: 'proxima-semi-bold'; src: url('../../assets/fonts/Proxima_Nova_Semibold.otf'); }
+@font-face { font-family: 'fontello'; src: url('../../assets/fonts/fontello.eot'); src: url('../../assets/fonts/fontello.eot') format("embedded-opentype"), url('../../assets/fonts/fontello.woff2') format("woff2"), url('../../assets/fonts/fontello.woff') format("woff"), url('../../assets/fonts/fontello.ttf') format("truetype"), url('../../assets/fonts/fontello.svg') format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'fontello'; src: url('../../assets/fonts/fontello.eot'); src: url('../../assets/fonts/fontello.eot') format("embedded-opentype"), url('../../assets/fonts/fontello.woff2') format("woff2"), url('../../assets/fonts/fontello.woff') format("woff"), url('../../assets/fonts/fontello.ttf') format("truetype"), url('../../assets/fonts/fontello.svg') format("svg"); font-weight: normal; font-style: normal; }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?47685461#fontello') format('svg');
-  }
+@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'fontello'; src: url('../font/fontello.svg?47685461#fontello') format('svg'); }
 }
 */
 /* line 23, ../sass/sosmed_icons.scss */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
+[class^="icon-"]:before, [class*=" icon-"]:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: .2em; text-align: center; /* opacity: .8; */ /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; /* fix buttons height, for twitter bootstrap */ line-height: 1em; /* Animation center compensation - margins should be symmetric */ /* remove if not needed */ margin-left: .2em; /* you can be more comfortable with increased icons size */ /* font-size: 120%; */ /* Font smoothing. That was taken from TWBS */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; /* Uncomment for 3D effect */ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
 /* line 58, ../sass/sosmed_icons.scss */
-.icon-path:before {
-  content: '\e800';
-}
+.icon-path:before { content: '\e800'; }
 
 /* line 59, ../sass/sosmed_icons.scss */
-.icon-search:before {
-  content: '\e801';
-}
+.icon-search:before { content: '\e801'; }
 
 /* line 60, ../sass/sosmed_icons.scss */
-.icon-ok-circled:before {
-  content: '\e802';
-}
+.icon-ok-circled:before { content: '\e802'; }
 
 /* line 61, ../sass/sosmed_icons.scss */
-.icon-cancel-circled:before {
-  content: '\e803';
-}
+.icon-cancel-circled:before { content: '\e803'; }
 
 /* line 62, ../sass/sosmed_icons.scss */
-.icon-info-circled:before {
-  content: '\e804';
-}
+.icon-info-circled:before { content: '\e804'; }
 
 /* line 63, ../sass/sosmed_icons.scss */
-.icon-left-open:before {
-  content: '\e805';
-}
+.icon-left-open:before { content: '\e805'; }
 
 /* line 64, ../sass/sosmed_icons.scss */
-.icon-right-open:before {
-  content: '\e806';
-}
+.icon-right-open:before { content: '\e806'; }
 
 /* line 65, ../sass/sosmed_icons.scss */
-.icon-instagram-circled:before {
-  content: '\f05e';
-}
+.icon-instagram-circled:before { content: '\f05e'; }
 
 /* line 66, ../sass/sosmed_icons.scss */
-.icon-twitter:before {
-  content: '\f099';
-}
+.icon-twitter:before { content: '\f099'; }
 
 /* line 67, ../sass/sosmed_icons.scss */
-.icon-facebook:before {
-  content: '\f09a';
-}
+.icon-facebook:before { content: '\f09a'; }
 
 /* line 68, ../sass/sosmed_icons.scss */
-.icon-instagram:before {
-  content: '\f16d';
-}
+.icon-instagram:before { content: '\f16d'; }
 
 /* line 69, ../sass/sosmed_icons.scss */
-.icon-diamond:before {
-  content: '\f219';
-}
+.icon-diamond:before { content: '\f219'; }
 
 /* line 70, ../sass/sosmed_icons.scss */
-.icon-twitter-circled:before {
-  content: '\f30a';
-}
+.icon-twitter-circled:before { content: '\f30a'; }
 
 /* line 6, ../sass/pricing.scss */
-.pricing-header {
-  height: 300px;
-  background: url('/images/background/06-Pricing.jpg');
-  background-size: cover;
-}
+.pricing-header { height: 300px; background: url('../../assets/background/06-Pricing.jpg'); background-size: cover; }
 /* line 11, ../sass/pricing.scss */
-.pricing-header .title {
-  top: 50%;
-  left: 50%;
-  position: relative;
-  float: left;
-  transform: translate(-50%, -50%);
-}
+.pricing-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
 /* line 17, ../sass/pricing.scss */
-.pricing-header .title h1 {
-  font-family: "proxima-bold";
-  font-size: 42px;
-  font-weight: 700;
-}
+.pricing-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
 
 /* line 25, ../sass/pricing.scss */
-.text-muted {
-  color: red !important;
-  font-size: 13px;
-  text-align: right;
-}
+.text-muted { color: red !important; font-size: 13px; text-align: right; }
 
 /* line 31, ../sass/pricing.scss */
-.border-bottom-text {
-  margin-top: 20px;
-  border-bottom: 3px solid #FF3366;
-  width: 3vw;
-  margin-left: auto;
-  margin-right: auto;
-}
+.border-bottom-text { margin-top: 20px; border-bottom: 3px solid #FF3366; width: 3vw; margin-left: auto; margin-right: auto; }
 
 /* line 40, ../sass/pricing.scss */
-.pricing-content h2 {
-  text-align: center;
-  font-size: 33px;
-  font-family: "proxima-bold";
-}
+.pricing-content h2 { text-align: center; font-size: 33px; font-family: "proxima-bold"; }
 /* line 46, ../sass/pricing.scss */
-.pricing-content p {
-  font-size: 13px;
-  letter-spacing: .3px;
-  line-height: 18px;
-}
+.pricing-content p { font-size: 13px; letter-spacing: .3px; line-height: 18px; }
 /* line 52, ../sass/pricing.scss */
-.pricing-content .f-s-22 {
-  font-size: 22px;
-}
+.pricing-content .f-s-22 { font-size: 22px; }
 /* line 56, ../sass/pricing.scss */
-.pricing-content .bold {
-  font-family: "proxima-bold";
-}
+.pricing-content .bold { font-family: "proxima-bold"; }
 /* line 60, ../sass/pricing.scss */
-.pricing-content .bg-gray {
-  background-color: #F8F8F8;
-}
+.pricing-content .bg-gray { background-color: #F8F8F8; }
 /* line 64, ../sass/pricing.scss */
-.pricing-content .center-position {
-  margin-left: auto;
-  margin-right: auto;
-}
+.pricing-content .center-position { margin-left: auto; margin-right: auto; }
 /* line 68, ../sass/pricing.scss */
-.pricing-content .center-position [class*='col-'] {
-  padding: 0;
-  float: left;
-}
+.pricing-content .center-position [class*='col-'] { padding: 0; float: left; }
 /* line 74, ../sass/pricing.scss */
-.pricing-content .text-center {
-  text-align: center;
-}
+.pricing-content .text-center { text-align: center; }
 /* line 78, ../sass/pricing.scss */
-.pricing-content .gold {
-  color: #C49F42;
-}
+.pricing-content .gold { color: #C49F42; }
 /* line 82, ../sass/pricing.scss */
-.pricing-content .silver {
-  color: #AAAAAA;
-}
+.pricing-content .silver { color: #AAAAAA; }
 /* line 86, ../sass/pricing.scss */
-.pricing-content i {
-  font-size: 18px;
-}
+.pricing-content i { font-size: 18px; }
 /* line 88, ../sass/pricing.scss */
-.pricing-content i.green {
-  color: #38CBAE;
-}
+.pricing-content i.green { color: #38CBAE; }
 /* line 91, ../sass/pricing.scss */
-.pricing-content i.red {
-  color: #FF3166;
-}
+.pricing-content i.red { color: #FF3166; }
 /* line 94, ../sass/pricing.scss */
-.pricing-content i.blue {
-  color: #698DF5;
-}
+.pricing-content i.blue { color: #698DF5; }
 /* line 99, ../sass/pricing.scss */
-.pricing-content .select-category {
-  background: url('/images/icons/arrow-down.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 45px;
-  border: 1px solid #979797;
-  border-radius: 4px;
-  background-position: right 10px center;
-  padding: 0;
-}
+.pricing-content .select-category { background: url('../../assets/icons/arrow-down.png'); background-repeat: no-repeat; width: 100%; height: 45px; border: 1px solid #979797; border-radius: 4px; background-position: right 10px center; padding: 0; }
 /* line 108, ../sass/pricing.scss */
-.pricing-content .select-category select {
-  width: 100%;
-  height: 100% !important;
-  background: transparent;
-  border: none;
-  appearance: none;
-  padding-left: 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  color: #848484;
-}
+.pricing-content .select-category select { width: 100%; height: 100% !important; background: transparent; border: none; appearance: none; padding-left: 10px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; color: #848484; }
 /* line 123, ../sass/pricing.scss */
-.pricing-content input {
-  width: 100%;
-  height: 40px;
-  padding-left: 10px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  border: 1px solid #979797;
-  color: #848484;
-}
+.pricing-content input { width: 100%; height: 40px; padding-left: 10px; border-radius: 4px; box-sizing: border-box; border: 1px solid #979797; color: #848484; }
 /* line 133, ../sass/pricing.scss */
-.pricing-content .dropdown-menu {
-  width: 100%;
-  color: #555555;
-  padding: 0;
-  display: block;
-}
+.pricing-content .dropdown-menu { width: 100%; color: #555555; padding: 0; display: block; }
 /* line 139, ../sass/pricing.scss */
-.pricing-content .dropdown-menu li {
-  padding: 10px;
-}
+.pricing-content .dropdown-menu li { padding: 10px; }
 /* line 142, ../sass/pricing.scss */
-.pricing-content .dropdown-menu li:hover {
-  background-color: #E5E5E5;
-  cursor: pointer;
-}
+.pricing-content .dropdown-menu li:hover { background-color: #E5E5E5; cursor: pointer; }
 /* line 149, ../sass/pricing.scss */
-.pricing-content .search-city {
-  position: relative;
-  color: #555555;
-}
+.pricing-content .search-city { position: relative; color: #555555; }
 /* line 153, ../sass/pricing.scss */
-.pricing-content .search-city i {
-  position: absolute;
-  top: 10px;
-  right: 5px;
-}
+.pricing-content .search-city i { position: absolute; top: 10px; right: 5px; }
 /* line 160, ../sass/pricing.scss */
-.pricing-content button.btn {
-  width: 100%;
-  padding: 10px 0;
-  border-radius: 4px;
-  background-color: #698DF5;
-  border: 1px solid #698DF5;
-  color: #FFF;
-}
+.pricing-content button.btn { width: 100%; padding: 10px 0; border-radius: 4px; background-color: #698DF5; border: 1px solid #698DF5; color: #FFF; }
 /* line 169, ../sass/pricing.scss */
-.pricing-content .pricing-info {
-  margin-top: 80px;
-}
-@media only screen and (max-width: 1023px) {
-  /* line 169, ../sass/pricing.scss */
-  .pricing-content .pricing-info {
-    padding-top: 40px;
-    margin-top: 0;
-    border-top: 1px solid #E5E5E5;
-  }
-}
+.pricing-content .pricing-info { margin-top: 80px; }
+@media only screen and (max-width: 1023px) { /* line 169, ../sass/pricing.scss */
+  .pricing-content .pricing-info { padding-top: 40px; margin-top: 0; border-top: 1px solid #E5E5E5; } }
 /* line 178, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide {
-  display: none;
-}
+.pricing-content .pricing-info .pricing-slide { display: none; }
 /* line 181, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .top-slide {
-  text-transform: uppercase;
-}
+.pricing-content .pricing-info .pricing-slide .top-slide { color: #555; margin: auto; text-transform: uppercase; }
 /* line 182, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .top-slide i {
-  padding: 4px 3px 2px 2px;
-  border-radius: 50%;
-  font-size: 18px;
-  color: #FFF;
-}
-/* line 191, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide {
-  width: 100%;
-  display: table;
-}
-/* line 194, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide span {
-  display: table-cell;
-  vertical-align: middle;
-}
-/* line 199, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  width: 170px;
-}
-/* line 206, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn {
-  padding: 10px 30px;
-}
-/* line 214, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .gold-plan .top-slide .best-seller {
-  background-color: #C49F42;
-  color: #FFF;
-  padding: 7px 30px;
-  border-radius: 3px;
-  font-family: "brandon-bold";
-  letter-spacing: 1px;
-  font-size: 16px;
-}
-/* line 224, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .gold-plan .top-slide i {
-  background-color: #C49F42;
-}
-/* line 232, ../sass/pricing.scss */
-.pricing-content .pricing-info .pricing-slide .silver-plan .top-slide i {
-  background-color: #AAAAAA;
-}
-@media only screen and (max-width: 1023px) {
-  /* line 178, ../sass/pricing.scss */
-  .pricing-content .pricing-info .pricing-slide {
-    display: block;
-  }
-}
-/* line 243, ../sass/pricing.scss */
-.pricing-content .pricing-info table {
-  border-collapse: separate;
-  border-spacing: 15px 0;
-  display: table;
-  font-size: 14px;
-  margin-left: -15px;
-  width: 100%;
-}
-@media only screen and (max-width: 1023px) {
-  /* line 243, ../sass/pricing.scss */
-  .pricing-content .pricing-info table {
-    display: none;
-  }
-}
-/* line 253, ../sass/pricing.scss */
-.pricing-content .pricing-info table [class*='col-'] {
-  padding: 0;
-  float: left;
-}
-/* line 260, ../sass/pricing.scss */
-.pricing-content .pricing-info table tr:nth-child(even) {
-  background-color: #F8F8F8;
-}
-/* line 264, ../sass/pricing.scss */
-.pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child {
-  background-color: #FFF;
-}
-/* line 269, ../sass/pricing.scss */
-.pricing-content .pricing-info table tbody td {
-  color: #555555;
-}
-/* line 275, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) {
-  width: 350px;
-}
-/* line 279, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) {
-  width: 200px;
-  text-align: center;
-  vertical-align: top;
-}
-/* line 284, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(1n+2) .best-seller, .pricing-content .pricing-info table td:nth-child(1n+2) .best-seller {
-  width: 65%;
-  background-color: #38CBAE;
-  padding: 9px 0;
-  margin-left: auto;
-  margin-right: auto;
-  color: #FFF;
-}
-/* line 293, ../sass/pricing.scss */
-.pricing-content .pricing-info table th:nth-child(1n+2) .price, .pricing-content .pricing-info table td:nth-child(1n+2) .price {
-  font-size: 16px;
-}
-/* line 298, ../sass/pricing.scss */
-.pricing-content .pricing-info table th.side-border, .pricing-content .pricing-info table td.side-border {
-  border-left: 2px solid #38CBAE;
-  border-right: 2px solid #38CBAE;
-}
-/* line 303, ../sass/pricing.scss */
-.pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border {
-  border-top: 2px solid #38CBAE;
-}
-/* line 307, ../sass/pricing.scss */
-.pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border {
-  border-bottom: 2px solid #38CBAE;
-}
+.pricing-content .pricing-info .pricing-slide .top-slide i { padding: 4px 3px 2px 2px; border-radius: 50%; font-size: 18px; color: #FFF; }
+/* line 193, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide { width: 100%; display: table; }
+/* line 196, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide span { display: table-cell; vertical-align: middle; }
+/* line 201, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase { margin-left: auto; margin-right: auto; margin-bottom: 20px; margin-top: 50px; width: 170px; }
+/* line 208, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn { padding: 10px 30px; }
+/* line 216, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .gold-plan .top-slide .best-seller { background-color: #C49F42; color: #FFF; padding: 7px 30px; border-radius: 3px; font-family: "brandon-bold"; letter-spacing: 1px; font-size: 16px; }
+/* line 226, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .gold-plan .top-slide i { background-color: #C49F42; }
+/* line 234, ../sass/pricing.scss */
+.pricing-content .pricing-info .pricing-slide .silver-plan .top-slide i { background-color: #AAAAAA; }
+@media only screen and (max-width: 1023px) { /* line 178, ../sass/pricing.scss */
+  .pricing-content .pricing-info .pricing-slide { display: block; } }
+/* line 245, ../sass/pricing.scss */
+.pricing-content .pricing-info table { border-collapse: separate; border-spacing: 15px 0; display: table; font-size: 14px; margin-left: -15px; width: 100%; }
+@media only screen and (max-width: 1023px) { /* line 245, ../sass/pricing.scss */
+  .pricing-content .pricing-info table { display: none; } }
+/* line 255, ../sass/pricing.scss */
+.pricing-content .pricing-info table [class*='col-'] { padding: 0; float: left; }
+/* line 262, ../sass/pricing.scss */
+.pricing-content .pricing-info table tr:nth-child(even) { background-color: #F8F8F8; }
+/* line 266, ../sass/pricing.scss */
+.pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child { background-color: #FFF; }
+/* line 271, ../sass/pricing.scss */
+.pricing-content .pricing-info table tbody td { color: #555555; }
+/* line 277, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) { width: 350px; }
+/* line 281, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) { width: 200px; text-align: center; vertical-align: top; }
+/* line 286, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(1n+2) .best-seller, .pricing-content .pricing-info table td:nth-child(1n+2) .best-seller { width: 65%; background-color: #38CBAE; padding: 9px 0; margin-left: auto; margin-right: auto; color: #FFF; }
+/* line 295, ../sass/pricing.scss */
+.pricing-content .pricing-info table th:nth-child(1n+2) .price, .pricing-content .pricing-info table td:nth-child(1n+2) .price { font-size: 16px; }
+/* line 300, ../sass/pricing.scss */
+.pricing-content .pricing-info table th.side-border, .pricing-content .pricing-info table td.side-border { border-left: 2px solid #38CBAE; border-right: 2px solid #38CBAE; }
+/* line 305, ../sass/pricing.scss */
+.pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border { border-top: 2px solid #38CBAE; }
+/* line 309, ../sass/pricing.scss */
+.pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border { border-bottom: 2px solid #38CBAE; }
