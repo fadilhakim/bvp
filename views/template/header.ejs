@@ -19,7 +19,7 @@
             <a class="navbar-brand" href="<%- baseUrl -%>"></a>
             <div class="top-menu">
                 <ul>
-                    <li ng-if="!loginCtrl.user()"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
+                    <li ng-if="!loginCtrl.user()"><a class="hp_vendor_login" href="<%- baseUrl -%>/login">VENDOR LOGIN</a></li>
                     <li ng-if="loginCtrl.user().id">
                         <div class="dropdown show if-login">
                             <a class="dropdown-toggle btn" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/"><%- localization[transId].home.content_30 -%></a></li>
+                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="<%- baseUrl -%>/register/vendor#/"><%- localization[transId].home.content_30 -%></a></li>
                     <li class="">
                         <a href="#">
                             <div class="dropdown show">
@@ -105,12 +105,12 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
                     <li class="btn-wrap-m">
-                        <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center" href="https://business.bridestory.com/register/vendor">
+                        <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center" href="<%- baseUrl -%>/register/vendor">
                             <%- localization[transId].home.content_30 -%>
                         </a>
                     </li>
                     <li class="mt-20 mb-20">
-                        <a class="text-center block" href="https://business.bridestory.com/login">
+                        <a class="text-center block" href="<%- baseUrl -%>/login">
                             VENDOR LOGIN
                         </a>
                     </li>
