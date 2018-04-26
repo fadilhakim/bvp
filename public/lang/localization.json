@@ -42,7 +42,9 @@
 
 			"content_28"		: "Sarana yang Anda butuhkan untuk mengembangkan bisnis pernikahan Anda.",
 			"content_29"		: "Lihat Artikel Lainnya",
-			"content_30"		: "Mulai Free Trial"
+			"content_30"		: "Mulai Free Trial",
+			"content_31"		: "Pelajari Lebih Lanjut",
+			"content_32"		: "Temukan Lebih Banyak" 
 		},
 	    "benefits" : {
 	    	"title" 		: "Bangun sebuah online presence yang tepat",
@@ -161,7 +163,9 @@
 
 			"content_28"		: "Resources you need to grow your wedding business.",
 			"content_29"		: "View More Articles",
-			"content_30"		: "Start Free Trial"
+			"content_30"		: "Start Free Trial",
+			"content_31"		: "Learn More",
+			"content_32"		: "Find Out More" 
 		},
 	    "benefits" : {
 	    	"title" 		: "Build an online presence that works",
