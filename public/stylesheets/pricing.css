@@ -56,112 +56,114 @@
 
 /* line 6, ../sass/pricing.scss */
 .pricing-header { height: 300px; background: url('../../assets/background/06-Pricing.jpg'); background-size: cover; }
-/* line 11, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 6, ../sass/pricing.scss */
+  .pricing-header { background-position-x: right; } }
+/* line 13, ../sass/pricing.scss */
 .pricing-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
-/* line 17, ../sass/pricing.scss */
+/* line 19, ../sass/pricing.scss */
 .pricing-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
 
-/* line 25, ../sass/pricing.scss */
+/* line 27, ../sass/pricing.scss */
 .text-muted { color: red !important; font-size: 13px; text-align: right; }
 
-/* line 31, ../sass/pricing.scss */
+/* line 33, ../sass/pricing.scss */
 .border-bottom-text { margin-top: 20px; border-bottom: 3px solid #FF3366; width: 3vw; margin-left: auto; margin-right: auto; }
 
-/* line 40, ../sass/pricing.scss */
+/* line 42, ../sass/pricing.scss */
 .pricing-content h2 { text-align: center; font-size: 33px; font-family: "proxima-bold"; }
-/* line 46, ../sass/pricing.scss */
+/* line 48, ../sass/pricing.scss */
 .pricing-content p { font-size: 13px; letter-spacing: .3px; line-height: 18px; }
-/* line 52, ../sass/pricing.scss */
+/* line 54, ../sass/pricing.scss */
 .pricing-content .f-s-22 { font-size: 22px; }
-/* line 56, ../sass/pricing.scss */
+/* line 58, ../sass/pricing.scss */
 .pricing-content .bold { font-family: "proxima-bold"; }
-/* line 60, ../sass/pricing.scss */
+/* line 62, ../sass/pricing.scss */
 .pricing-content .bg-gray { background-color: #F8F8F8; }
-/* line 64, ../sass/pricing.scss */
+/* line 66, ../sass/pricing.scss */
 .pricing-content .center-position { margin-left: auto; margin-right: auto; }
-/* line 68, ../sass/pricing.scss */
+/* line 70, ../sass/pricing.scss */
 .pricing-content .center-position [class*='col-'] { padding: 0; float: left; }
-/* line 74, ../sass/pricing.scss */
+/* line 76, ../sass/pricing.scss */
 .pricing-content .text-center { text-align: center; }
-/* line 78, ../sass/pricing.scss */
+/* line 80, ../sass/pricing.scss */
 .pricing-content .gold { color: #C49F42; }
-/* line 82, ../sass/pricing.scss */
+/* line 84, ../sass/pricing.scss */
 .pricing-content .silver { color: #AAAAAA; }
-/* line 86, ../sass/pricing.scss */
-.pricing-content i { font-size: 18px; }
 /* line 88, ../sass/pricing.scss */
+.pricing-content i { font-size: 18px; }
+/* line 90, ../sass/pricing.scss */
 .pricing-content i.green { color: #38CBAE; }
-/* line 91, ../sass/pricing.scss */
+/* line 93, ../sass/pricing.scss */
 .pricing-content i.red { color: #FF3166; }
-/* line 94, ../sass/pricing.scss */
+/* line 96, ../sass/pricing.scss */
 .pricing-content i.blue { color: #698DF5; }
-/* line 99, ../sass/pricing.scss */
+/* line 101, ../sass/pricing.scss */
 .pricing-content .select-category { background: url('../../assets/icons/arrow-down.png'); background-repeat: no-repeat; width: 100%; height: 45px; border: 1px solid #979797; border-radius: 4px; background-position: right 10px center; padding: 0; }
-/* line 108, ../sass/pricing.scss */
+/* line 110, ../sass/pricing.scss */
 .pricing-content .select-category select { width: 100%; height: 100% !important; background: transparent; border: none; appearance: none; padding-left: 10px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; color: #848484; }
-/* line 123, ../sass/pricing.scss */
+/* line 125, ../sass/pricing.scss */
 .pricing-content input { width: 100%; height: 40px; padding-left: 10px; border-radius: 4px; box-sizing: border-box; border: 1px solid #979797; color: #848484; }
-/* line 133, ../sass/pricing.scss */
+/* line 135, ../sass/pricing.scss */
 .pricing-content .dropdown-menu { width: 100%; color: #555555; padding: 0; display: block; }
-/* line 139, ../sass/pricing.scss */
+/* line 141, ../sass/pricing.scss */
 .pricing-content .dropdown-menu li { padding: 10px; }
-/* line 142, ../sass/pricing.scss */
+/* line 144, ../sass/pricing.scss */
 .pricing-content .dropdown-menu li:hover { background-color: #E5E5E5; cursor: pointer; }
-/* line 149, ../sass/pricing.scss */
+/* line 151, ../sass/pricing.scss */
 .pricing-content .search-city { position: relative; color: #555555; }
-/* line 153, ../sass/pricing.scss */
+/* line 155, ../sass/pricing.scss */
 .pricing-content .search-city i { position: absolute; top: 10px; right: 5px; }
-/* line 160, ../sass/pricing.scss */
+/* line 162, ../sass/pricing.scss */
 .pricing-content button.btn { width: 100%; padding: 10px 0; border-radius: 4px; background-color: #698DF5; border: 1px solid #698DF5; color: #FFF; }
-/* line 169, ../sass/pricing.scss */
+/* line 171, ../sass/pricing.scss */
 .pricing-content .pricing-info { margin-top: 80px; }
-@media only screen and (max-width: 1023px) { /* line 169, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 171, ../sass/pricing.scss */
   .pricing-content .pricing-info { padding-top: 40px; margin-top: 0; border-top: 1px solid #E5E5E5; } }
-/* line 178, ../sass/pricing.scss */
+/* line 180, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide { display: none; }
-/* line 181, ../sass/pricing.scss */
+/* line 183, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide { color: #555; margin: auto; text-transform: uppercase; }
-/* line 182, ../sass/pricing.scss */
+/* line 184, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .top-slide i { padding: 4px 3px 2px 2px; border-radius: 50%; font-size: 18px; color: #FFF; }
-/* line 193, ../sass/pricing.scss */
+/* line 195, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide { width: 100%; display: table; }
-/* line 196, ../sass/pricing.scss */
+/* line 198, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide span { display: table-cell; vertical-align: middle; }
-/* line 201, ../sass/pricing.scss */
+/* line 203, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide .purchase { margin-left: auto; margin-right: auto; margin-bottom: 20px; margin-top: 50px; width: 170px; }
-/* line 208, ../sass/pricing.scss */
+/* line 210, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .bottom-slide .purchase .btn { padding: 10px 30px; }
-/* line 216, ../sass/pricing.scss */
+/* line 218, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide .best-seller { background-color: #C49F42; color: #FFF; padding: 7px 30px; border-radius: 3px; font-family: "brandon-bold"; letter-spacing: 1px; font-size: 16px; }
-/* line 226, ../sass/pricing.scss */
+/* line 228, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .gold-plan .top-slide i { background-color: #C49F42; }
-/* line 234, ../sass/pricing.scss */
+/* line 236, ../sass/pricing.scss */
 .pricing-content .pricing-info .pricing-slide .silver-plan .top-slide i { background-color: #AAAAAA; }
-@media only screen and (max-width: 1023px) { /* line 178, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 180, ../sass/pricing.scss */
   .pricing-content .pricing-info .pricing-slide { display: block; } }
-/* line 245, ../sass/pricing.scss */
+/* line 247, ../sass/pricing.scss */
 .pricing-content .pricing-info table { border-collapse: separate; border-spacing: 15px 0; display: table; font-size: 14px; margin-left: -15px; width: 100%; }
-@media only screen and (max-width: 1023px) { /* line 245, ../sass/pricing.scss */
+@media only screen and (max-width: 1023px) { /* line 247, ../sass/pricing.scss */
   .pricing-content .pricing-info table { display: none; } }
-/* line 255, ../sass/pricing.scss */
+/* line 257, ../sass/pricing.scss */
 .pricing-content .pricing-info table [class*='col-'] { padding: 0; float: left; }
-/* line 262, ../sass/pricing.scss */
+/* line 264, ../sass/pricing.scss */
 .pricing-content .pricing-info table tr:nth-child(even) { background-color: #F8F8F8; }
-/* line 266, ../sass/pricing.scss */
+/* line 268, ../sass/pricing.scss */
 .pricing-content .pricing-info table tr:nth-child(odd), .pricing-content .pricing-info table tr:last-child { background-color: #FFF; }
-/* line 271, ../sass/pricing.scss */
+/* line 273, ../sass/pricing.scss */
 .pricing-content .pricing-info table tbody td { color: #555555; }
-/* line 277, ../sass/pricing.scss */
+/* line 279, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(4n+1), .pricing-content .pricing-info table td:nth-child(4n+1) { width: 350px; }
-/* line 281, ../sass/pricing.scss */
+/* line 283, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2), .pricing-content .pricing-info table td:nth-child(1n+2) { width: 200px; text-align: center; vertical-align: top; }
-/* line 286, ../sass/pricing.scss */
+/* line 288, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .best-seller, .pricing-content .pricing-info table td:nth-child(1n+2) .best-seller { width: 65%; background-color: #38CBAE; padding: 9px 0; margin-left: auto; margin-right: auto; color: #FFF; }
-/* line 295, ../sass/pricing.scss */
+/* line 297, ../sass/pricing.scss */
 .pricing-content .pricing-info table th:nth-child(1n+2) .price, .pricing-content .pricing-info table td:nth-child(1n+2) .price { font-size: 16px; }
-/* line 300, ../sass/pricing.scss */
+/* line 302, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.side-border, .pricing-content .pricing-info table td.side-border { border-left: 2px solid #38CBAE; border-right: 2px solid #38CBAE; }
-/* line 305, ../sass/pricing.scss */
+/* line 307, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border { border-top: 2px solid #38CBAE; }
-/* line 309, ../sass/pricing.scss */
+/* line 311, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border { border-bottom: 2px solid #38CBAE; }

@@ -13,7 +13,11 @@
                 <div class="col-lg-6 col-md-6 col-xs-12 testimonial">
                     <div class="row">
                         <div class="col-lg-3 col-xs-12">
-                            <div class="profpic"></div>
+                            <div class="profpic">
+                                <% if(testimoni.vendor_pic){%>
+                                    <img class="img-responsive" src="<%- assetsUrl -%>/vendor_prof_pic/<%= testimoni.vendor_pic %>">
+                                <% } %>
+                            </div>
                         </div>
                         <div class="col-lg-9 col-xs-12 text">
                             <p><%= testimoni.vendor_testi %></p>

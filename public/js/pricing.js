@@ -110,6 +110,14 @@ angular
 
 				$scope.currency = response.data.planCombination.currency.name;
 				$scope.submitted[idx] = false;
+
+				setTimeout(function(){
+					$('.pricing-slide').slick({
+				        dots: true,
+				        infinite: false,
+				        arrows: true
+				    })
+			    });
 			})
 			.catch(function (error) {
 				console.log(error);

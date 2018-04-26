@@ -305,7 +305,9 @@
             width: 100px;
             height: 100px;
             border-radius:100px;
-            background-color: #EAEBED; 
+            background-color: #EAEBED;
+            text-align: center;
+            overflow: hidden; 
         }
         .text {
             background: image-url('icons/quote.png') no-repeat;
