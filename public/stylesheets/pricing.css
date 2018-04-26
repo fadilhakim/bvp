@@ -167,3 +167,23 @@
 .pricing-content .pricing-info table th.top-border, .pricing-content .pricing-info table td.top-border { border-top: 2px solid #38CBAE; }
 /* line 311, ../sass/pricing.scss */
 .pricing-content .pricing-info table th.bottom-border, .pricing-content .pricing-info table td.bottom-border { border-bottom: 2px solid #38CBAE; }
+
+/* line 321, ../sass/pricing.scss */
+.tooltip { position: relative; display: inline-block; z-index: 1; }
+
+/* line 327, ../sass/pricing.scss */
+.tooltip .tooltiptext { visibility: hidden; width: 320px; background-color: #FFF; color: #555; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; opacity: 0; transition: opacity 0.3s; box-shadow: 1px 6px 5px 0px rgba(85, 85, 85, 0.35); -webkit-box-shadow: 1px 6px 5px 0px rgba(85, 85, 85, 0.35); -moz-box-shadow: 1px 6px 5px 0px rgba(85, 85, 85, 0.35); font-size: 13px; }
+@media only screen and (max-width: 1023px) { /* line 327, ../sass/pricing.scss */
+  .tooltip .tooltiptext { width: 180px; font-size: 12px; } }
+/* line 349, ../sass/pricing.scss */
+.tooltip .tooltiptext.mid { top: -20px; left: 50px; }
+@media only screen and (max-width: 1023px) { /* line 349, ../sass/pricing.scss */
+  .tooltip .tooltiptext.mid { left: 0px; top: -100px; } }
+@media only screen and (max-width: 1023px) { /* line 358, ../sass/pricing.scss */
+  .tooltip .tooltiptext.last { left: -140px; bottom: -68px; } }
+
+/* line 366, ../sass/pricing.scss */
+.tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; }
+
+/* line 377, ../sass/pricing.scss */
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
