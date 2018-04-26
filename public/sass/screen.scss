@@ -410,6 +410,12 @@
             font-weight: 700;
             display: block;
             margin-top: 10px;
+            &:hover {
+                text-decoration: none;
+            }
+            span { 
+                color: #555;
+            }
         }
     }
 }

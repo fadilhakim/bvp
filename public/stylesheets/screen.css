@@ -183,25 +183,29 @@
 .contact-assist p span { font-weight: 700; display: block; margin-top: 10px; }
 /* line 408, ../sass/screen.scss */
 .contact-assist p a { color: #5E7FDA; font-weight: 700; display: block; margin-top: 10px; }
+/* line 413, ../sass/screen.scss */
+.contact-assist p a:hover { text-decoration: none; }
+/* line 416, ../sass/screen.scss */
+.contact-assist p a span { color: #555; }
 
-@media only screen and (max-width: 1023px) { /* line 419, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 425, ../sass/screen.scss */
   .blogs .col-lg-4 { margin-bottom: 45px; } }
-/* line 424, ../sass/screen.scss */
+/* line 430, ../sass/screen.scss */
 .blogs a:hover { text-decoration: none; color: #555; }
-/* line 428, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 .blogs .img-blog { width: 100%; }
-/* line 431, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .blogs span { display: block; margin-top: 20px; margin-bottom: 20px; color: #aaa; font-weight: 400; font-size: 13px; }
-/* line 438, ../sass/screen.scss */
+/* line 444, ../sass/screen.scss */
 .blogs span b { font-weight: 700; letter-spacing: 1px; font-size: 14px; color: #4A90E2; text-transform: uppercase; }
-/* line 446, ../sass/screen.scss */
+/* line 452, ../sass/screen.scss */
 .blogs h3 { text-align: center; }
-@media only screen and (max-width: 1023px) { /* line 446, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 452, ../sass/screen.scss */
   .blogs h3 { margin: auto; width: 60%; line-height: 28px; margin-bottom: 25px; } }
-/* line 455, ../sass/screen.scss */
+/* line 461, ../sass/screen.scss */
 .blogs h4 { line-height: 29px; font-size: 22px; }
-@media only screen and (max-width: 1023px) { /* line 455, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 461, ../sass/screen.scss */
   .blogs h4 { font-size: 18px; } }
 
-@media only screen and (max-width: 1023px) { /* line 464, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 470, ../sass/screen.scss */
   h2.head-section { font-size: 20px; } }
