@@ -8,7 +8,7 @@
 /* line 6, ../sass/screen.scss */
 .jumbotron { position: relative; background: url('../../assets/background/01-Homepage-Hero_Image.jpg'); background-size: cover; border-radius: 0px; }
 @media only screen and (max-width: 1023px) { /* line 6, ../sass/screen.scss */
-  .jumbotron { padding: 3rem 1rem; } }
+  .jumbotron { padding: 60px  1rem 20px 1rem; } }
 /* line 14, ../sass/screen.scss */
 .jumbotron form { background-color: #fff; min-height: 470px; border-radius: 4px; padding: 15px; }
 @media only screen and (max-width: 1023px) { /* line 14, ../sass/screen.scss */

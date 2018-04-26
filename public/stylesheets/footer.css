@@ -14,60 +14,62 @@ footer .btm li { display: inline-block; padding-top: 40px; padding-left: 20px; }
   footer .btm li { padding-left: 0; padding-top: 0px; } }
 /* line 25, ../sass/footer.scss */
 footer .btm li a { color: #aaa; font-size: 9px; font-weight: 400; letter-spacing: 0.35px; line-height: 18px; text-transform: uppercase; }
-/* line 35, ../sass/footer.scss */
+@media only screen and (max-width: 1023px) { /* line 34, ../sass/footer.scss */
+  footer .btm .terms { margin-bottom: 50px; } }
+/* line 40, ../sass/footer.scss */
 footer .footer-logo { height: 55px; width: auto; }
-@media only screen and (max-width: 1023px) { /* line 35, ../sass/footer.scss */
+@media only screen and (max-width: 1023px) { /* line 40, ../sass/footer.scss */
   footer .footer-logo { margin-bottom: 20px; } }
-/* line 43, ../sass/footer.scss */
+/* line 48, ../sass/footer.scss */
 footer h4 { color: #555; font-size: 12px; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; }
-/* line 50, ../sass/footer.scss */
+/* line 55, ../sass/footer.scss */
 footer li { line-height: 18px; }
-/* line 52, ../sass/footer.scss */
+/* line 57, ../sass/footer.scss */
 footer li a { font-size: 12px; letter-spacing: 0.25px; color: #aaa !important; }
-/* line 59, ../sass/footer.scss */
+/* line 64, ../sass/footer.scss */
 footer .sosmed-footer li { display: inline-block; }
-/* line 62, ../sass/footer.scss */
-footer .sosmed-footer a { display: block; width: 23px; height: 23px; }
 /* line 67, ../sass/footer.scss */
+footer .sosmed-footer a { display: block; width: 23px; height: 23px; }
+/* line 72, ../sass/footer.scss */
 footer .sosmed-footer .fb { background: url('../../assets/icons/SocMed_Facebook.png'); background-size: cover; }
-/* line 71, ../sass/footer.scss */
+/* line 76, ../sass/footer.scss */
 footer .sosmed-footer .twt { background: url('../../assets/icons/SocMed_Twitter.png'); background-size: cover; }
-/* line 75, ../sass/footer.scss */
+/* line 80, ../sass/footer.scss */
 footer .sosmed-footer .ig { background: url('../../assets/icons/SocMed_Instagram.png'); background-size: cover; }
-/* line 79, ../sass/footer.scss */
-footer .sosmed-footer .pin { background: url('../../assets/icons/SocMed_Pinterest.png'); background-size: cover; }
 /* line 84, ../sass/footer.scss */
+footer .sosmed-footer .pin { background: url('../../assets/icons/SocMed_Pinterest.png'); background-size: cover; }
+/* line 89, ../sass/footer.scss */
 footer .dropdown { border: 0.5px solid #d5d5d5; border-radius: 6px; width: 56px; height: 22px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; position: relative; }
-/* line 93, ../sass/footer.scss */
+/* line 98, ../sass/footer.scss */
 footer .dropdown .dropdown-toggle { padding: 3px 0px 3px 20px; font-size: 12px; font-weight: 700; line-height: 1; text-transform: uppercase; }
-/* line 99, ../sass/footer.scss */
+/* line 104, ../sass/footer.scss */
 footer .dropdown .dropdown-toggle.en { background: url('../../assets/icons/Icon_EN.png'); background-size: 29%; background-position: 3px 1px; background-repeat: no-repeat; }
-/* line 105, ../sass/footer.scss */
+/* line 110, ../sass/footer.scss */
 footer .dropdown .dropdown-toggle.id { background: url('../../assets/icons/Icon_ID.png'); background-size: 29%; background-position: 3px 1px; background-repeat: no-repeat; }
-/* line 113, ../sass/footer.scss */
+/* line 118, ../sass/footer.scss */
 footer .dropdown .dropdown-toggle::after { margin-top: 4px; }
-/* line 116, ../sass/footer.scss */
+/* line 121, ../sass/footer.scss */
 footer .dropdown .dropdown-menu { min-width: 6rem; }
-/* line 119, ../sass/footer.scss */
-footer .dropdown .dropdown-item { width: 56px; height: 22px; display: block; text-transform: uppercase; }
 /* line 124, ../sass/footer.scss */
+footer .dropdown .dropdown-item { width: 56px; height: 22px; display: block; text-transform: uppercase; }
+/* line 129, ../sass/footer.scss */
 footer .dropdown .dropdown-item.en { background: url('../../assets/icons/Icon_EN.png'); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }
-/* line 131, ../sass/footer.scss */
+/* line 136, ../sass/footer.scss */
 footer .dropdown .dropdown-item.id { background: url('../../assets/icons/Icon_ID.png'); background-size: 32%; background-position: 3px 1px; background-repeat: no-repeat; }
 
-/* line 143, ../sass/footer.scss */
+/* line 148, ../sass/footer.scss */
 .fixedFooterMobile { background-color: #fff; border-top: 1px solid #ccc; padding-bottom: 10px; padding-top: 10px; display: none; }
-/* line 149, ../sass/footer.scss */
+/* line 154, ../sass/footer.scss */
 .fixedFooterMobile .btn { width: 100%; }
-/* line 152, ../sass/footer.scss */
+/* line 157, ../sass/footer.scss */
 .fixedFooterMobile .col-5 { padding-left: 0px; background-color: #fff !important; }
-/* line 155, ../sass/footer.scss */
+/* line 160, ../sass/footer.scss */
 .fixedFooterMobile .col-5 a:hover { text-decoration: none; }
-/* line 159, ../sass/footer.scss */
+/* line 164, ../sass/footer.scss */
 .fixedFooterMobile .chat { border: 1.5px solid #698DF5; border-radius: 4px; height: 100%; text-align: center; color: #698DF5; font-weight: 700; }
-/* line 166, ../sass/footer.scss */
-.fixedFooterMobile .chat img { display: inline-block; margin-top: 9px; width: 25px; }
 /* line 171, ../sass/footer.scss */
+.fixedFooterMobile .chat img { display: inline-block; margin-top: 9px; width: 25px; }
+/* line 176, ../sass/footer.scss */
 .fixedFooterMobile .chat span { height: 100%; display: inline-block; padding-top: 3px; vertical-align: middle; margin-left: 5px; }
-@media only screen and (max-width: 1023px) { /* line 143, ../sass/footer.scss */
+@media only screen and (max-width: 1023px) { /* line 148, ../sass/footer.scss */
   .fixedFooterMobile { position: fixed; left: 0px; bottom: 0px; width: 100%; display: block; } }

@@ -31,6 +31,11 @@ footer {
                 text-transform: uppercase;
             }
         }
+        .terms {
+            @include mobile-device-screen { 
+                margin-bottom: 50px;
+            }
+        }
     }
     .footer-logo {
         height: 55px;
