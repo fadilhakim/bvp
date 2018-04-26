@@ -4,7 +4,7 @@ node('jenkins-aws')
   stage('Checkout Repo')
   {
       checkout([$class: 'GitSCM',
-      branches: [[name: '*/develop']],
+      branches: [[name: '*/release/1.0.0']],
       doGenerateSubmoduleConfigurations: false,
       extensions: [],
       submoduleCfg: [],
@@ -32,7 +32,7 @@ node('jenkins-aws')
       sh 'sed -e "s:BUILD_NUMBER:${BUILD_NUMBER}:g" task-template-staging.json > task-template-staging-${BUILD_NUMBER}.json'
       sh 'aws ecs register-task-definition --family vendor-home-staging-task --cli-input-json file://task-template-staging-${BUILD_NUMBER}.json'
   }
-  
+
   stage('Update Service')
   {
       sh 'bash update-service-staging.sh'
