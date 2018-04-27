@@ -1,0 +1,27 @@
+{
+    "containerDefinitions": [
+        {
+            "portMappings": [
+                {
+                    "hostPort": 0,
+                    "containerPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "name": "vendor-home-production-container",
+            "image": "172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:production-BUILD_NUMBER",
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "frontend-cluster-production",
+                    "awslogs-region": "ap-southeast-1",
+                    "awslogs-stream-prefix": "vendor-home-production"
+                }
+            },
+            "cpu": 0,
+            "memoryReservation": 128
+        }
+    ],
+    "family": "vendor-home-production-task"
+}

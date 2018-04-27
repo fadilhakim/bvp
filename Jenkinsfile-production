@@ -27,5 +27,15 @@ node('jenkins-aws')
     sh 'docker push 172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:production-${BUILD_NUMBER}'
   }
 
+  stage('Create New Task')
+  {
+      sh 'sed -e "s:BUILD_NUMBER:${BUILD_NUMBER}:g" task-template-production.json > task-template-production-${BUILD_NUMBER}.json'
+      sh 'aws ecs register-task-definition --family vendor-home-production-task --cli-input-json file://task-template-production-${BUILD_NUMBER}.json'
+  }
+
+  stage('Update Service')
+  {
+      sh 'bash update-service-production.sh'
+  }
 
 }
