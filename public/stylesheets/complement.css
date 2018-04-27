@@ -134,33 +134,33 @@ button { font-family: "proxima-reg"; font-weight: 700; }
 /* line 184, ../sass/complement.scss */
 .page-header { background-size: cover; height: 300px; }
 /* line 187, ../sass/complement.scss */
-.page-header.testimonials { background: url('../../assets/background/05-Success_Stories.jpg'); background-position-x: center; }
-/* line 191, ../sass/complement.scss */
-.page-header.benefits { background: url('../../assets/background/04-Benefits-Hero_image_3.jpg'); }
-/* line 195, ../sass/complement.scss */
+.page-header.testimonials { background: url('../../assets/background/05-Success_Stories.jpg'); background-position-x: center; background-size: cover; }
+/* line 192, ../sass/complement.scss */
+.page-header.benefits { background: url('../../assets/background/04-Benefits-Hero_image_3.jpg'); background-size: cover; }
+/* line 197, ../sass/complement.scss */
 .page-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
-/* line 202, ../sass/complement.scss */
+/* line 204, ../sass/complement.scss */
 .page-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
-/* line 207, ../sass/complement.scss */
+/* line 209, ../sass/complement.scss */
 .page-header .title .border-bottom-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 30%; margin-left: auto; margin-right: auto; }
 
-/* line 221, ../sass/complement.scss */
+/* line 223, ../sass/complement.scss */
 .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 30px; padding-left: 30px; display: flex; align-items: center; flex-wrap: wrap; text-align: center; }
-/* line 233, ../sass/complement.scss */
+/* line 235, ../sass/complement.scss */
 .col-xs-15 .img-responsive, .col-sm-15 .img-responsive, .col-md-15 .img-responsive, .col-lg-15 .img-responsive { width: 90%; }
 
-/* line 237, ../sass/complement.scss */
+/* line 239, ../sass/complement.scss */
 .col-xs-15 { width: 20%; float: left; }
 
-/* line 245, ../sass/complement.scss */
+/* line 247, ../sass/complement.scss */
 .mobile { display: none; }
 
 @media (max-width: 450px) { display: block;
-  /* line 251, ../sass/complement.scss */
+  /* line 253, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 200px) { /* line 260, ../sass/complement.scss */
+@media (min-width: 200px) { /* line 262, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 992px) { /* line 268, ../sass/complement.scss */
+@media (min-width: 992px) { /* line 270, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 20%; flex: 0 0 20%; max-width: 20%; } }
-@media (min-width: 1200px) { /* line 277, ../sass/complement.scss */
+@media (min-width: 1200px) { /* line 279, ../sass/complement.scss */
   .col-lg-15 { width: 20%; float: left; } }

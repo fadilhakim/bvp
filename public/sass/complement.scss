@@ -187,9 +187,11 @@ button {
     &.testimonials {
         background: image-url('background/05-Success_Stories.jpg');
         background-position-x: center;
+        background-size: cover;
     }
     &.benefits {
         background: image-url('background/04-Benefits-Hero_image_3.jpg');
+        background-size: cover;
     }
     
     .title {
