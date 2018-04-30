@@ -118,10 +118,11 @@ header {
 
     .top-menu {
         float: right;
+        text-align: right;
         @include mobile-device-screen { 
             display: none;
         }
-        width: 350px;
+        min-width: 350px;
         margin-top: 10px;
         li {
             display: inline-block;
@@ -362,7 +363,7 @@ header {
 }
 
 .navbar-header {
-    padding: 10px 0px 0px 15px !important;
+    padding: 10px 15px 0px 15px !important;
     display: block;
     @include mobile-device-screen {
         padding:0px !important;
