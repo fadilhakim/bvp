@@ -19,8 +19,8 @@
             <a class="navbar-brand" href="<%- baseUrl -%>"></a>
             <div class="top-menu">
                 <ul>
-                    <li ng-if="!loginCtrl.user()"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
-                    <li ng-if="loginCtrl.user().id">
+                    <li ng-if="!loginCtrl.user() || loginCtrl.user().type == 'user'"><a class="hp_vendor_login" href="https://business.bridestory.com/login">VENDOR LOGIN</a></li>
+                    <li ng-if="loginCtrl.user().id && loginCtrl.user().type != 'user'">
                         <div class="dropdown show if-login">
                             <a class="dropdown-toggle btn" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
                                 <div class="vendorPic">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </li>   
-                    <li ng-if="!loginCtrl.user()" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/"><%- localization[transId].home.content_30 -%></a></li>
+                    <li ng-if="!loginCtrl.user() || loginCtrl.user().type == 'user'" class="p-left15"><a class="btn btn-primary hp_start_free_trial" data-key="hp_start_free_trial" href="https://business.bridestory.com/register/vendor#/"><%- localization[transId].home.content_30 -%></a></li>
                     <li class="">
                         <a href="#">
                             <div class="dropdown show">
@@ -100,10 +100,10 @@
             </div>
             
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-faded" ng-if="!loginCtrl.isLoading()">
+        <nav class="navbar navbar-expand-lg navbar-light bg-faded">
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav mt-20 m-top" ng-if="loginCtrl.user().id == undefined">
+                <ul class="navbar-nav mt-20 m-top" ng-if="!loginCtrl.user() || loginCtrl.user().type == 'user'">
                     <li class="btn-wrap-m">
                         <a data-key="hp_start_free_trial" class="hp_start_free_trial btn btn-primary block center" href="https://business.bridestory.com/register/vendor">
                             <%- localization[transId].home.content_30 -%>
@@ -116,7 +116,7 @@
                     </li>
                 </ul>
            
-                <div class="m-if-login" ng-if="loginCtrl.user().id != undefined">
+                <div class="m-if-login" ng-if="loginCtrl.user().id && loginCtrl.user().type != 'user'">
                     <div class="vendorPic">
                         <img src="{{loginCtrl.user().account.data.cover}}" alt="Vendor Image Profile" height="45">
                     </div>

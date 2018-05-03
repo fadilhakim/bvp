@@ -64,6 +64,8 @@ angular
 					})
 					
 					$scope.isLoading = false;
+				}else {
+					$scope.isLoading = false;
 				}
 			})
 			.catch(function (error) {
