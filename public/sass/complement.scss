@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import './fonts.scss';
 @import './colors.scss';
+@import './_mixins.scss';
 
 //general 
 html {
@@ -185,6 +186,7 @@ button {
     height: 300px;
     &.testimonials {
         background: image-url('background/05-Success_Stories.jpg');
+        background-position-x: center;
     }
     &.benefits {
         background: image-url('background/04-Benefits-Hero_image_3.jpg');

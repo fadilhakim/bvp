@@ -31,136 +31,136 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @font-face { font-family: 'proxima-bold'; src: url('../../assets/fonts/Proxima_Nova_Bold.otf'); }
 @font-face { font-family: 'proxima-semi-bold'; src: url('../../assets/fonts/Proxima_Nova_Semibold.otf'); }
 @font-face { font-family: 'fontello'; src: url('../../assets/fonts/fontello.eot'); src: url('../../assets/fonts/fontello.eot') format("embedded-opentype"), url('../../assets/fonts/fontello.woff2') format("woff2"), url('../../assets/fonts/fontello.woff') format("woff"), url('../../assets/fonts/fontello.ttf') format("truetype"), url('../../assets/fonts/fontello.svg') format("svg"); font-weight: normal; font-style: normal; }
-/* line 6, ../sass/complement.scss */
+/* line 7, ../sass/complement.scss */
 html { font-family: "proxima-reg"; font-family: 400; }
 
-/* line 12, ../sass/complement.scss */
+/* line 13, ../sass/complement.scss */
 li { list-style: none; }
 
-/* line 16, ../sass/complement.scss */
+/* line 17, ../sass/complement.scss */
 p, li, a, h1, h2, h3 { color: #555; }
 
-/* line 23, ../sass/complement.scss */
+/* line 24, ../sass/complement.scss */
 button { font-family: "proxima-reg"; font-weight: 700; }
 
-/* line 27, ../sass/complement.scss */
+/* line 28, ../sass/complement.scss */
 .block { display: block; }
 
-/* line 32, ../sass/complement.scss */
+/* line 33, ../sass/complement.scss */
 .btn-primary { background-color: #698DF5; border-color: #698DF5; }
-/* line 35, ../sass/complement.scss */
+/* line 36, ../sass/complement.scss */
 .btn-primary.mid-button { padding: 10px 15px; margin-left: auto; margin-right: auto; }
 
-/* line 43, ../sass/complement.scss */
+/* line 44, ../sass/complement.scss */
 .img-responsive { width: 100%; }
 
-/* line 48, ../sass/complement.scss */
+/* line 49, ../sass/complement.scss */
 .head-section { color: #555555; font-size: 36px; font-weight: 700; line-height: 43px; text-align: center; }
 
-/* line 56, ../sass/complement.scss */
+/* line 57, ../sass/complement.scss */
 .tag-head { font-size: 18px; font-weight: 400; letter-spacing: 0.64px; line-height: 24px; text-align: center; display: block; }
 
-/* line 67, ../sass/complement.scss */
+/* line 68, ../sass/complement.scss */
 .m-top20 { margin-top: 20px; }
 
-/* line 70, ../sass/complement.scss */
+/* line 71, ../sass/complement.scss */
 .m-top30 { margin-top: 30px; }
 
-/* line 74, ../sass/complement.scss */
+/* line 75, ../sass/complement.scss */
 .m-top40 { margin-top: 40px; }
 
-/* line 78, ../sass/complement.scss */
+/* line 79, ../sass/complement.scss */
 .m-top60 { margin-top: 60px; }
 
-/* line 83, ../sass/complement.scss */
+/* line 84, ../sass/complement.scss */
 .m-btm20 { margin-bottom: 20px; }
 
-/* line 87, ../sass/complement.scss */
+/* line 88, ../sass/complement.scss */
 .m-btm30 { margin-bottom: 30px; }
 
-/* line 91, ../sass/complement.scss */
+/* line 92, ../sass/complement.scss */
 .m-btm40 { margin-bottom: 40px; }
 
-/* line 94, ../sass/complement.scss */
+/* line 95, ../sass/complement.scss */
 .m-btm60 { margin-bottom: 60px; }
 
-/* line 98, ../sass/complement.scss */
+/* line 99, ../sass/complement.scss */
 .p-left15 { padding-left: 15px; }
 
-/* line 102, ../sass/complement.scss */
+/* line 103, ../sass/complement.scss */
 .p-left30 { padding-left: 30px; }
 
-/* line 106, ../sass/complement.scss */
+/* line 107, ../sass/complement.scss */
 .p-top10 { padding-top: 10px; }
 
-/* line 110, ../sass/complement.scss */
+/* line 111, ../sass/complement.scss */
 .p-top20 { padding-top: 20px; }
 
-/* line 114, ../sass/complement.scss */
+/* line 115, ../sass/complement.scss */
 .pd-section { padding-top: 50px; padding-bottom: 50px; }
 
-/* line 120, ../sass/complement.scss */
+/* line 121, ../sass/complement.scss */
 .border-pink { width: 45px; height: 3px; margin-top: 25px; display: block; background-color: #FF3366; }
-/* line 126, ../sass/complement.scss */
+/* line 127, ../sass/complement.scss */
 .border-pink.center { margin-left: auto; margin-right: auto; }
 
-/* line 134, ../sass/complement.scss */
+/* line 135, ../sass/complement.scss */
 .l-h28 { line-height: 28px; }
 
-/* line 139, ../sass/complement.scss */
+/* line 140, ../sass/complement.scss */
 .f-w400 { font-weight: 400; }
 
-/* line 143, ../sass/complement.scss */
+/* line 144, ../sass/complement.scss */
 .f-w700 { font-weight: 700; }
 
-/* line 147, ../sass/complement.scss */
+/* line 148, ../sass/complement.scss */
 .underline { text-decoration: underline; }
 
-/* line 152, ../sass/complement.scss */
+/* line 153, ../sass/complement.scss */
 .white { color: #FFF !important; }
 
-/* line 156, ../sass/complement.scss */
+/* line 157, ../sass/complement.scss */
 .dark-gray { color: #555555; }
 
-/* line 162, ../sass/complement.scss */
+/* line 163, ../sass/complement.scss */
 .sprite { background-image: url(spritesheet.png); background-repeat: no-repeat; display: block; }
 
-/* line 168, ../sass/complement.scss */
+/* line 169, ../sass/complement.scss */
 .sprite-Logo-Vendor-Indonesia { width: 2346px; height: 1540px; background-position: -5px -5px; }
 
-/* line 175, ../sass/complement.scss */
+/* line 176, ../sass/complement.scss */
 .benefits-header { height: 300px; background-size: cover; }
 
-/* line 183, ../sass/complement.scss */
+/* line 184, ../sass/complement.scss */
 .page-header { background-size: cover; height: 300px; }
-/* line 186, ../sass/complement.scss */
-.page-header.testimonials { background: url('../../assets/background/05-Success_Stories.jpg'); }
-/* line 189, ../sass/complement.scss */
+/* line 187, ../sass/complement.scss */
+.page-header.testimonials { background: url('../../assets/background/05-Success_Stories.jpg'); background-position-x: center; }
+/* line 191, ../sass/complement.scss */
 .page-header.benefits { background: url('../../assets/background/04-Benefits-Hero_image_3.jpg'); }
-/* line 193, ../sass/complement.scss */
+/* line 195, ../sass/complement.scss */
 .page-header .title { top: 50%; left: 50%; position: relative; float: left; transform: translate(-50%, -50%); }
-/* line 200, ../sass/complement.scss */
+/* line 202, ../sass/complement.scss */
 .page-header .title h1 { font-family: "proxima-bold"; font-size: 42px; font-weight: 700; }
-/* line 205, ../sass/complement.scss */
+/* line 207, ../sass/complement.scss */
 .page-header .title .border-bottom-text { margin-top: 10px; border-bottom: 3px solid #FF3366; width: 30%; margin-left: auto; margin-right: auto; }
 
-/* line 219, ../sass/complement.scss */
+/* line 221, ../sass/complement.scss */
 .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 30px; padding-left: 30px; display: flex; align-items: center; flex-wrap: wrap; text-align: center; }
-/* line 231, ../sass/complement.scss */
+/* line 233, ../sass/complement.scss */
 .col-xs-15 .img-responsive, .col-sm-15 .img-responsive, .col-md-15 .img-responsive, .col-lg-15 .img-responsive { width: 90%; }
 
-/* line 235, ../sass/complement.scss */
+/* line 237, ../sass/complement.scss */
 .col-xs-15 { width: 20%; float: left; }
 
-/* line 243, ../sass/complement.scss */
+/* line 245, ../sass/complement.scss */
 .mobile { display: none; }
 
 @media (max-width: 450px) { display: block;
-  /* line 249, ../sass/complement.scss */
+  /* line 251, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 200px) { /* line 258, ../sass/complement.scss */
+@media (min-width: 200px) { /* line 260, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; } }
-@media (min-width: 992px) { /* line 266, ../sass/complement.scss */
+@media (min-width: 992px) { /* line 268, ../sass/complement.scss */
   .col-lg-15 { -webkit-box-flex: 0; -ms-flex: 0 0 20%; flex: 0 0 20%; max-width: 20%; } }
-@media (min-width: 1200px) { /* line 275, ../sass/complement.scss */
+@media (min-width: 1200px) { /* line 277, ../sass/complement.scss */
   .col-lg-15 { width: 20%; float: left; } }

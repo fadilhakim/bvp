@@ -186,6 +186,6 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
 // 	console.log("... port %d in %s mode", app.address().port, app.settings.env);
 // });
 
-app.listen(4000, () => console.log('App listening on port 4000!'))
+app.listen(3000, () => console.log('App listening on port 3000!'))
 
 // set to local.bridestory.com

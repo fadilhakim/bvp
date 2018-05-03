@@ -42,7 +42,9 @@
 
 			"content_28"		: "Sarana yang Anda butuhkan untuk mengembangkan bisnis pernikahan Anda.",
 			"content_29"		: "Lihat Artikel Lainnya",
-			"content_30"		: "Mulai Free Trial"
+			"content_30"		: "Mulai Free Trial",
+			"content_31"		: "Pelajari Lebih Lanjut",
+			"content_32"		: "Temukan Lebih Banyak" 
 		},
 	    "benefits" : {
 	    	"title" 		: "Bangun sebuah online presence yang tepat",
@@ -54,7 +56,7 @@
 			"content_6"     : "Tim ahli kami akan membantu mengoptimalkan hasil pencarian lewat search engine agar Anda dapat fokus pada bisnis yang dijalankan.",
 			"content_7"     : "Platform Mobile-Oriented",
 			"content_8"     : "Calon pengantin masa kini memiliki mobilitas lebih tinggi. Aplikasi mobile yang telah meraih berbagai penghargaan serta situs kami akan memudahkan mereka untuk menemukan vendor pernikahan yang tepat.",			
-			"content_9"		: "By being listed in Bridestory, they will be able to find you instantly. ID",
+			"content_9"		: "Dengan terdaftar di Bridestory, mereka dapat menemukan Anda secara instan",
 			"content_10"    : "Kembangkan bisnis Anda setiap hari",
 			"content_11"    : "Kini Anda dapat meraih lebih banyak klien potensial sekaligus mengembangkan bisnis Anda.",
 			"content_12"    : "Jadilah sebuah bisnis global hanya dengan <br/> satu tombol",
@@ -93,7 +95,7 @@
 			"content_15"	: "Access to Bridestory Inbox",
 			"content_16"	: "Listed in Bridestory",
 			"content_17"	: "0% Installment for clients**",
-			"content_18"	: "Offer your clients 0% installment payment option for up to 24 months with 15 banks by joining Bridestory Pay!",
+			"content_18"	: "Offer your clients 0% installment payment option for up to 24 months with 10 banks by joining Bridestory Pay!",
 			"content_19"	: "Wedding Protection for clients**",
 			"content_20"	: "Provide your clients with Wedding Cancelation Protection by joining Bridestory Pay.",
 			"content_21"	: "Search Marketing",
@@ -111,7 +113,7 @@
 			"content_33"	: "No MDR Charge",
 			"content_34"	: "3% MDR Charge",
 			"content_35"	: "Only when your trial account is active",
-			"content_36"	: "Start Free Trial",
+			"content_36"	: "Mulai Free Trial",
 			"content_37"	: "BEST SELLER",
 			"content_38"	: "UNLIMITED CREDITS",
 			"content_39"	: "FOR",
@@ -161,7 +163,9 @@
 
 			"content_28"		: "Resources you need to grow your wedding business.",
 			"content_29"		: "View More Articles",
-			"content_30"		: "Start Free Trial"
+			"content_30"		: "Start Free Trial",
+			"content_31"		: "Learn More",
+			"content_32"		: "Find Out More" 
 		},
 	    "benefits" : {
 	    	"title" 		: "Build an online presence that works",
@@ -212,7 +216,7 @@
 			"content_15"	: "Access to Bridestory Inbox",
 			"content_16"	: "Listed in Bridestory",
 			"content_17"	: "0% Installment for clients**",
-			"content_18"	: "Offer your clients 0% installment payment option for up to 24 months with 15 banks by joining Bridestory Pay!",
+			"content_18"	: "Offer your clients 0% installment payment option for up to 24 months with 10 banks by joining Bridestory Pay!",
 			"content_19"	: "Wedding Protection for clients**",
 			"content_20"	: "Provide your clients with Wedding Cancelation Protection by joining Bridestory Pay.",
 			"content_21"	: "Search Marketing",

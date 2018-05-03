@@ -137,71 +137,75 @@
 @media only screen and (max-width: 1023px) { /* line 298, ../sass/screen.scss */
   .sucess-stories .testimonial { padding-bottom: 0px; } }
 /* line 304, ../sass/screen.scss */
-.sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; }
-/* line 310, ../sass/screen.scss */
+.sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; text-align: center; overflow: hidden; }
+/* line 312, ../sass/screen.scss */
 .sucess-stories .testimonial .text { background: url('../../assets/icons/quote.png') no-repeat; background-size: 10%; background-position-x: 15px; padding-top: 60px; }
-@media only screen and (max-width: 1023px) { /* line 310, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 312, ../sass/screen.scss */
   .sucess-stories .testimonial .text { background-size: 5%; padding-top: 30px; margin-top: 25px; } }
-/* line 320, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .sucess-stories .testimonial .text p { width: 90%; line-height: 25px; }
-/* line 325, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 .sucess-stories .testimonial .border-pink { margin-top: 60px; }
-@media only screen and (max-width: 1023px) { /* line 325, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 327, ../sass/screen.scss */
   .sucess-stories .testimonial .border-pink { margin-top: 40px; } }
-/* line 331, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .sucess-stories .testimonial .name { font-size: 18px; }
-/* line 334, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 .sucess-stories .testimonial .role { font-size: 12px; color: #555; }
-@media only screen and (max-width: 1023px) { /* line 340, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 342, ../sass/screen.scss */
   .sucess-stories h2 { font-size: 20px; padding-left: 15px; } }
 
-@media only screen and (max-width: 1023px) { /* line 352, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 354, ../sass/screen.scss */
   .vendors h2 { font-size: 20px; } }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .vendors .col-lg-15 { margin: 30px 0px 0px 0px; }
-@media only screen and (max-width: 1023px) { /* line 358, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 360, ../sass/screen.scss */
   .vendors .col-lg-15 { margin: 20px 0 20px 0; } }
 
-/* line 367, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 .trial { background: url('../../assets/background/03-Homepage-Create_Account_Section.jpg'); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
-/* line 372, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .trial h2 { font-size: 28px; }
-@media only screen and (max-width: 1023px) { /* line 372, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 374, ../sass/screen.scss */
   .trial h2 { margin: auto; width: 60%; line-height: 28px; } }
 
-/* line 383, ../sass/screen.scss */
-.contact-assist { background-color: #EEF4FF; }
 /* line 385, ../sass/screen.scss */
+.contact-assist { background-color: #EEF4FF; }
+/* line 387, ../sass/screen.scss */
 .contact-assist h2 { font-size: 32px; }
-@media only screen and (max-width: 1023px) { /* line 385, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 387, ../sass/screen.scss */
   .contact-assist h2 { margin: auto; width: 60%; line-height: 28px; } }
-/* line 393, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .contact-assist .ct-icon { height: 60px; width: 60px; margin: auto; }
-/* line 398, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .contact-assist p { margin-top: 30px; font-size: 22px; }
-/* line 401, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 .contact-assist p span { font-weight: 700; display: block; margin-top: 10px; }
-/* line 406, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .contact-assist p a { color: #5E7FDA; font-weight: 700; display: block; margin-top: 10px; }
+/* line 413, ../sass/screen.scss */
+.contact-assist p a:hover { text-decoration: none; }
+/* line 416, ../sass/screen.scss */
+.contact-assist p a span { color: #555; }
 
-@media only screen and (max-width: 1023px) { /* line 417, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 425, ../sass/screen.scss */
   .blogs .col-lg-4 { margin-bottom: 45px; } }
-/* line 422, ../sass/screen.scss */
+/* line 430, ../sass/screen.scss */
 .blogs a:hover { text-decoration: none; color: #555; }
-/* line 426, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 .blogs .img-blog { width: 100%; }
-/* line 429, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .blogs span { display: block; margin-top: 20px; margin-bottom: 20px; color: #aaa; font-weight: 400; font-size: 13px; }
-/* line 436, ../sass/screen.scss */
-.blogs span b { font-weight: 700; letter-spacing: 1px; font-size: 14px; color: #4A90E2; text-transform: uppercase; }
 /* line 444, ../sass/screen.scss */
+.blogs span b { font-weight: 700; letter-spacing: 1px; font-size: 14px; color: #4A90E2; text-transform: uppercase; }
+/* line 452, ../sass/screen.scss */
 .blogs h3 { text-align: center; }
-@media only screen and (max-width: 1023px) { /* line 444, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 452, ../sass/screen.scss */
   .blogs h3 { margin: auto; width: 60%; line-height: 28px; margin-bottom: 25px; } }
-/* line 453, ../sass/screen.scss */
+/* line 461, ../sass/screen.scss */
 .blogs h4 { line-height: 29px; font-size: 22px; }
-@media only screen and (max-width: 1023px) { /* line 453, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 461, ../sass/screen.scss */
   .blogs h4 { font-size: 18px; } }
 
-@media only screen and (max-width: 1023px) { /* line 462, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 470, ../sass/screen.scss */
   h2.head-section { font-size: 20px; } }
