@@ -10,7 +10,7 @@
             ],
             "essential": true,
             "name": "vendor-home-staging-container",
-            "image": "172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-BUILD_NUMBER",
+            "image": "172405484086.dkr.ecr.ap-southeast-1.amazonaws.com/vendor-home:staging-BRANCH_NAME-BUILD_NUMBER",
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
