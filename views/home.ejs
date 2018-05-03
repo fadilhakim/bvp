@@ -180,8 +180,7 @@
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
                     <p><%- localization[transId].home.content_14 -%>
-                        <span class="counter-value">597</span>
-                        <span>K</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_visitor %></span>
                     </p>
               
                 </div>
@@ -190,8 +189,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
                     <p><%- localization[transId].home.content_15 -%>
-                        <span class="counter-value">290</span>
-                        <span>K</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_inquiry %></span>
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -199,7 +197,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
                     <p><%- localization[transId].home.content_16 -%>
-                        <span class="counter-value">136</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_inquiry_per_vendor %></span>
                     </p>
                 </div>
             </div>
