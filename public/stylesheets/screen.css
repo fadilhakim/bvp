@@ -137,75 +137,77 @@
 @media only screen and (max-width: 1023px) { /* line 298, ../sass/screen.scss */
   .sucess-stories .testimonial { padding-bottom: 0px; } }
 /* line 304, ../sass/screen.scss */
-.sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; text-align: center; overflow: hidden; }
+.sucess-stories .testimonial .profpic { width: 100px; height: 100px; border-radius: 100px; background-color: #EAEBED; text-align: center; overflow: hidden; position: relative; }
 /* line 312, ../sass/screen.scss */
+.sucess-stories .testimonial .profpic .no-pic { bottom: 0px; position: absolute; left: 13px; width: 75px; }
+/* line 319, ../sass/screen.scss */
 .sucess-stories .testimonial .text { background: url('../../assets/icons/quote.png') no-repeat; background-size: 10%; background-position-x: 15px; padding-top: 60px; }
-@media only screen and (max-width: 1023px) { /* line 312, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 319, ../sass/screen.scss */
   .sucess-stories .testimonial .text { background-size: 5%; padding-top: 30px; margin-top: 25px; } }
-/* line 322, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .sucess-stories .testimonial .text p { width: 90%; line-height: 25px; }
-/* line 327, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .sucess-stories .testimonial .border-pink { margin-top: 60px; }
-@media only screen and (max-width: 1023px) { /* line 327, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 334, ../sass/screen.scss */
   .sucess-stories .testimonial .border-pink { margin-top: 40px; } }
-/* line 333, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .sucess-stories .testimonial .name { font-size: 18px; }
-/* line 336, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .sucess-stories .testimonial .role { font-size: 12px; color: #555; }
-@media only screen and (max-width: 1023px) { /* line 342, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 349, ../sass/screen.scss */
   .sucess-stories h2 { font-size: 20px; padding-left: 15px; } }
 
-@media only screen and (max-width: 1023px) { /* line 354, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 361, ../sass/screen.scss */
   .vendors h2 { font-size: 20px; } }
-/* line 360, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .vendors .col-lg-15 { margin: 30px 0px 0px 0px; }
-@media only screen and (max-width: 1023px) { /* line 360, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 367, ../sass/screen.scss */
   .vendors .col-lg-15 { margin: 20px 0 20px 0; } }
 
-/* line 369, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 .trial { background: url('../../assets/background/03-Homepage-Create_Account_Section.jpg'); padding-top: 60px; padding-bottom: 60px; background-size: cover; }
-/* line 374, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 .trial h2 { font-size: 28px; }
-@media only screen and (max-width: 1023px) { /* line 374, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 381, ../sass/screen.scss */
   .trial h2 { margin: auto; width: 60%; line-height: 28px; } }
 
-/* line 385, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 .contact-assist { background-color: #EEF4FF; }
-/* line 387, ../sass/screen.scss */
+/* line 394, ../sass/screen.scss */
 .contact-assist h2 { font-size: 32px; }
-@media only screen and (max-width: 1023px) { /* line 387, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 394, ../sass/screen.scss */
   .contact-assist h2 { margin: auto; width: 60%; line-height: 28px; } }
-/* line 395, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 .contact-assist .ct-icon { height: 60px; width: 60px; margin: auto; }
-/* line 400, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .contact-assist p { margin-top: 30px; font-size: 22px; }
-/* line 403, ../sass/screen.scss */
+/* line 410, ../sass/screen.scss */
 .contact-assist p span { font-weight: 700; display: block; margin-top: 10px; }
-/* line 408, ../sass/screen.scss */
+/* line 415, ../sass/screen.scss */
 .contact-assist p a { color: #5E7FDA; font-weight: 700; display: block; margin-top: 10px; }
-/* line 413, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .contact-assist p a:hover { text-decoration: none; }
-/* line 416, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 .contact-assist p a span { color: #555; }
 
-@media only screen and (max-width: 1023px) { /* line 425, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 432, ../sass/screen.scss */
   .blogs .col-lg-4 { margin-bottom: 45px; } }
-/* line 430, ../sass/screen.scss */
-.blogs a:hover { text-decoration: none; color: #555; }
-/* line 434, ../sass/screen.scss */
-.blogs .img-blog { width: 100%; }
 /* line 437, ../sass/screen.scss */
-.blogs span { display: block; margin-top: 20px; margin-bottom: 20px; color: #aaa; font-weight: 400; font-size: 13px; }
+.blogs a:hover { text-decoration: none; color: #555; }
+/* line 441, ../sass/screen.scss */
+.blogs .img-blog { width: 100%; }
 /* line 444, ../sass/screen.scss */
+.blogs span { display: block; margin-top: 20px; margin-bottom: 20px; color: #aaa; font-weight: 400; font-size: 13px; }
+/* line 451, ../sass/screen.scss */
 .blogs span b { font-weight: 700; letter-spacing: 1px; font-size: 14px; color: #4A90E2; text-transform: uppercase; }
-/* line 452, ../sass/screen.scss */
+/* line 459, ../sass/screen.scss */
 .blogs h3 { text-align: center; }
-@media only screen and (max-width: 1023px) { /* line 452, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 459, ../sass/screen.scss */
   .blogs h3 { margin: auto; width: 60%; line-height: 28px; margin-bottom: 25px; } }
-/* line 461, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .blogs h4 { line-height: 29px; font-size: 22px; }
-@media only screen and (max-width: 1023px) { /* line 461, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 468, ../sass/screen.scss */
   .blogs h4 { font-size: 18px; } }
 
-@media only screen and (max-width: 1023px) { /* line 470, ../sass/screen.scss */
+@media only screen and (max-width: 1023px) { /* line 477, ../sass/screen.scss */
   h2.head-section { font-size: 20px; } }

@@ -1,83 +1,86 @@
 <% include template/header %>
-    <section class="jumbotron">
-        <div class="row justify-content-end" ng-controller="registerController as registerCtrl" ng-cloak>
-            <div class="col-lg-8 col-md-6 col-xs-12">
-                <h1>
-                    <%- localization[transId].home.title -%>
-                </h1>
-                <span class="border-pink m-top30 m-btm30"></span>
-                <p class="l-h28 f-w400"> <%- localization[transId].home.sub_title -%></p>
-            </div>   
-            <div class="col-lg-4 col-md-6 col-xs-12">
-                <form>
-                    <h2 class=""><%- localization[transId].home.form_title -%></h2>
-                    <span><%- localization[transId].home.form_sub_title -%> :</span>
-                    <div class="form-group ">
-                        <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id"></select>
-                        <small ng-if="category.id == 0 && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="businessName" placeholder="Business Name" required>
-                        <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
-                    </div>
+    <div ng-controller="loginController as loginCtrl"></div> 
+        <section class="jumbotron">
+            <div class="row justify-content-left" ng-controller="registerController as registerCtrl" ng-cloak>
+                <div class="col-lg-8 col-md-6 col-xs-12">
+                    <h1>
+                        <%- localization[transId].home.title -%>
+                    </h1>
+                    <span class="border-pink m-top30 m-btm30"></span>
+                    <p class="l-h28 f-w400"> <%- localization[transId].home.sub_title -%></p>
+                </div>   
+                <div class="col-lg-4 col-md-6 col-xs-12" >
+                    <form>
+                        <h2 class=""><%- localization[transId].home.form_title -%></h2>
+                        <span><%- localization[transId].home.form_sub_title -%> :</span>
+                        <div class="form-group ">
+                            <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id"></select>
+                            <small ng-if="category.id == 0 && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="businessName" placeholder="Business Name" required>
+                            <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address" required>
-                        <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
-                        <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
-                    </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address" required>
+                            <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
+                            <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="password" class="form-control" ng-model="password" placeholder="Password" required>
-                        <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
-                    </div>
-                    <a class="btn btn-primary block white f-w700" ng-click="submitRegistration()" /><%- localization[transId].home.content_30 -%></a>
-                    <span class="block mt-20 info-login"><%- localization[transId].home.form_cond_1 -%></span>
+                        <div class="form-group">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Password" required>
+                            <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
+                        </div>
+                        <a class="btn btn-primary block white f-w700" ng-click="submitRegistration()" /><%- localization[transId].home.content_30 -%></a>
+                        <span class="block mt-20 info-login"><%- localization[transId].home.form_cond_1 -%></span>
 
-                    <span class="f-w700 block mt-20 info-login"><%- localization[transId].home.form_cond_2 -%></span>
-                </form>
+                        <span class="f-w700 block mt-20 info-login"><%- localization[transId].home.form_cond_2 -%></span>
+                    </form>
+                </div>
             </div>
-        </div>
 
-        <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
-    </section>
+            <a href="#benefits" class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
+        </section>
 
     <!-- displayed only on mobile screen -->
-    <section class="home-regis">
-        <div class="container" ng-controller="registerController as registerCtrl" ng-cloak>
-            <div class="col-12">
-                <form>
-                    <h2 class=""><%- localization[transId].home.form_title -%></h2>
-                    <span><%- localization[transId].home.form_sub_title -%> :</span>
-                    <div class="form-group ">
-                        <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id"></select>
-                        <small ng-if="category.id == 0 && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="businessName" placeholder="Business Name">
-                        <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
-                    </div>
+    
+        <section ng-if="!loginCtrl.user()"  class="home-regis">
+            <div class="container" ng-controller="registerController as registerCtrl" ng-cloak>
+                <div class="col-12">
+                    <form>
+                        <h2 class=""><%- localization[transId].home.form_title -%></h2>
+                        <span><%- localization[transId].home.form_sub_title -%> :</span>
+                        <div class="form-group ">
+                            <select class="form-control m-top20" ng-model="category" ng-options="item as item.name for item in registerCtrl.categories() track by item.id"></select>
+                            <small ng-if="category.id == 0 && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Category Name</small>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="businessName" placeholder="Business Name">
+                            <small ng-if="!businessName && submitted" id="businessEmpty" class="form-text text-muted">Please fill your Business Name</small>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address">
-                        <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
-                        <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
-                    </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="emailVendor" ng-change="validateEmail(emailVendor)" placeholder="Email Address">
+                            <small ng-if="!emailVendor && submitted" id="emailEmpty" class="form-text text-muted">Please fill your Email</small>
+                            <small ng-if="emailVendor && !emailValid && submitted" id="wrongEmail" class="form-text text-muted">Your email is not valid</small>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="password" class="form-control" ng-model="password" placeholder="Password">
-                        <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
-                    </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Password">
+                            <small ng-if="!password && submitted" id="passwordEmpty" class="form-text text-muted">Please fill your password</small>
+                        </div>
 
-                    <button ng-click="submitRegistration()" class="btn btn-primary"><%- localization[transId].home.content_30 -%></button>
-                    <span><%- localization[transId].home.form_cond_1 -%></span>
-                    <br><br>
-                    <span class="f-w700"><%- localization[transId].home.form_cond_2 -%></span>
-                    <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
-                </form>
+                        <button ng-click="submitRegistration()" class="btn btn-primary"><%- localization[transId].home.content_30 -%></button>
+                        <span><%- localization[transId].home.form_cond_1 -%></span>
+                        <br><br>
+                        <span class="f-w700"><%- localization[transId].home.form_cond_2 -%></span>
+                        <a href="#benefits"  class="text-center mt-20 mb-20 f-w700 pagelink" style="display:block;"><%- localization[transId].home.content_1 -%></a> 
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <!-- -->
 
     <section id="benefits" class="home-benefits bg-white">
@@ -177,8 +180,7 @@
                             <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_1.png" alt="Average Monthly Visitors">
                     </div>
                     <p><%- localization[transId].home.content_14 -%>
-                        <span class="counter-value">597</span>
-                        <span>K</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_visitor %></span>
                     </p>
               
                 </div>
@@ -187,8 +189,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_2.png" alt="Average Monthly Inquiries">
                     </div>
                     <p><%- localization[transId].home.content_15 -%>
-                        <span class="counter-value">290</span>
-                        <span>K</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_inquiry %></span>
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -196,7 +197,7 @@
                         <img class="img-responsive" src="<%- assetsUrl -%>/icons/statistics_icon_3.png" alt="Average Monthly Inquiries / Vendor">
                     </div>
                     <p><%- localization[transId].home.content_16 -%>
-                        <span class="counter-value">136</span>
+                        <span class="counter-value"><%= dataStatic.average_monthly_inquiry_per_vendor %></span>
                     </p>
                 </div>
             </div>

@@ -1,1 +1,1 @@
-# Bridestory New Vendor Landing Page
+#  Bridestory New Vendor Landing Page

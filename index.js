@@ -152,21 +152,29 @@ app.get('/:lang*?/home/', langChecker, function(req, res) {
     res.locals.baseUrl = process.env.BASE_URL;
     res.locals.assetsUrl = process.env.ASSETS_URL;
     res.locals.mainUrl = process.env.MAIN_URL;
+    res.locals.apiUrl = process.env.API_URL;
     res.locals.transId = req.params.lang || 'en';
     res.locals.menuUrl = (res.locals.transId != 'en') ? res.locals.baseUrl + '/' + res.locals.transId : res.locals.baseUrl;
-    
+    if(process.env.NODE_ENV == "staging" || process.env.NODE_ENV == "local" ){
+        staticPoint = 'https://secure-cdn-backend-staging.bridestory.com/v2/statistics_platform/'
+    }else {
+        staticPoint = 'https://secure-cdn-api.bridestory.com/v2/statistics_platform/'
+    }
     fs.readFile(dataVendors, 'utf-8', (err, data) => {
         if (err) {
             console.log(err)
         } else {
             axios.all([
                     axios.get('https://secure-cdn-api.bridestory.com/v2/blog_vendors?limit=3&is_published=true&sort=most_published&include=views,category,tag'),
-                ]).then(axios.spread((response) => {
+                    axios.get(staticPoint),
+                ]).then(axios.spread((response,staticResponse) => {
                     var dataBlogs = response.data.blogVendors
+                    var dataStatic = staticResponse.data.platformStatistic
                     data = JSON.parse(data)
                     var dataVendors = data.vendors
                     res.render('home', {
                         dataVendors: dataVendors,
+                        dataStatic : dataStatic,
                         dataBlogs: dataBlogs,
                         folderImg: folderImg,
                         menu: menu,

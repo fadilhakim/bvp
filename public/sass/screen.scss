@@ -308,6 +308,13 @@
             background-color: #EAEBED;
             text-align: center;
             overflow: hidden; 
+            position: relative;
+            .no-pic{
+                bottom: 0px;
+                position: absolute;
+                left: 13px;
+                width: 75px;
+            }
         }
         .text {
             background: image-url('icons/quote.png') no-repeat;

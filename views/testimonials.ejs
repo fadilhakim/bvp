@@ -16,6 +16,8 @@
                             <div class="profpic">
                                 <% if(testimoni.vendor_pic){%>
                                     <img class="img-responsive" src="<%- assetsUrl -%>/vendor_prof_pic/<%= testimoni.vendor_pic %>">
+                                <% } else {%>
+                                    <img class="no-pic" src="<%- assetsUrl -%>/vendor_prof_pic/user_icon.png">
                                 <% } %>
                             </div>
                         </div>
