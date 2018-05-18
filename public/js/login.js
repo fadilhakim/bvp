@@ -70,6 +70,10 @@ angular
 			})
 			.catch(function (error) {
 				console.log(error);
+				if (error.status == 401) {
+					document.cookie = 'BSID=;expires=Thu, 01 Jan 1970 00:00:01 GMT;;domain=.bridestory.com;path=/';
+					document.cookie = 'BS.userOrigin=;expires=Thu, 01 Jan 1970 00:00:01 GMT;;domain=.bridestory.com;path=/';
+				}
 			});
 		}else {
 			$scope.isLoading = false;
